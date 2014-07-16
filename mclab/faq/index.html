@@ -1,0 +1,36 @@
+---
+---
+<!DOCTYPE HTML>
+<html> 
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+		<!-- Main -->
+			<div id="main-wrapper">
+				<div id="main" class="container">
+					<div class="row">
+						<div class="12u skel-cell-important">
+							<div class="content">
+								<!-- Content -->
+									<article class="is-page-content">
+                  <section>
+										<header>
+											<h2>Frequently Asked Questions</h2>
+										</header>
+                    {% for qa in site.data.faq %}
+                        <h3>{{ qa.question }}</h3>
+                        {% markdown %}{{ qa.answer }}{% endmarkdown %}
+                    {% endfor %}
+                    </section>
+									</article>
+								<!-- /Content -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Main -->
+    {% include footer.html %}
+	</body>
+</html>

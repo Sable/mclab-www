@@ -1,0 +1,165 @@
+---
+---
+<!DOCTYPE HTML>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+    <!-- Main -->
+    <div id="main-wrapper">
+      <div id="main" class="container">
+        <div class="row">
+          <div class="12u skel-cell-important">
+            <div class="content">
+              <!-- Content -->
+              <article class="is-page-content">
+              <header>
+              <h2 style="text-transform:none; text-align:center">McLab Publications</h2>
+              </header>
+              <div>
+                <span><a style="text-decoration:none" href="#tutorials">Lectures and Tutorials</a> | </span>
+                <span><a style="text-decoration:none"href="#papers">Papers</a> | </span>
+                <span><a style="text-decoration:none"href="#theses">Theses</a> | </span>
+                <span><a style="text-decoration:none"href="#techreports">Technical Reports</a> | </span>
+              </div>
+              <hr style="margin-bottom: 2em">
+              <link rel="stylesheet" type="text/css" href="/css/nosidebar.css">
+              <section>
+              <h2 class="major"><span><a name="tutorials">Lectures and Tutorials</a></span></h2>
+              <ol>
+                {% for publication in site.data.publications %}
+                  {% if publication.type == "Lecture" or publication.type == "Tutorial" %}
+                    <li style="margin-bottom: 2em">
+                    <h5><a style="text-decoration:underline" href="{{ publication.link }}">{{ publication.title }}</a></h5>
+                    <h6>Description</h6>
+                    <div>
+                      {% markdown %}{{ publication.abstract }}{% endmarkdown %} 
+                    </div>
+                    <h6 style="display: inline">Authors</h6>
+                    {% for author in publication.authors %}
+                      {% assign nonmember = true %}
+                      {% for person in site.data.people %}
+                        {% if person.name == author %}
+                          <a href="{{ person.website }}">{{ author }}</a> &nbsp&nbsp
+                          {% assign nonmember = false %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if nonmember %}
+                        <span>{{ author }}</span> &nbsp&nbsp
+                      {% endif %}
+                    {% endfor %}
+                    <div><h6>Date</h6>{{ publication.date }}</div>
+                    <div><h6>Presented</h6><span style="font-style: italic">{{ publication.publisher}}</span>, {{ publication.location }}</div>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+              </ol>
+              </section>
+              <section>
+              <h2 class="major"><span><a name="papers">Papers</a></span></h2>
+              <ol>
+                {% for publication in site.data.publications %}
+                  {% if publication.type == "Paper" %}
+                    <li style="margin-bottom: 2em">
+                    <h5><a style="text-decoration:underline" href="{{ publication.link }}">{{ publication.title }}</a></h5>
+                    <h6>Abstract</h6>
+                    <div>
+                      {% markdown %}{{ publication.abstract }}{% endmarkdown %}
+                    </div>
+                    <h6>Authors</h6>
+                    {% for author in publication.authors %}
+                    {% assign nonmember = true %}
+                      {% for person in site.data.people %}
+                        {% if person.name == author %}
+                          <a href="{{ person.website }}">{{ author }}</a> &nbsp&nbsp
+                          {% assign nonmember = false %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if nonmember %}
+                        <span>{{ author }}</span> &nbsp&nbsp
+                      {% endif %}
+                    {% endfor %}
+                    <div><h6>Date</h6>{{ publication.date }}</div>
+                    <div><h6>Published</h6><span style="font-style: italic">{{ publication.publisher}}</span>, {{ publication.location }}</div>
+                    <div><a href="{{ publication.bibTexEntry }}"><h6 style="display: inline; padding-right: 1em">BibTex</h6></a></div>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ol>
+              </section>
+              <section>
+              <h2 class="major"><span><a name="theses">Theses</a></span></h2>
+              <ol>
+                {% for publication in site.data.publications %}
+                  {% if publication.type == "Thesis" %}
+                    <li style="margin-bottom: 2em">
+                    <h5><a style="text-decoration:underline" href="{{ publication.link }}">{{ publication.title }}</a></h5>
+                    <h6>Abstract</h6>
+                    <div>
+                      {% markdown %}{{ publication.abstract }}{% endmarkdown %}
+                    </div>
+                    <h6>Authors</h6>
+                    {% for author in publication.authors %}
+                      {% assign nonmember = true %}
+                      {% for person in site.data.people %}
+                        {% if person.name == author %}
+                          <a href="{{ person.website }}">{{ author }}</a> &nbsp&nbsp
+                          {% assign nonmember = false %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if nonmember %}
+                        <span>{{ author }}</span> &nbsp&nbsp
+                      {% endif %}
+                    {% endfor %}
+                    <div><h6>Date</h6>{{ publication.date }}</div>
+                    <div><h6>Published</h6><span style="font-style: italic">{{ publication.publisher}}</span>, {{ publication.location }}</div>
+                    <div><a href="{{ publication.bibTexEntry }}"><h6 style="display: inline; padding-right: 1em">BibTex</h6></a></div>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ol>
+              </section>
+              <section>
+              <h2 class="major"><span><a name="techreports">Technical Reports</a></span></h2>
+              <ol>
+                {% for publication in site.data.publications %}
+                  {% if publication.type == "Technical Report" %}
+                    <li style="margin-bottom: 2em">
+                    <h5><a style="text-decoration:underline" href="{{ publication.link }}">{{ publication.title }}</a></h5>
+                    <h6>Abstract</h6>
+                    <div>
+                      {% markdown %}{{ publication.abstract }}{% endmarkdown %}
+                    </div>
+                    <h6>Authors</h6>
+                    {% for author in publication.authors %}
+                      {% assign nonmember = true %}
+                      {% for person in site.data.people %}
+                        {% if person.name == author %}
+                          <a href="{{ person.website }}">{{ author }}</a> &nbsp&nbsp
+                          {% assign nonmember = false %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if nonmember %}
+                      <span>{{ author }}</span> &nbsp&nbsp
+                    {% endif %}
+                    {% endfor %}
+                    <div><h6>Date</h6>{{ publication.date }}</div>
+                    <div><h6>Published</h6><span style="font-style: italic">{{ publication.publisher}}</span>, {{ publication.location }}</div>
+                    <div><a href="{{ publication.bibTexEntry }}"><h6 style="display: inline; padding-right: 1em">BibTex</h6></a></div>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ol>
+              </section>
+              </article>
+              <!-- /Content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Main -->
+    {% include footer.html %}
+  </body>
+</html>

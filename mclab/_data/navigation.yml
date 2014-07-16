@@ -1,0 +1,17 @@
+- name: Home
+  link: /
+
+- name: Projects
+  link: /projects/ 
+
+- name: Publications
+  link: /publications/ 
+
+- name: People
+  link: /people/
+
+- name: FAQs 
+  link: /faq/
+
+- name: Contact Us
+  link: /contact/

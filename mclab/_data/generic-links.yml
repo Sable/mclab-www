@@ -1,0 +1,8 @@
+bugReportingSystem: "https://svn.sable.mcgill.ca/mclab-bugzilla" 
+projects: "/projects/"
+publications: "/publications/"
+people: "/people/"
+contactUs: "/contact/"
+peopleElephantImage: "/images/mclab_transparent_360.png"
+logo: "/images/mclab_360.png"
+mailGroup: "mailto:mclab-list@sable.mcgill.ca"

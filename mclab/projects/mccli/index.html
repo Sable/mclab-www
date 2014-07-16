@@ -1,0 +1,65 @@
+---
+project: "McCli" 
+descriptionmd: "projects/mccli.md"
+downloadmd: "projects/downloads/mccli.md"
+---
+<!DOCTYPE HTML>
+<html> 
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+		<!-- Main -->
+      <link rel="stylesheet" type="text/css" href="/css/nosidebar.css">
+			<div id="main-wrapper">
+				<div id="main" class="container">
+					<div class="row">
+						<div class="12u skel-cell-important">
+							<div class="content">
+								<!-- Content -->
+									<article class="is-page-content">
+                    <section>
+                      {% for project in site.data.projects %}
+                        {% if project.name == page.project %} 
+                        <h2 class="major" style="text-transform: none"><span>{{ project.name }}</span></h2>
+                        <div style="padding-left:2em">
+                          {% markdown %}{% include {{ page.descriptionmd }} %}{% endmarkdown %}
+                          <h3>People</h3>
+                            <ul style="margin-bottom: 1em; padding-left: 2em">
+                              {% for person in site.data.people %} 
+                                {% for pproject in person.projects %}
+                                  {% if pproject.name == page.project %} 
+                                  <li><a href="{{ person.link }}">{{ person.name }} </a></li>
+                                  {% endif %}
+                                {% endfor %}
+                              {% endfor %}
+                            </ul>
+                          <h3>Publications</h3>
+                            <ul style="list-style-stype: circle; padding-left: 2em">
+                              {% for p in project.publications %}
+                                {% for pub in site.data.publications %} 
+                                  {% if pub.title == p %} 
+                                  <li><span style="font-style:italic">{{ pub.type }}:&nbsp&nbsp</span><a href="{{ pub.link }}">{{ pub.title }}</a></li>
+                                  {% endif %}
+                                {% endfor %} 
+                              {% endfor %} 
+                            </ul>
+                          <h3>Software</h3>
+                          <div>
+                          {% markdown %}{% include {{page.downloadmd}} %}{% endmarkdown %}
+                          </div>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                    </section>
+									</article>
+								<!-- /Content -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Main -->
+    {% include footer.html %}
+	</body>
+</html>

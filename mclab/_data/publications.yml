@@ -1,0 +1,956 @@
+# Types : { Lecture, Tutorial, Paper, Thesis, Technical Report } 
+
+# Template for publication, for mutliple paragraphs in abstract, do two new lines
+# - title: ""
+#   link: "" 
+#   type: "" 
+#   abstract: ""
+#   authors: 
+#     - "" 
+#     - "" 
+#   date: ""
+#   publisher: "" 
+#   location: ""
+#   bibTexEntry: "" 
+
+#================================Lectures and Tutorials================================
+- title: "MiX10 Lecture At CASCON"
+  link: "http://webdocs.cs.ualberta.ca/~amaral/cascon/CDP13/#VinetKumar" 
+  type: "Lecture" 
+  abstract: "We had a chance to talk about MiX10 at the 12th Compiler Driven
+      Performance workshop at CASCON 2013. Get the slides here." 
+  authors: 
+    - "Vineet Kumar" 
+  date: "November 2013"
+  publisher: "CASCON 2013" 
+  location: "Markham, Canada"
+
+- title: "Leverhulme Lecture Series"
+  link: "http://www.sable.mcgill.ca/mclab/leverhulme.html" 
+  type: "Lecture" 
+  abstract: "During the academic year 2010-2011, Professor Hendren was on
+      sabbatical leave at the University of Oxford, during which time she held a
+      Leverhulme Visiting Professor position. As part of the position she presented a
+      series of three Leverhulme Lectures." 
+  authors: 
+    - "Laurie Hendren" 
+  date: "June - July 2011"
+  publisher: "University of Oxford" 
+  location: "Oxford, England"
+
+- title: "Introduction to McLab, a compiler and VM framework for MATLAB"
+  link: "http://www.sable.mcgill.ca/mclab/pldi_tutorial.html" 
+  type: "Tutorial" 
+  abstract: "The purpose of this tutorial is to introduce McLab, a new
+      publicly-available toolkit for analyzing and executing MATLAB programs. The
+      tutorial starts by introducing the MATLAB language and the particular
+      challenges the language presents for compiler developers. It then presents the
+      McLab front-end, which supports both standard MATLAB, prebuilt extensions such
+      as AspectMatlab, and the ability to create new language extensions. The middle
+      part of the tutorial focuses on the IRs and analysis framework along with some
+      example analyses. The final part of the tutorial presents the back-ends, with a
+      particular emphasis on the McVM JIT."
+  authors: 
+    - "Laurie Hendren" 
+    - "Rahul Garg"
+    - "Narudeen Lameed"
+  date: "June 2011"
+  publisher: "PLDI" 
+  location: "San Jose, California"
+
+#================================Papers================================
+- title: "Mc2FOR: A tool for automatically translating MATLAB to FORTRAN 95"
+  link: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.pdf" 
+  type: "Paper" 
+  abstract: "MATLAB is a dynamic numerical scripting language widely used by
+    scientists, engineers and students. While MATLAB's high-level syntax and
+    dynamic types make it ideal for prototyping, programmers often prefer using
+    high-performance static languages such as FORTRAN for their final distributable
+    code. Rather than rewriting the code by hand, our solution is to provide a tool
+    that automatically translates the original MATLAB program to an equivalent
+    FORTRAN program. There are several important challenges for automatically
+    translating MATLAB to FORTRAN, such as correctly estimating the static type
+    characteristics of all the variables in a MATLAB program, mapping MATLAB
+    built-in functions, and effectively mapping MATLAB constructs to equivalent
+    FORTRAN constructs.   
+
+ 
+    In this paper, we introduce Mc2FOR, a tool which automatically translates
+    MATLAB to FORTRAN. This tool consists of two major parts. The first part is an
+    interprocedural analysis component to estimate the static type characteristics,
+    such as the shape of arrays and the range of scalars, which are used to
+    generate variable declarations and to remove unnecessary array bounds checking
+    in the translated FORTRAN program. The second part is an extensible FORTRAN
+    code generation framework automatically transforming MATLAB constructs to
+    FORTRAN. This work has been implemented within the McLab framework, and we
+    demonstrate the performance of the translated FORTRAN code on a collection of
+    MATLAB benchmarks."
+  authors: 
+    - "Xu Li" 
+    - "Laurie Hendren" 
+  date: "February 3rd, 2014"
+  publisher: "WCRE 2014" 
+  location: "Antwerp, Belgium"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.bib"  
+
+- title: "Refactoring MATLAB"
+  link: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.pdf" 
+  type: "Paper" 
+  abstract: "MATLAB is a dynamic numerical scripting language widely used by
+      scientists, engineers and students. While MATLAB's high-level syntax and
+      dynamic types make it ideal for prototyping, programmers often prefer using
+      high-performance static languages such as FORTRAN for their final distributable
+      code. Rather than rewriting the code by hand, our solution is to provide a tool
+
+      that automatically translates the original MATLAB program to an equivalent
+      FORTRAN program. There are several important challenges for automatically
+      translating MATLAB to FORTRAN, such as correctly estimating the static type
+      characteristics of all the variables in a MATLAB program, mapping MATLAB
+      built-in functions, and effectively mapping MATLAB constructs to equivalent
+      FORTRAN constructs.
+
+      
+      In this paper, we introduce Mc2FOR, a tool which automatically translates
+      MATLAB to FORTRAN. This tool consists of two major parts. The first part is an
+      interprocedural analysis component to estimate the static type characteristics,
+      such as the shape of arrays and the range of scalars, which are used to
+      generate variable declarations and to remove unnecessary array bounds checking
+      in the translated FORTRAN program. The second part is an extensible FORTRAN
+      code generation framework automatically transforming MATLAB constructs to
+      FORTRAN. This work has been implemented within the McLab framework, and we
+      demonstrate the performance of the translated FORTRAN code on a collection of
+      MATLAB benchmarks."
+  authors: 
+    - "Soroush Radpour" 
+    - "Laurie Hendren" 
+  date: "March 2013"
+  publisher: "CC 2013" 
+  location: "Rome, Italy"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2013-2/cc13-radpour.bib" 
+
+- title: "A Modular Approach to On-Stack Replacement in LLVM"
+  link: "http://www.sable.mcgill.ca/publications/papers/2013-1/vee13-lameed.pdf" 
+  type: "Paper" 
+  abstract: "This paper presents a modular approach to implementing OSR for the
+      LLVM compiler infrastructure. This is an important step forward because LLVM is
+      gaining popular support, and adding the OSR capability allows compiler
+      developers to develop new dynamic techniques. In particular, it will enable
+      more sophisticated LLVM-based JIT compiler approaches. Indeed, other
+      compiler/VM developers can use our approach because it is a clean modular
+      addition to the standard LLVM distribution. Further, our approach is defined
+      completely at the LLVM-IR level and thus does not require any modifications to
+      the target code generation."
+  authors: 
+    - "Nurudeen Lameed" 
+    - "Laurie Hendren" 
+  date: "March 2013"
+  publisher: "VEE 2013" 
+  location: "Houston, Texas, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2013-1/vee13-lameed.bib" 
+
+- title: "Taming MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/papers/2012-1/oopsla12-dubrau.pdf" 
+  type: "Paper" 
+  abstract: "MATLAB is a dynamic scientific language used by scientists,
+      engineers and students worldwide. Although MATLAB is very suitable for rapid
+      prototyping and development, MATLAB users often want to convert their final
+      MATLAB programs to a static language such as FORTRAN. This paper presents an
+      extensible object-oriented toolkit for supporting the generation of static
+      programs from dynamic MATLAB programs. Our open source toolkit, called the
+      MATLAB Tamer, identifies a large tame subset of MATLAB, supports the generation
+      of a specialized Tame IR for that subset, provides a principled approach to
+      handling the large number of builtin MATLAB functions, and supports an
+      extensible interprocedural value analysis for estimating MATLAB types and call
+      graphs."
+  authors: 
+    - "Anton Dubrau" 
+    - "Laurie Hendren" 
+  date: "October 2012"
+  publisher: "OOPSLA 2012" 
+  location: "Tucson, Arizona, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2012-1/oopsla12-dubrau.bib" 
+
+- title: "Kind Analysis for MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/papers/2011-3/oopsla104-doherty.pdf" 
+  type: "Paper" 
+  abstract: "A fundamental problem in MATLAB is determining the kind of an
+      identifier. Does an identifier refer to a variable, a named function or a
+      prefix? Although this is a trivial problem for most programming languages, it
+      was not clear how to do this properly in MATLAB. Furthermore, there was no
+      simple explanation of kind analysis suitable for MATLAB programmers, nor a
+      publicly-available implementation suitable for compiler researchers.
+
+      This paper explains the required background of MATLAB, clarifies the kind
+      assignment program, and proposes some general guidelines for developing good
+      kind analyses. Based on these foundations we present our design and
+      implementation of a variety of kind analyses, including an approach that
+      matches the intended behaviour of modern MATLAB 7 and two potentially better
+      alternatives."
+  authors: 
+    - "Jesse Doherty" 
+    - "Soroush Radpour" 
+    - "Laurie Hendren" 
+  date: "October 2012"
+  publisher: "OOPSLA 2012" 
+  location: "Tucson, Arizona, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2012-1/oopsla12-dubrau.bib" 
+
+- title: "MetaLexer: A Modular Lexical Specification Language"
+  link: "http://www.sable.mcgill.ca/publications/papers/2011-4/pXaosd61r-hendren.pdf" 
+  type: "Paper" 
+  abstract: "Compiler toolkits make it possible to rapidly develop compilers
+      and translators for new programming languages. Although there exist elegant
+      toolkits for modular and extensible parsers, compiler developers must often
+      resort to ad-hoc solutions when extending or composing lexers. This paper
+      presents MetaLexer, a new modular lexical specification language and associated
+      tool.
+
+
+      Slides are available
+      [here](http://www.sable.mcgill.ca/publications/papers/2011-4/aosd.pptx)."
+  authors: 
+    - "Andrew Casey" 
+    - "Laurie Hendren" 
+  date: "October 2011"
+  publisher: "AOSD 2011" 
+  location: "Pernambuco, Brazil"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2011-4/pXaosd61r-hendren.bib" 
+
+- title: "Typing Aspects for MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/papers/2011-5/dsal11-hendren.pdf" 
+  type: "Paper" 
+  abstract: "This paper introduces the idea of adding typing aspects to MATLAB
+      programs. A typing aspect can be used to: (1) capture the run-time types of
+      variables, and (2) to check run-time types against either a declared type or
+      against a previously captured run-time type. Typings aspects can be deployed at
+      three different levels,they can be used: (1) solely as documentation, (2) to
+      log type errors or (3) to catch type errors at run-time.
+
+
+      Slides are available
+      [here](http://www.sable.mcgill.ca/publications/papers/2011-5/dsall11-hendren.pptx)."
+  authors: 
+    - "Laurie Hendren" 
+  date: "October 2011"
+  publisher: "DSAL 2011" 
+  location: "Pernambuco, Brazi"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2011-5/dsal11-hendren.bib" 
+
+- title: "Staged Static Techniques to Efficiently Implement Array Copy Semantics in a MATLAB JIT Compiler"
+  link: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2011.pdf" 
+  type: "Paper" 
+  abstract: "Several aspects of the MATLAB language such as dynamic loading and
+      typing, safe updates, and copy semantics for arrays contribute to its appeal to
+      the scientific communities, but at the same time provide many challenges to the
+      compiler and virtual machine. One such problem, minimizing the number of copies
+      and copy checks for Matlab programs has not received much attention. The
+      classical approach to minimizing the number of copies (i.e., reference
+      counting) does not work in a garbage-collected virtual machine. This paper
+      presents a staged static analysis approach that does not require reference
+      counts, thus enabling a garbage-collected virtual machine."
+  authors: 
+    - "Nurudeen Lameed" 
+    - "Laurie Hendren" 
+  date: "March 2011"
+  publisher: "Compiler Construction (CC) 2011" 
+  location: "Saarbrüken, Germany"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2011.bib" 
+
+- title: "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
+  link: "http://www.sable.mcgill.ca/mclab/mcir/lcpc2010.pdf" 
+  type: "Paper" 
+  abstract: "This paper presents a new framework,McFLAT,which uses
+      profile-based training runs to determine likely loop-bounds ranges for which
+      specialized versions of the loops may be generated. The main idea is to collect
+      information about observed loop bounds and hot loops using training data which
+      is then used to heuristically decide upon which loops and which ranges are
+      worth specializing using a variety of loop transformations."
+  authors: 
+    - "Amina Aslam" 
+    - "Laurie Hendren" 
+  date: "October 2010"
+  publisher: "LCPC 2010" 
+  location: "Houston, Texas, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcir/lcpc2010.bib" 
+
+- title: "McLab: An extensible compiler toolkit for MATLAB and related languages"
+  link: "http://www.sable.mcgill.ca/mclab/publications/c3s2e10.pdf" 
+  type: "Paper" 
+  abstract: "MATLAB is a popular language for scientific computation.
+      Effectively compiling MATLAB presents many challenges due to the dynamic nature
+      of the language. We present McLab, an extensible compiler toolkit for the
+      MATLAB and related languages. McLab aims to provide high performance execution
+      of MATLAB on modern architectures while bringing modern programming concepts
+      such as aspect-oriented programming and other extensions to MATLAB. McLab
+      consists of several components. The first component is an extensible frontend
+      to parse and analyze MATLAB as well as extensions to MATLAB. The second
+      component, called McFor, is a compiler to translate a static subset of MATLAB
+      to FORTRAN. The third component, McVM, is a virtual machine including a JIT
+      compiler to execute MATLAB code. Finally we also provide language extensions
+      such as AspectMatlab. We present the current state of the implementation of
+      McLab and describe ongoing work and future directions of the project."
+  authors: 
+    - "Andrew Casey" 
+    - "Jun Li" 
+    - "Jesse Doherty" 
+    - "Maxime Chevalier-Boisvert" 
+    - "Toheed Aslam" 
+    - "Anton Dubrau" 
+    - "Nurudeen Lameed" 
+    - "Amina Aslam" 
+    - "Rahul Garg" 
+    - "Soroush Radpour" 
+    - "Olivier Savary Belanger" 
+    - "Laurie Hendren" 
+    - "Clark Verbrugge" 
+  date: "May 2010"
+  publisher: "C3S2E '10" 
+  location: "Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/publications/c3s2e10.bib" 
+
+- title: "Optimizing Matlab through Just-In-Time Specialization"
+  link: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2010.pdf" 
+  type: "Paper" 
+  abstract: "Scientists are increasingly using dynamic programming languages
+      like Matlab for prototyping and implementation. Effectively compiling Matlab
+      raises many challenges due to the dynamic and complex nature of Matlab types.
+      This paper presents a new JIT-based approach which specializes and optimizes
+      functions on-the-fly based on the current types of function arguments."
+  authors: 
+    - "Maxime Chevalier-Boisvert" 
+    - "Laurie Hendren" 
+    - "Clark Verbrugge"
+  date: "March 2010"
+  publisher: "Compiler Construction (CC) 2010" 
+  location: "Paphos, Cyprus"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2010.bib" 
+
+- title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
+  link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/paper.pdf" 
+  type: "Paper" 
+  abstract: "This paper introduces a new aspect-oriented programming language,
+      AspectMatlab. AspectMatlab introduces key aspect-oriented features in a way
+      that is both accessible to scientists and where the aspect-oriented features
+      concentrate on array accesses and loops, the core computation elements in
+      scientific programs. The paper reports on the language design of AspectMatlab,
+      the amc compiler implementation and related optimizations, and also provides an
+      overview of use cases that are specific to scientific programming."
+  authors: 
+    - "Toheed Aslam" 
+    - "Jesse Doherty" 
+    - "Anton Dubrau" 
+    - "Laurie Hendren" 
+  date: "March 2010"
+  publisher: "AOSD 2010" 
+  location: "Rennes and Saint-Malo , France"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/paper.bib" 
+
+#================================Theses================================
+- title: "MC2FOR: A MATLAB TO FORTRAN 95 COMPILER"
+  link: "http://www.sable.mcgill.ca/mclab/mc2for/sable-thesis-2014-master-xuli.pdf" 
+  type: "Thesis" 
+  abstract: "MATLAB is a dynamic numerical scripting language widely used by
+    scientists, engineers and students. While MATLAB's high-level syntax and
+    dynamic types make it ideal for fast prototyping, programmers often prefer
+    using high-performance static languages such as FORTRAN for their final
+    distribution. Rather than rewriting the code by hand, our solution is to
+    provide a source-to-source compiler that translates the original MATLAB program
+    to an equivalent MATLAB program.
+
+
+    In this thesis, we introduce MC2FOR, a source-to-source compiler which
+    transforms MATLAB to FORTRAN and handles several important challenges during
+    the transformation, such as efficiently estimating the static type
+    characteristics of all the variables in a given MATLAB program, mapping
+    numerous MATLAB built-in functions to FORTRAN, and correctly supporting some
+    MATLAB dynamic features in the generated FORTRAN code.
+
+
+    This compiler consists of two major parts. The first part is an interprocedural
+    analysis component to estimate the static type characteristics, such as the
+    shapes of the arrays and the ranges of the scalars, which are used to generate
+    variable declarations and to remove unnecessary array bounds checking in the
+    translated FORTRAN program. The second part is an extensible FORTRAN code
+    generation framework automatically transforming MATLAB constructs to equivalent
+    FORTRAN constructs.
+
+
+    This work has been implemented within the McLab framework, and we evaluated the
+    performance of the Mc2For compiler on a collection of 20 MATLAB benchmarks.
+    For most of the benchmarks, the generated FORTRAN program runs 1.2 to 337 times
+    faster than the original MATLAB program, and in terms of physical lines of
+    code, typically grows only by a factor of around 2. These experimental results
+    show that the code generated by Mc2For performs better on average, at the cost
+    of only a modest increase in code size."
+  authors: 
+    - "Xu Li" 
+  date: "April 2014"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mc2for/sable-thesis-2014-master-xuli.bib" 
+
+- title: "MiX10: Compiling MATLAB to X10 for high performance"
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-vkumar/thesis.pdf" 
+  type: "Thesis" 
+  abstract: "MATLAB is a popular dynamic array-based language commonly used by
+      students, scientists and engineers who appreciate the interactive development
+      style, the rich set of array operators, the extensive builtin library, and the
+      fact that they do not have to declare static types. Even though these users
+      like to program in MATLAB, their computations are often very compute-intensive
+      and are better suited for emerging high performance computing systems. This
+      thesis reports on MIX10, a source-to-source compiler that automatically
+      translates MATLAB programs to X10, a language designed for “Performance and
+      Productivity at Scale\"; thus, helping scientific programmers make better use
+      of high performance computing systems. There is a large semantic gap between
+      the array-based dynamically-typed nature of MATLAB and the object-oriented,
+      statically-typed, and high-level array abstractions of X10. This thesis
+      addresses the major challenges that must be overcome to produce sequential X10
+      code that is competitive with state-of-the-art static compilers for MATLAB
+      which target more conventional imperative languages such as C and Fortran.
+      Given that efficient basis, the thesis then provides a translation for the
+      MATLAB parfor construct that leverages the powerful concurrency constructs in
+      X10. The MIX10 compiler has been implemented using the McLab compiler tools, is
+      open source, and is available both for compiler researchers and end-user MATLAB
+      programmers. We have used the implementation to perform many empirical
+      measurements on a set of 17 MATLAB benchmarks. We show that our best
+      MIX10-generated code is significantly faster than the de facto Mathworks’
+      MATLAB system, and that our results are competitive with state-of-the-art
+      static compilers that target C and Fortran. We also show the importance of
+      finding the correct approach to representing the arrays in X10, and the
+      necessity of an IntegerOkay analysis that determines which double variables can
+      be safely represented as integers. Finally, we show that our X10-based handling
+      of the MATLAB parfor greatly outperforms the de facto MATLAB implementation."
+  authors: 
+    - "Vineet Kumar" 
+  date: "April 2014"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-vkumar/thesis.bib" 
+
+- title: "DYNAMIC COMPILER OPTIMIZATION TECHNIQUES FOR MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/thesis/phd-nlameed/thesis-phd-2013-nlameed.pdf" 
+  type: "Thesis" 
+  abstract: "MATLAB has gained widespread acceptance among engineers and
+      scientists. Several aspects of the language such as dynamic loading and typing,
+      safe updates, copy semantics for arrays, and support for higher-order functions
+      contribute to its appeal, but at the same time provide many challenges to the
+      compiler and virtual machine. MATLAB is a dynamic language. Traditional
+      implementations of the language use interpreters and have been found to be too
+      slow for large computations. More recently, researchers and software developers
+      have been developing JIT compilers for MATLAB and other dynamic languages. This
+      thesis is about the development of new compiler analyses and transformations
+      for a MATLAB JIT compiler, McJIT, which is based on the LLVM JIT compiler
+      toolkit.
+
+      The new contributions include a collection of novel analyses for optimizing
+      copying of arrays, which are performed when a function is first compiled. We
+      designed and imple- mented four analyses to support an efficient implementation
+      of array copy semantics in a MATLAB JIT compiler. Experimental results show
+      that copy optimization is essential for performance improvement in a compiler
+      for the MATLAB language.
+
+
+      We also developed a variety of new dynamic analyses and code transformations
+      for optimizing running code on-the-fly according to the current conditions of
+      the runtime en- vironment. LLVM does not currently support on-the-fly code
+      transformation. So, we first developed a new on-stack replacement approach for
+      LLVM. This capability allows the run- time stack to be modified during the
+      execution of a function, thus enabling a continuation of the execution at a
+      higher optimization level. We then used the on-stack replacement implementation
+      to support selective inlining of function calls in long-running loops. Our
+      experimental results show that function calls in long-running loops can result
+      in high run- time overhead, and that selective dynamic inlining can be used to
+      drastically reduce this overhead.
+
+
+      The built-in function feval is an important MATLAB feature for certain classes
+      of numerical programs and solvers which benefit from having functions as
+      parameters. Pro- grammers may pass a function name or function handle to the
+      solver and then the solver uses feval to indirectly call the function. In this
+      thesis, we show that although feval provides an acceptable abstraction
+      mechanism for these types of applications, there are significant performance
+      overheads for function calls via feval, in both MATLAB inter- preters and JITs.
+      The thesis then proposes, implements and compares two on-the-fly mech- anisms
+      for specialization of feval calls. The first approach uses our on-stack
+      replacement technology. The second approach specializes calls of functions with
+      feval using a combi- nation of runtime input argument types and values.
+      Experimental results on seven numerical solvers show that the techniques
+      provide good performance improvements.
+
+
+      The implementation of all the analyses and code transformations presented in
+      this thesis has been done within the McLab virtual machine, McVM, and is
+      available to the public as open source software."
+  authors: 
+    - "Nurudeen Abiodum Lameed" 
+  date: "April 2013"
+  publisher: "Ph.D Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/phd-nlameed/thesis-phd-2013-nlameed.bib" 
+
+- title: "Understanding and Refactoring the MATLAB language"
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-sradpo/sradpothesis.pdf" 
+  type: "Thesis" 
+  abstract: "MATLAB is a very popular dynamic \"scripting\" language for
+      numerical computations used by scientists, engineers and students world-wide.
+      MATLAB programs are often developed incrementally using a mixture of MATLAB
+      scripts and functions and frequently build upon existing code which may use
+      outdated features. This results in programs that could benefit from
+      refactoring, especially if the code will be reused and/or distributed. Despite
+      the need for refactoring there appear to be no MATLAB refactoring tools
+      available. Correct refactoring of MATLAB is quite challenging because of its
+      non-standard rules for binding identifiers. Even simple refactorings are
+      non-trivial. Compiler writers and software engineers are generally not familiar
+      with MATLAB and how it is used so the problem has been left untouched so far.
+      This thesis has two main contributions. The first is McBench, a tool that helps
+      compiler writers understand the language better. In order to have a systematic
+      approach to the problem, we developed this tool to give us some insight about
+      how programmers use MATLAB. The second contribution is a suite of
+      semantic-preserving refactoring for MATLAB functions and scripts including:
+      function and script inlining, converting scripts to functions, extracting new
+      functions, and converting dynamic feval calls to static function calls. These
+      refactorings have been implemented using the McLAB compiler framework, and an
+      evaluation is given on a large set of MATLAB programs which demonstrates the
+      effectiveness of our approach."
+  authors: 
+    - "Soroush Radpour " 
+  date: "August 2012"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-sradpo/sradpothesis.bib" 
+
+- title: "Taming MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-adubra/tamerthesis.pdf" 
+  type: "Thesis" 
+  abstract: "This thesis presents an extensible object-oriented toolkit to help
+      facilitate the generation of static programs from dynamic MATLAB programs. Our
+      open source toolkit, called the MATLAB Tamer, targets a large subset of MATLAB.
+      Given information about the entry point of the program, the MATLAB Tamer builds
+      a complete callgraph, transforms every function into a reduced intermediate
+      representation, and provides typing information to aid the generation of static
+      code."
+  authors: 
+    - "Anton Dubrau" 
+  date: "April 2012"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-adubra/tamerthesis.bib" 
+
+- title: "MCSAF: AN EXTENSIBLE STATIC ANALYSIS FRAMEWORK FOR THE MATLAB LANGUAGE"
+  link: "http://www.sable.mcgill.ca/mclab/mcsaf/mcsafthesis.pdf" 
+  type: "Thesis" 
+  abstract: "MATLAB is a popular language for scientific and numerical
+      programming. Despite its popularity, there are few active projects providing
+      open tools for MATLAB related compiler research. This thesis provides the McLAB
+      Static Analysis Framework, McSAF, the goal of which is to simplify the
+      development of new compiler tools for MATLAB"
+  authors: 
+    - "Jesse Doherty" 
+  date: "August 2011"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcsaf/mcsafthesis.bib" 
+
+- title: "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
+  link: "http://www.sable.mcgill.ca/mclab/mcir/mcflatthesis.pdf" 
+  type: "Thesis"
+  abstract: "This thesis presents a new framework, McFLAT, which uses profile-based
+      training runs to determine likely loop-bounds ranges for which specialized
+      versions of the loops may be generated. The main idea is to collect information
+      about observed loop bounds and hot loops using training data which is then used
+      to heuristically decide upon which loops and which ranges are worth
+      specializing using a variety of loop transformations." 
+  authors: 
+    - "Amina Aslam" 
+  date: "August 2010"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcir/mcflatthesis.bib" 
+
+- title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
+  link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/thesis.pdf" 
+  type: "Thesis" 
+  abstract: "This is the first thesis introducing AspectMatlab."
+  authors: 
+    - "Toheed Aslam " 
+  date: "February 2010"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/thesis.bib" 
+
+- title: "McFOR: A MATLAB to FORTRAN 95 Compiler"
+  link: "http://www.sable.mcgill.ca/mclab/mcfor/mcforthesis.pdf" 
+  type: "Thesis" 
+  abstract: "The high-level array programming language MATLAB is widely used
+      for prototyping algorithms and applications of scientific computations.
+      However, its dynamically typed nature, which means that MATLAB programs are
+      usually executed via an interpreter, leads to poor performance. An alternative
+      approach would be converting MATLAB programs to equivalent Fortran 95 programs.
+      The resulting programs could be compiled using existing high-performance
+      Fortran compilers and thus could provide better performance. This thesis
+      introduces McFOR, a MATLAB to FORTRAN 95 Compiler."
+  authors: 
+    - "Jun Li" 
+  date: "August 2009"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcfor/mcforthesis.bib" 
+
+- title: "McVM: an Optimizing Virtual Machine for the MATLAB Programming Language"
+  link: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmthesis.pdf" 
+  type: "Thesis" 
+  abstract: "In recent years, there has been an increase in the popularity of
+      dynamic languages such as Python, Ruby, PHP, JavaScript and MATLAB. Programmers
+      appreciate the productivity gains and ease of use associated with such
+      languages. However, most of them still run in virtual machines which provide no
+      Just-In-Time (JIT) compilation support, and thus perform relatively poorly when
+      compared to their statically compiled counterparts. While the reference MATLAB
+      implementation does include a built-in compiler, this implementation is not
+      open sourced and little is known abouts its internal workings. TheMcVMproject
+      has focused on the design and implementation of an optimizing virtual machine
+      for a subset of the MATLAB programming language."
+  authors: 
+    - "Maxime Chevalier-Boisvert " 
+  date: "August 2009"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmthesis.bib" 
+
+- title: "The Metalexer Lexer Specification Language"
+  link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/metalexerthesis.pdf" 
+  type: "Thesis" 
+  abstract: "Compiler toolkits make it possible to rapidly develop compilers
+      and translators for new programming languages. Recently, toolkit writers have
+      focused on supporting extensible languages and systems that mix the syntaxes of
+      multiple programming languages. However, this work has not been extended down
+      to the lexical analysis level. As a result, users of these toolkits have to
+      rely on ad-hoc solutions when they extend or mix syntaxes. This thesis presents
+      MetaLexer, a new lexical specification language that remedies this deficiency."
+  authors: 
+    - "Andrew Michael Casey" 
+  date: "June 2009"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/metalexerthesis.bib" 
+
+#================================Technical Reports================================
+- title: "Using JavaScript and WebCL for Numerical Computations: A Comparative Study of Native and Web Technologies"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2014-6/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "From its modest beginnings as a tool to validate forms, JavaScript
+      is now an industrial-strength language used to power online applications such
+      as spreadsheets, IDEs, image editors and even 3D games. Since all modern web
+      browsers support JavaScript, it provides a medium that is both easy to
+      distribute for developers and easy to access for users. This paper provides
+      empirical data to answer the question: Is JavaScript suitable for numerical
+      computations? By measuring and comparing the runtime performance of benchmarks
+      representative of a wide variety of scientific applications, we show that for
+      sequential JavaScript is within a factor of 2 of native code. Parallel code
+      using WebCL shows speed improvements of up to 2.28 over JavaScript for the
+      majority of the benchmarks."
+  authors: 
+    - "Faiz Khan" 
+    - "Vincent Foley-Bourgon" 
+    - "Sujay Kathrotia"
+    - "Erick Lavoie"
+    - "Laurie Hendren"
+  date: "June 2014"
+  publisher: "McGill University" 
+  location: "Montreal, Canada"
+  bibTexEntry: "" 
+
+- title: "MiX10: Compiling MATLAB for High Performance Computing via X10"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "Matlab is a popular dynamic array-based language commonly used by
+      students, scientists and engineers who appreciate the interactive development
+      style, the rich set of array operators, the extensive builtin library, and the
+      fact that they do not have to declare static types. Even though these users
+      like to program in Matlab, their computations are often very compute- intensive
+      and are better suited for emerging high performance computing systems. This
+      paper reports on MiX10, a source-to-source compiler that automatically
+      translates Matlab programs to X10, a language designed for “Performance and
+      Productivity at Scale”; thus, helping scientific programmers make better use of
+      high performance computing systems. There is a large semantic gap between the
+      array-based dynamically-typed nature of Matlab and the object-oriented,
+      statically-typed, and high-level array abstractions of X10. This paper
+      addresses the major challenges that must be overcome to produce sequential X10
+      code that is competitive with state-of-the-art static compilers for Matlab
+      which target more conventional imperative languages such as C and Fortran.
+      Given that efficient basis, the paper then provides a translation for the
+      Matlab parfor construct that leverages the powerful concurrency constructs in
+      X10. The MiX10 compiler has been implemented using the McLab compiler tools, is
+      open source, and is available both for compiler researchers and end-user Matlab
+      programmers. We have used the implementation to perform many empirical
+      measurements on a set of 17 Matlab benchmarks. We show that our best
+      MiX10-generated code is significantly faster than the de facto Mathworks’
+      Matlab system, and that our results are competitive with state-of-the-art
+      static compilers that target C and Fortran. We also show the importance of
+      finding the correct approach to representing the arrays in X10, and the
+      necessity of an IntegerOkay analysis that determines which double variables can
+      be safely represented as integers. Finally, we show that our X10-based handling
+      of the Matlab parfor greatly outperforms the de facto Matlab implementation."
+  authors: 
+    - "Vineet Kumar" 
+    - "Laurie Hendren" 
+  date: "March 2014"
+  publisher: "Sable Technical Report (2014-1)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.bib" 
+
+- title: "Velociraptor: A compiler toolkit for numerical programs targeting CPUs and GPUs"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "Developing compilers that allow scientific programmers to use
+      multicores and GPUs is of increasing interest, however building such compilers
+      requires considerable effort. We present Velociraptor: a portable compiler
+      toolkit that can be used to easily build compilers for numerical programs
+      targeting multicores and GPUs. Velociraptor provides a new high-level IR called
+      VRIR which has been specifically designed for numeric computations, with rich
+      support for arrays, plus support for high-level parallel and accelerator
+      constructs. A compiler developer uses Velociraptor by generating VRIR for key
+      parts of an input program. Velociraptor does the rest of the work by optimizing
+      the VRIR code, and generating LLVM for CPUs and OpenCL for GPUs. Velociraptor
+      also provides a smart runtime system to manage GPU resources and task dispatch.
+      To demonstrate Velociraptor in action, we present two case studies: a
+      proof-of-concept Python compiler targeting CPUs and GPUs, and a GPU extension
+      for a MATLAB JIT."
+  authors: 
+    - "Rahul Garg" 
+    - "Laurie Hendren" 
+  date: "November 2013"
+  publisher: "Sable Technical Report (2013-5)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.bib" 
+
+- title: "Mc2For: a tool for automatically transforming MATLAB to Fortran 95"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2013-4/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "MATLAB is a dynamic numerical scripting language widely used by
+      scientists, engineers and students. While MATLAB's high-level syntax and
+      dynamic types makes it ideal for prototyping, programmers often prefer using
+      high-performance static programming languages such as Fortran for their final
+      distributable code. Rather than requiring programmers to rewrite their code by
+      hand, our solution is to provide a tool that automatically translates the
+      original MATLAB program to produce an equivalent Fortran program. There are
+      several important challenges for automatically translating MATLAB to Fortran,
+      such as correctly estimating the static type characteristics of all the
+      variables in a MATLAB program, mapping MATLAB built-in functions, and
+      effectively mapping MATLAB constructs to Fortran constructs. In this paper, we
+      introduce Mc2For, a tool which automatically translates MATLAB to Fortran. This
+      tool consists of two major parts. The first part is an interprocedural analysis
+      component to estimate the static type characteristics, such as array shape and
+      the range value information, which are used to generate variable declarations
+      in the translated Fortran program. The second part is an extensible Fortran
+      code generation framework to automatically transform MATLAB constructs to
+      corresponding Fortran constructs. This work has been implemented within the
+      McLab framework, and we demonstrate the performance of the translated Fortran
+      code for a collection of MATLAB benchmark programs."
+  authors: 
+    - "Xu Li" 
+    - "Laurie Hendren" 
+  date: "October 2013"
+  publisher: "Sable Technical Report (2013-04)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2013-4/techrep.bib" 
+
+- title: "MiX10:Compiling MATLAB for High Performance Computing via X10"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2013-3/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "MATLAB is a popular dynamic array-based language commonly used by
+      students, scientists and engineers, who appreciate the interactive development
+      style, the rich set of array operators, the extensive builtin library, and the
+      fact that they do not have to declare static types. Even though these users
+      like to program in MATLAB, their computations are often very compute-intensive
+      and are better suited for the emerging high performance computing systems. Our
+      solution is MiX10, a source to source compiler that automatically translates
+      MATLAB programs to X10, a language designed for \"Performance and Productivity
+      at Scale\"; thus, helping scientific programmers make better use of high
+      performance computing systems. This paper addresses two major challenges in
+      compiling MATLAB to X10: (1) efficiently transforming dynamically-typed MATLAB
+      arrays to the best high-level, statically-typed array representation in X10;
+      and (2) effectively exposing concurrency in MATLAB and generating efficient
+      concurrent code in X10. We have implemented the techniques presented in this
+      paper and provide an empirical study on a set of benchmarks, examining both the
+      efficiency of the generated sequential X10 code and speedups for the concurrent
+      versions."
+  authors: 
+    - "Vineet Kumar" 
+    - "Laurie Hendren" 
+  date: "October 2013"
+  publisher: "Sable Technical Report (2013-03)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2013-3/techrep.bib" 
+
+- title: "First steps to compiling MATLAB to X10"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2013-2/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "MATLAB is a popular dynamic array-based language commonly used by
+      students, scientists and engineers, who appreciate the interactive development
+      style, the rich set of array operators, the extensive builtin library, and the
+      fact that they do not have to declare static types. Even though these users
+      like to program in MATLAB, their computations are often very compute-intensive
+      and are potentially very good applications for high-performance languages such
+      as X10. To provide a bridge between MATLAB and X10, we are developing MiX10, a
+      source-to-source compiler that translates MATLAB to X10. This paper provides an
+      overview of the initial design of the MiX10 compiler, presents a template-based
+      specialization approach to compiling the builtin MATLAB operators, and provides
+      translation rules for the key sequential MATLAB constructs with a focus on
+      those which are challenging to convert to semantically-equivalent X10. An
+      initial core compiler has been implemented, and preliminary results are
+      provided."
+  authors: 
+    - "Vineet Kumar" 
+    - "Laurie Hendren" 
+  date: "May 2013"
+  publisher: "Sable Technical Report (2013-02)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2013-2/techrep.bib" 
+
+- title: "Optimizing MATLAB feval with Dynamic Techniques"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2012-6/lameed-12-feval-TR.pdf" 
+  type: "Technical Report" 
+  abstract: "MATLAB is a popular dynamically-typed array-based language. The
+      built-in function feval is an important MATLAB feature for certain classes of
+      numerical programs and solvers which benefit from having functions as
+      parameters. Programmers may pass a function name or function handle to the
+      solver and then the solver uses feval to indirectly call the function. In this
+      paper, we show that although feval provides an acceptable abstraction mechanism
+      for these types of applications, there are significant performance overheads
+      for function calls via feval, in both MATLAB interpreters and JITs. The paper
+      then proposes, implements and compares two on-the-fly mechanisms for
+      specialization of feval calls. The first approach specializes calls of
+      functions with feval using a combination of runtime input argument types and
+      values. The second approach uses on-stack replacement technology, as supported
+      by McVM/McOSR. Experimental results on seven numerical solvers show that the
+      techniques provide good performance improvements."
+  authors: 
+    - "Nurudeen Lameed" 
+    - "Laurie Hendren" 
+  date: "March 2013"
+  publisher: "Sable Technical Report (2012-06-rev1)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2012-6/lameed-12-feval-TR.bib" 
+
+- title: "A compiler toolkit for array-based languages targeting	CPU/GPU hybrid systems"
+  link: "" 
+  type: "Technical Report" 
+  abstract: "Superceded by newer report (2013-5, see above)."
+  authors: 
+    - "Rahul Garg" 
+    - "Laurie Hendren " 
+  date: "November 2012"
+  publisher: "" 
+  location: ""
+  bibTexEntry: "" 
+
+- title: "A Modular Approach to On-Stack Replacement in LLVM"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2012-1/lameed-12-osr-TR.pdf" 
+  type: "Technical Report" 
+  abstract: "In this report, we present a modular approach to implementing
+      on-stack replacement that can be used by any system that targets the LLVM SSA
+      intermediate representation, and we demonstrate the approach by using it to
+      support dynamic inlining in McVM. McVM is a virtual machine for MATLAB which
+      uses a LLVM-based JIT compiler. MATLAB is a popular dynamic language for
+      scientific and engineering applications which typically manipulate large
+      matrices and often contain long-running loops, and is thus an ideal target for
+      dynamic JIT compilation and OSRs."
+  authors: 
+    - "Nurudeen Lameed" 
+    - "Laurie Hendren" 
+  date: "April 2012"
+  publisher: "Sable Technical Report (2012-01-rev1)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2012-1/lameed-12-osr-TR.bib" 
+
+- title: "Refactoring MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2011-2/radpour-11-refactoring-TR.pdf" 
+  type: "Technical Report" 
+  abstract: "This report presents the important challenges of refactoring
+      MATLAB along with automated techniques to handle a collection of refactorings
+      for MATLAB functions and scripts including: function and script inlining,
+      converting scripts to functions, and converting dynamic feval calls to static
+      function calls. The refactorings have been implemented using the MATLAB
+      compiler framework, and an evaluation is given on a large set of MATLAB
+      benchmarks which demonstrates the effectiveness of our approach."
+  authors: 
+    - "Soroush Radpour" 
+    - "Laurie Hendren" 
+  date: "October 2011"
+  publisher: "Sable Technical Report (2011-02)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2011-2/radpour-11-refactoring-TR.bib" 
+
+- title: "McSAF: A Static Analysis Framework for MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2011-1/doherty-11-framework-TR.pdf" 
+  type: "Technical Report" 
+  abstract: "MATLAB is an extremely popular programming language used by
+      scientists, engineers, researchers and students world-wide. Despite its
+      popularity, it has received very little attention from compiler researchers.
+      This report introduces McSAF, an open-source static analysis framework which is
+      intended to enable more compiler research for MATLAB and extensions of MATLAB.
+      The framework is based on an intermediate representation (IR) called McLAST,
+      which has been designed to capture all the key features of MATLAB, while at the
+      same time as being simple for program analysis. The paper describes both the IR
+      and the procedure for creating the IR from the higher-level AST. The analysis
+      framework itself provides visitor-based traversals including fixed-point-based
+      traversals to support both forwards and backwards analyses. McSAF has been
+      implemented as part of the McLAB project, and the framework has already been
+      used for a variety of analyses, both for MATLAB and the AspectMATLAB
+      extension."
+  authors: 
+    - "Jesse Doherty" 
+    - "Laurie Hendren" 
+  date: "December 2011"
+  publisher: "Sable Technical Report (2011-01)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2011-1/doherty-11-framework-TR.bib" 
+
+- title: "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
+  link: "http://www.sable.mcgill.ca/mclab/mcir/sable-2010-06.pdf" 
+  type: "Technical Report" 
+  abstract: "This technical report presents a new framework, McFLAT, which uses
+      profile-based training runs to determine likely loop bounds ranges for which
+      specialized versions of the loops may be generated. The main idea is to collect
+      information about observed loop bounds and hot loops using training data which
+      is then used to heuristically decide upon which loops and which ranges are
+      worth specializing using a variety of loop transformations."
+  authors: 
+    - "Amina Aslam" 
+    - "Laurie Hendren" 
+  date: "July 2010"
+  publisher: "Sable Technical Report (2010-06)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcir/sable-2010-06.bib" 
+
+- title: "Staged Static Techniques to Efficiently Implement Array Copy Semantics in a MATLAB JIT Compiler"
+  link: "http://www.sable.mcgill.ca/mclab/mcvm/cpAnalysis/sable-2010-05.pdf" 
+  type: "Technical Report" 
+  abstract: "Several aspects of the MATLAB language such as dynamic loading and
+      typing, safe updates, and copy semantics for arrays contribute to its appeal to
+      the scientific communities, but at the same time provide many challenges to the
+      compiler and virtual machine. One such problem, minimizing the number of copies
+      and copy checks for Matlab programs has not received much attention. The
+      classical approach to minimizing the number of copies (i.e., reference
+      counting) does not work in a garbage-collected virtual machine. This technical
+      report presents a staged static analysis approach that does not require
+      reference counts, thus enabling a garbage-collected virtual machine."
+  authors: 
+    - "Nurudeen Lameed" 
+    - "Laurie Hendren" 
+  date: "July 2010"
+  publisher: "Sable Technical Report (2010-05)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcvm/cpAnalysis/sable-2010-05.bib" 
+
+- title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
+  link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "This technical report is an extended version of the AOSD 2010
+paper above."
+  authors: 
+    - "Toheed Aslam " 
+  date: "January 2010"
+  publisher: "Sable Technical Report (2009-03)" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/techrep.bib" 

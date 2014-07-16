@@ -1,0 +1,36 @@
+To modify publications, open the _data/publications.yml file in the site root folder.
+
+The following template should be used for adding a new person: 
+
+- title: ""
+  link: "" 
+  type: "" 
+  abstract: ""
+  authors: 
+    - "" 
+    - "" 
+  date: ""
+  publisher: "" 
+  location: ""
+  bibTexEntry: "" 
+
+The spacing matters since yaml is strict on it. None of the information is
+strictly required except the type, however, all the entries must be there in the entry.
+The list of types is available on the top of the yaml file. Its good to have as much as possible.
+
+Author names should match the ones on the _data/people.yml file. If not, no link
+to their page will be displayed. 
+
+Publisher is either the conference or journal name for papers. It is either 
+"Master's Thesis" or "PhD Thesis" for theses. It is the Sable Technical Report
+id for Tech Reports. Finally its the location of presentation for the lectures
+and tutorials. 
+
+Abstract gets processed as markdown but it seems to fight against the 
+yaml processor. To break paragraphs, use two hard breaks (press enter 3 times). 
+
+If a new publication is being added and it is associated with a project then please
+add the name of the publication to the project. 
+
+**NOTE: Please watch out for extra spaces in names, it will messup the interlinking
+between files. Also please escape double quotes with backslash (e.g. \").

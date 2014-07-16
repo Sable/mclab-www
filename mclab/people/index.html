@@ -1,0 +1,455 @@
+---
+---
+<!DOCTYPE HTML>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+		<!-- Main -->
+			<div id="main-wrapper">
+				<div id="main" class="container">
+					<div class="row">
+						<div class="12u skel-cell-important">
+							<div class="content">
+								<!-- Content -->
+									<article class="is-page-content">
+										<header>
+											<h2 style="text-transform:none; text-align:center">Mclab Members</h2>
+										</header>
+                    <span><a style="text-decoration:none" href="#professors">Professors</a> | </span>
+                    <span><a style="text-decoration:none"href="#postdocs">Postdocs</a> | </span>
+                    <span><a style="text-decoration:none"href="#phds">PhDs</a> | </span>
+                    <span><a style="text-decoration:none"href="#masters">Masters</a> | </span>
+                    <span><a style="text-decoration:none"href="#undergrads">Undergraduates</a> | </span>
+                    <span><a style="text-decoration:none"href="#postdocalumni">Post Doc Alumni</a> | </span>
+                    <span><a style="text-decoration:none"href="#phdalumni">PhD Alumni</a> | </span>
+                    <span><a style="text-decoration:none"href="#mastersalumni">Masters Alumni</a> | </span>
+                    <span><a style="text-decoration:none"href="#formerundergrad">Former Undergraduates</a> | </span>
+                    <hr style="margin-bottom: 2em">
+                    <link rel="stylesheet" type="text/css" href="/css/nosidebar.css">
+                    <style>
+                      
+                      .membermeta {
+                        border-left: thick double;
+                      }
+                      .membermeta p{
+                        margin-bottom: 0;
+                        }
+                      .memberpic div img{
+                        width: 100%;
+                        height: 100%;
+                      }
+                      #people .memberdesc p {
+                        margin-bottom: 1em;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      }
+
+                      #people img{
+                        display: block;
+                        max-width: 400px;
+                        max-height: 200px;
+                        margin-left: auto; 
+                        margin-right: auto;
+                      }
+                      #people .projects{
+                        font-style: italic;
+                        text-decoration: underline;
+                        text-transform: capitalize;
+                      }
+
+                    </style>
+                    <div id="people">
+										<section>
+                      <h2 class="major"><span><a name="professors">Professors</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "Professor" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>Prof. {{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <div><a href="{{ person.website }}">{{ person.name }}'s Webpage</a></div>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+										<section>
+                      <h2 class="major"><span><a name="postdocs">Postdocs</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "Postdoc" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>Dr. {{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <a href="{{ person.website }}">{{ person.name }}'s Webpage</a>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+										<section>
+                      <h2 class="major"><span><a name="phds">PhDs</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "PHD" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>{{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <a href="{{ person.website }}">{{ person.name }}'s Webpage</a>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+										<section>
+                      <h2 class="major"><span><a name="masters">Masters</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "Masters" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>{{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <div><a href="{{ person.website }}">{{ person.name }}'s Webpage</a></div>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+										<section>
+                      <h2 class="major"><span><a name="undergrads">Undergraduates</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "Undergrad" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>{{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <div><a href="{{ person.website }}">{{ person.name }}'s Webpage</a></div>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+										<section>
+                    <h2 class="major"><span><a name="postdocalumni">Postdoc Alumni</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "Postdoc Alumni" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>{{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <div><a href="{{ person.website }}">{{ person.name }}'s Webpage</a></div>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+										<section>
+                      <h2 class="major"><span><a name="phdalumni">Phd Alumni</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "PHD Alumni" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>{{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <div><a href="{{ person.website }}">{{ person.name }}'s Webpage</a></div>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+										<section>
+                      <h2 class="major"><span><a name="mastersalumni">Masters Alumni</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "Masters Alumni" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>{{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <div><a href="{{ person.website }}">{{ person.name }}'s Webpage</a></div>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+										<section>
+                      <h2 class="major"><span><a name="formerundergrad">Former Undergraduates</a></span></h2>
+                      <ol>
+                        {% for person in site.data.people %} 
+                          {% if person.type == "Undergrad Alumni" %}
+                          <div class="row">
+                            <div class="4u memberpic">
+                              {% if person.image != "" %}
+                                <img src="{{ person.image }}" />
+                              {% else %} 
+                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              {% endif %}
+                            </div>
+                            <div class="8u membermeta">
+                              <h6>{{ person.name }}</h6>
+                              {{ person.email | markdownify }}
+                              <div><a href="{{ person.website }}">{{ person.name }}'s Webpage</a></div>
+                              <div>
+                                <span class="projects">Projects</span>&nbsp
+                                {% for project in person.projects %}
+                                  {% assign listed = false %}
+                                  {% for listedProject in site.data.projects %}
+                                    {% if listedProject.name == project.name %}
+                                      {% assign listed = true %}
+                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                    {% endif %}
+                                  {% endfor %}
+                                  {% unless listed %}
+                                    <a href="{{ project.link}}">{{ project.name}}</a>&nbsp&nbsp|
+                                  {% endunless %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row memberdesc">
+                            {% markdown %}{{ person.description }}{% endmarkdown %}
+                          </div>
+                          <hr>
+                          {% endif %}
+                        {% endfor %}
+                      </ol>
+										</section>
+                  </div>
+              </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Main -->
+
+		<!-- Footer -->
+    {% include footer.html %}
+		<!-- /Footer -->
+
+	</body>
+</html>

@@ -1,0 +1,32 @@
+To modify the people's section, open the _data/people.yml file in the site root folder.
+
+The following template should be used for adding a new person: 
+
+- name: "" 
+ type: ""
+ email: "" 
+ website: ""
+ projects: 
+   - name: "" 
+     link: ""
+ description: ""
+ image: "
+
+The spacing matters since yaml is strict on it. None of the information is
+strictly required except the type, however, all the entries must be there in the entry.
+The list of types is available on the top of the yaml file. Its good to have as much as possible.
+
+If a project has been added to the website then simply add the name that is in 
+the _data/project.yml file and it will use the link on that source. Otherwise
+you may explicitly add the link. You can have multiple projects, just copy and 
+paste the name/link lines and ensure the spacing is preserved.
+
+Description gets processed as markdown but it seems to fight against the 
+yaml processor. To break paragraphs, use two hard breaks (press enter 3 times). 
+
+Images should be stored in the images/people folder and should be written in the 
+following format : "/images/people/filename.ext". Example: "/images/people/vineet.jpg".
+Note the space before images must be there. 
+
+**NOTE: Please watch out for extra spaces in names, it will messup the interlinking
+between files. Also please escape double quotes with backslash (e.g. \").

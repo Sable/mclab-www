@@ -1,0 +1,83 @@
+Modifying the project page requires going through a few files. 
+
+ADDING A NEW PROJECT: 
+====================
+
+First you need to add the following template to the _data/projects.yml file: 
+
+- name: "" 
+  category: ""
+  link: ""
+  status: ""
+  description: ""
+  publications:
+    - ""
+
+Categories are listed in _data/research-categories.yml
+
+You have two choices: 
+
+1. Make your own webpage for the project and link to it 
+2. Use the provided template 
+
+1. Make your Own Webpage:
+  If you want to make or already have made your own web page then simply fill
+  in the link, status and description fields. No need to fill in publications. If
+  you want to point to publications on your webpage then you will have to add
+  them yourself. 
+
+
+2. User Provided Template: 
+  To use the provided template you have to do a few preparation steps. Go to
+  the site root folder and enter the projects directory. Make a directory for
+  your project. Copy the templates/project.index.html.template file in the
+  templates folder above the site root to this directory. Change the name to
+  index.html. Open the file, you will notice three fields enclosed in two lines
+  (triple dashes). For the project key enter the name of your project that you
+  put into the _data/projects.yml file.
+
+  The other two fields point to two markdown files. The first markdown file
+  should reside in _includes/projects/ from the site root directory. This
+  markdown file should contain all your relevant project description and nothing
+  regarding the download and installation of your project.
+
+  The second markdown file should reside in _inlcudes/projects/downloads when
+  traversing from the site root directory. This file should contain any download
+  and install instructions. If there are no such entities for your project then
+  just create a blank file.
+
+MODIFYING AN EXISTING PROJECT:
+=============================
+
+Change Research Category: 
+  Edit the _data/research-categories.yml file. Add or change the research
+  category you would like following the same format as the rest. If you change a
+  research category then make sure you change all relevant field in the
+  _data/projects.yml file that use that category.
+
+
+Change Description/Link/Status of a project: 
+  Simply change the entry in _data.projects.yml file. 
+
+Change the name of a project: 
+  If you change the name then it will affect everythin else that points to it. So
+  unless you want to figure out everything that points to it and change them
+  individually, don't.
+
+Modify the people in the project: 
+  You have to add or remove the project from the person's description in the
+  data.people.yml file.
+
+Change the project page: 
+  If you are using the provided template you can not move the people and
+  publications section without going to the Liquid Template. You are also limited
+  to the css enforced by the site. If you want to change the description or setup
+  information then go to /projects under the site root directory and goto the
+  relevant project folder. Open the index.html file. Go to  _includes/projects/
+  for the description or _inlcudes/projects/downloads/ and find the file pointed
+  to by the template file. Edit them using relevant markdown.
+
+
+  Also note, that if a thesis, paper and tech report share the same title in the 
+  publications page then only one needs to be added to the project description. 
+  It will list all of them and annotate them accordingly. 

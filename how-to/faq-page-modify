@@ -1,0 +1,11 @@
+To modify faq, open the _data/faq.yml file in the site root folder.
+
+The FAQ page is simple, just use the following template: 
+
+- question: ""
+  answer: ""
+
+Answers are processed using markdown. New paragraphs need two hard breaks (3 
+new lines).
+
+**NOTE: Please escape double quotes with backslash (e.g. \").

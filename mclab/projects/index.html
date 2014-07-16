@@ -1,0 +1,54 @@
+---
+---
+<!DOCTYPE HTML>
+<html> 
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+		<!-- Main -->
+			<div id="main-wrapper">
+				<div id="main" class="container">
+					<div class="row">
+						<div class="12u skel-cell-important">
+							<div class="content">
+								<!-- Content -->
+									<article class="is-page-content">
+                  <section>
+										<header>
+											<h2>McLab Projects</h2>
+										</header>
+                      {% for category in site.data.research-categories %}
+                        <h3>{{ category }} </h3>
+                        <ul style="padding-left: 2em;">
+                        {% for project in site.data.projects %} 
+                          {% if project.category == category %} 
+                          <div style="padding: 1em 0 1em 0">
+                              <li>
+                              <h4 style="color: #4682b4; margin: 0; text-transform: none">
+                                <a href="{{ project.link }}">{{ project.name }}</a>
+                              </h4>
+                                {% unless project.status == "ongoing" %}
+                                <span style="text-transform: capitalize; font-style: italic">
+                                  ({{project.status}})
+                                </span>
+                                {% endunless %} 
+                                <div>{{ project.description }}</div>
+                              </li>
+                            </div>
+                            <hr style="margin: 0; padding: 0;">
+                          {% endif %}
+                        {% endfor %}
+                        </ul>
+                      {% endfor %}
+									</article>
+								<!-- /Content -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Main -->
+    {% include footer.html %}
+	</body>
+</html>

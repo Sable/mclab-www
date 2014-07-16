@@ -1,0 +1,220 @@
+# Status { ongoing, unmaintained, deprecated } 
+
+# Please use the following template: 
+# - name: "" 
+#   category: ""
+#   link: ""
+#   status: ""
+#   description: ""
+#   publications:
+#     - ""
+#
+#  categories are in the research-cateogies.yml file
+
+###################### Analysis Tools #############################
+- name: "McFlat" 
+  category: "Analysis Tools"
+  link: "/projects/mcflat/"
+  status: "unmaintained"
+  description: "We apply profile-based training runs to determine likely
+      loop-bounds ranges for which specialized versions of the loops may be
+      generated. The main idea is to collect information about observed loop bounds
+      and hot loops using training data which is then used to heuristically decide
+      upon which loops and which ranges are worth specializing using a variety of
+      loop transformation. This project is no longer maintained."
+  publications:
+    - "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
+
+- name: "Tamer"
+  category: "Analysis Tools"
+  link: "/projects/tamer/"
+  status: "ongoing"
+  description: "Our open source toolkit, called the MATLAB Tamer, targets a
+      large subset of MATLAB. Given information about the entry point of the program,
+      the MATLAB Tamer builds a complete callgraph, transforms every function into a
+      reduced intermediate representation, and provides typing information to aid the
+      generation of static code."
+  publications:
+    - "Taming MATLAB"
+
+- name: "Tamer+"
+  category: "Analysis Tools"
+  link: "/projects/tamer-plus/"
+  status: "ongoing"
+  description: "An extension to Tamer that reverses TamerIR to a high-level,
+      human-readable representation."
+  publications:
+    - ""
+
+###################### Static Compilers  #############################
+- name: "VeloCity"
+  category: "Static Compilers"
+  link: "/projects/velocity/"
+  status: "ongoing"
+  description: ""
+  publications:
+    - ""
+
+- name: "AspectMatlab"
+  category: "Static Compilers"
+  link: "/projects/aspect-matlab/"
+  status: "ongoing"
+  description: "Our aim is to bring aspect-oriented features in a way that is
+      both accessible to scientists and where the aspect-oriented features
+      concentrate on array accesses and loops, the core computation elements in
+      scientific programs."
+  publications:
+    - "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
+    - "Typing Aspects for MATLAB"
+
+- name: "MiX10"
+  category: "Static Compilers"
+  link: "/projects/mix10/" 
+  status: "ongoing"
+  description: "MiX10 (a recursive acronym for Mix10 Isn't X10) is an open
+      MATLAB compiler that ports MATLAB programs for efficient execution on high
+      performance computing systems by translating them to IBM's new-age high
+      performance computing languge, X10, which in turn compiles to more commonly
+      used languages, C++ and Java."
+  publications:
+    - "MiX10: Compiling MATLAB to X10 for high performance"
+    - "MiX10: Compiling MATLAB for High Performance Computing via X10"
+    - "First steps to compiling MATLAB to X10"
+    - "MiX10 Lecture At CASCON"
+
+- name: "Mc2For" 
+  category: "Static Compilers"
+  link: "/projects/mc2for/"
+  status: "ongoing"
+  description: "A new and improved MATLAB to Fortran 95 Compiler using McSAF
+      and Tamer."
+  publications:
+    - "name"
+
+- name: "McCli" 
+  category: "Static Compilers"
+  link: "/projects/mccli/"
+  status: "unmaintained"
+  description: "A compiler that compilers MATLAB to .NET bytecode. This project
+      is no longer maintained."
+  publications:
+    - "name"
+
+- name: "McFor" 
+  category: "Static Compilers"
+  link: "/projects/mcfor/"
+  status: "deprecated"
+  description: "The MATLAB-to-Fortran 95 compiler, McFor, is designed to
+      translate MATLAB programs that are focussed on scientific computations to
+      efficient and reusable Fortran code. This project has been superseded by Mc2For." 
+  publications:
+    - "name"
+
+###################### JIT Compilers #############################
+- name: "McVM & McJIT"
+  category: "JIT Compilers"
+  link: "/projects/mcvm/"
+  status: "ongoing"
+  description: "The McVM virtual machine currently integrates an interpreter
+      and an optimizing JIT compiler called McJIT supporting a non-trivial subset of the MATLAB
+      programming language. The primary objective of this project is to serve as a
+      platform to help researchers explore both static and dynamic optimization
+      techniques for dynamic scientific languages. A secondary objective of the
+      project is to make McVM a viable alternative implementation of the language for
+      those who use MATLAB for scientific computing."
+  publications:
+    - "Optimizing Matlab through Just-In-Time Specialization" 
+    - "DYNAMIC COMPILER OPTIMIZATION TECHNIQUES FOR MATLAB"
+    - "McVM: an Optimizing Virtual Machine for the MATLAB Programming Language"
+
+
+###################### Web(JavaScript) and Distributed SCientific Computing #############################
+- name: "McLib.js"
+  link: "/projects/mclibjs/"
+  category: "JavaScript, Web and Distributed Scientific Computing"
+  status: "ongoing"
+  description: ""
+  publications:
+    - "name"
+
+- name: "Pando"
+  category: "JavaScript, Web and Distributed Scientific Computing"
+  link: "/projects/pando/"
+  status: "ongoing"
+  description: ""
+  publications:
+    - "name"
+
+- name: "MatJuice"
+  category: "JavaScript, Web and Distributed Scientific Computing"
+  link: "/projects/matjuice/"
+  status: "ongoing"
+  description: ""
+  publications:
+    - "name"
+
+- name: "Ostrich Benchmark Suite" 
+  category: "JavaScript, Web and Distributed Scientific Computing"
+  link: "/projects/ostrich/"
+  status: "ongoing"
+  description: "Ostrich is a benchmark suite developed in the Sable Lab at
+      McGill University with the objective of studying the performance of JavaScript
+      and WebCL for numerical code. Version of the benchmarks are available in C/C++,
+      JavaScript, OpenCL and WebCL."
+  publications:
+    - "Using JavaScript and WebCL for Numerical Computations: A Comparative Study of Native and Web Technologies"
+
+###################### Parallel Scientific Computing #############################
+- name: "Velociraptor"
+  category: "Parallel Scientific Computing"
+  link: "http://www.sable.mcgill.ca/mclab/gpu/index.html"
+  status: "ongoing"
+  description: "Velociraptor is a compiler toolkit consisting of a code
+      generation library as well as a runtime system. It takes as input a high-level
+      IR called Velociraptor IR (VRIR for short) that is designed to accomodate array
+      semantics of many different languages. VRIR is a typed AST based representation
+      that is easy to generate, and has built-in operators for many high-level array
+      operations (like matrix multiplication), flexible array indexing schemes, and
+      array layouts. Velociraptor generates LLVM for CPUs and OpenCL for GPUs, making
+      it portable across many different systems. Velociraptor is accompanied by its
+      intelligent runtime system, that is designed for maximizing throughput in
+      hybrid systems by doing operations in parallel and by minimizing redundant data
+      transfers."
+  publications:
+    - "name"
+
+- name: "RaijinCL"
+  category: "Parallel Scientific Computing"
+  link: "http://www.raijincl.org/"
+  status: "ongoing"
+  description: "RaijinCL is a high-performance, portable libary for
+      implementing many matrix operations on the GPU such as matrix multiplication
+      and reductions. It is difficult to write a single OpenCL code that works well
+      everywhere. Therefore, RaijinCL does autotuning, a process where it tests
+      hundreds of different versions of important functions and records the best one
+      found on a user's machine. Initial results are encouraging, and we are able to
+      match the performance of vendor libraries on some systems, and deliver good
+      performance everywhere. RaijinCL currently consists of GEMM-inspired (GEMM =
+      general matrix multiply) routines, reduction routines for calulating sum and
+      product of elements of multidimensional arrays along a particular axis as well
+      as several element-wise operations on strided multidimensional arrays. We are
+      also looking into more routines such as matrix decomposition."
+  publications:
+    - "name"
+
+###################### Programmer #############################
+- name: "McIDE"
+  category: "Programmer Tools"
+  link: "/projects/mcide/"
+  status: "ongoing"
+  description: ""
+  publications:
+    - "name"
+
+- name: "McTutorial" 
+  category: "Programmer Tools"
+  link: "/projects/mctutorial/"
+  status: "ongoing"
+  description: ""
+  publications:
+    - "name"
