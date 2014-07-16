@@ -1,5 +1,4 @@
 ###Overview
-####Happy People
 Ostrich is a benchmark suite developed in the Sable Lab at McGill University with the objective of studying the performance of JavaScript and WebCL for numerical code. Version of the benchmarks are available in C/C++, JavaScript, OpenCL and WebCL. The current list of supported benchmarks is below:
 
 *  back-prop: a machine-learning algorithm that trains the weights of connecting nodes on a layered neural network
