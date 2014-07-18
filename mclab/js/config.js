@@ -1,3 +1,5 @@
+---
+---
 /*
 	TXT 2.5 by HTML5 UP
 	html5up.net | @n33co
@@ -6,7 +8,7 @@
 
 window._skel_config = {
 	preset: 'standard',
-	prefix: 'css/style',
+	prefix: '{{ site.baseurl }}/css/style',
 	resetCSS: true
 };
 
