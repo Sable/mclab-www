@@ -37,7 +37,7 @@ we can find out whether the corresponding Matlab classes have a precedence
 relaitonship between them. We found the following inferior/superior
 relationships for Matlab classes (with transitive edges removed).
 
-![Built In Class Relationships](/images/projects/tamer/builtin-class-relationships.png)
+![Built In Class Relationships]({{ site.baseurl }}/images/projects/tamer/builtin-class-relationships.png)
 
 You can download the small project that generates the result (using python,
 Matlab, graphviz), [here](http://www.sable.mcgill.ca/mclab/tamer/generatematlabBuiltinClassRelationships.zip).

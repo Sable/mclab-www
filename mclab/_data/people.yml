@@ -165,7 +165,7 @@
 - name: "Sameer Jagdale" 
   type: "Masters"
   email: "sameer.jagdale@mail.mcgill.ca" 
-  website: "http://www.cs.mcgill.ca/~sradpo"
+  website: ""
   projects: 
     - name: "VeloCity" 
       link: ""
@@ -185,7 +185,7 @@
 - name: "Andrew Bodzay " 
   type: "Masters"
   email: "andrew.bodzay@mail.mcgill.ca" 
-  website: "http://www.cs.mcgill.ca/~sradpo"
+  website: ""
   projects: 
     - name: "AspectMatlab" 
       link: ""
@@ -205,7 +205,7 @@
 - name: "Xu Li" 
   type: "Masters Alumni"
   email: "xu.li2@mail.mcgill.ca" 
-  website: "http://www.cs.mcgill.ca/~sradpo"
+  website: ""
   projects: 
     - name: "Mc2For" 
       link: ""
@@ -215,7 +215,7 @@
 - name: "Mathieu Dubet" 
   type: "Masters Alumni"
   email: "mdubet@cs.mcgill.ca" 
-  website: "www.cs.mcgill.ca/~aaslam1"
+  website: ""
   projects: 
     - name: "McVM & McJIT" 
       link: ""
@@ -225,7 +225,7 @@
 - name: "Amina Aslam" 
   type: "Masters Alumni"
   email: "amina.aslam@mail.mcgill.ca" 
-  website: "www.cs.mcgill.ca/~aaslam1"
+  website: "http://www.cs.mcgill.ca/~aaslam1"
   projects: 
     - name: "McFlat" 
       link: ""
@@ -235,7 +235,7 @@
 - name: "Toheed Aslam" 
   type: "Masters Alumni"
   email: "tsaslam@cs.mcgill.ca" 
-  website: "http://www.cs.mcgill.ca/~sradpo"
+  website: ""
   projects: 
     - name: "AspectMatlab" 
       link: ""
@@ -275,7 +275,7 @@
 - name: "Anton Dubrau" 
   type: "Masters Alumni"
   email: "" 
-  website: "www.anton.dubrau.eu"
+  website: "http://www.anton.dubrau.eu"
   projects: 
     - name: "McFor" 
       link: ""
@@ -287,7 +287,7 @@
 - name: "Jun Li" 
   type: "Masters Alumni"
   email: "" 
-  website: "http://www.cs.mcgill.ca/~sradpo"
+  website: ""
   projects: 
     - name: "McFor" 
       link: ""

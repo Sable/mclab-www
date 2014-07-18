@@ -27,7 +27,7 @@
                     <span><a style="text-decoration:none"href="#mastersalumni">Masters Alumni</a> | </span>
                     <span><a style="text-decoration:none"href="#formerundergrad">Former Undergraduates</a> | </span>
                     <hr style="margin-bottom: 2em">
-                    <link rel="stylesheet" type="text/css" href="/css/nosidebar.css">
+                    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/nosidebar.css">
                     <style>
                       
                       .membermeta {
@@ -69,9 +69,9 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                              <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
-                                <img src="{{ site.data.generic-links.peopleElephantImage }}" />
+                              <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
                             </div>
                             <div class="8u membermeta">
@@ -85,7 +85,11 @@
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}
@@ -111,7 +115,7 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                                <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
                                 <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
@@ -127,7 +131,11 @@
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}
@@ -153,7 +161,7 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                                <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
                                 <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
@@ -169,7 +177,11 @@
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}
@@ -195,7 +207,7 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                                <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
                                 <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
@@ -211,7 +223,11 @@
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}
@@ -237,7 +253,7 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                                <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
                                 <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
@@ -252,8 +268,12 @@
                                   {% assign listed = false %}
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}
@@ -279,7 +299,7 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                                <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
                                 <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
@@ -295,7 +315,11 @@
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}
@@ -321,7 +345,7 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                                <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
                                 <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
@@ -337,7 +361,11 @@
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}
@@ -363,7 +391,7 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                                <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
                                 <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
@@ -379,7 +407,11 @@
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}
@@ -405,7 +437,7 @@
                           <div class="row">
                             <div class="4u memberpic">
                               {% if person.image != "" %}
-                                <img src="{{ person.image }}" />
+                                <img src="{{ site.baseurl}}{{ person.image }}" />
                               {% else %} 
                                 <img src="{{ site.data.generic-links.peopleElephantImage }}" />
                               {% endif %}
@@ -420,8 +452,12 @@
                                   {% assign listed = false %}
                                   {% for listedProject in site.data.projects %}
                                     {% if listedProject.name == project.name %}
+                                      {% if listedProject.link contains 'http' %} 
+                                        <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% else %}
+                                        <a href="{{ site.baseurl}}{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
+                                      {% endif %}
                                       {% assign listed = true %}
-                                      <a href="{{ listedProject.link}}">{{ listedProject.name}}</a>&nbsp&nbsp|
                                     {% endif %}
                                   {% endfor %}
                                   {% unless listed %}

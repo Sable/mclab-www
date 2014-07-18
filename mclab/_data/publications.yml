@@ -59,41 +59,7 @@
   location: "San Jose, California"
 
 #================================Papers================================
-- title: "Mc2FOR: A tool for automatically translating MATLAB to FORTRAN 95"
-  link: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.pdf" 
-  type: "Paper" 
-  abstract: "MATLAB is a dynamic numerical scripting language widely used by
-    scientists, engineers and students. While MATLAB's high-level syntax and
-    dynamic types make it ideal for prototyping, programmers often prefer using
-    high-performance static languages such as FORTRAN for their final distributable
-    code. Rather than rewriting the code by hand, our solution is to provide a tool
-    that automatically translates the original MATLAB program to an equivalent
-    FORTRAN program. There are several important challenges for automatically
-    translating MATLAB to FORTRAN, such as correctly estimating the static type
-    characteristics of all the variables in a MATLAB program, mapping MATLAB
-    built-in functions, and effectively mapping MATLAB constructs to equivalent
-    FORTRAN constructs.   
-
- 
-    In this paper, we introduce Mc2FOR, a tool which automatically translates
-    MATLAB to FORTRAN. This tool consists of two major parts. The first part is an
-    interprocedural analysis component to estimate the static type characteristics,
-    such as the shape of arrays and the range of scalars, which are used to
-    generate variable declarations and to remove unnecessary array bounds checking
-    in the translated FORTRAN program. The second part is an extensible FORTRAN
-    code generation framework automatically transforming MATLAB constructs to
-    FORTRAN. This work has been implemented within the McLab framework, and we
-    demonstrate the performance of the translated FORTRAN code on a collection of
-    MATLAB benchmarks."
-  authors: 
-    - "Xu Li" 
-    - "Laurie Hendren" 
-  date: "February 3rd, 2014"
-  publisher: "WCRE 2014" 
-  location: "Antwerp, Belgium"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.bib"  
-
-- title: "Refactoring MATLAB"
+- title: "Mc2For: A tool for automatically translating MATLAB to FORTRAN 95"
   link: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.pdf" 
   type: "Paper" 
   abstract: "MATLAB is a dynamic numerical scripting language widely used by
@@ -101,15 +67,14 @@
       dynamic types make it ideal for prototyping, programmers often prefer using
       high-performance static languages such as FORTRAN for their final distributable
       code. Rather than rewriting the code by hand, our solution is to provide a tool
-
       that automatically translates the original MATLAB program to an equivalent
       FORTRAN program. There are several important challenges for automatically
       translating MATLAB to FORTRAN, such as correctly estimating the static type
       characteristics of all the variables in a MATLAB program, mapping MATLAB
       built-in functions, and effectively mapping MATLAB constructs to equivalent
-      FORTRAN constructs.
+      FORTRAN constructs.   
 
-      
+   
       In this paper, we introduce Mc2FOR, a tool which automatically translates
       MATLAB to FORTRAN. This tool consists of two major parts. The first part is an
       interprocedural analysis component to estimate the static type characteristics,
@@ -120,6 +85,24 @@
       FORTRAN. This work has been implemented within the McLab framework, and we
       demonstrate the performance of the translated FORTRAN code on a collection of
       MATLAB benchmarks."
+  authors: 
+    - "Xu Li" 
+    - "Laurie Hendren" 
+  date: "February 3rd, 2014"
+  publisher: "WCRE 2014" 
+  location: "Antwerp, Belgium"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.bib"  
+
+- title: "Refactoring MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/papers/2013-2/cc13-radpour.pdf" 
+  type: "Paper" 
+  abstract: "This paper presents the important challenges of refactoring MATLAB
+      along with automated techniques to handle a collection of refactorings for
+      MATLAB functions and scripts including: converting scripts to functions,
+      extracting functions, and converting dynamic function calls to static ones. The
+      refactorings have been implemented using the McLAB compiler framework, and an
+      evaluation is given on a large set of MATLAB benchmarks which demonstrates the
+      effectiveness of our approach." 
   authors: 
     - "Soroush Radpour" 
     - "Laurie Hendren" 
@@ -346,7 +329,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/paper.bib" 
 
 #================================Theses================================
-- title: "MC2FOR: A MATLAB TO FORTRAN 95 COMPILER"
+- title: "Mc2For: A MATLAB to Fortran 95 Compiler"
   link: "http://www.sable.mcgill.ca/mclab/mc2for/sable-thesis-2014-master-xuli.pdf" 
   type: "Thesis" 
   abstract: "MATLAB is a dynamic numerical scripting language widely used by
@@ -723,7 +706,7 @@
   location: "McGill University, Montreal, Canada"
   bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.bib" 
 
-- title: "Mc2For: a tool for automatically transforming MATLAB to Fortran 95"
+- title: "Mc2For: A tool for automatically transforming MATLAB to Fortran 95"
   link: "http://www.sable.mcgill.ca/publications/techreports/2013-4/techrep.pdf" 
   type: "Technical Report" 
   abstract: "MATLAB is a dynamic numerical scripting language widely used by

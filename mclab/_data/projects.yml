@@ -89,7 +89,9 @@
   description: "A new and improved MATLAB to Fortran 95 Compiler using McSAF
       and Tamer."
   publications:
-    - "name"
+    - "Mc2For: A tool for automatically translating MATLAB to FORTRAN 95"
+    - "Mc2For: A MATLAB to Fortran 95 Compiler"
+    - "Mc2For: A tool for automatically transforming MATLAB to Fortran 95"
 
 - name: "McCli" 
   category: "Static Compilers"
@@ -108,7 +110,7 @@
       translate MATLAB programs that are focussed on scientific computations to
       efficient and reusable Fortran code. This project has been superseded by Mc2For." 
   publications:
-    - "name"
+    - "McFOR: A MATLAB to FORTRAN 95 Compiler"
 
 ###################### JIT Compilers #############################
 - name: "McVM & McJIT"

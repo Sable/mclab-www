@@ -26,7 +26,11 @@
                           <div style="padding: 1em 0 1em 0">
                               <li>
                               <h4 style="color: #4682b4; margin: 0; text-transform: none">
-                                <a href="{{ project.link }}">{{ project.name }}</a>
+                                {% if project.link contains 'http' %} 
+                                  <a href="{{ project.link}}">{{ project.name}}</a>
+                                {% else %}
+                                  <a href="{{ site.baseurl}}{{ project.link}}">{{ project.name}}</a>
+                                {% endif %}
                               </h4>
                                 {% unless project.status == "ongoing" %}
                                 <span style="text-transform: capitalize; font-style: italic">

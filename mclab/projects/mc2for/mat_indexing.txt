@@ -1,0 +1,138 @@
+Brief Introduction of Matrix Indexing in MATLAB
+
+Indexing into a matrix is a means of selecting a subset of elements from the
+matrix and the index of a matrix is also called the subscript. According to our
+experience and a MATLAB online documentation, the valid subscripts in MATLAB
+can be divided into five categories: scalar literals, scalar variables, vector
+expressions, vector variables and colon notation (:). Following is some MATLAB
+code to illustrate how these five kinds of subscripts work in accessing MATLAB
+matrices. Note that the special built-in operator end at line 13 and 25 is used
+to return the last position of the indexed matrix. The single colon notation
+(:) in a subscript position at line 34 is shorthand for 1:end and is often used
+to select a entire row or column.
+
+1  % constructing a vector
+2  >> v = [2 4 6 8 10 12 14 16];
+3  % the subscript is a scalar literal
+4  >> v(3)
+5  ans =
+6         6
+7  % the subscript is a scalar variable
+8  >> idx = 3;
+9  >> v(idx)
+10  ans =
+11        6
+12 % the subscript is the special end operator
+13 >> v(end)
+14 ans =
+15        16
+16 % the subscript is a vector expression
+17 >> v([1 2 3])
+18 ans =
+19        2 4 6
+20 % the subscript is a vector expression
+21 >> v(1:3)
+22 ans =
+23        2 4 6
+24 % the subscript is a vector expression
+25 >> v(1:end)
+26 ans =
+27       2 4 6 8 10 12 14 16
+28 % the subscript is a vector variable
+29 >> idxv = 1:3;
+30 >> v(idxv)
+31 ans =
+32        2 4 6
+33 % the subscript is a colon notation
+34 >> v(:)
+35 ans =
+36        2 4 6 8 10 12 14 16
+
+Besides various kinds of subscripts, the relation between the number of the
+indices and the rank of the accessed matrix is also very interesting. In
+MATLAB, the number of the indices doesn't need to be equal to the rank of the
+accessed matrix as in some programming languages, like FORTRAN. In some
+circumstances, it is legal to access a matrix with indices whose number is less
+than or even greater than the rank of the accessed matrix.
+
+For the case where the number of the indices is less than the rank of the
+accessed matrix, the MATLAB interpreter will use the last index in the index
+list to do linear indexing on the remaining dimensions of the accessed matrix.
+For example, in following code example, the matrix arr is a 2 dimensional
+matrix and there is only one subscript.
+
+
+1  >> arr = [[1; 2; 3] [4; 5; 6] [7; 8; 9]]
+2  arr = 
+3         1   4   7
+4         2   5   8
+5         3   6   9
+6  >> arr(3)
+7  ans =
+8         3
+In this case, the only index 3 is regarded as the last index and all the two
+dimensions of arr is regarded as the remaining dimensions. The MATLAB
+interpreter will iterate arr in the column-major order to apply linear
+indexing. Accessing the matrix with the subscript 3 at line 6 returns 3,
+because 3 is the value of the third element of the matrix in column-major
+order. Another example is here.
+
+1  >> arr = ones(3,3,3);
+2  >> arr(2,:,:) = [[1; 2; 3] [4; 5; 6] [7; 8; 9]];
+3  >> arr(2,:,:)
+4  ans(:,:,1) =
+5         1   2   3
+6  ans(:,:,2) =
+7         4   5   6
+8  ans(:,:,3) =
+9         7   8   9
+10 >> arr(2,3)
+11 ans =
+12        3
+In this example, the matrix arr has three dimensions and is accessed by the
+index list (2,3) at line 10. In this example, the number of the indices is less
+than the rank of arr. The interpreter will use the last index 3 to proceed the
+linear indexing on arr's remaining dimensions, which are the second and third
+dimensions. Since the third element of the remaining dimensions has the value
+of 3, the matrix indexing with (2,3) at line 8 returns 3.
+
+When the number of the indices is greater than the rank of the accessed matrix,
+if this matrix access is in an array get statement, it's definitely a run-time
+error , but if it is in an array set statement, the MATLAB interpreter first
+tries to grow the original matrix according to the extra index (or indices), if
+the endeavor fails, the interpreter throws a run-time error. For example in the
+following code example.
+
+
+1  >> arr = ones(2,2);
+2  >> arr(2,2,2) = 0
+3  arr(:,:,1) =
+4         1   1
+5         1   1
+6  arr(:,:,2) =
+7         0   0
+8         0   0
+9  >> size(arr)
+10 ans =
+11        2   2   2
+
+At line 2, the number of the indices (2,2,2), which is 3, is greater than the
+rank of the matrix arr, which is only 2. Since this matrix accessing is on the
+left hand side of the assignment, the MATLAB interpreter first tries to grow
+the original matrix. For this case, the interpreter succeeds in resizing the
+matrix, so the resized matrix becomes a 2-by-2-by-2 matrix. While in the
+example,
+
+1  >> arr = ones(2,2);
+2  >> arr(2,2,:) = rand(2,2)
+3  Assignment has more non-singleton rhs dimensions than non-singleton subscripts
+4  >> arr(2,2,1:3) = [4 5 6];
+5  >> size(arr)
+6  ans =
+7         2   2   3
+
+at line 2, although the matrix accessing is on the left hand side of the
+assignment, the MATLAB interpreter cannot succeed in resizing the matrix arr
+with the extra index colon notation. But, at line 4, the extra index 1:3 gives
+the interpreter a better information about how the programmer wants to resize
+the matrix, and the interpreter succeeds in resizing the matrix arr.
