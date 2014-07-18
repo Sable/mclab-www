@@ -15,9 +15,15 @@
 								<!-- Content -->
 									<article class="is-page-content">
                   <section>
-										<header>
-											<h2>Work with us!</h2>
-										</header>
+                      <h2>Contact Us</h2>
+											<h3>Bug Reports</h3>
+                      <p>Please report all bugs to 
+                      {% if  site.data.generic-links.bugReportingSystem  contains 'http' %}
+                        <a href="{{ site.data.generic-links.bugReportingSystem }}">our bug reporting system.</a></p>
+                      {% else %}
+                        <a href="{{ site.baseurl }}{{ site.data.generic-links.bugReportingSystem }}">our bug reporting system.</a></p>
+                      {% endif %}
+											<h3>Work with us!</h3>
                     We would like to hear from you if you're interested in working with us as:
                     <ul style="list-style-type: square; padding-left: 2em;">
                       <li> scientists/engineers who have applications which need to run
