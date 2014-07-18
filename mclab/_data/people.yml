@@ -140,15 +140,18 @@
 
 - name: "Sujay Kathrotia" 
   type: "Masters"
-  email: "" 
+  email: "sujay.kathrotia@mail.mcgill.ca"
   website: ""
   projects: 
     - name: "McLib.js" 
       link: ""
     - name: "Ostrich Benchmark Suite" 
       link: ""
-  description: ""
-  image: ""
+  description: "I joined the lab in fall of 2013. I am interested in numerical computation in JavaScript. 
+      I am working on McLib.JS which is a dynamic and high-performance JavaScript library for numerical 
+      computation. I also like to investigate performance issues in benchmarks. I have worked on McTicToc
+      project based on NodeJS and EmberJS which is an autometed benchmarks runner for McLab backends."
+  image: "/images/people/sujay.jpg"
 
 - name: "Vincent Foley-Bourgon" 
   type: "Masters"
