@@ -555,7 +555,7 @@
   type: "Thesis" 
   abstract: "This is the first thesis introducing AspectMatlab."
   authors: 
-    - "Toheed Aslam " 
+    - "Toheed Aslam" 
   date: "February 2010"
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
@@ -932,7 +932,7 @@
   abstract: "This technical report is an extended version of the AOSD 2010
 paper above."
   authors: 
-    - "Toheed Aslam " 
+    - "Toheed Aslam" 
   date: "January 2010"
   publisher: "Sable Technical Report (2009-03)" 
   location: "McGill University, Montreal, Canada"
