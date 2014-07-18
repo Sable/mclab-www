@@ -1,17 +1,17 @@
 - name: Home
-  link: /mclab/
+  link: /
 
 - name: Projects
-  link: /mclab/projects/ 
+  link: /projects/ 
 
 - name: Publications
-  link: /mclab/publications/ 
+  link: /publications/ 
 
 - name: People
-  link: /mclab/people/
+  link: /people/
 
 - name: FAQs 
-  link: /mclab/faq/
+  link: /faq/
 
 - name: Contact Us
-  link: /mclab/contact/
+  link: /contact/
