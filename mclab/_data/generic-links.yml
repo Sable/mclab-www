@@ -1,4 +1,4 @@
-bugReportingSystem: "https://svn.sable.mcgill.ca/mclab-bugzilla" 
+bugReportingSystem: "https://github.com/Sable/mclab/issues" 
 projects: "/projects/"
 publications: "/publications/"
 people: "/people/"
