@@ -1,0 +1,55 @@
+\lstdefinelanguage{X10}%
+  {morekeywords={abstract,break,case,catch,class,%
+      const,continue,default,do,else,extends,false,final,%
+      finally,for,goto,if,implements,import,instanceof,%
+      interface,label,native,new,null,package,private,protected,%
+      public,return,static,super,switch,synchronized,this,throw,%
+      throws,transient,true,try,volatile,while,%
+      async,atomic,when,foreach,ateach,finish,clocked,%
+      type,here,%
+      self,property,%
+      future,to,has,as,var,val,def,where,in,%
+      next,value,or,await,current,any},%
+   %basicstyle=\normalfont\ttfamily\color{Red},%
+   %keywordstyle=\normalfont\ttfamily\color{OliveGreen},%
+   %commentstyle=\normalfont\ttfamily\color{Gray},%
+   %identifierstyle=\normalfont\ttfamily\color{Red},%
+   %stringstyle=\normalfont\ttfamily,%
+   tabsize=4,%
+   showstringspaces=false,%
+   sensitive,%
+   morecomment=[l]//,%
+   morecomment=[s]{/*}{*/},%
+   morestring=[b]",%
+   morestring=[b]',%
+   columns=fullflexible,%
+   mathescape=false,%
+   keepspaces=true,%
+   showlines=false,%
+   breaklines=true,%
+   breakatwhitespace=true,%
+   postbreak={},%
+   %breakautoindent=true,%
+   %breakindent=0pt,%
+   %prebreak={},%
+  }
+
+\lstnewenvironment{xtenmath}
+  {\lstset{language=X10,breaklines=false,captionpos=b,xleftmargin=2em,mathescape=true}}
+  {}
+
+\lstnewenvironment{xtenlst}
+  {\lstset{language=X10,breaklines=false,captionpos=b,xleftmargin=2em}}
+  {}
+
+\lstnewenvironment{xtennoindent}
+  {\lstset{language=X10,breaklines=false,captionpos=b}}
+  {}
+
+
+\newcommand\inputxten[1]{\begin{minipage}{\textwidth}\lstinputlisting[language=X10,breaklines=false,captionpos=b,numbers=left,numberstyle=\tiny,xleftmargin=15pt]{#1}\end{minipage}}
+
+\lstset{language=X10,flexiblecolumns}
+
+\let\xcd\lstinline
+\newcommand\xcdmath{\xcd[mathescape=true]}

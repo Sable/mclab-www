@@ -56,9 +56,9 @@ operation from double to integer is a costly operation due to the value checks
 involved in it. The IntegerOkay analysis identifies those numerical values that
 can be safely declared to be of an integer type at compile time. Read more
 details about the analysis
-[here](http://www.sable.mcgill.ca/mclab/mix10/thesis/thesis.html#Q1-1-64) or
+[here](http://www.sable.mcgill.ca/mclab/projects/mix10/docs/thesis/thesis.html#Q1-1-64) or
 just check out the algorithm
-[here](http://www.sable.mcgill.ca/mclab/mix10/thesis/thesis.html#x1-420004).
+[here](http://www.sable.mcgill.ca/mclab/projects/mix10/docs/thesis/thesis.html#x1-420004).
 
 ###Evaluation
-A detailed evaluation of the MiX10 compiler can be read [here](http://www.sable.mcgill.ca/mclab/mix10/thesis/thesis.html#Q1-1-78).
+A detailed evaluation of the MiX10 compiler can be read [here](http://www.sable.mcgill.ca/mclab/projects/mix10/docs/thesis/thesis.html#Q1-1-78).

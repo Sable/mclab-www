@@ -1,0 +1,10 @@
+MEX {
+	global:
+		mexFunction;
+		emlrtMexFcnProperties;
+		drv_lgdr;
+		drv_lgdr_initialize;
+		drv_lgdr_terminate;
+	local:
+		*;
+};

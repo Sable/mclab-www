@@ -1,8 +1,8 @@
 The alpha release of the MiX10 compiler is now available. You can download it
-[here](http://www.sable.mcgill.ca/mclab/mix10/MiX10.tar.gz). A step-by-step
+[here](http://www.sable.mcgill.ca/mclab/projects/mix10/docs/MiX10.tar.gz). A step-by-step
 documentation for getting started with the downloaded file is available in PDF
 format
-[here](http://www.sable.mcgill.ca/mclab/mix10/MiX10_alpha_release_doc.pdf).
+[here](http://www.sable.mcgill.ca/mclab/projects/mix10/docs/MiX10_alpha_release_doc.pdf).
 
 ###Source Code
 McLab is open sourced under the Apache 2.0 license. The source code for MiX10

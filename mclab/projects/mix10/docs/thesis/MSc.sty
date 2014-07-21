@@ -1,0 +1,44 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{MSc}%
+  [2002/05/16 M.Sc. thesis style for McGill Computer Science]
+
+
+% -- Title Page ----------------------------------------------------------------
+
+\renewcommand{\maketitle}%
+{
+  \begin{titlepage}
+
+  \mbox{}\vspace{38mm}
+  \begin{center}
+    {\large\uppercase\expandafter{\@title}}
+    \\[5mm]
+    {
+      \normalsize
+      \textit{by \\ \@author}
+      \\[5mm]
+		  \textrm{\@Department \\ \@Institution, \@Location}
+      \\[5mm]
+		  \@SubmitDate
+    }
+  \end{center}
+  \vfill
+  \begin{center}
+    {
+      \small\sc
+      a thesis submitted to the Faculty of Graduate Studies and Research \\
+		  in partial fulfillment of the requirements for the degree of \\
+		  Master of Science
+    }
+  \end{center}
+  \vspace{25mm}
+  \begin{center}
+    {
+      \normalsize
+      \@CopyrightMessage
+    }
+  \end{center}
+
+  \end{titlepage}
+}

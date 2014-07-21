@@ -1,0 +1,10 @@
+digraph builtins{
+  rankdir=TD;
+  main[label="main(cmain)"];
+  f[label="f(cf)"];
+  g[label="g(cg)"];
+
+  main -> f;
+  f -> g;
+  main -> g;
+}

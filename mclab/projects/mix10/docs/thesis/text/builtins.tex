@@ -1,0 +1,179 @@
+\matlab  builtin methods are the core of the language and one of the
+features that make it popular among scientists. They provide a huge set
+of commonly used numerical functions.  All the operators, including the
+standard binary operators (\verb|+, -, *,/|), comparison operators
+(\verb|<, >, <=, >=, ==|) and logical operators (\verb+&, &&, |, ||+)
+are merely syntactic sugar for corresponding builtin methods that take
+the operands as arguments. For example an expression like \verb|a+b| is
+actually implemented as \verb|plus(a,b)|. An important thing to note is
+that unlike most programming languages, all the \matlab builtin methods
+by default operate on matrix values as a whole. For example \verb|a*b|
+or \verb|mtimes(a,b)| actually performs matrix multiplication on matrix
+values \verb|a| and \verb|b|.  However, most of the builtin methods also
+accept one or more scalar, or more accurately, $1\times1$ matrix
+arguments.
+Builtin methods are overloaded to accept almost all possible shapes of
+arguments. Thus \verb|mtimes(a,b)| can have both \verb|a| and \verb|b| as
+matrix arguments (including $1\times1$ matrices) with number of columns in
+\verb|a| equal to number of rows in \verb|b|, in which case the result
+is a matrix multiplication of \verb|a| and \verb|b| or one of them can
+be a $1\times1$ matrix and other can be a matrix of any size and the
+result is a matrix containing each element of the non-scalar argument
+times the scalar argument.  Wherever possible, \matlab builtins also
+support complex numerical values.  \xten on the other hand, like most of
+the programming languages operates on scalar values by default.
+ 
+Due to the fact that \xten is still new and evolving, it has a very
+limited set of libraries, specially to support a large subset of
+available \matlab builtin methods. The \xten Global Matrix Library (GML)
+supports double-precision matrix operations however it is still not as
+extensive as \matlab's set of operations and it poses some restrictions:
+
+\begin{enumerate}
+
+\item It works on values of type \verb|Matrix| instead of \xten type
+\verb|Array| which means it needs explicit conversion of \verb|Array|
+values to \verb|Matrix| values before performing a matrix operation and
+and then a conversion of the results back to \verb|Array| type. This
+conversion may be  a large overhead, especially for small data sizes.
+
+\item GML is limited to Matrix values of two dimensions and containing
+elements of type \verb|Double|, whereas many \matlab builtin methods
+support values of greater number of dimensions.
+
+\item GML currently does not support complex numerical values whereas
+\matlab naturally supports them.
+
+\item Currently GML requires a separate installation and configuration which
+is non-trivial specially for scientists who need something that works
+out of the box.
+
+%\item TODO:verify if GML provides overloaded methods for scalars
+
+\end{enumerate}
+
+Due to above restrictions, \xten Global Matrix Library is useful in some
+situations, for example when there is a matrix multiplication of a very
+large data size, but cannot be used or is not a good choice for a large
+number of operations.
+
+For a language with open-sourced libraries, it would be possible to actually
+compile the library methods to \xten.  However,  many \matlab libraries 
+are closed source and thus it is not possible to translate them to \xten.
+
+\subsection{ The \mixten Builtin Support Framework}
+
+We decided to write our own \xten implementations of the commonly used
+\matlab builtin methods. Currently we have implemented
+only those methods that are used in our benchmarks. In this thesis, we
+concentrate on how these methods are included in the generated \xten
+code with minimal loss of readability and performance rather than the
+actual implementation.
+
+The code below shows the \xten code for the \matlab builtin method
+\verb|plus(a,b)| involving 2-dimensional simple arrays.
+
+\noindent
+\begin{lstlisting}[language=X10,numbers=none]
+public static def 
+  plus(a: Array_2[Double], b:Array_2[Double]){
+		val x = new Array_2[Double](a.numElems_1, a.numElems_2);
+		for (p in a.indices()){
+			x(p) = a(p)+ b(p);
+		}
+  	return x;
+}
+	
+public static def plus(a:Double, b:Array_2[Double]){
+	val x = new Array_2[Double](b.numElems_1, b.numElems_2);
+	for (p in b.indices()){
+		x(p) = a+ b(p);
+	}
+	return x;
+}
+	
+public static def plus(a:Array_2[Double], b:Double){
+	val x = new Array_2[Double](a.numElems_1, a.numElems_2);
+	for (p in a.indices()){
+		x(p) = a(p)+ b;
+	}
+	return x;
+}
+	
+public static def plus(a:Double, b:Double){
+	val x: Double;
+	x = a+b;
+	return x;
+}
+\end{lstlisting}
+
+This \xten code contains four overloaded versions (and it still does not
+contain methods to support complex values, variables of types other than Double,
+simple arrays of other dimensions, and region arrays) based 
+on whether the arguments are scalar or \texttt{Array\_2} and their relative position
+in the list of arguments. 
+
+Including all the overloaded versions and versions specialized for arrays of
+different dimensions or region arrays, in the generated \xten code would result
+in lot of lookup overhead, would require producing redundant code (versions
+of methods with arguments of similar shape but different types will have the
+same algorithm) and would generate large code with less readability. Instead we
+designed a specialization technique that selects the appropriate versions of
+only the methods used in the source \matlab program. Note that the use of
+generic types to handle arguments of different types is not always a good idea,
+since several builtin implementations involve calls to \xten library functions
+which are not defined on generic types. For example, functions in the
+\texttt{x10.lang.Math} librarry like \texttt{floor(Double a)},
+\texttt{max(Double a, Double b)}, etc. do not take generic type arguments. 
+
+After studying numerous builtin methods we categorized them into the
+following five categories:
+
+\begin{description}
+\item[Type 1:] All the parameters are scalar values or no parameters.
+\item[Type 2:] All the parameters are arrays.
+\item[Type 3:] First parameter is scalar, rest of the parameters are arrays.
+\item[Type 4:] Last parameter is scalar, rest of the parameters are arrays.
+\item[Type 5:] Any other type(Default).
+\end{description}
+
+Each of these categories, except \emph{Type 5}, uses similar code template for
+different types of values. Note that due to the three address code-like
+structure of Tame IR, any call to a builtin almost always contains zero, one or
+two arguments. For builtin calls like \texttt{horzcat} and \texttt{vertcat}
+which may contain variable number of arguments, \mixten packs all the arguments
+in a \texttt{Rail} and passes a single argument of type \texttt{Rail}.
+Accordingly, these builtins are implemented in \emph{Type 2} category and receive a
+single argument of type \texttt{Rail}.
+
+We build an XML file that contains the method bodies for each category for
+every builtin method (that we support). The XML also contains specialized
+implementations of every builtin for different kinds of arrays.  We implement
+the following strategy to select and generate the correct and required methods.
+First, we make a pass through the AST to make a list of all the builtin methods
+used in the source \matlab program. Next, we parse the XML file once and read
+in the \xten code templates for all the categories of the builtin methods
+collected in the first step. Next, whenever a call to a builtin method is made,
+based on the results of the value analysis we: (1) Identify the required
+specialization for the method (simple array or region array); and (2) generate
+the correct method header and select the corresponding builtin template in the
+required specialization for that method.  The generated methods are finally
+written to a \xten class file named \verb|Mix10.x10|. In the code generated for
+actual \matlab program, the call to a builtin method is simply replaced by a
+call to the corresponding method in the Mix10 class. For example, \matlab
+expression \verb|plus(a,b)| is translated to \xten expression
+\verb|Mix10.plus(a,b)|. Appendix \ref{chap:Builtinxml} demonstrates the
+structure of the builtin XML with an example implementation of the builtin
+\texttt{plus}. 
+
+Using the above approach not only improves the readability of the generated
+code, but it also allows for future extensibility, better maintenance and more
+specialization. Specializations that we plan to add in future are: (1) the
+ability to use the Global Matrix Library for the available methods in it and
+whenever the data size is large enough; and (2) concurrent versions of the
+relevant builtins to support the execution of vector instructions in parallel
+fashion, as
+described in section \ref{sec:parvec}. We also encourage advanced users to
+mdoify the generated \texttt{Mix10.x10} file to enhance or add builtin
+implementations for higher performance of the generated code. 
+

@@ -1,0 +1,24 @@
+ \renewcommand{\tabcolsep}{3pt}
+In this appendix we show the generated mclass propagation tables
+for builtins. We categorized the functions into sections
+grouping similar functions together. This categorization helped
+us organize the builtin functions into a tree structure.
+
+Rows in the tables 
+correspond to the mclass of the first argument, columns correspond to
+the mclass of the second argument, and the table entries give the mclass
+of the result. The labels {\tt i8} through {\tt i64} represent the
+mclasses {\tt int8} through {\tt int64}, {\tt f32} is {\tt single},
+{\tt f64} is {\tt double}, {\tt c} is {\tt char}, and {\tt b} is {\tt
+logical}. {\tt h} refers to function handles. Values labelled {\tt \{\}} refer to the
+empty cell array - we use this argument to check whether functions
+support cell arrays at all. Some functions allow arbitrary cell arrays,
+others only operate on cell arrays of strings (e.g. the string functions).
+
+Entries of the form ``-" indicate that this combination is
+not allowed and will result in a runtime error. {\tt N/A} signifies
+that the results were inconsistent across different trials, meaning
+that there was no exact result found.
+
+
+\input{text/tables}
