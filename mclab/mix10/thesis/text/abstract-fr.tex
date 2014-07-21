@@ -1,0 +1,45 @@
+\begin{otherlanguage}{french} 
+\matlab est un langage de programmation dynamique, orienté-tableaux
+communément utilisé par les étudiants, les scientifiques et les
+ingénieurs qui apprécient son style de développement interactif, la
+richesse de ses opérateurs sur les tableaux, sa librairie
+impressionnante de fonctions de base et le fait qu'on aie pas à
+déclarer statiquement le type des variables.  Bien que ces usagers
+apprécient \matlab, leurs programmes nécessitent souvent des ressources
+de calcul importantes qui sont offertes par les nouveaux systèmes de
+haute performance.  Cette thèse fait le rapport de \mixten, un
+compilateur source-à-source qui fait la traduction automatique de
+programmes \matlab à \xten, un langage construit pour "la performance et
+la productivité à grande échelle."  Ainsi, \mixten aide les programmeurs
+scientifiques à faire un meilleur usage des ressources des systèmes de
+calcul de haute performance.
+
+Il y a un écart sémantique important entre le typage dynamique et le
+focus sur les tableaux de \matlab et l'approche orientée-objet, le
+typage statique et les abstractions de haut niveau sur les tableaux de
+\xten.  Cette thèse discute des défis principaux qui doivent être
+surmontés afin de produire du code \xten séquentiel compétitif avec les
+meilleurs compilateurs statiques pour \matlab qui traduisent vers des
+langages impératifs plus conventionnels, tels que C et Fortran.  Fort
+de cette fondation efficace, cette thèse décrit ensuite la traduction
+de l'instruction \texttt{parfor} de \matlab afin d'utiliser les opérations
+sophistiquées de traitement concurrent de \xten.
+
+Le compilateur \mixten a été implémenté à l'aide de la suite d'outils de
+McLab, un projet libre de droits, disponible à la communauté de
+recherche ainsi qu'aux utilisateurs de \matlab.  Nous avons utilisé
+notre implémentation afin d'effectuer des mesures empiriques de
+performance sur un jeu de 17 programmes \matlab.  Nous démontrons que
+le code généré par \mixten est considérablement plus rapide que le
+système \matlab de Mathworks et que nos résultats sont compétitifs avec
+les meilleurs compilateurs statiques qui produisent du code C et
+Fortran.  Nous montrons également l'importance d'une représentation
+appropriée des tableaux en \xten et la nécessité d'une analyse
+\emph{IntegerOkay} qui permet de déterminer quelles variables de type réel
+(double) peuvent être correctement représentées par des entiers
+(int). Finalement, nous montrons que notre traitement de l'instruction
+\texttt{parfor} en \xten nous permet d'atteindre des vitesses d'exécution
+considérablement meilleures que dans \matlab.
+
+\end{otherlanguage}
+

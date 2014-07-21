@@ -1,0 +1,231 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{QMSZ98b}
+
+\bibitem[AP02]{MaJIC}
+George Alm\'{a}si and David Padua.
+\newblock \href{http://doi.acm.org/10.1145/512529.512564}{Ma{JIC}: compiling
+  {MATLAB} for speed and responsiveness}.
+\newblock In {\em PLDI '02: Proceedings of the ACM SIGPLAN 2002 Conference on
+  Programming language design and implementation}, Berlin, Germany, 2002, pages
+  294--303. ACM.
+
+\bibitem[BKSE12]{julia}
+Jeff Bezanson, Stefan Karpinski, Viral~B. Shah, and Alan Edelman.
+\newblock {Julia: A Fast Dynamic Language for Technical Computing}.
+\newblock {\em CoRR}, abs/1209.5145, 2012.
+
+\bibitem[Bud83]{801218}
+Timothy~A. Budd.
+\newblock \href{http://doi.acm.org/10.1145/800062.801218}{{An APL compiler for
+  the UNIX timesharing system}}.
+\newblock In {\em APL '83: Proceedings of the international conference on APL},
+  Washington, D.C., United States, 1983, pages 205--209. ACM, New York, NY,
+  USA.
+
+\bibitem[CB98]{745866}
+St\'{e}phane Chauveau and Fran\c{c}ois Bodin.
+\newblock {Menhir: An Environment for High Performance Matlab}.
+\newblock In {\em LCR '98: Selected Papers from the 4th International Workshop
+  on Languages, Compilers, and Run-Time Systems for Scalable Computers}, 1998,
+  pages 27--40. Springer-Verlag, London, UK.
+
+\bibitem[CBP{\etalchar{+}}12]{coman}
+E~Coman, M~Brewster, S~Popuri, A~Raim, and M~Gobbert.
+\newblock {A Comparative Evaluation of Matlab, Octave, FreeMat, Scilab, R, and
+  IDL on Tara}.
+\newblock Technical report, Baltimore County, US, 2012.
+
+\bibitem[CDD{\etalchar{+}}95]{898821}
+J.~Choi, J.~Demmel, I.~Dhillon, J.~Dongarra, S.~Ostrouchov, A.~Petitet,
+  K.~Staney, D.~Walker, and R.~C. Whaley.
+\newblock {LAPACK Working Note 95: ScaLAPACK: A Portable Linear Algebra Library
+  for Distributed Memory Computers -- Design Issues and Performance}.
+\newblock Technical report, Knoxville, TN, USA, 1995.
+
+\bibitem[DH12a]{McSAFecoop12}
+Jesse Doherty and Laurie Hendren.
+\newblock {McSAF}: A static analysis framework for {MATLAB}.
+\newblock In {\em Proceedings of ECOOP 2012}, 2012, pages 132--155.
+
+\bibitem[DH12b]{TamerPaper}
+Anton Dubrau and Laurie Hendren.
+\newblock Taming {MATLAB}.
+\newblock In {\em Proceedings of OOPSLA 2012}, 2012, pages 503--522.
+
+\bibitem[DHR11]{KindAnalysis}
+Jesse Doherty, Laurie Hendren, and Soroush Radpour.
+\newblock Kind analysis for {MATLAB}.
+\newblock In {\em In Proceedings of OOPSLA 2011}, 2011, pages 99--118.
+
+\bibitem[DKB]{freemat}
+Eugene~Ingerman Demetrios~Kyriakis and Samit Basu.
+\newblock Freemat.
+\newblock \url{http://freemat.sourceforge.net/}.
+
+\bibitem[Doh11]{JesseThesis}
+Jesse Doherty.
+\newblock {McSAF: An Extensible Static Analysis Framework for the MATLAB
+  Language}.
+\newblock Master's thesis, McGill University, December 2011.
+
+\bibitem[Dub12]{adubra12}
+Anton Dubrau.
+\newblock Taming matlab.
+\newblock Master's thesis, April 2012.
+
+\bibitem[EH04]{ekman04}
+{Torbj\"{o}rn} Ekman and {G\"{o}rel} Hedin.
+\newblock Reusable language specifications in {JastAdd II}.
+\newblock In Thomas Cleenewerck, editor, {\em Evolution and Reuse of Language
+  Specifications for {DSLs} {(ERLS)}}, 2004.
+\newblock Available from: \url{http://prog.vub.ac.be/~thomas/ERLS/Ekman.pdf}.
+
+\bibitem[IBM12]{x10}
+IBM.
+\newblock X10 programming language.
+\newblock \url{http://x10-lang.org}, February 2012.
+
+\bibitem[IBM13a]{apgaspaper}
+IBM.
+\newblock {APGAS} programming in {X10} 2.4, 2013.
+\newblock
+  \url{http://x10-lang.org/documentation/tutorials/apgas-programming-in-x10-24.html}.
+
+\bibitem[IBM13b]{x10intro}
+IBM.
+\newblock An introduction to {X10}, 2013.
+\newblock
+  \url{http://x10.sourceforge.net/documentation/intro/latest/html/node4.html}.
+
+\bibitem[INR09]{Scilab}
+INRIA.
+\newblock Scilab, 2009.
+\newblock \url{http://www.scilab.org/platform/}.
+
+\bibitem[jas]{jastaddurl}
+{JastAdd}.
+\newblock \url{http://jastadd.org/}.
+
+\bibitem[JB01]{magica}
+Pramod~G. Joisha and Prithviraj Banerjee.
+\newblock \href{http://doi.acm.org/10.1145/570407.570408}{{Correctly detecting
+  intrinsic type errors in typeless languages such as MATLAB}}.
+\newblock In {\em APL '01: Proceedings of the 2001 conference on APL}, New
+  Haven, Connecticut, 2001, pages 7--21. ACM, New York, NY, USA.
+
+\bibitem[Joi03]{MAT2C}
+Pramod~G. Joisha.
+\newblock \href{http://www.ece.northwestern.edu/cpdc/pjoisha/mat2c/}{a
+  {MATLAB-to-C} translator}, 2003.
+\newblock  \\
+  \(<\)\href{http://www.ece.northwestern.edu/cpdc/pjoisha/mat2c/}{http://www.ece.northwestern.edu/cpdc/pjoisha/mat2c/}\(>\)
+  .
+
+\bibitem[LH14]{mc2for}
+Xu~Li and Laurie Hendren.
+\newblock Mc2for: A tool for automatically translating matlab to fortran 95.
+\newblock In {\em In Proceedings of CSMR-WCRE 2014}, 2014, pages 234--243.
+
+\bibitem[Li09]{McForThesis}
+Jun Li.
+\newblock \href{http://www.sable.mcgill.ca/mclab/matlab_fortran.html}{{{McFor}:
+  A {MATLAB} to {FORTRAN} 95 Compiler}}.
+\newblock Master's thesis, McGill University, August 2009.
+
+\bibitem[Mata]{MATLABCoder}
+MathWorks.
+\newblock {{ MATLAB Coder}}.
+\newblock \url{http://www.mathworks.com/products/matlab-coder/}.
+
+\bibitem[Matb]{reducassg}
+Mathworks.
+\newblock {Reduction variables}.
+\newblock
+  \url{http://www.mathworks.com/help/distcomp/advanced-topics.html#bq_of7_-3}.
+
+\bibitem[Mat13]{pct}
+MathWorks.
+\newblock Parallel computing toolbox, 2013.
+\newblock \url{http://www.mathworks.com/products/parallel-computing/}.
+
+\bibitem[Mol]{MatlabGrowth}
+Cleve Moler.
+\newblock {{The Growth of MATLAB and The MathWorks over Two Decades}}.
+\newblock
+  \url{http://www.mathworks.com/company/newsletters/news_notes/clevescorner/jan06.pdf}.
+
+\bibitem[Oct]{Octave}
+{GNU Octave}.
+\newblock \url{http://www.gnu.org/software/octave/index.html}.
+
+\bibitem[PAG11]{megha}
+Ashwin Prasad, Jayvant Anantpur, and R.~Govindarajan.
+\newblock \href{http://doi.acm.org/10.1145/1993498.1993517}{Automatic
+  compilation of {MATLAB} programs for synergistic execution on heterogeneous
+  processors}.
+\newblock In {\em Proceedings of the 32nd {ACM} {SIGPLAN} conference on
+  Programming language design and implementation}, San Jose, California, USA,
+  2011, PLDI '11, pages 152--163. ACM, New York, NY, USA.
+
+\bibitem[QMSZ98a]{QMSZ98}
+Michael~J. Quinn, Alexey Malishevsky, Nagajagadeswar Seelam, and Yan Zhao.
+\newblock {Preliminary Results from a Parallel MATLAB Compiler}.
+\newblock In {\em Proceedings of Int. Parallel Processing Symp.}, 1998, IPPS,
+  pages 81--87.
+
+\bibitem[QMSZ98b]{Quinn}
+Michael~J. Quinn, Alexey Malishevsky, Nagajagadeswar Seelam, and Yan Zhao.
+\newblock {Preliminary Results from a Parallel MATLAB Compiler}.
+\newblock In {\em Proc. Int. Parallel Processing Symp. (IPPS}, 1998, pages
+  81--87. IEEE CS Press.
+
+\bibitem[RP99]{falcon}
+Luiz~De Rose and David Padua.
+\newblock \href{http://doi.acm.org/10.1145/316686.316693}{{Techniques for the
+  translation of MATLAB programs into Fortran 90}}.
+\newblock {\em ACM Trans. Program. Lang. Syst.}, 21(2):286--323, 1999.
+
+\bibitem[SBP{\etalchar{+}}12]{specs}
+Vijay Saraswat, Bard Bloom, Igor Peshansky, Olivier Tardieu, and David Grove.
+\newblock {\em X10 Language Specification, Version 2.2}.
+\newblock January 2012.
+
+\bibitem[Sch75]{361235}
+J.~T. Schwartz.
+\newblock \href{http://doi.acm.org/10.1145/361227.361235}{{Automatic data
+  structure choice in a language of very high level}}.
+\newblock {\em Commun. ACM}, 18(12):722--728, 1975.
+
+\bibitem[Sci]{numpy}
+Scipy.org.
+\newblock Numpy.
+\newblock \url{http://www.numpy.org/}.
+
+\bibitem[Soh11]{Tetsu-2011}
+Tetsu Soh.
+\newblock Design and implementation of a {DSL} based on {Ruby} for parallel
+  programming.
+\newblock Technical report, The University of Tokyo, January 2011.
+
+\bibitem[{The}02]{matlabjit}
+{The Mathworks}.
+\newblock {Technology Backgrounder: Accelerating MATLAB}, September 2002.
+\newblock
+  \url{http://www.mathworks.com/company/newsletters/digest/sept02/accel_matlab.pdf}.
+
+\bibitem[WS81]{805380}
+Zvi Weiss and Harry~J. Saal.
+\newblock \href{http://doi.acm.org/10.1145/800142.805380}{{Compile time syntax
+  analysis of APL programs}}.
+\newblock In {\em APL '81: Proceedings of the international conference on APL},
+  San Francisco, California, United States, 1981, pages 313--320. ACM, New
+  York, NY, USA.
+
+\bibitem[WTLY12]{Wei-2012}
+Haitao Wei, Hong Tan, Xiaoxian Liu, and Junqing Yu.
+\newblock \href{http://doi.acm.org/10.1145/2246056.2246057}{{StreamX10}: a
+  stream programming framework on {X10}}.
+\newblock In {\em Proceedings of the 2012 ACM SIGPLAN X10 Workshop}, Beijing,
+  China, 2012, X10 '12, pages 1:1--1:6. ACM, New York, NY, USA.
+
+\end{thebibliography}

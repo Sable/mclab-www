@@ -1,0 +1,131 @@
+digraph builtins{
+       //size="10.25,7.75";
+       rankdir=TD;
+       //graph [ranksep=.2,concentrate=true, nodesep=.3];
+       //edge[ weight = 1.2 ];
+       Builtin;
+
+
+    
+   //- create a way of just returning the dominant arg, where a list of dominant args is given
+   //abstractRoot[shape=plaintext,color=none,label="Root"];
+   //Builtin -> abstractRoot;
+    
+   //pure functions have no side effects and always return the same value, depending only on arguments
+   abstractPureFunction[shape=plaintext,color=none,label="PureFn"];
+   Builtin -> abstractPureFunction [weight=2];
+
+   objectFunction[shape=plaintext,label="ObjectFn",rank="max"];
+   abstractPureFunction -> objectFunction;
+    
+   //function operates on matrizes (numerical,char,logical)
+   abstractMatrixFunction[shape=plaintext,color=none,label="MatrixFn"];
+   abstractPureFunction -> abstractMatrixFunction [weight=10];
+   
+   //constant function - there are few of these, most 'constants' take optional shape args
+   abstractConstant[shape=plaintext,color=none,label="Constant"];
+   abstractMatrixFunction -> abstractConstant;
+
+
+   //general function - operates on any matrix, sometimes with restrictions
+   abstractAnyMatrixFunction[shape=plaintext,color=none,label="AnyMatrixFn"];
+   abstractMatrixFunction -> abstractAnyMatrixFunction;
+    
+    
+
+  //- some actual Matlab functions don't actually coerce logicals and or chars!
+  abstractNumericFunction[shape=plaintext,color=none,label="NumericFn"];
+  abstractMatrixFunction -> abstractNumericFunction[weight=10];
+    
+  //should this be called something related to operator?
+  abstractProperNumericFunction[shape=plaintext,color=none,label="ProperNumericFn"];
+  abstractNumericFunction -> abstractProperNumericFunction[weight=10];
+   
+  //unary numeric function
+  abstractUnaryNumericFunction[shape=plaintext,color=none,label="UnaryNumericFn"];
+  abstractProperNumericFunction -> abstractUnaryNumericFunction;
+
+  //binary numeric function - doesn't mix integers
+  abstractBinaryNumericFunction[shape=plaintext,color=none,label="BinaryNumericFn"];
+  abstractProperNumericFunction -> abstractBinaryNumericFunction[weight=10];
+    
+       //elemental binary numeric matrix function
+       abstractElementalBinaryNumericFunction[shape=plaintext,color=none,label="ElementalBinaryNumericFn"];
+       abstractBinaryNumericFunction -> abstractElementalBinaryNumericFunction[weight=10];
+       complex[shape=box,label="complex",rank="max"];
+       abstractElementalBinaryNumericFunction -> complex;
+    
+       //elemewise binary arithmetic
+       abstractElementalBinaryArithmetic[shape=plaintext,color=none,label="ElementalBinaryArithmetic"];
+       abstractElementalBinaryNumericFunction -> abstractElementalBinaryArithmetic[weight=10];
+       plus[shape=box,label="plus\nminus\ntimes\npower",rank="max"];
+       abstractElementalBinaryArithmetic -> plus;
+
+       abstractDividingElementalArithmetic[shape=plaintext,color=none,label="DividingElementalArithmetic"];
+       abstractElementalBinaryArithmetic -> abstractDividingElementalArithmetic[weight=10];
+       ldivide[shape=box,label="ldivide\nrdivide\nmod\nrem",rank="max"];
+       abstractDividingElementalArithmetic -> ldivide;
+    
+  //array wise binary numeric matrix function
+  abstractArrayBinaryNumericFunction[shape=plaintext,color=none,label="ArrayBinaryNumericFn"];
+  abstractBinaryNumericFunction -> abstractArrayBinaryNumericFunction;
+
+    
+  //arguments that either options or different possible operands.
+  abstractImproperNumericFunction[shape=plaintext,color=none,label="ImproperNumericFn"];
+  abstractNumericFunction -> abstractImproperNumericFunction;
+    
+    
+
+
+  //operatoes on floating point matrizes
+  abstractFloatFunction[shape=plaintext,color=none,label="FloatFn"];
+  abstractMatrixFunction -> abstractFloatFunction;
+
+
+  //bit functions - usually operates on ints or logicals, some exceptions
+  abstractBitFunction[shape=plaintext,color=none,label="BitFn"];
+  abstractMatrixFunction -> abstractBitFunction;
+
+  //TODO impure/pure unary for scalar?
+  abstractMatrixQuery[shape=plaintext,color=none,label="MatrixQuery"];
+  abstractMatrixFunction -> abstractMatrixQuery;
+    
+  //functions that create matrix arrays from vectors or values describing the matrizes
+  abstractMatrixCreation[shape=plaintext,color=none,label="MatrixCreation"];
+  abstractMatrixFunction -> abstractMatrixCreation;
+    
+  //matrix constructors
+  abstractMatrixConstructor[shape=plaintext,color=none,label="MatrixConstructor"];
+  abstractMatrixFunction -> abstractMatrixConstructor;
+    
+  //function operates on cell arrays
+  abstractCellFunction[shape=plaintext,color=none,label="CellFn"];
+  abstractPureFunction -> abstractCellFunction;
+  //cell[shape=box,label="cell",rank="max"];
+  //abstractCellFunction -> cell;
+  //     abstractCellCat[shape=plaintext,color=none,label="CellCat"];
+  //     abstractCellFunction -> abstractCellCat;
+  //     cellhorzcat[shape=box,label="cellhorzcat\ncellvertcat",rank="max"];
+  //     abstractCellCat -> cellhorzcat;
+    
+  //function operates on structures
+  abstractStructFunction[shape=plaintext,color=none,label="StructFn"];
+  abstractPureFunction -> abstractStructFunction;
+  //isfield[shape=box,label="isfield\nstruct",rank="max"];
+  //abstractStructFunction -> isfield;
+    
+
+
+  //function operates on a mixtures of matrizes, cell arrays, structures and/or objects
+  abstractVersatileFunction[shape=plaintext,color=none,label="VersatileFn"];
+  abstractPureFunction -> abstractVersatileFunction;
+    
+    
+  //*** opposite of pure functions *****************************************
+  abstractImpureFunction[shape=plaintext,color=none,label="ImpureFn"];
+  Builtin -> abstractImpureFunction;
+  //superiorto[shape=box,label="superiorto\nsuperiorfloat\nexit\nquit",rank="max"];
+  //abstractImpureFunction -> superiorto;
+    
+}

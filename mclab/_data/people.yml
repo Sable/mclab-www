@@ -140,15 +140,18 @@
 
 - name: "Sujay Kathrotia" 
   type: "Masters"
-  email: "" 
+  email: "sujay.kathrotia@mail.mcgill.ca"
   website: ""
   projects: 
     - name: "McLib.js" 
       link: ""
     - name: "Ostrich Benchmark Suite" 
       link: ""
-  description: ""
-  image: ""
+  description: "I joined the lab in fall of 2013. I am interested in numerical computation in JavaScript. 
+      I am working on McLib.JS which is a dynamic and high-performance JavaScript library for numerical 
+      computation. I also like to investigate performance issues in benchmarks. I have worked on McTicToc
+      project based on NodeJS and EmberJS which is an autometed benchmarks runner for McLab backends."
+  image: "/images/people/sujay.jpg"
 
 - name: "Vincent Foley-Bourgon" 
   type: "Masters"
@@ -169,7 +172,7 @@
   projects: 
     - name: "VeloCity" 
       link: ""
-  description: "I currently pursuing my Masters in Computer Science from McGill University. I have completed my Bachelors in Information Technology from University of Pune(India). I am mainly interested in Compilers and programming to parallel architectures especially massively parallel ones. Array based Languages such as Matlab and python with it's NumPy library provide constructs and methods which simplify scientific computing algorithms. The performance of these algorithms can be improved by executing frrequently used sections of code on parallel architectures. My project aims to compile such hot methods to C++ and CudaC from array based languages . The generated code will be compiled to a shared library which can then be called from the high-level language (Matlab or python). This allows to maintain most of his code in a high-level language and compiling only certain methods to a low level language."
+  description: "I joined the lab in the summer of 2013. I have completed my Bachelor's in Information Technology from University of Pune (India). My interests include in compilers and programming to parallel architectures. I am currently working on the VeloCty project for my Master's thesis. My non-academic interests include travelling to new places and reading books among others."
   image: "/images/people/sameer.jpg"
 
 - name: "Ismail Badawi" 
@@ -335,7 +338,7 @@
   description: "For the convenience of analyzing Matlab code and collecting information for later phase, tamer convert Matlab to a low level IR, tamerIR, almost three address code. This low level IR has many temporary variables and not very friendly human readable, so my project goal is trying to aggregate those simplified code back to a higher level IR and make them more human readable"
   image: ""
 
-- name: "Olivier Savary" 
+- name: "Olivier Savary Belanger" 
   type: "Undergrad Alumni"
   email: "" 
   website: ""

@@ -1,0 +1,99 @@
+% -- Custom Environments ---
+\definecolor{darkgrey} {rgb}{0.843,0.843,0.843}
+\definecolor{lightgrey} {rgb}{0.979,0.979,0.979}
+\lstset{
+        language=[AspectJ]Java, %keyword highlighting seems annoying
+        morekeywords={declare, parents},
+        basicstyle=\ttfamily\footnotesize, % use fixed-width font
+        keywordstyle=\bfseries\color[rgb]{.498,.000,.333}, % eclipse color, bold
+        %keywordstyle=\bfseries, % bold keywords
+        identifierstyle=,       % nothing happens
+        %commentstyle=\color[rgb]{.247,.498,.372}, % eclipse color
+        commentstyle=\color[rgb]{.753,.753,.753}, % grey comments
+        stringstyle=\color[rgb]{.164,.000,1.00},  % eclipse color
+        %stringstyle=\ttfamily,  % typewriter type for strings
+        showstringspaces=false, % no special string spaces
+	    tabsize=2,
+        columns=fullflexible,   % Use flexible column format (for comments)
+        frame=single, %
+        framerule=0.6pt, %
+        backgroundcolor=\color{white}, %
+        rulecolor=\color{darkgrey}, %
+        captionpos=b, %
+	    numbers=left, 
+	    numberstyle=\scriptsize\color[rgb]{.501,.501,.501},
+	    stepnumber=1,
+	    breaklines=true,
+	    breakatwhitespace=true
+}
+
+\newcommand{\code}[1]{{\small \texttt{#1}}}
+\newcommand{\codekeyword}[1]{\textbf{\code{#1}}}
+
+% MetaLexer
+
+\newcommand{\mlkw}[1]{\codekeyword{#1}\xspace}
+\newcommand{\ml}[1]{\textit{#1}}
+\newcommand{\jflexkw}[1]{\codekeyword{#1}\xspace}
+\newcommand{\jflex}[1]{\textit{#1}}
+%\newcommand{\java}[1]{\textit{#1}}
+\newcommand{\weburl}[1]{\textit{#1}}
+\newcommand{\file}[1]{\textit{#1}}
+\newcommand{\target}[1]{\textit{#1}}
+\newcommand{\property}[1]{\textit{#1}}
+\newcommand{\cli}[1]{\textit{#1}}
+\newcommand{\chapref}[1]{\textit{Chapter \ref{#1}}}
+\newcommand{\appendixref}[1]{\textit{Appendix \ref{#1}}}
+\newcommand{\sectionref}[1]{\textit{Section \ref{#1}}}
+\newcommand{\figref}[1]{\textit{Figure \ref{#1}}}
+\newcommand{\tableref}[1]{\textit{Table \ref{#1}}}
+\newcommand{\lstref}[1]{\textit{Listing \ref{#1}}}
+\newcommand{\lstrefTwo}[2]{\textit{Listings \ref{#1} \& \ref{#2}}}
+\newcommand{\lstrefN}[2]{\textit{Listings \ref{#1} - \ref{#2}}}
+
+\newcommand{\secref}[1]{Sec.~\ref{#1}}
+\newcommand{\figureref}[1]{Figure~\ref{#1}}
+\newcommand{\equationref}[1]{Equation~\ref{#1}}
+\newcommand{\eqnref}[1]{(\ref{#1})}
+\newcommand{\RC}{reference-counting-based }
+
+
+
+\newcommand{\patANY}{\mlkw{<<ANY>>}}
+\newcommand{\patEOF}{\mlkw{<<EOF>>}}
+\newcommand{\mpatANY}{\mlkw{<ANY>}}
+\newcommand{\mpatBOF}{\mlkw{<BOF>}}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\note}[1]{\textcolor{red}{\textbf{#1}}}
+\newcommand{\variation}[2]{\textbf{\textcolor{green}{#1} \red{or} \textcolor{blue}{#2}}}
+
+%\newcommand{\mcode}[1]{\lstinline[language=MATLAB]|#1|}
+\newcommand{\jcode}[1]{\lstinline[language=Java]|#1|}
+\newcommand{\pcode}[1]{\lstinline[language=pseudo]|#1|}
+
+
+\newcommand{\into}{ 
+   \end{minipage}
+   \parbox{1cm}{\LARGE\centering $\mathbf{\Rightarrow}$}
+   \begin{minipage}{5cm}
+ }
+\newenvironment{transform}
+{
+  \begin{center}
+    \begin{minipage}{5cm}
+}
+{
+  \end{minipage}
+\end{center}
+}
+\lstnewenvironment{mtrans}
+{
+\lstset{language=matlab,numbers=none,frame=single}
+}
+{}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: "thesis"
+%%% End: 

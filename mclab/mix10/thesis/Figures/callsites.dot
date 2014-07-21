@@ -1,0 +1,30 @@
+digraph builtins{
+  rankdir=TD;
+
+  //main1[label="main(cmain)"];
+  f1[label="f(cf)"];
+  g4[label="g(cg)"];
+  g5[label="@char/g(cg)"];
+  //main1 -> f1; 
+  f1 -> g4; f1-> g5;
+
+
+  //main[label="main(cmain)"];
+  f[label="f(cf)"];
+  g1[label="g(c1)"];
+  g2[label="g(c2)"];
+  g3[label="g(c3)"];
+
+  //main -> f;
+  f -> g1; f -> g2; f-> g3;
+
+
+  //main2[label="main(cmain)"];
+  f2[label="f(cf)"];
+  foo[label="foo(ch)"];
+  bar[label="bar(ch)"];
+
+  //main2 -> f2;
+  f2 -> foo; f2 -> bar;
+
+}

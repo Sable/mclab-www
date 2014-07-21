@@ -1,0 +1,519 @@
+\newpage
+\section{Binary Arithmetic Operations}
+
+\textbf{plus, minus, mtimes, times, kron, @(x,y)cross([x,x,x],[y,y,y]):}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&i8&-&-&-&-&-&-&-&-&i8&i8&-&-&-\\ \hline
+u8&-&u8&-&-&-&-&-&-&-&u8&u8&-&-&-\\ \hline
+i16&-&-&i16&-&-&-&-&-&-&i16&i16&-&-&-\\ \hline
+u16&-&-&-&u16&-&-&-&-&-&u16&u16&-&-&-\\ \hline
+i32&-&-&-&-&i32&-&-&-&-&i32&i32&-&-&-\\ \hline
+u32&-&-&-&-&-&u32&-&-&-&u32&u32&-&-&-\\ \hline
+i64&-&-&-&-&-&-&i64&-&-&i64&i64&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&u64&-&u64&u64&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&f32&f32&f32&f32&-&-\\ \hline
+f64&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+c&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&f32&f64&f64&f64&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+
+\textbf{mldivide, mrdivide, ldivide, rdivide, mod, rem, mod:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&i8&-&-&-&-&-&-&-&-&i8&i8&-&-&-\\ \hline
+u8&-&u8&-&-&-&-&-&-&-&u8&u8&-&-&-\\ \hline
+i16&-&-&i16&-&-&-&-&-&-&i16&i16&-&-&-\\ \hline
+u16&-&-&-&u16&-&-&-&-&-&u16&u16&-&-&-\\ \hline
+i32&-&-&-&-&i32&-&-&-&-&i32&i32&-&-&-\\ \hline
+u32&-&-&-&-&-&u32&-&-&-&u32&u32&-&-&-\\ \hline
+i64&-&-&-&-&-&-&i64&-&-&i64&i64&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&u64&-&u64&u64&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&f32&f32&f32&f32&-&-\\ \hline
+f64&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+c&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&f32&f64&f64&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\textbf{mpower, power:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&i8&-&-&-&-&-&-&-&-&-&i8&-&-&-\\ \hline
+u8&-&u8&-&-&-&-&-&-&-&-&u8&-&-&-\\ \hline
+i16&-&-&i16&-&-&-&-&-&-&-&i16&-&-&-\\ \hline
+u16&-&-&-&u16&-&-&-&-&-&-&u16&-&-&-\\ \hline
+i32&-&-&-&-&i32&-&-&-&-&-&i32&-&-&-\\ \hline
+u32&-&-&-&-&-&u32&-&-&-&-&u32&-&-&-\\ \hline
+i64&-&-&-&-&-&-&i64&-&-&-&i64&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&u64&-&-&u64&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&f32&f32&f32&f32&-&-\\ \hline
+f64&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+c&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&f32&f64&f64&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+
+
+
+\section{Unary Arithmetic/Numeric Functions}
+
+\textbf{uplus, uminus, real, imag, abs, fix:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{conj, round, floor, ceil, sign:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+
+\section{Operations Resulting in Logicals}
+
+\textbf{not, any, all, isinf:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{isempty, isobject, isfloat, isinteger, islogical, isstruct, iscell:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\textbf{eq, ne, lt, gt, le, ge, and, or, xor:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+u8&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+i16&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+u16&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+i32&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+u32&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+i64&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+u64&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+f32&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+f64&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+c&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+b&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{@(x,y)x\&\&y:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+u8&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+i16&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+u16&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+i32&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+u32&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+i64&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+u64&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+f32&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+f64&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+c&b&b&b&b&b&b&b&b&b&b&b&b&-&-\\ \hline
+b&b&b&b&b&b&b&b&b&b&b&b&b&-&N/A\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\textbf{@(x,y)x {\tt ||} y:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+u8&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+i16&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+u16&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+i32&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+u32&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+i64&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+u64&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+f32&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+f64&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+c&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+b&b&b&b&b&b&b&b&b&b&b&b&b&N/A&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{isequalwithequalnans, isequal:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+u8&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+i16&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+u16&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+i32&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+u32&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+i64&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+u64&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+f32&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+f64&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+c&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+b&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+h&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+\{\}&b&b&b&b&b&b&b&b&b&b&b&b&b&b\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\section{Matrix Constructors from Shape}
+
+\textbf{ones, zeros, eye, inf, nan:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64&-&f64&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{true, false:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&b&b&b&b&b&b&b&b&b&b&-&b&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+
+\section{Query Functions Resulting in Numeric Values}
+
+\textbf{find, find, nnz:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{length, ndims, numel:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64&f64\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{rank:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&-&-&-&-&-&-&-&f64&f64&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\section{Dimension-Collapsing Operations}
+Functions of the form $f(M, [dim])$. {\tt cumprod}, {\tt mode} among
+the unary float functions, and {\tt median} in the in the general
+operators are also dimension-collapsing.
+
+\textbf{sum, mean:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&f64&f64&f64&f64&f64&f64&f64&f64&f32&f64&f64&f64&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{min, max:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&b&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{cumsum:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&-&-&-&-&-&-&-&f32&f64&-&f64&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{var, std:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&-&-&-&-&-&-&-&f32&f64&f64&f64&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\section{General Operators}
+
+\textbf{transpose, ctranspose, sort, sort:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&-&C-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{unique, squeeze, unique, squeeze:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&C-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{tril, triu, diag, diag, median:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{horzcat, vertcat:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&i8&i8&i8&i8&i8&i8&i8&i8&i8&i8&c&i8&-&Ci8\\ \hline
+u8&u8&u8&u8&u8&u8&u8&u8&u8&u8&u8&c&u8&-&Cu8\\ \hline
+i16&i16&i16&i16&i16&i16&i16&i16&i16&i16&i16&c&i16&-&Ci16\\ \hline
+u16&u16&u16&u16&u16&u16&u16&u16&u16&u16&u16&c&u16&-&Cu16\\ \hline
+i32&i32&i32&i32&i32&i32&i32&i32&i32&i32&i32&c&i32&-&Ci32\\ \hline
+u32&u32&u32&u32&u32&u32&u32&u32&u32&u32&u32&c&u32&-&Cu32\\ \hline
+i64&i64&i64&i64&i64&i64&i64&i64&i64&i64&i64&c&i64&-&Ci64\\ \hline
+u64&u64&u64&u64&u64&u64&u64&u64&u64&u64&u64&c&u64&-&Cu64\\ \hline
+f32&i8&u8&i16&u16&i32&u32&i64&u64&f32&f32&c&f32&-&Cf32\\ \hline
+f64&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&f64&-&Cf64\\ \hline
+c&c&c&c&c&c&c&c&c&c&c&c&-&-&Cc\\ \hline
+b&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&-&b&-&Cb\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&h\\ \hline
+\{\}&Ci8&Cu8&Ci16&Cu16&Ci32&Cu32&Ci64&Cu64&Cf32&Cf64&Cc&Cb&h&C-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\section{Bit Operations}
+
+\textbf{bitand, bitor, bitxor:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u8&-&u8&-&-&-&-&-&-&-&u8&-&-&-&-\\ \hline
+i16&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u16&-&-&-&u16&-&-&-&-&-&u16&-&-&-&-\\ \hline
+i32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u32&-&-&-&-&-&u32&-&-&-&u32&-&-&-&-\\ \hline
+i64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&u64&-&u64&-&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+f64&-&u8&-&u16&-&u32&-&u64&-&-&-&-&-&-\\ \hline
+c&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&-&-&-&b&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{bitcmp:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u8&-&-&-&-&N/A&-&-&-&-&-&-&u8&-&-\\ \hline
+i16&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u16&-&-&-&-&N/A&-&N/A&N/A&-&-&-&u16&-&-\\ \hline
+i32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u32&-&-&N/A&-&-&-&-&-&-&-&-&u32&-&-\\ \hline
+i64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u64&-&N/A&N/A&N/A&N/A&-&N/A&-&-&-&-&u64&-&-\\ \hline
+f32&-&f32&-&f32&-&f32&-&f32&-&-&-&-&-&-\\ \hline
+f64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+c&-&c&-&c&-&c&-&c&-&-&-&-&-&-\\ \hline
+b&-&b&-&b&-&b&-&b&-&-&-&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\textbf{bitset:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u8&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+i16&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u16&N/A&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+i32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u32&-&-&N/A&N/A&-&N/A&-&-&-&-&-&-&-&-\\ \hline
+i64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u64&-&-&N/A&N/A&N/A&-&N/A&N/A&-&-&-&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+f64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+c&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{bitget:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u8&-&-&-&-&-&-&N/A&-&-&-&-&-&-&-\\ \hline
+i16&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u16&N/A&-&-&-&N/A&-&-&-&-&-&-&-&-&-\\ \hline
+i32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u32&N/A&-&-&N/A&-&-&-&-&-&-&-&-&-&-\\ \hline
+i64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u64&-&N/A&N/A&N/A&N/A&N/A&-&N/A&-&-&-&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+f64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+c&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\textbf{bitshift:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u8&u8&u8&u8&u8&u8&u8&u8&u8&-&-&-&-&-&-\\ \hline
+i16&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u16&u16&u16&u16&u16&u16&u16&u16&u16&-&-&-&-&-&-\\ \hline
+i32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u32&u32&u32&u32&u32&u32&u32&u32&u32&-&-&-&-&-&-\\ \hline
+i64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u64&u64&u64&u64&u64&u64&u64&u64&u64&-&-&-&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+f64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+c&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\section{Floating Point Operations}
+\textbf{expm, sqrtm, logm, sqrt, realsqrt, erf, erfinv, erfcinv, gamma, gammaln, exp, log, log2, log10, sin, cos, tan, cot, sec, csc, sind, cosd, tand, cotd, secd, cscd, sinh, cosh, tanh, coth, sech, csch, atan, acot, atand, acotd, asinh, acsch, inv, eig, norm, det, rcond, eps, prod, inv, eig, norm, det, rcond, eps, schur, lu, chol, qr, svd, cumprod, mode:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&-&-&-&-&-&-&-&f32&f64&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{asin, acos, asind, acosd, asecd, acscd, atanh, acoth, asech:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&-&-&-&-&-&-&-&f32&f64&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{asec:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&-&-&-&-&-&-&-&f32&f64&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{acsc, acosh:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&-&-&-&-&-&-&-&f32&f64&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\textbf{hypot, atan2, linsolve:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u8&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+i16&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u16&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+i32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u32&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+i64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&f32&f32&-&-&-&-\\ \hline
+f64&-&-&-&-&-&-&-&-&f32&f64&-&-&-&-\\ \hline
+c&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{schar, ordschur:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\section{Fourier Transform Functions}
+
+\textbf{ifftn, fftn, fft:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+&-&f64&-&f64&-&-&-&-&f32&f64&-&f64&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\section{Other Functions}
+
+\textbf{@(x,y)colon(x,y), @(x,y)colon(x,y,x), @(x,y)colon(y,x,x), @(x,y)colon(x,x,y):}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&i8&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u8&-&u8&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+i16&-&-&i16&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+u16&-&-&-&u16&-&-&-&-&-&-&-&-&-&-\\ \hline
+i32&-&-&-&-&i32&-&-&-&-&-&-&-&-&-\\ \hline
+u32&-&-&-&-&-&u32&-&-&-&-&-&-&-&-\\ \hline
+i64&-&-&-&-&-&-&i64&-&-&-&-&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&u64&-&-&-&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&f32&f32&-&-&-&-\\ \hline
+f64&-&-&-&-&-&-&-&-&f32&f64&-&f64&-&-\\ \hline
+c&-&-&-&-&-&-&-&-&-&-&c&-&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&-&f64&-&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\textbf{complex:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&i8&-&-&-&-&-&-&-&-&i8&-&-&-&-\\ \hline
+u8&-&u8&-&-&-&-&-&-&-&u8&-&-&-&-\\ \hline
+i16&-&-&i16&-&-&-&-&-&-&i16&-&-&-&-\\ \hline
+u16&-&-&-&u16&-&-&-&-&-&u16&-&-&-&-\\ \hline
+i32&-&-&-&-&i32&-&-&-&-&i32&-&-&-&-\\ \hline
+u32&-&-&-&-&-&u32&-&-&-&u32&-&-&-&-\\ \hline
+i64&-&-&-&-&-&-&i64&-&-&i64&-&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&u64&-&u64&-&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&f32&f32&-&-&-&-\\ \hline
+f64&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&-&-&-&-\\ \hline
+c&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+\newpage
+\textbf{dot:}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&f64&-&-&-&-&-&-&-&-&f64&f64&-&-&-\\ \hline
+u8&-&f64&-&-&-&-&-&-&-&f64&f64&-&-&-\\ \hline
+i16&-&-&f64&-&-&-&-&-&-&f64&f64&-&-&-\\ \hline
+u16&-&-&-&f64&-&-&-&-&-&f64&f64&-&-&-\\ \hline
+i32&-&-&-&-&f64&-&-&-&-&f64&f64&-&-&-\\ \hline
+u32&-&-&-&-&-&f64&-&-&-&f64&f64&-&-&-\\ \hline
+i64&-&-&-&-&-&-&f64&-&-&f64&f64&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&f64&-&f64&f64&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&f32&f32&f32&f32&-&-\\ \hline
+f64&f64&f64&f64&f64&f64&f64&f64&f64&f32&f64&f64&f64&-&-\\ \hline
+c&f64&f64&f64&f64&f64&f64&f64&f64&f32&f64&f64&f64&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+
+
+\textbf{@(x,y)min(x,y), @(x,y)max(x,y):}
+\begin{scriptsize}\begin{tt}\begin{center}\vspace{-.3cm}\begin{tabular}{|m{.65cm}||m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|m{.65cm}|}\hline 
+&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&c&b&h&\{\}\\ \hline \hline
+i8&i8&-&-&-&-&-&-&-&-&i8&i8&-&-&-\\ \hline
+u8&-&u8&-&-&-&-&-&-&-&u8&u8&-&-&-\\ \hline
+i16&-&-&i16&-&-&-&-&-&-&i16&i16&-&-&-\\ \hline
+u16&-&-&-&u16&-&-&-&-&-&u16&u16&-&-&-\\ \hline
+i32&-&-&-&-&i32&-&-&-&-&i32&i32&-&-&-\\ \hline
+u32&-&-&-&-&-&u32&-&-&-&u32&u32&-&-&-\\ \hline
+i64&-&-&-&-&-&-&i64&-&-&i64&i64&-&-&-\\ \hline
+u64&-&-&-&-&-&-&-&u64&-&u64&u64&-&-&-\\ \hline
+f32&-&-&-&-&-&-&-&-&f32&f32&f32&f32&-&-\\ \hline
+f64&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+c&i8&u8&i16&u16&i32&u32&i64&u64&f32&f64&f64&f64&-&-\\ \hline
+b&-&-&-&-&-&-&-&-&f32&f64&f64&b&-&-\\ \hline
+h&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\{\}&-&-&-&-&-&-&-&-&-&-&-&-&-&-\\ \hline
+\end{tabular}\end{center}\end{tt}\end{scriptsize} 
+Note that {\tt min}, {\tt max}, using only one argument, are listed as dimension-collapsing functions.
+
+
+
+
