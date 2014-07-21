@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MiX10 : a MATLAB-to-X10 Compiler</title>
+<script type="text/javascript" src="js/prototype.js"></script> <!--These three scripts are for lightbox. To use lightbox to display a picture, put <a href="source" rel="lightbox" title="your title"></a> around the link.--> 
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.title {font-family: "Lucida Sans"; font-weight: bold; } <!--use this style for titles-->
+
+a:link {
+	color: #830000;
+	text-decoration: none;
+}
+a:visited {
+	color: #830000;
+	text-decoration: none;
+}
+a:hover {
+	color: #590202;
+	text-decoration: underline;
+}
+a:active {
+	color: #830000;
+	text-decoration: none;
+}
+.paragraph {
+	font-family: "Lucida Sans";
+	font-size: 12px;
+} <!--use this style for body text-->
+-->
+</style>
+</head>
+
+<body onload="MM_preloadImages('image/inner/buttons/projects.png','image/inner/buttons/publications.png','image/inner/buttons/software.png','image/inner/buttons/people.png','image/inner/buttons/faqs.png','image/inner/buttons/contact.png','image/inner/buttons/internal.png','image/inner/buttons/home.png')">
+<table cellpadding="0" cellspacing="0" align="center">
+	<tr>
+    	<td><img src="image/inner/header.png" name="Image2" border="0" usemap="#Map" id="Image2" /></td>
+    </tr>
+    <tr>
+    	<td><img src="image/inner/nav.png" name="Image1" border="0" usemap="#Image1Map" id="Image1" /></td>
+  </tr>
+    <tr>
+   	  <td background="image/inner/tile.png"><table cellpadding="10"><tr>
+   	    <td>
+         <span class="paragraph"><a href="aspectmatlab/index.html">AspectMatlab</a>
+         | <a href="mcir.html">McIR and analysis and transformation engine </a>| 
+         <a href="mcvm_mcjit.html">McVM and McJIT </a>| 
+         <a href="matlab_fortran.html">Matlab to Fortran</a> | 
+         <a href="domain_specific.html">Domain-Specific Scientific Languages</a></span><br /><br />
+<!--        <span class="title">Matlab to Fortran</span> <br />
+        <span class="paragraph">body text<br />
+        <a href="index.html">link demo</a>
+       </span> -->
+	   </td> 
+   	    <!--content goes HERE!-->
+   	  </tr>
+	   
+<tr>
+<td width="780">	   
+
+
+<h1>MiX10: MATLAB to X10 compiler</h1>
+<!--
+<h2>Overview</h2>
+
+<p>
+	MiX10 (MiX10 Isn't X10) is a MATLAB to X10 compiler based on McLab compiler
+toolkit. 
+</p>
+<p>
+MATLAB is the most popular language among scientists for solving numerically intensive problems but it does not allow scientists to take full advantage of today’s supercomputers which they have access to. We try to solve this problem by developing a MATLAB to X10 translator.
+</p>
+<p>
+X10 is a programming language being developed by IBM research to provide a programming model that provides scalability and productivity for new generation supercomputing architectures. X10 is based on four basic principles of asynchrony, locality, atomicity, and order developed on a type-safe, class-based, object-oriented foundation.
+</p>
+<p>
+MiX10 is a part of the McLab project at SABLE lab that provides a static backend with X10 as the target language for our MATLAB compiler. Two major challenges in translating MATLAB to X10 are 1) Mapping programming constructs of a matrix-based, dynamic and “wild” language to those of a statically typed, object-oriented, parallel programming language and 2) Providing support for a huge number of MATLAB builtin methods that are a major reason behind its success as a scientific programming language. MiX10 builds upon McLab’s Tamer analysis framework and aims for performance and readability of generated X10 code. 
+</p>
+Get a snazzy overview of what we are doing <a href="http://prezi.com/h47gye29lqev/x10/?kw=view-h47gye29lqev&rc=ref-29161617">here</a>.
+
+<p>
+	
+</p>
+
+<h2>Publications</h2>
+
+<p>
+	We have completed our phase 1 of MiX10 compiler and we are able to compile
+	most of the MATLAB's "wild" features. Read this <a href="mix10/techrep.pdf">Technical Report</a> 
+	about first steps to compile MATLAB to X10 to know what we have done so fore, how we do it and what are
+       we going to do next.	
+</p>
+
+<h2 class="section"><a name="AV">Availability</a></h2>
+
+<p>
+McLab will be open sourced under the Apache 2.0 license. The source code for MiX10 
+is still brewing and a complete and stable release will be made soon.
+In the mean time you can see what's going on under the hood (and maybe get your hands 
+dirty too) at our <a href="https://github.com/Sable/mclab/tree/fragile/languages/Natlab/src/natlab/backends/x10">GitHub repository</a>.
+</p>
+-->
+<!--
+<h2>Availability</h2>
+
+<p>
+McLab will be open sourced under the BSD license. A release is not currently provided, but source code will be made available on demand.
+</p>
+-->
+
+<h2>Our implementation of X10 array classes</h2>
+To make X10 array representation more compatible with MTALAB array representation, 
+we modified the <i>Array_2</i> and <i>Array_3</i> X10 classes (in particular, <i>offset()</i> 
+method in these classes) to support column-major ordering. We also
+added a <i>Helper</i> class that contains <i>getSubArray()</i> methods. 
+In order to use MiX10 we recommend to download the following
+files and add/replace them in your X10 sourcecode under [YOUR X10-TRUNK]/x10.runtime/src-x10/array/ directory.
+<br>
+<a href = "./Array_2.x10">Array_2.x10</a><br>
+<a href = "./Array_3.x10">Array_3.x10</a><br>
+<a href = "./Helper.x10">Helper.x10</a><br>
+
+
+
+</td>
+   	  </tr>
+      </table>
+      
+      </td> 
+    </tr>
+    <tr>
+    	<td><img src="image/inner/bottom.png" /></td>
+    </tr>
+</table>
+
+
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" /><!--for lightbox-->
+
+<!--image map for the navigation bar-->
+
+<map name="Image1Map" id="Image1Map"><area shape="rect" coords="171,-18,244,38" href="projects.html" alt="Projects" onmouseover="MM_swapImage('Image1','','image/inner/buttons/projects.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="242,-1,348,37" href="Publications.html" alt="Publications" onmouseover="MM_swapImage('Image1','','image/inner/buttons/publications.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="347,-2,429,35" href="Software.html" alt="Software" onmouseover="MM_swapImage('Image1','','image/inner/buttons/software.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="427,0,500,36" href="people.html" alt="People" onmouseover="MM_swapImage('Image1','','image/inner/buttons/people.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="496,-7,562,37" href="faq.html" alt="FAQs" onmouseover="MM_swapImage('Image1','','image/inner/buttons/faqs.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="560,-4,661,40" href="contact.html" onmouseover="MM_swapImage('Image1','','image/inner/buttons/contact.png',1)" onmouseout="MM_swapImgRestore()" />
+</map>
+<map name="Map" id="Map"><area shape="rect" coords="737,28,806,46" href="internal.html" onmouseover="MM_swapImage('Image2','','image/inner/buttons/internal.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="733,7,808,30" href="index.html" onmouseover="MM_swapImage('Image2','','image/inner/buttons/home.png',1)" onmouseout="MM_swapImgRestore()" />
+</map></body>
+</html>

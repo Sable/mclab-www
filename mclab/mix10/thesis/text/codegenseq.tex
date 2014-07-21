@@ -1,0 +1,387 @@
+\matlab is a programming language designed specifically for numerical
+computations. Every value is a \emph{Matrix} and has an associated array
+shape.  Even scalar values are $1\times1$ matrices. Vectors are
+$1\times n$ or $n \times 1$ matrices. All the values are by default of
+type \verb+double+.  \matlab naturally supports imaginary components for
+all numerical values and almost all operators and library functions
+support complex inputs. In the rest of this chapter we describe some of
+the key features of \matlab that demonstrate what makes \matlab 
+different and challenging to compile statically and techniques used by
+\mixten to translate these ``wild" features to \xten. We provide necessary
+details on the various \matlab constructs as we discuss them, however for the
+readers who are totally unfamiliar with \matlab, we suggest reading chapter 2 of
+the M.Sc. thesis on the Tamer framework~\cite{adubra12}. 
+
+\section{Methods}
+
+A function definition in \matlab takes one or more input arguments and
+returns one or more values. A typical \matlab function looks as follows:
+
+%\lstset{tabsize=2}
+\begin{lstlisting}[language=Matlab,numbers=none]
+function[x,y] = foo(a,b)
+    x = a+3;
+    y = b-3;
+end
+\end{lstlisting}
+
+This function has two input arguments \verb|a| and \verb|b| that
+can be of any type and any shape and returns two values \verb|x| and
+\verb|y| of the same shape as \verb|a| and \verb|b| respectively and of
+types determined by \matlab's type conversion rules. The Tamer IR
+provides a list of input arguments and a list of return values for a
+function. The interprocedural value analysis identifies the types,
+shapes and whether they are complex numerical values for all the
+arguments and the return values.
+
+\matlab functions are mapped to \xten methods. If it is the entry
+function, the type of the input argument is specified by the user (Tame
+IR requires to have an entry function or a driver function with one
+argument. This function may call other functions with any number of
+input arguments). For other functions the parameter types are computed
+by the value analysis performed by the Tamer on the Tame IR. The type
+information computed includes the type of the value, its shape and
+whether it is a complex value. Other statements in the function block
+are processed recursively and corresponding nodes are created in the
+\xten IR. Finally, if there are any return values, as determined by the
+Tame IR, a return statement is inserted in the \xten IR at the end of
+the method. If the function returns only one value, say \verb|x| then
+the inserted statement is simply \verb|return x;| but if the function
+returns more than one values (which is quite common in \matlab) then we
+return a \texttt{Rail} of type \verb|Any| whose elements are the
+values that are returned. So, for the above example the return statement
+is \verb|return [x as Any, y as Any];|. Note that the use of short syntactic form
+for \texttt{Rail} construction improves the readability of the
+generated code. Below is the generated code for the simple example
+above.
+
+\begin{lstlisting}[language=X10,numbers=none]
+static def foo(a: Double, b: Double){
+    var mc_t0: Double = 3.3;
+    var x: Double = Mix10.plus(a, mc_t0);
+    var mc_t1: Double = 3.2;
+    var y: Double = Mix10.minus(b, mc_t1);
+    return [x as Any, y as Any];
+}
+\end{lstlisting}
+
+Also note that the variables \verb|mc_t0| and \verb|mc_t1| are introduced by
+Tamer in the Tame IR. 
+
+
+\section{Types, Assignments and Declarations}
+
+\matlab provides following basic types:
+\begin{itemize}
+\item \verb|double, single|: floating point values
+\item \verb|uint8, uint16, uint32, uint64|: unsigned integer values 
+\item \verb|int8, int16, in32, int64|:	integer values
+\item \verb|logical|: boolean values
+\item \verb|char|: character values (strings are vectors of \verb|char|)
+\end{itemize}
+
+These basic types are naturally mapped to \xten base types as follows.  Floating
+point values are mapped to \verb|Double| and \verb|Float| respectively, unsigned
+integers are mapped to \verb|UByte, UShort, UInt| and \verb|ULong|, integer
+values are mapped to \verb|Byte, Short, Int| and \verb|Long|, \verb|logical| is
+mapped to \verb|Boolean| and \verb|char| is mapped to \verb|Char| (vector of
+chars is mapped to \verb|String| type). If the shape of an identifier of type
+\verb|T| is greater than $1\times1$ it is mapped to \verb|Array[T]|.  The type
+conversion rules are quite different from standard languages.  For example, an
+operation involving a \verb|double| and an \verb|int32| results in a value of
+type \verb|int32|.\footnote{The type rules are explained in detail in the Tamer
+documents, \url{www.sable.mcgill.ca/mclab/tamer.html.}}  \mixten inserts an
+explicit typecast wherever required.
+  
+All the \matlab operators are designed to work on matrix values and are provided
+as syntactic sugar to the corresponding builtin methods that take operands as
+arguments.  Operators are overloaded to support different semantics for
+$1\times1$ matrices (scalar values). \matlab provides two types of operators -
+\emph{matrix operators} and \emph{array operators}. Matrix operators work on
+whole matrix values.  These include matrix multiplication (\verb+*+) and matrix
+division (\verb+\+, \verb+/+). Array operators always operate in an element-wise
+manner. For example array multiply operator \verb+.*+ performs element-wise
+multiplication. As described in \chapref{chap:Builtins}, \mixten implements all
+operators as builtins.
+
+\matlab is a dynamically typed language which means that variables need
+not be declared and take up any value that they are assigned to. \xten
+however, is statically typed and requires variables to be declared before
+being assigned to. \mixten maintains a list of all the declared
+variables. It starts with an empty list. Whenever an identifier appears
+in an assignment statement on LHS, if it is not already present in the
+list, a declaration statement is added to the \xten IR and the variable
+(with its associated type and value information) is added to the list, followed
+by an assignment statement corresponding to the statement in \matlab.
+If the identifier is already present in the list, the assignment statement is
+added to the \xten IR and the associated type and value information is
+updated. In case the \matlab assignment statement is inside a loop and
+needs a declaration, the declaration statement (without any assignment)
+is added to the method block outside any loop or conditional scope and
+the assignment statement is added in the scope where it is present in
+\matlab code. If the identifier on LHS is an array, then the declaration
+creates a new array with the shape corresponding to the shape of the
+RHS array. For example a \matlab statement like \verb|a=b;| where shape of
+\verb|a| is, say, $3\times3$ and type is \verb|double| will be
+translated to \verb|a:Array_2[Double]=new Array_2[Double](b);| for simple arrays
+and \verb|a:Array[Double]=new Array[Double](b);| for region arrays
+(outside the scope of any loops or conditionals). 
+ 
+\section{Loops}
+
+Loops in \matlab are fairly intuitive except for one semantic difference
+from most of the languages. In a \verb|for| loop if the loop index
+variable is redefined inside the body of the loop, then its new value is
+persistent only in a particular iteration and does not affect the number
+of loop iterations. For example, consider the following listing.
+
+\begin{lstlisting}[language=Matlab,numbers=none]
+function [x] =  forTest1(a)
+    for i = (1:10)
+        i=3;
+        a=a+i;
+    end
+    x=a;
+end
+\end{lstlisting}
+
+\noindent 
+Note that inside every iteration, the value of loop index
+variable \verb|i| is 3 but the loop still terminates after ten
+iterations. The above code would be translated to the following \xten
+code:
+
+\begin{lstlisting}[language=X10,numbers=none]
+static def forTest1 (a: Double)
+{
+  //Note that in the actual generated code
+  //the name of the temporary variable introduced by MiX10
+  //is mangled to ensure that there is no 
+  //conflict with any other variable name. 
+  
+  var mc_t0: Long = 1;
+  var mc_t1: Long = 10;
+  var i_x10: Long;
+  var b: Double;
+  var i: Long;
+  for (i_x10 = mc_t0; (i_x10 <= mc_t1); i_x10 = (i_x10 + 1))
+      {   
+           i = i_x10;
+           i = 3 ;
+           b = Mix10.plus(a, i) ;
+      }
+  var x: Double = a;
+  return x;
+}
+\end{lstlisting}
+
+To handle this somewhat different semantics we introduce a new loop
+index variable and assign it to the original loop index variable at the
+beginning of the loop body. The rest of the loop body is translated by
+standard rules.  Note that the new loop index variable is
+introduced only if the actual loop index variable is redefined inside
+the loop body. 
+
+\section{Conditionals}
+
+In \matlab conditionals are expressed using the if-elseif-else construct
+and do not have any wild semantics. \matlab also allows switch
+statements which are converted to equivalent if-else statements by the
+Tamer. It also recursively converts a statement like 
+\texttt{if (B1) S1 elseif (B2) S2 else S3} to a series of if-else clauses like 
+\texttt{if (B1) S1 else\{ if(B2) S2 else S3\}}. This if-else construct is 
+intuitively mapped to the if-else construct in \xten. 
+
+%\section{Colon operator} 
+
+%\section{Array access and Colon operator}
+%
+%Arrays (or matrices) are the core of \matlab and most of the data read and
+%write operations involve accessing one or a set of elements of an array. There
+%are two basic ways of accessing elements of an array, as described below.
+%
+%
+%\paragraph{Accessing individual elements:}  
+%This type of access is similar to that in
+%C or Java where an array element is accessed given its location index along
+%each dimension of the array. \matlab naturally supports linear
+%indexing\footnote{
+%\url{http://www.mathworks.com/help/matlab/math/matrix-indexing.html}}
+%More precisely, if the
+%number of subscripts in an array access is less than the number of dimensions
+%of the array, the last subscript is linearly indexed over the remaining number
+%of dimensions in a column-major fashion. (Support for linear indexing in
+%\mixten is currently a work in progress). Note that array indexing in
+%\matlab starts from 1. \matlab allows the use of keyword \verb|end| or an
+%expression involving \verb|end| (like \verb|end-1|) as a subscript. \verb|end|
+%denotes the highest index in that dimension. 
+%
+%This subscripting operation to access individual elements is mapped to
+%\xten array subscripting operation. If the rank of array is 4 or less,
+%it is subscripted directly by integers corresponding to subscripts in
+%\matlab otherwise we create a \verb|point| object from these integer
+%values and use it to subscript the array. In case \verb|end| is used,
+%if we have complete shape information we easily know the highest index
+%for a particular dimension, otherwise if shape information cannot be
+%determined at compile time we use the \verb|max(Int i)| method provided
+%by the \verb|Region| class of \xten. Thus an array access such as 
+%\verb|a(i,end)| is translated to \verb|a(i as Int, a.region.max(1))|.
+%Whenever an identifier of type \verb|Double| (default in \matlab) is
+%used as a subscript, we need to explicitly cast it to \verb|Int|.  
+%
+%\paragraph{Accessing a set of elements:}  \matlab supports accessed and
+%operations on a set of elements as a whole. To achieve this \matlab
+%allows the use of an expression involving \verb|colon| operator in place
+%of an integer subscript.  An expression such as \verb|a:b| (or
+%\verb|colon(a,b)|) creates a vector of 
+%integers \verb|[a, a+1, a+2, ...b]|.\footnote{See
+%\url{http://www.mathworks.com/help/matlab/ref/colon.html.}} In a second
+%form, an interval size can also be provided. For example \verb|a:i:b|
+%with interval size \verb|i| creates a vector \verb|[a, a+i, a+2i, ...k]| 
+%where \verb|k| is the greatest integer such that \verb|b-k<i|. Use
+%of a \verb|colon| expression for array subscripting takes all the
+%elements of the array for which the subscript in a particular dimension
+%is in the vector created by the \verb|colon| expression in that
+%dimension.  For array subscripting we can also use "\verb|:|" without
+%specifying the lower and the upper limit. In this case elements for all
+%the indices in that particular dimension are accessed. 
+%
+%Consider the \matlab code below:
+%
+%\begin{lstlisting}[language=Matlab,numbers=none]
+%function [x] = crazyArray(a)
+%    y = ones(3,4,5);
+%    x = y(1,2:3,:);
+%end 
+%\end{lstlisting}
+%
+%In this code \verb|y| is a 3-dimensional array of shape $3\times4\times5$.
+%\verb|x| is an array created by copying the elements of \verb|y| at 
+%\verb|(1,2,1), (1,2,2), |\\*
+%\verb|... (1,2,5), (1,3,1), (1,3,2),| 
+%\verb|... and (1,3,5)|. However \verb|y| itself is of shape $1\times2\times5$ and is indexed normally.
+%This code is translated into the following \xten code.\footnote{Note
+%that we are currently implementing aggregation transformations which
+%will aggregate expressions, including folding constants into
+%expressions.}
+%
+%\begin{lstlisting}[language=X10,numbers=none]
+%public static def crazyArray(a: Double){
+%    var mc_t1: Double = 3;
+%    var mc_t2: Double = 4;
+%    var mc_t3: Double = 5;
+%    val y: Array[Double] = 
+%             new Array[Double]( Mix10.ones(mc_t1, mc_t2, mc_t3));
+%    var mc_t4: Double = 2;
+%    var mc_t5: Double = 3;
+%    val mc_t0: Array[Double] = 
+%             new Array[Double]( Mix10.colon(mc_t4, mc_t5));
+%    var mc_t6: Double = 1;
+%    val x: Array[Double];
+%    val mix10_pt_y: Point;
+%    mix10_pt_y = Point.make(1-(mc_t6 as Int), 
+%                  1-(mc_t0(mc_t0.region.min(0)) as Int), 0);
+%    x = new Array[Double]((1..1)*
+%         ((mc_t0.region.min(0)) as Int..
+%          (mc_t0.region.max(0)) as Int)*
+%          ((y.region.min(2))..y.region.max(2)),
+%           (p:Point(3))=>y(p.operator-(mix10_pt_y))); 
+%}
+%\end{lstlisting}
+%
+%Our current shape analysis engine does not compute the shape of arrays
+%involving \verb|colon| operator but we can use the \\ \verb|Region.min(Int i)| 
+%and \verb|Region.max(Int i)| methods to compute the correct values
+%at run time. In the above example, we first create a new \verb|Point|
+%object that serves as an offset to get the elements at the correct
+%position of the array accessed. Then we create the new array with region
+%derived from the resultant vector from the \verb|colon| operator for
+%second dimension and from the third dimension of the source array
+%\verb|y|. Thus the resultant array \verb|x| has the region
+%\verb|1..1*1..2*1..5|. Note that \mixten creates arrays with
+%starting index 1 to maintain readability of the generated code for
+%\matlab users. This is easy due to region-based arrays in \xten.
+%Providing support for \verb|colon| operator in array access on LHS of an
+%assignment statement and support for \verb|colon| operator with
+%specified interval value is currently a work in progress.
+   
+\section{Function Calls}
+
+Function calls in \matlab are similar to other programming languages if
+the called function returns nothing or returns only one value. However,
+\matlab allows a function to return multiple values.
+Whenever a call is made to such a function, returned values are received
+in a list in the order specified by function definition. For example in
+the statement \verb|[x,n] = bubble(a);| a call is made to the function
+\verb|bubble| which returns two values that are read into \verb|x| and
+\verb|n| respectively. This statement is compiled to following code in
+\xten.
+
+\begin{lstlisting}[language=X10,numbers=none]
+  
+  //Note that in the actual generated code
+  //the name of the temporary variable introduced by MiX10
+  //is mangled to ensure that there is no 
+  //conflict with any other variable name. 
+  
+   var x: Double;
+   var n: Double;
+   val _x_n: Rail[Any];
+   _x_n = bubble(A) ;
+   x = _x_n(0) as Double ;
+   n = _x_n(1) as Double ;
+\end{lstlisting}
+
+The key idea here is to create a \texttt{Rail} of type \verb|Any| and read the
+returned value. Remember that \mixten packs the multiple return values
+of a method in a Rail of type \verb|Any| and returns it.  Individual
+elements of the list simply read the values from this array. If the
+function call is inside a loop, all the declarations are moved out of
+the loop and only assignments are inside the loop. 
+
+\section{Cell Arrays}
+
+Cell arrays in \matlab are arrays of data containers called cells and
+each cell can contain data of any type. For example \texttt{fooCell =
+\{'x',10,'I like',ones(3,3)\};} creates a cell array containing values
+of type char, double, char array and a double array. To convert to
+\xten, the elements of the cell array are packed into a \texttt{rail} of
+type \verb|Any|. While accessing an element it is type cast into its
+original type.  Consider the following \matlab listing:
+  
+\begin{lstlisting}[language=Matlab,numbers=none]
+function [x] =  cellTest(a)
+	m = ones(2,3);
+	n = [4,5];
+	myCell = {m, n*100};
+	x = myCell{1,2};
+end
+\end{lstlisting}
+
+It creates a cell array containing two arrays. It is translated to the below
+\xten code:
+
+\begin{lstlisting}[language=X10,numbers=none]
+static def cellTest (a: Double)
+	{ 
+    //Note that for the purpose of demonstration,
+    //this example uses region arrays and
+    //does not use IntegerOkay analysis.
+		
+    var mc_t2: Double = 2;
+		var mc_t3: Double = 3;
+		var m: Array[Double] = new Array[Double](Mix10.ones(mc_t2, mc_t3));
+		var mc_t5: Double = 4;
+		var mc_t6: Double = 5;
+		var n: Array[Double] = new Array[Double](Mix10.horzcat(mc_t5, mc_t6));
+		var mc_t0: Array[Double] = new Array[Double](m);
+		var mc_t7: Double = 100;
+		var mc_t1: Array[Double] = new Array[Double](Mix10.mtimes(n, mc_t7));
+		var myCell: Rail[Any] = [mc_t0 as Any ,mc_t1 as Any];
+		var mc_t9: Double = 1;
+		var mc_t10: Double = 2;
+		var x: Array[Double];
+		x = myCell(mc_t9 as Long -1, mc_t10 as Long -1) as Array[Double];
+		return x;
+	}
+\end{lstlisting}

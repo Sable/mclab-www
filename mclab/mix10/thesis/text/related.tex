@@ -1,0 +1,114 @@
+The work in this thesis presents a research compiler for \matlab. 
+We provide a source-to-source static
+compiler that targets the high-level, object oriented language, \xten.  Our approach is
+open and extensible and generates sequential \xten code that is competitive in
+performance to code in state-of-the-art languages like C and Fortran, generated
+by other \matlab compilers. We also generated high performance code for
+\matlab's \texttt{parfor} loops, that showed great performance improvements.
+
+\section{Alternatives to \matlab}
+Although our focus is on handling \matlab itself, there are notable open source
+alternatives of \matlab like Scilab\cite{Scilab}, Julia\cite{julia},
+NumPy\cite{numpy}, FreeMat\cite{freemat} and Octave\cite{Octave}.
+Octave is an open source implementation of the \matlab language and supports
+most of the \matlab programs, however until the recently released version 3.8.1,
+Octave was solely an interpreted language and our experiments showed it to be
+orders of magnitude slower than \matlab. We would like to evaluate its
+performance for the latest version that comes with a JIT compiler. Scilab and
+FreeMat are similar in syntax to \matlab but have significant differences that
+prevent a significant portion of \matlab programs to be able to run on these systems.
+NumPy is a python package for scientific computing, and Julia is a technical
+computing language. Julia also provides a fairly advanced distributed parallel
+execution environment. However, these alternative systems concentrate on
+providing open library support and have not tackled the problems of static
+compilation.  We are investigating if there is any way of
+sharing some of their library support with \mixten. A Comparative evaluation of
+Matlab, Octave, FreeMat, Scilab, R, and IDL on a cluster computing system is 
+presented in a technical report by Coman at al.~\cite{coman}  
+The MEGHA
+project\cite{megha} provides an interesting approach to map \matlab array
+operations to CPUs and GPUs, but supports only a very small subset of \matlab.  
+
+%As discussed in \secref{Sec:Background}, this work builds upon the
+%previous work from the \mclab group, including the front-end, the \mcsaf
+%analysis framework~\cite{JesseThesis,McSAFecoop12} analysis framework,
+%and the \matlab Tamer~\cite{TamerPaper}.
+
+\section{Other \matlab Compilers}
+There have been  previous research projects on static compilation of
+\matlab which focused particularly on the array-based subset of \matlab
+and developed advanced static analyses for determining shapes and sizes
+of arrays.  For example, FALCON \cite{falcon} is a \matlab to {\sc
+Fortran90} translator with sophisticated type inference algorithms.
+The McLab group has previously implemented a prototype Fortran 95
+generator~\cite{McForThesis}, and has more recently developed the next generation
+Fortran generator, \mctwofor~\cite{mc2for} in parallel with the \mixten project.   Some of the
+solutions are shared between the projects, especially the parts which
+extend the Tamer. \matlab Coder is a commercial compiler by MathWorks\cite{MATLABCoder},
+which produces C code for a subset of \matlab. We also compared \mixten's
+performance to \matlab coder. Below are more details about these and few other
+notable \matlab compiler research projects:
+\begin{itemize}
+\item Falcon is a \matlab-to-Fortran 90 compiler that applies type inference
+algorithms developed for the array programming language
+APL~\cite{magica,805380,801218} and set
+language SETL~\cite{361235}. It uses a static single-assignment(SSA) based
+intermediate representation, and inlines all functions and scripts into one
+large function. The Falcon project also curated a set of \matlab benchmarks to
+measure the performance of their compiler. Several of our benchmarks are
+originally from Falcon's benchmark suite.
+\item \mcfor is a prototype \matlab-to-Fortran 95 generator developed by the
+\mclab research group and paved way for further research (of which \mixten is a
+part) into developing efficient static \matlab compilers for \matlab. \mctwofor
+is the second generation \matlab-to-Fortran 95 compiler built on top of the
+Tamer and \mcsaf static analysis tools. \mixten and \mctwofor share some of the
+solutions that extend the Tamer tool. We have also used \mctwofor for our
+performance evaluation. A good performance by both \mixten and \mctwofor further
+validates the strength of our compilation techniques.
+\item MAJIC (\matlab Just-In-time Compiler)~\cite{MaJIC} is a continuation of the
+Falcon project. It aims to exploit optimization opportunities in the following
+three areas\footnote{\url{http://polaris.cs.uiuc.edu/majic/techniques.html}}:
+(1) source-level optimizations for matrix-based operations; (2) just-in-time
+compilation to defer compilation as much as possible and thus minimize the
+effects of challenges raised by \matlab's "wild" nature as we discussed in
+\chapref{chap:CodegenSeq}; and (3) specialized optimizations for operations on
+sparse matrices.
+\item \textsc{Menhir}~\cite{745866} is a retargetable \matlab compiler that can
+generate C or Fortran code based on a target system description(MTSD). MTSD
+describes target system's properties and implementation details and thus allows
+efficient code generation that exploits optimized sequential and parallel
+libraries. 
+\item MATCH~\cite{MAT2C} is a library based compilation environment for distributed
+heterogeneous adaptive computing systems consisting of field-programmable gate
+arrays and digital signal processors. It parallelizes \matlab code based on user
+directives and generates C code that can call different runtime libraries. 
+\item Otter~\cite{Quinn} is a \matlab to C compiler that targets parallel computers
+supporting parallel numerical libraries like ScaLAPACK~\cite{898821}. It would be interesting,
+as a future work, to compare performance of the Otter compiler to that of
+\mixten when it supports the parallel compilation of \matlab more effectively.
+\end{itemize}      
+
+A major difference between \mixten and these compilers is that \mixten targets
+an object oriented language with high-level array abstractions, and which is 
+itself source-to-source compiled, whereas all the above mentioned projects either target
+ JIT compilation or static compilation to either Fortran, which is itself an array
+based language and in fact was the precursor of \matlab, or C, which is a fairly
+low-level language with advanced native compilers. 
+Even though some of the techniques used by
+these compilers were helpful in generating \xten code for simple \matlab constructs,
+the novelty of \mixten lies in the fact that it identified major challenges
+involved in efficiently compiling \matlab arrays and array based operations to 
+\xten and achieved a performance comparable to that of compilers targeting 
+C and Fortran.      
+
+\section{Compilers Targeting \xten} In terms of source-to-source compilers for
+\xten, we are aware of two other projects.  StreamX10 is a stream programming
+framework based on \xten~\cite{Wei-2012}.  StreamX10  consists of a stream
+programming language COStream and a compiler which translates programs in
+COStream to parallel \xten code.  Tetsu discusses the design of a Ruby-based DSL
+for parallel programming that is compiled to \xten~\cite{Tetsu-2011}. Both these
+projects focus on compiling a parallel programming language to \xten, a more
+efficient and generic parallel programming language. In the future, we would like to study
+these projects in more depth and hope to get useful insights into efficiently
+using \xten as a target language for parallelism in \matlab.
+ 

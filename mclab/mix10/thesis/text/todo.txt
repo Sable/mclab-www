@@ -1,0 +1,4 @@
+fix ref to eval results in intro !
+
+update builtins chapter, include a sample of xml file in appendix.
+

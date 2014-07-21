@@ -1,0 +1,39 @@
+public abstract class BuiltinVisitor<A,R> {
+  public abstract R caseBuiltin(Builtin builtin,A arg);
+  
+  ...    
+  
+  //operates on floating point matrizes
+  public R caseAbstractFloatFunction(Builtin builtin,A arg){
+    return caseAbstractMatrixFunction(builtin,arg);
+  }
+    
+  //proper float functions have a fixed arity, and all operands are floats
+  public R caseAbstractProperFloatFunction(Builtin builtin,A arg){
+    return caseAbstractFloatFunction(builtin,arg);
+  }
+    
+  //unary functions operating on floating point matrizes
+  public R caseAbstractUnaryFloatFunction(Builtin builtin,A arg){
+    return caseAbstractProperFloatFunction(builtin,arg);
+  }
+    
+  //elemental unary functions operating on floating point matrizes
+  public R caseAbstractElementalUnaryFloatFunction(Builtin builtin,A arg){ 
+    return caseAbstractUnaryFloatFunction(builtin,arg); }
+  public R caseSqrt(Builtin builtin,A arg){
+    return caseAbstractElementalUnaryFloatFunction(builtin,arg); }
+  public R caseRealsqrt(Builtin builtin,A arg){
+    return caseAbstractElementalUnaryFloatFunction(builtin,arg); }
+  public R caseErf(Builtin builtin,A arg){
+    return caseAbstractElementalUnaryFloatFunction(builtin,arg); }
+  
+  ... 
+  
+  //float function with optional arguments or variable number of arguments
+  public R caseAbstractImproperFloatFunction(Builtin builtin,A arg){
+    return caseAbstractFloatFunction(builtin,arg); }
+  
+  ...
+  
+}

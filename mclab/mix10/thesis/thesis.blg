@@ -1,0 +1,69 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/MacPorts 2013_5)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: web-alpha.bst
+Database file #1: progtools.bib
+Database file #2: matlab.bib
+Warning--entry type for "apgaspaper" isn't style-file defined
+--line 129 of file matlab.bib
+Warning--entry type for "x10intro" isn't style-file defined
+--line 136 of file matlab.bib
+Warning--entry type for "Scilab" isn't style-file defined
+--line 143 of file matlab.bib
+Warning--entry type for "pct" isn't style-file defined
+--line 150 of file matlab.bib
+Warning--entry type for "numpy" isn't style-file defined
+--line 157 of file matlab.bib
+Database file #3: jun.bib
+Warning--entry type for "freemat" isn't style-file defined
+--line 35 of file jun.bib
+Database file #4: refs.bib
+Database file #5: refs_short.bib
+Warning--to sort, need author or key in Octave
+Warning--to sort, need author or key in jastaddurl
+Warning--empty institution in coman
+Warning--empty institution in 898821
+Warning--empty school in adubra12
+Warning--empty publisher in specs
+You've used 38 entries,
+            2703 wiz_defined-function locations,
+            793 strings with 9882 characters,
+and the built_in function-call counts, 15281 in all, are:
+= -- 1536
+> -- 631
+< -- 30
++ -- 213
+- -- 208
+* -- 952
+:= -- 2317
+add.period$ -- 121
+call.type$ -- 38
+change.case$ -- 244
+chr.to.int$ -- 34
+cite$ -- 46
+duplicate$ -- 658
+empty$ -- 1279
+format.name$ -- 258
+if$ -- 3323
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 19
+newline$ -- 193
+num.names$ -- 110
+pop$ -- 353
+preamble$ -- 1
+purify$ -- 268
+quote$ -- 0
+skip$ -- 562
+stack$ -- 0
+substring$ -- 677
+swap$ -- 151
+text.length$ -- 30
+text.prefix$ -- 17
+top$ -- 0
+type$ -- 337
+warning$ -- 6
+while$ -- 131
+width$ -- 40
+write$ -- 493
+(There were 12 warnings)
