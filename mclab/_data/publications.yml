@@ -309,7 +309,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2010-3/mcvmcc2010.bib" 
 
 - title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
-  link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/paper.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/papers/2010-2/AspectMatlab.pdf" 
   type: "Paper" 
   abstract: "This paper introduces a new aspect-oriented programming language,
       AspectMatlab. AspectMatlab introduces key aspect-oriented features in a way
@@ -326,7 +326,7 @@
   date: "March 2010"
   publisher: "AOSD 2010" 
   location: "Rennes and Saint-Malo , France"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/paper.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2010-2/AspectMatlab.bib" 
 
 #================================Theses================================
 - title: "Mc2For: A MATLAB to Fortran 95 Compiler"
@@ -551,7 +551,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-aaslam1/mcflatthesis.bib" 
 
 - title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
-  link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/thesis.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-taslam/thesis.pdf" 
   type: "Thesis" 
   abstract: "This is the first thesis introducing AspectMatlab."
   authors: 
@@ -559,7 +559,7 @@
   date: "February 2010"
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/thesis.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-taslam/AspectMatlab.bib" 
 
 - title: "McFOR: A MATLAB to FORTRAN 95 Compiler"
   link: "http://www.sable.mcgill.ca/mclab/mcfor/mcforthesis.pdf" 
@@ -927,7 +927,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2010-5/lameed-10-arraycopy-TR.pdf" 
 
 - title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
-  link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/techrep.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/techreports/2009-3/aslam-09-aspectmatlab-TR.pdf" 
   type: "Technical Report" 
   abstract: "This technical report is an extended version of the AOSD 2010
 paper above."
@@ -936,4 +936,4 @@ paper above."
   date: "January 2010"
   publisher: "Sable Technical Report (2009-03)" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/techrep.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2009-3/aslam-09-aspectmatlab-TR.bib" 
