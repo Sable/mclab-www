@@ -600,7 +600,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-maxime/McVM.bib" 
 
 - title: "The Metalexer Lexer Specification Language"
-  link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/metalexerthesis.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/thesis.pdf" 
   type: "Thesis" 
   abstract: "Compiler toolkits make it possible to rapidly develop compilers
       and translators for new programming languages. Recently, toolkit writers have
@@ -614,7 +614,7 @@
   date: "June 2009"
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/metalexerthesis.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/Metalexer.bib" 
 
 #================================Technical Reports================================
 - title: "Using JavaScript and WebCL for Numerical Computations: A Comparative Study of Native and Web Technologies"
