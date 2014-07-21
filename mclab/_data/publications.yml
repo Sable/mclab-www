@@ -520,7 +520,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-adubra/tamerthesis.bib" 
 
 - title: "MCSAF: AN EXTENSIBLE STATIC ANALYSIS FRAMEWORK FOR THE MATLAB LANGUAGE"
-  link: "http://www.sable.mcgill.ca/mclab/mcsaf/mcsafthesis.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-jdoherty/mcsafthesis.pdf" 
   type: "Thesis" 
   abstract: "MATLAB is a popular language for scientific and numerical
       programming. Despite its popularity, there are few active projects providing
@@ -532,7 +532,7 @@
   date: "August 2011"
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcsaf/mcsafthesis.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-jdoherty/mcsafthesis.bib" 
 
 - title: "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
   link: "http://www.sable.mcgill.ca/publications/thesis/masters-aaslam1/mcflatthesis.pdf" 
