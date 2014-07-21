@@ -39,7 +39,7 @@
   location: "Oxford, England"
 
 - title: "Introduction to McLab, a compiler and VM framework for MATLAB"
-  link: "http://www.sable.mcgill.ca/mclab/lectures-and-tutorials/pldi-tutorial/" 
+  link: "http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/" 
   type: "Tutorial" 
   abstract: "The purpose of this tutorial is to introduce McLab, a new
       publicly-available toolkit for analyzing and executing MATLAB programs. The
