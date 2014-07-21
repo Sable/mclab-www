@@ -257,7 +257,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2010-4/lcpc2010.bib" 
 
 - title: "McLab: An extensible compiler toolkit for MATLAB and related languages"
-  link: "http://www.sable.mcgill.ca/mclab/publications/c3s2e10.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/posters/sable-poster-2010-1.pdf" 
   type: "Paper" 
   abstract: "MATLAB is a popular language for scientific computation.
       Effectively compiling MATLAB presents many challenges due to the dynamic nature
@@ -289,7 +289,7 @@
   date: "May 2010"
   publisher: "C3S2E '10" 
   location: "Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/publications/c3s2e10.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/posters/sable-poster-2010-1.bib" 
 
 - title: "Optimizing Matlab through Just-In-Time Specialization"
   link: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2010.pdf" 
