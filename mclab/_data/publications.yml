@@ -306,7 +306,7 @@
   date: "March 2010"
   publisher: "Compiler Construction (CC) 2010" 
   location: "Paphos, Cyprus"
-  bibTexEntry: "" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2010-3/mcvmcc2010.bib" 
 
 - title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
   link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/paper.pdf" 
