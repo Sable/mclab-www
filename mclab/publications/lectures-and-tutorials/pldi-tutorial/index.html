@@ -1,0 +1,67 @@
+---
+---
+<!DOCTYPE HTML>
+<html> 
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+
+    <div id="main-wrapper">
+      <div id="main" class="container">
+        <div class="row">
+          <div class="12u">
+            <section>
+              <h1> Tutorial we presented at PLDI 2011 </h1>
+
+              <h2>Introduction to McLab, a compiler and VM framework for MATLAB </h2>
+
+              <p> 
+              <a href="TutorialSlides/">Click here to get our slides</a>
+
+              MATLAB is a popular dynamic programming language used for scientific and
+              numerical programming. As a language, it has evolved from a small scripting
+              language intended as an interactive interface to numerical libraries, to a very
+              popular language supporting many language features and libraries.  The
+              overloaded syntax and dynamic nature of the language, plus the somewhat organic
+              addition of language features over the years, makes static analysis of modern
+              MATLAB quite challenging.   Furthermore, there is a real lack of
+              publicly-available tools which has inhibited research on this very important
+              real-world language.
+
+              <p>
+              The purpose of this tutorial is to introduce McLab, a new publicly-available
+              toolkit for analyzing and executing MATLAB programs.   The tutorial starts
+              by introducing the MATLAB language and the particular challenges the language
+              presents for compiler developers.  It then presents the McLab front-end,
+              which supports both standard MATLAB, prebuilt extensions such as AspectMatlab,
+              and the ability to create new language extensions.  The middle part of the
+              tutorial focuses on the IRs and  analysis framework along with some example analyses.
+              The final part of the tutorial presents the back-ends, with a particular
+              emphasis on the McVM JIT.
+
+              <h4> Structure of the Tutorial </h4>
+              <p>
+              The tutorial follows the structure of the toolkit.  There are
+              four major parts: <br/>
+
+              <ul>
+              <li>Introduce the MATLAB language and the specific challenges this language
+              raises for compiler researchers.</li>
+
+              <li>Introduce the front-end, showing the overall structure and the basics of
+              how to make a language extension.</li>
+
+              <li>Describe the analysis framework and some sample analyses.</li>
+
+              <li>Give an overview of McFor and McVM as examples of static and dynamic backends.</li> 
+              </ul>
+              </p>
+            </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% include footer.html %}
+  </body>
+</html

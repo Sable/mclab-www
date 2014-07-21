@@ -1,0 +1,17 @@
+There are four directories:
+
+SlidesPowerPoint/   
+   - contains the original power point slides, many slides have notes
+   - there are 8 parts in the presentation, one .pptx file for each part
+
+HandoutsPDF/  
+   - contains .pdf files for handouts, one .pdf for each section
+   - also contains one file for the handouts for all sections 
+
+SlidesPDF/
+  - contains .pdf files for the slides, one .pdf for each section 
+  - also contains one file for the slides for all sections 
+
+SlidesWithNotesPDF/
+  - contains .pdf files for the slides along with the notes, one .pdf for each section
+  - also contains a file for the slides with notes for all sections
