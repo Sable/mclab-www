@@ -91,7 +91,7 @@
   date: "February 3rd, 2014"
   publisher: "WCRE 2014" 
   location: "Antwerp, Belgium"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.pdf"  
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2014-1/wcre14-xuli.bib"  
 
 - title: "Refactoring MATLAB"
   link: "http://www.sable.mcgill.ca/publications/papers/2013-2/cc13-radpour.pdf" 
