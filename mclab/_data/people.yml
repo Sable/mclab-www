@@ -1,22 +1,22 @@
 # Types: { Professor, Postdoc, PHD, Masters, Undergrad, Postdoc Alumni, PHD Alumni, Masters Alumni, Undergrad Alumni}
 
-# Template (Even if you don't need the key/value, make sure you leave it there with an empty string. For descriptions, do 2 hard breaks for a single one on the webpage. 
-# - name: "" 
+# Template (Even if you don't need the key/value, make sure you leave it there with an empty string. For descriptions, do 2 hard breaks for a single one on the webpage.
+# - name: ""
 #  type: ""
-#  email: "" 
+#  email: ""
 #  website: ""
-#  projects: 
-#    - name: "" 
+#  projects:
+#    - name: ""
 #      link: ""
 #  description: ""
 #  image: "
 ##########################################Professors###############################################
-- name: "Laurie Hendren" 
+- name: "Laurie Hendren"
   type: "Professor"
-  email: "hendren@cs.mcgill.ca" 
+  email: "hendren@cs.mcgill.ca"
   website: "http://www.sable.mcgill.ca/~hendren/"
-  projects: 
-    - name: "Projects Overview" 
+  projects:
+    - name: "Projects Overview"
       link: "/projects/"
   description: "This is the fourth big compiler project I have led. In the past
       my research groups have worked on (i) optimizing/parallelizing C (McCAT), (ii)
@@ -31,12 +31,12 @@
       languages that provide good programming models and good execution performance."
   image: "/images/people/laurie.jpg"
 
-- name: "Clark Verbrugge" 
+- name: "Clark Verbrugge"
   type: "Professor"
-  email: "clump@cs.mcgill.ca " 
+  email: "clump@cs.mcgill.ca "
   website: "http://www.sable.mcgill.ca/~clump/"
-  projects: 
-    - name: "Projects Overview" 
+  projects:
+    - name: "Projects Overview"
       link: "/projects"
   description: "I am a member of the Sable Research Group for compiler and
       computer language work, and GR@M for computer games research. I have also been
@@ -51,12 +51,12 @@
   image: "/images/people/clark.gif"
 
 ##########################################Postdocs###############################################
-- name: "Guang Hu" 
+- name: "Guang Hu"
   type: "Postdoc"
-  email: "guangh@cs.mcgill.ca" 
+  email: "guangh@cs.mcgill.ca"
   website: "https://sites.google.com/site/drguanghu/"
-  projects: 
-    - name: "Translating MATLAB to Java and Android bytecode" 
+  projects:
+    - name: "Translating MATLAB to Java and Android bytecode"
       link: ""
   description: "I'm a Postdoc in computer science at McGill University's Sable
       research group. I received the Postdoctoral Fellowship Scholarship for his
@@ -71,14 +71,14 @@
   image: "/images/people/guang.jpg"
 
 ##########################################PHDs###################################################
-- name: "Erick Lavoie" 
+- name: "Erick Lavoie"
   type: "PHD"
-  email: "erick.lavoie@mail.mcgill.ca" 
+  email: "erick.lavoie@mail.mcgill.ca"
   website: "http://ericklavoie.com/"
-  projects: 
-    - name: "Pando" 
+  projects:
+    - name: "Pando"
       link: ""
-    - name: "Ostrich Benchmark Suite" 
+    - name: "Ostrich Benchmark Suite"
       link: ""
   description: "I am a PhD student in Computer Science, with a background in
       Computer Engineering. I am deeply interested in the leverage programming
@@ -91,16 +91,16 @@
       layers."
   image: "/images/people/erick.jpg"
 
-- name: "Rahul Garg" 
+- name: "Rahul Garg"
   type: "PHD"
-  email: "rahul.garg@mail.mcgill.ca" 
+  email: "rahul.garg@mail.mcgill.ca"
   website: ""
-  projects: 
-    - name: "McVM & McJIT" 
+  projects:
+    - name: "McVM & McJIT"
       link: ""
-    - name: "Velociraptor" 
+    - name: "Velociraptor"
       link: ""
-    - name: "RaijinCL" 
+    - name: "RaijinCL"
       link: ""
   description: "My thesis topic is compiling array-based languages to mixed
       CPU/GPU systems. I am reusable toolkit called Velociraptor for writing
@@ -110,12 +110,12 @@
       me."
   image: ""
 
-- name: "Nurudeen Lameed" 
+- name: "Nurudeen Lameed"
   type: "PHD Alumni"
-  email: "nlamee@cs.mcgill.ca" 
+  email: "nlamee@cs.mcgill.ca"
   website: "http://www.sable.mcgill.ca/~nlamee"
-  projects: 
-    - name: "McVM & McJIT" 
+  projects:
+    - name: "McVM & McJIT"
       link: ""
   description: "Dynamic languages such as MATLAB pose significant performance
       challenges, but also present great opportunities for optimizations. The dynamic
@@ -128,222 +128,229 @@
   image: "/images/people/nurudeen.jpg"
 
 ##########################################Masters################################################
-- name: "Faiz Khan" 
+- name: "Faiz Khan"
   type: "Masters"
-  email: "faiz.khan@mail.mcgill.ca" 
+  email: "faiz.khan@mail.mcgill.ca"
   website: ""
-  projects: 
-    - name: "Ostrich Benchmark Suite" 
+  projects:
+    - name: "Ostrich Benchmark Suite"
       link: ""
   description: "  "
   image: ""
 
-- name: "Sujay Kathrotia" 
+- name: "Sujay Kathrotia"
   type: "Masters"
   email: "sujay.kathrotia@mail.mcgill.ca"
   website: ""
-  projects: 
-    - name: "McLib.js" 
+  projects:
+    - name: "McLib.js"
       link: ""
-    - name: "Ostrich Benchmark Suite" 
+    - name: "Ostrich Benchmark Suite"
       link: ""
-  description: "I joined the lab in fall of 2013. I am interested in numerical computation in JavaScript. 
-      I am working on McLib.JS which is a dynamic and high-performance JavaScript library for numerical 
+  description: "I joined the lab in fall of 2013. I am interested in numerical computation in JavaScript.
+      I am working on McLib.JS which is a dynamic and high-performance JavaScript library for numerical
       computation. I also like to investigate performance issues in benchmarks. I have worked on McTicToc
       project based on NodeJS and EmberJS which is an autometed benchmarks runner for McLab backends."
   image: "/images/people/sujay.jpg"
 
-- name: "Vincent Foley-Bourgon" 
+- name: "Vincent Foley-Bourgon"
   type: "Masters"
-  email: "" 
+  email: ""
   website: ""
-  projects: 
-    - name: "MatJuice" 
+  projects:
+    - name: "MatJuice"
       link: ""
-    - name: "Ostrich Benchmark Suite" 
+    - name: "Ostrich Benchmark Suite"
       link: ""
-  description: ""
-  image: ""
+  description: "I joined the lab in 2013.  I am interested in compilers,
+  programming languages and type systems.  For my masters, I am
+  working on MatJuice, a backend for McLab that translates MATLAB code
+  into JavaScript code: this project will allow scientists and
+  engineers to distribute their work on the web to a much greater
+  number of users.  I am also one of the developers of the
+  Ostrich benchmark suite."
+  image: "/images/people/vfoley1.png"
 
-- name: "Sameer Jagdale" 
+
+- name: "Sameer Jagdale"
   type: "Masters"
-  email: "sameer.jagdale@mail.mcgill.ca" 
+  email: "sameer.jagdale@mail.mcgill.ca"
   website: ""
-  projects: 
-    - name: "VeloCity" 
+  projects:
+    - name: "VeloCity"
       link: ""
   description: "I joined the lab in the summer of 2013. I have completed my Bachelor's in Information Technology from University of Pune (India). My interests include in compilers and programming to parallel architectures. I am currently working on the VeloCty project for my Master's thesis. My non-academic interests include travelling to new places and reading books among others."
   image: "/images/people/sameer.jpg"
 
-- name: "Ismail Badawi" 
+- name: "Ismail Badawi"
   type: "Masters"
-  email: "ismail.badawi@mail.mcgill.ca" 
+  email: "ismail.badawi@mail.mcgill.ca"
   website: "https://github.com/isbadawi"
-  projects: 
-    - name: "McIDE" 
+  projects:
+    - name: "McIDE"
       link: ""
   description: "I joined the lab in fall semester of the year 2012, and I'm interested in programmer productivity tools; things like IDEs, static analyzers, automated refactoring tools... McLint is a code-improving static analyzer for MATLAB. It uses various checks and static analyses to warn the MATLAB programmer about bad code (performance-wise, readability-wise, confusing-semantics-wise, etc.) and also to identify possible opportunities for refactoring; it also applies the refactoring automatically if possible. The aim is to have a tool that can be useful to MATLAB programmers throughout the development process."
   image: "/images/people/ismail.jpg"
 
-- name: "Andrew Bodzay " 
+- name: "Andrew Bodzay "
   type: "Masters"
-  email: "andrew.bodzay@mail.mcgill.ca" 
+  email: "andrew.bodzay@mail.mcgill.ca"
   website: ""
-  projects: 
-    - name: "AspectMatlab" 
+  projects:
+    - name: "AspectMatlab"
       link: ""
   description: "I joined the lab in fall semester of the year 2012, and my interest is mainly about AspectMatlab."
   image: ""
 
-- name: "Vineet Kumar" 
+- name: "Vineet Kumar"
   type: "Masters Alumni"
-  email: "" 
+  email: ""
   website: "http://vineetkumar.net/"
-  projects: 
-    - name: "MiX10" 
+  projects:
+    - name: "MiX10"
       link: ""
   description: "My fascination with compilers started while writing a C decompiler for my undergrad project and after three years in industry I came to McGill for the master's programme in Computer Science. Here I joined the Sable research group under the supervision of Professor Laurie Hendren to develop MiX10, a MATLAB to X10 compiler. MATLAB is an easy to use scientific program language and is widely used by scientists and engineers. On the other hand, X10 is an object-oriented, statically typed language specifically designed for high performance computing. The aim of MiX10 compiler is to help MATLAB users take advantage of the power of high performance computing, while still writing their programs in MATLAB."
   image: "/images/people/vineet.jpg"
 
-- name: "Xu Li" 
+- name: "Xu Li"
   type: "Masters Alumni"
-  email: "xu.li2@mail.mcgill.ca" 
+  email: "xu.li2@mail.mcgill.ca"
   website: ""
-  projects: 
-    - name: "Mc2For" 
+  projects:
+    - name: "Mc2For"
       link: ""
   description: "I joined the lab in winter semester of the year 2012, and currently I am working on static analysis of Matlab and designing a backend to convert Matlab to Fortran95."
   image: "/images/people/xu.jpg"
 
-- name: "Mathieu Dubet" 
+- name: "Mathieu Dubet"
   type: "Masters Alumni"
-  email: "mdubet@cs.mcgill.ca" 
+  email: "mdubet@cs.mcgill.ca"
   website: ""
-  projects: 
-    - name: "McVM & McJIT" 
+  projects:
+    - name: "McVM & McJIT"
       link: ""
   description: "I joined the lab in winter semester of the year 2012, and currently I am working on dynamic analysis of Matlab and improving the performance of McVM."
   image: ""
 
-- name: "Amina Aslam" 
+- name: "Amina Aslam"
   type: "Masters Alumni"
-  email: "amina.aslam@mail.mcgill.ca" 
+  email: "amina.aslam@mail.mcgill.ca"
   website: "http://www.cs.mcgill.ca/~aaslam1"
-  projects: 
-    - name: "McFlat" 
+  projects:
+    - name: "McFlat"
       link: ""
   description: "I am working on Analysis and Transformation engine of McLab project under the supervision of Laurie Hendren. Analysis and Transformation engine computes dependence between loop statements and apply various loop transformations that could improve the performance of programs. In MatLab the loop bounds are mostly determined at run time,so the profiler component of analysis and transformation engine generates data for different runs of the program.The data is then passed to heuristic engine to estimate appropriate ranges for loops in the program. Dependence Analysis and transformations are applied on the estimated ranges. The focus of my thesis is to avoid expensive run time dependence analysis tests and do most of the computations at compile time."
   image: "/images/people/amina.jpg"
 
-- name: "Toheed Aslam" 
+- name: "Toheed Aslam"
   type: "Masters Alumni"
-  email: "tsaslam@cs.mcgill.ca" 
+  email: "tsaslam@cs.mcgill.ca"
   website: ""
-  projects: 
-    - name: "AspectMatlab" 
+  projects:
+    - name: "AspectMatlab"
       link: ""
   description: "I have developed the AspectMatlab as part of my masters thesis under the supervision of professor Laurie Hendren. AspectMatlab extends the base Natlab (Neat Matlab) language by introducing the aspect-oriented features. Besides the basic functions related patterns, AspectMatlab provides the array accesses and loops specific patterns, much to the needs of a scientific programmer. Currently, a beta version of AspectMatlab Compiler (amc) is available."
   image: "/images/people/toheed.jpg"
 
-- name: "Andrew Casey" 
+- name: "Andrew Casey"
   type: "Masters Alumni"
-  email: "acasey@cs.mcgill.ca" 
+  email: "acasey@cs.mcgill.ca"
   website: ""
-  projects: 
-    - name: "" 
+  projects:
+    - name: ""
       link: ""
   description: "I was one of the founding members of the McLab project and I created a large part of the front-end including the Natlab scanner and parser and the Matlab2Natlab converter. This work sparked my interest in composable compiler-generator tools. My M.Sc. thesis was the design and implementation of MetaLexer, a lexical analysis toolkit"
   image: ""
 
-- name: "Maxime Chevalier-Boisvert" 
+- name: "Maxime Chevalier-Boisvert"
   type: "Masters Alumni"
-  email: "mcheva@cs.mcgill.ca" 
+  email: "mcheva@cs.mcgill.ca"
   website: "http://www.cs.mcgill.ca/~mcheva"
-  projects: 
-    - name: "McVM" 
+  projects:
+    - name: "McVM"
       link: ""
   description: "I have completed my masters thesis at McGill University under the supervision of professors Laurie Hendren and Clark Verbrugge. The focus of my thesis was the design and implementation of the McVM virtual machine and its optimizing JIT compiler. This JIT compiler features a type-driven just-in-time function specialization system designed specifically for MATLAB code."
   image: "/images/people/maxime.jpg"
 
-- name: "Jesse Doherty" 
+- name: "Jesse Doherty"
   type: "Masters Alumni"
-  email: "" 
+  email: ""
   website: ""
-  projects: 
-    - name: "McSAF" 
+  projects:
+    - name: "McSAF"
       link: ""
   description: "I started doing research as an undergraduate, both with the Sable group and also in other areas. During my M.Sc. studies I was one of the founding members of the McLab project. My main contributions are in the design and implementation of the McIR and analysis frameworks. However, I have also participated in the AspectMatlab project, designing the analysis which reduces weaving overhead."
   image: "/images/people/jesse.jpg"
 
-- name: "Anton Dubrau" 
+- name: "Anton Dubrau"
   type: "Masters Alumni"
-  email: "" 
+  email: ""
   website: "http://www.anton.dubrau.eu"
-  projects: 
-    - name: "McFor" 
+  projects:
+    - name: "McFor"
       link: ""
-    - name: "Tamer" 
+    - name: "Tamer"
       link: ""
   description: "I joined the McLab project as a summer undergraduate researcher and has continued on as a M.Sc. student. My main interest is in the McFor compiler, extending its functionality to cover as much of the MATLAB language as possible, and in the design of new language features. I have also contributed to the AspectMatlab project, designing various use cases for aspects in numerical computing."
   image: "/images/people/anton.jpg"
 
-- name: "Jun Li" 
+- name: "Jun Li"
   type: "Masters Alumni"
-  email: "" 
+  email: ""
   website: ""
-  projects: 
-    - name: "McFor" 
+  projects:
+    - name: "McFor"
       link: ""
   description: "My M.Sc. thesis was the design and development of the first version of the Matlab-to-Fortran compiler."
   image: ""
 
-- name: "Soroush Radpour" 
+- name: "Soroush Radpour"
   type: "Masters Alumni"
-  email: "soroush.radpour@mail.mcgill.ca" 
+  email: "soroush.radpour@mail.mcgill.ca"
   website: "http://www.cs.mcgill.ca/~sradpo"
-  projects: 
-    - name: "McVM" 
+  projects:
+    - name: "McVM"
       link: ""
   description: "At Mclab we are working on Matlab language as it is used by researchers extensively. I am working with a team of researchers from other universities on refactoring Matlab source codes. We are hoping that the resulting toolkit will help scientists to code and debug in Matlab faster."
   image: "/images/people/soroush.jpg"
 
 ##########################################Undergrads################################################
-- name: "Lei Lopez" 
+- name: "Lei Lopez"
   type: "Undergrad"
-  email: "" 
+  email: ""
   website: ""
-  projects: 
-    - name: "McTutorial" 
+  projects:
+    - name: "McTutorial"
       link: ""
   description: ""
   image: ""
 
-- name: "Tristan Labelle" 
+- name: "Tristan Labelle"
   type: "Undergrad Alumni"
-  email: "tristan@tristanlabelle.com" 
+  email: "tristan@tristanlabelle.com"
   website: "tristanlabelle.com"
-  projects: 
-    - name: "McCli" 
+  projects:
+    - name: "McCli"
       link: ""
   description: "I have a deeply ingrained passion for programming, be it under the hat of the software engineer or of the computer scientist.I enjoy anything that poses an challenge, but have had the most fun with compilers, game development, GPU programming, security, networked systems and object-oriented design. McCli is a back-end component of the McLAB compiler targeting the .NET platform. It transforms code from a subset of the MATLAB language into statically typed .NET bytecode. It provides a path for integrating MATLAB scripts into existing .NET applications on Windows, MacOS X, Linux and even Windows Phone."
   image: "/images/people/tristan.jpg"
 
-- name: "Mohammed Sahibi" 
+- name: "Mohammed Sahibi"
   type: "Undergrad Alumni"
-  email: "mohamed.sahibi@mail.mcgill.ca" 
+  email: "mohamed.sahibi@mail.mcgill.ca"
   website: ""
-  projects: 
-    - name: "Tamer+" 
+  projects:
+    - name: "Tamer+"
       link: ""
   description: "For the convenience of analyzing Matlab code and collecting information for later phase, tamer convert Matlab to a low level IR, tamerIR, almost three address code. This low level IR has many temporary variables and not very friendly human readable, so my project goal is trying to aggregate those simplified code back to a higher level IR and make them more human readable"
   image: ""
 
-- name: "Olivier Savary Belanger" 
+- name: "Olivier Savary Belanger"
   type: "Undergrad Alumni"
-  email: "" 
+  email: ""
   website: ""
-  projects: 
-    - name: "" 
+  projects:
+    - name: ""
       link: ""
   description: "I joined the McLab project, just when it was starting, as a Brebeuf CEGEP intern in summer 2008, and then returned again in summer 2009. I have worked on benchmarks and the development of plotting functionality such that McVM can plot using GnuPlot."
   image: ""
