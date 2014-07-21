@@ -292,7 +292,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/posters/sable-poster-2010-1.bib" 
 
 - title: "Optimizing Matlab through Just-In-Time Specialization"
-  link: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2010.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/papers/2010-3/mcvmcc2010.pdf" 
   type: "Paper" 
   abstract: "Scientists are increasingly using dynamic programming languages
       like Matlab for prototyping and implementation. Effectively compiling Matlab
@@ -306,7 +306,7 @@
   date: "March 2010"
   publisher: "Compiler Construction (CC) 2010" 
   location: "Paphos, Cyprus"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2010.bib" 
+  bibTexEntry: "" 
 
 - title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
   link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/paper.pdf" 
@@ -580,7 +580,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcfor/mcforthesis.bib" 
 
 - title: "McVM: an Optimizing Virtual Machine for the MATLAB Programming Language"
-  link: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmthesis.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-maxime/mcvmthesis.pdf" 
   type: "Thesis" 
   abstract: "In recent years, there has been an increase in the popularity of
       dynamic languages such as Python, Ruby, PHP, JavaScript and MATLAB. Programmers
@@ -597,7 +597,7 @@
   date: "August 2009"
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmthesis.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-maxime/McVM.bib" 
 
 - title: "The Metalexer Lexer Specification Language"
   link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/metalexerthesis.pdf" 
