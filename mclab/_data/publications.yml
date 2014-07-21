@@ -562,7 +562,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-taslam/AspectMatlab.bib" 
 
 - title: "McFOR: A MATLAB to FORTRAN 95 Compiler"
-  link: "http://www.sable.mcgill.ca/mclab/mcfor/mcforthesis.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-jli127/mcforthesis.pdf" 
   type: "Thesis" 
   abstract: "The high-level array programming language MATLAB is widely used
       for prototyping algorithms and applications of scientific computations.
@@ -577,7 +577,7 @@
   date: "August 2009"
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcfor/mcforthesis.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-jli127/McFOR.bib" 
 
 - title: "McVM: an Optimizing Virtual Machine for the MATLAB Programming Language"
   link: "http://www.sable.mcgill.ca/publications/thesis/masters-maxime/mcvmthesis.pdf" 
