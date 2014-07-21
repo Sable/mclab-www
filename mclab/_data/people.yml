@@ -184,12 +184,12 @@
 
 - name: "Ismail Badawi"
   type: "Masters"
-  email: "ismail.badawi@mail.mcgill.ca"
-  website: "https://github.com/isbadawi"
+  email: "ismail@badawi.io"
+  website: "http://ismail.badawi.io"
   projects:
     - name: "McIDE"
       link: ""
-  description: "I joined the lab in fall semester of the year 2012, and I'm interested in programmer productivity tools; things like IDEs, static analyzers, automated refactoring tools... McLint is a code-improving static analyzer for MATLAB. It uses various checks and static analyses to warn the MATLAB programmer about bad code (performance-wise, readability-wise, confusing-semantics-wise, etc.) and also to identify possible opportunities for refactoring; it also applies the refactoring automatically if possible. The aim is to have a tool that can be useful to MATLAB programmers throughout the development process."
+  description: "I joined the lab in the fall of 2012. I'm interested in programmer tools; things like IDEs, static analyzers, automated refactoring tools, text editors... For my Master's, I'm working on an IDE for MATLAB, with the theme of relying on dynamic information much more than static analysis."
   image: "/images/people/ismail.jpg"
 
 - name: "Andrew Bodzay "
