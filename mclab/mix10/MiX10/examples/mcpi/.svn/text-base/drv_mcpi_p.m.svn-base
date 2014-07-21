@@ -1,7 +1,0 @@
-function [T] = drv_mcpi_p(arr)
-t1 =tic;
-mcpi_p(arr(1),arr(2));
-T=toc(t1);
-end
-
-
