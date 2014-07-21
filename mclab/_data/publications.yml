@@ -60,7 +60,7 @@
 
 #================================Papers================================
 - title: "Mc2For: A tool for automatically translating MATLAB to FORTRAN 95"
-  link: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/papers/2014-1/wcre14-xuli.pdf" 
   type: "Paper" 
   abstract: "MATLAB is a dynamic numerical scripting language widely used by
       scientists, engineers and students. While MATLAB's high-level syntax and
@@ -91,7 +91,7 @@
   date: "February 3rd, 2014"
   publisher: "WCRE 2014" 
   location: "Antwerp, Belgium"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.bib"  
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mc2for/wcre14-xuli.pdf"  
 
 - title: "Refactoring MATLAB"
   link: "http://www.sable.mcgill.ca/publications/papers/2013-2/cc13-radpour.pdf" 
@@ -330,7 +330,7 @@
 
 #================================Theses================================
 - title: "Mc2For: A MATLAB to Fortran 95 Compiler"
-  link: "http://www.sable.mcgill.ca/mclab/mc2for/sable-thesis-2014-master-xuli.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2014-master-xuli.pdf" 
   type: "Thesis" 
   abstract: "MATLAB is a dynamic numerical scripting language widely used by
     scientists, engineers and students. While MATLAB's high-level syntax and
@@ -370,7 +370,7 @@
   date: "April 2014"
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mc2for/sable-thesis-2014-master-xuli.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2014-master-xuli.bib" 
 
 - title: "MiX10: Compiling MATLAB to X10 for high performance"
   link: "http://www.sable.mcgill.ca/publications/thesis/masters-vkumar/thesis.pdf" 
