@@ -155,8 +155,8 @@
 
 - name: "Vincent Foley-Bourgon"
   type: "Masters"
-  email: ""
-  website: ""
+  email: "vincent.foley-bourgon@mail.mcgill.ca"
+  website: "http://www.cs.mcgill.ca/~vfoley1/"
   projects:
     - name: "MatJuice"
       link: ""
