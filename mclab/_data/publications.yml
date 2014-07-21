@@ -220,7 +220,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2011-5/dsal11-hendren.bib" 
 
 - title: "Staged Static Techniques to Efficiently Implement Array Copy Semantics in a MATLAB JIT Compiler"
-  link: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2011.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/papers/2011-1/mcvmcc2011.pdf" 
   type: "Paper" 
   abstract: "Several aspects of the MATLAB language such as dynamic loading and
       typing, safe updates, and copy semantics for arrays contribute to its appeal to
@@ -237,7 +237,7 @@
   date: "March 2011"
   publisher: "Compiler Construction (CC) 2011" 
   location: "Saarbrüken, Germany"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcvm/mcvmcc2011.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2011-1/mcvmcc2011.bib" 
 
 - title: "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
   link: "http://www.sable.mcgill.ca/mclab/mcir/lcpc2010.pdf" 
@@ -907,7 +907,7 @@
   bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcir/sable-2010-06.bib" 
 
 - title: "Staged Static Techniques to Efficiently Implement Array Copy Semantics in a MATLAB JIT Compiler"
-  link: "http://www.sable.mcgill.ca/mclab/mcvm/cpAnalysis/sable-2010-05.pdf" 
+  link: "http://www.sable.mcgill.ca/publications/techreports/2010-5/lameed-10-arraycopy-TR.pdf" 
   type: "Technical Report" 
   abstract: "Several aspects of the MATLAB language such as dynamic loading and
       typing, safe updates, and copy semantics for arrays contribute to its appeal to
@@ -924,7 +924,7 @@
   date: "July 2010"
   publisher: "Sable Technical Report (2010-05)" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/mcvm/cpAnalysis/sable-2010-05.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2010-5/lameed-10-arraycopy-TR.pdf" 
 
 - title: "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
   link: "http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/techrep.pdf" 
