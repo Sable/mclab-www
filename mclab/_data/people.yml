@@ -222,14 +222,14 @@
   description: "I joined the lab in winter semester of the year 2012, and currently I am working on static analysis of Matlab and designing a backend to convert Matlab to Fortran95."
   image: "/images/people/xu.jpg"
 
-- name: "Mathieu Dubet"
+- name: "Matthieu Dubet"
   type: "Masters Alumni"
-  email: "mdubet@cs.mcgill.ca"
+  email: "matthieu.dubet@mcgill.ca"
   website: ""
   projects:
     - name: "McVM & McJIT"
       link: ""
-  description: "I joined the lab in winter semester of the year 2012, and currently I am working on dynamic analysis of Matlab and improving the performance of McVM."
+  description: "I joined the lab in february 2012, and I have worked on implementing a small JIT compiler to efficiently handle loops in MATLAB."
   image: ""
 
 - name: "Amina Aslam"
