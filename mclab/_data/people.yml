@@ -317,12 +317,12 @@
 ##########################################Undergrads################################################
 - name: "Lei Lopez"
   type: "Undergrad"
-  email: ""
+  email: "lei.lopez@mail.mcgill.ca"
   website: ""
   projects:
     - name: "McTutorial"
       link: ""
-  description: ""
+  description: "I am a CS undergrad and I joined the Sable lab in the summer of 2014.  I am currently working on McTutorial, an introduction to MATLAB with a focus on properly explaining the syntax and semantics from a CS point of view rather than teaching solely by example."
   image: ""
 
 - name: "Tristan Labelle"
