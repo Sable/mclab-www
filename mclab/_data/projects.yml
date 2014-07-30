@@ -178,7 +178,7 @@
 ###################### Parallel Scientific Computing #############################
 - name: "Velociraptor"
   category: "Parallel Scientific Computing"
-  link: "http://www.sable.mcgill.ca/mclab/gpu/index.html"
+  link: "/projects/velociraptor/"
   status: "ongoing"
   description: "Velociraptor is a compiler toolkit consisting of a code
       generation library as well as a runtime system. It takes as input a high-level
