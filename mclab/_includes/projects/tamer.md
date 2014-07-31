@@ -40,7 +40,7 @@ relationships for Matlab classes (with transitive edges removed).
 ![Built In Class Relationships]({{ site.baseurl }}/images/projects/tamer/builtin-class-relationships.png)
 
 You can download the small project that generates the result (using python,
-Matlab, graphviz), [here](http://www.sable.mcgill.ca/mclab/tamer/generatematlabBuiltinClassRelationships.zip).
+Matlab, graphviz), [here](http://www.sable.mcgill.ca/mclab/projects/tamer/generatematlabBuiltinClassRelationships.zip).
 
 
 ####MATLAB Builtin Function Usage
@@ -50,10 +50,10 @@ I.e. we used the mcbench framework to find all calls in all sample projects,
 with their associated frequencies (how often they were called), then used
 matlabs exists function to find out which ones of those are builtins. The list
 of all calls can be found here:
-[calls.txt](http://www.sable.mcgill.ca/mclab/tamer/calls.txt). When removing
+[calls.txt](http://www.sable.mcgill.ca/mclab/projects/tamer/calls.txt). When removing
 all functions that are not builtins we get the following list of relevant
 builtins, with their associated frequencies:
-[builtins.txt](http://www.sable.mcgill.ca/mclab/tamer/builtins.txt)
+[builtins.txt](http://www.sable.mcgill.ca/mclab/projects/tamer/builtins.txt)
 
 
 ####Semantics of Bultins with respect to MATLAB Classes
@@ -68,7 +68,7 @@ Matlab types, and uses them as arguments to Matlabs library functions
 outputs. This allows us to produces tables that for given input argument Matlab
 classes, shows us what the result Matlab class is.
 
-The result tables can be found [here](http://www.sable.mcgill.ca/mclab/tamer/tables.txt).
+The result tables can be found [here](http://www.sable.mcgill.ca/mclab/projects/tamer/tables.txt).
 
 Rows correspond to the mclass of the left operand, columns correspond to the
 mclass of the right operand, and the table entries give the mclass of the
@@ -86,7 +86,7 @@ either errors, or inconsistent results, so no good results are available.
 ###Builtin Framework 
 Our builtin framework allows the specification of Matlab builtin functions, their relationships (by defining them in a tree), and the behavior with respect to Matlab classes. More information can be found in the technical report below. In the following we have compiled the complete tree of all defined builtins, the specification used to create this tree (this specification includes comments explaining the domain-specific language used), and the domain-specific language used to specify Matlab class propgation information for builtin Functions.
 
-Tree of all defined builtin functions: [tree.png](http://www.sable.mcgill.ca/mclab/tamer/tree.png)
-Builtin definition file: [builtins.csv](http://www.sable.mcgill.ca/mclab/tamer/builtins.csv)
+Tree of all defined builtin functions: [tree.png](http://www.sable.mcgill.ca/mclab/projects/tamer/tree.png)
+Builtin definition file: [builtins.csv](http://www.sable.mcgill.ca/mclab/projects/tamer/builtins.csv)
 Definition of domain-specific language used in the above builtin definition
-file to define the propagation of mclasses through builtins: [ClassPropagationlanguage.txt](http://www.sable.mcgill.ca/mclab/tamer/ClassPropagationLanguage.txt)
+file to define the propagation of mclasses through builtins: [ClassPropagationlanguage.txt](http://www.sable.mcgill.ca/mclab/projects/tamer/ClassPropagationLanguage.txt)
