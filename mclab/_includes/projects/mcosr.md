@@ -6,7 +6,7 @@ interrupted. OSR is particularly useful for programs with potentially
 long-running loops, as it allows dynamic optimization of those loops as soon as
 they become hot.
 
-[McOSR](www.sable.mcgill.ca/~nlamee/#McOSR) is a modular tool to support OSR in the LLVM compiler infrastructure.
+[McOSR](http://www.sable.mcgill.ca/~nlamee/#McOSR) is a modular tool to support OSR in the LLVM compiler infrastructure.
 This is an important step forward because LLVM is gaining popular support, and
 adding the OSR capability allows compiler developers to develop new dynamic
 techniques. In particular, it will enable more sophisticated LLVM-based JIT
