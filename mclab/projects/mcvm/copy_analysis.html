@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>McLab - McVM and McJIT</title>
+<script type="text/javascript" src="js/prototype.js"></script> <!--These three scripts are for lightbox. To use lightbox to display a picture, put <a href="source" rel="lightbox" title="your title"></a> around the link.--> 
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.title {font-family: "Lucida Sans"; font-weight: bold; } <!--use this style for titles-->
+
+a:link {
+	color: #830000;
+	text-decoration: none;
+}
+a:visited {
+	color: #830000;
+	text-decoration: none;
+}
+a:hover {
+	color: #590202;
+	text-decoration: underline;
+}
+a:active {
+	color: #830000;
+	text-decoration: none;
+}
+.paragraph {
+	font-family: "Lucida Sans";
+	font-size: 12px;
+} <!--use this style for body text-->
+-->
+</style>
+</head>
+
+<body onload="MM_preloadImages('image/inner/buttons/projects.png','image/inner/buttons/publications.png','image/inner/buttons/software.png','image/inner/buttons/people.png','image/inner/buttons/faqs.png','image/inner/buttons/contact.png','image/inner/buttons/internal.png','image/inner/buttons/home.png')">
+<table cellpadding="0" cellspacing="0" align="center">
+ <!--- begin row and column for content --->
+<tr>
+<td width="780">
+<!--- CONTENT GOES HERE --->
+<h1>Staged Static Techniques to Efficiently Implement Array Copy Semantics in a MATLAB JIT Compiler</h1>
+
+<p>
+<b>Abstract</b><br>
+MATLAB has gained widespread acceptance among engineers and scientists.&nbsp;
+Several aspects of the language such as dynamic loading and typing, safe
+updates, and copy semantics for arrays contribute to its appeal, but at
+the same time provide many challenges to the compiler and virtual
+machine.&nbsp; One such problem, minimizing the number of copies and copy
+checks for MATLAB programs has not received much attention.&nbsp;  Existing
+MATLAB systems rely on reference-counting schemes to create copies only
+when a shared array representation is updated.&nbsp;  This reduces array
+copies, but increases the number of runtime checks.&nbsp;  In addition, this
+sort of reference-counted approach does not work in a garbage-collected
+system.&nbsp;
+
+In this paper we present a staged static analysis approach that does
+not require reference counts, thus enabling a garbage-collected virtual
+machine.&nbsp;  Our approach eliminates both unneeded array copies and
+does not require runtime checks.&nbsp;  The first stage combines two
+simple, yet fast, intraprocedural analyses to eliminate unnecessary
+copies.&nbsp;  The second stage is comprised of two analyses that
+together determine whether a copy should be performed before an array is
+updated: the first, <i>necessary copy analysis</i>, is a forward flow
+analysis and determines the program points where array copies are required
+while the second, <i>copy placement analysis</i>, is a backward analysis
+that finds the optimal points to place copies, which also guarantee safe
+array updates.&nbsp;
+
+We have implemented our approach in the McVM JIT, which is part of a
+garbage-collected virtual machine for MATLAB.&nbsp;  Our results demonstrate
+that there are significant overheads for both existing reference-counted and
+naive copy-insertion approaches.&nbsp;  We also show that our staged approach is
+effective.&nbsp;  In some cases the first stage is sufficient, but in many
+cases the second stage is required. Overall, our approach required no
+dynamic checks and successfully eliminated all unnecessary copies, for
+our benchmark set.&nbsp;
+</p>
+
+<p>
+Click <a href="http://www.sable.mcgill.ca/publications/techreports/2010-5/lameed-10-arraycopy-TR.pdf"> here</a> for the full technical report.
+</p>
+
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="33"></A>
+<TABLE>
+<CAPTION><STRONG>Benchmarks and the summary results of the copy analysis</STRONG></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1" ALIGN="CENTER">
+<TR><TD ALIGN="CENTER" COLSPAN=2></TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER" COLSPAN=5><SPAN><SPAN  CLASS="textbf"># Copies</SPAN></SPAN></TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER" COLSPAN=2></TD>
+<TD ALIGN="CENTER"><SPAN  CLASS="textbf"># Array</SPAN></TD>
+<TD ALIGN="CENTER" COLSPAN=2><SPAN><SPAN  CLASS="textbf">Lower Bound</SPAN></SPAN></TD>
+<TD ALIGN="CENTER" COLSPAN=3><SPAN><SPAN  CLASS="textbf">With Analyses</SPAN></SPAN></TD>
+</TR>
+<TR><TD ALIGN="CENTER" COLSPAN=2><SPAN><SPAN  CLASS="textbf">Benchmark</SPAN></SPAN></TD>
+<TD ALIGN="CENTER"><SPAN  CLASS="textbf">Updates</SPAN></TD>
+<TD ALIGN="CENTER"><SPAN  CLASS="textbf">Aspect</SPAN></TD>
+<TD ALIGN="CENTER"><SPAN  CLASS="textbf">Octave</SPAN></TD>
+<TD ALIGN="CENTER"><SPAN  CLASS="textbf">Naive</SPAN></TD>
+<TD ALIGN="CENTER"><SPAN  CLASS="textbf">QC</SPAN></TD>
+<TD ALIGN="CENTER"><SPAN  CLASS="textbf">CA</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/adpt_test.m>adpt</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>adaptive quadrature using Simpson's rule</TD>
+<TD ALIGN="CENTER">19624</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">12223</TD>
+<TD ALIGN="CENTER">12223</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/capr_test.m>capr</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>capacitance of a transmission line using finite difference and 
+     Gauss-Seidel iteration</TD>
+<TD ALIGN="CENTER">9790800</TD>
+<TD ALIGN="CENTER">10000</TD>
+<TD ALIGN="CENTER">10000</TD>
+<TD ALIGN="CENTER">40000</TD>
+<TD ALIGN="CENTER">20000</TD>
+<TD ALIGN="CENTER">10000</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/clos_test.m>clos</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>transitive closure of a directed graph</TD>
+<TD ALIGN="CENTER">2954</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/crni_test.m>crni</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>Crank-Nicholson solution to the one-dimensional heat equation</TD>
+<TD ALIGN="CENTER">21143907</TD>
+<TD ALIGN="CENTER">4598</TD>
+<TD ALIGN="CENTER">6898</TD>
+<TD ALIGN="CENTER">11495</TD>
+<TD ALIGN="CENTER">6897</TD>
+<TD ALIGN="CENTER">4598</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/dich_test.m>dich</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>Dirichlet solution to Laplace's equation</TD>
+<TD ALIGN="CENTER">6935292</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/diff_test.m>diff</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>diffraction pattern calculator</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/fdtd_test.m>fdtd</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>3D FDTD of a hexahedral cavity with conducting walls</TD>
+<TD ALIGN="CENTER">803</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">5400</TD>
+<TD ALIGN="CENTER">5400</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/fft_test.m>fft</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>fast fourier transform</TD>
+<TD ALIGN="CENTER">44038144</TD>
+<TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">1</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">1</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/fiff_test.m>fiff</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>finite-difference solution to the wave equation</TD>
+<TD ALIGN="CENTER">12243000</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/mbrt_test.m>mbrt</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>mandelbrot set</TD>
+<TD ALIGN="CENTER">5929</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/nb1d_test.m>nb1d</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>N-body problem coded using 1d arrays for the displacement vectors.</TD>
+<TD ALIGN="CENTER">55020</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">10984</TD>
+<TD ALIGN="CENTER">10980</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/nb3d_test.m>nb3d</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>N-body problem coded using 3d arrays for the displacement vectors.</TD>
+<TD ALIGN="CENTER">4878</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">5860</TD>
+<TD ALIGN="CENTER">5858</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/nfrc_test.m>nfrc</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>computes a newton fractal in the complex plane -2..2,-2i..2i</TD>
+<TD ALIGN="CENTER">12800</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="CENTER">6400</TD>
+<TD ALIGN="CENTER">6400</TD>
+<TD ALIGN="CENTER">0</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><a href=mcvm/cpAnalysis/bmarks/trid_test.m>trid</a></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=170>Solve tridiagonal system of equations</TD>
+<TD ALIGN="CENTER">2998</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">5</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="CENTER">2</TD>
+</TR>
+</TABLE>
+
+<A NAME="Tab-bmarks"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+<BR><HR>
+
+<h2> Aspect for counting dynamic array updates and copies </h2>
+<ul>
+<li><a href="mcvm/cpAnalysis/refcounter.m">Reference-counting aspect</a> </li>
+<li><a href="http://www.sable.mcgill.ca/mclab/aspectmatlab">AspectMATLAB compiler</a> </li>
+</ul>
+
+
+<!--- end row and column for content --->
+</td>
+</tr>
+
+      </table>
+      
+      </td> 
+    </tr>
+    <tr>
+    	<td><img src="image/inner/bottom.png" /></td>
+    </tr>
+</table>
+
+
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" /><!--for lightbox-->
+</body>
+</html>
