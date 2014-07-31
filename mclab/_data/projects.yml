@@ -130,6 +130,19 @@
     - "McVM: an Optimizing Virtual Machine for the MATLAB Programming Language"
 
 
+- name: "McOSR"
+  category: "Analysis Tools"
+  link: "/projects/mcosr/"
+  status: "ongoing"
+  description: "On-stack replacement (OSR) is a technique that allows a virtual
+      machine to interrupt running code during the execution of a function/method, to
+      re-optimize the function on-the-fly using an optimizing JIT compiler, and then
+      to resume the interrupted function at the point and state at which it was
+      interrupted. OSR is particularly useful for programs with potentially
+      long-running loops, as it allows dynamic optimization of those loops as soon as
+      they become hot. "
+  publications:
+    - ""
 ###################### Web(JavaScript) and Distributed SCientific Computing #############################
 - name: "McLib.js"
   link: "/projects/mclibjs/"
