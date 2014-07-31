@@ -40,7 +40,7 @@ relationships for Matlab classes (with transitive edges removed).
 ![Built In Class Relationships]({{ site.baseurl }}/images/projects/tamer/builtin-class-relationships.png)
 
 You can download the small project that generates the result (using python,
-Matlab, graphviz), [here](http://www.sable.mcgill.ca/mclab/projects/tamer/generatematlabBuiltinClassRelationships.zip).
+Matlab, graphviz), [here](http://www.sable.mcgill.ca/mclab/projects/tamer/generateMatlabBuiltinClassRelationships.zip).
 
 
 ####MATLAB Builtin Function Usage
