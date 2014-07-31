@@ -1,0 +1,8 @@
+example to build up a user-defined fortran library
+TODO: make it a makefile
+
+gfortran -c *.f95
+
+ar r libmc2for.a *.o // ar t libmc2for.a
+
+gfortran myprog.f95 -o myprog libmc2for.a

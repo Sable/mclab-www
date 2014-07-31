@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/www/!svn/ver/808/mclab/mc2for/libmc2for
+END
+any.f95
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/www/!svn/ver/797/mclab/mc2for/libmc2for/any.f95
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/www/!svn/ver/727/mclab/mc2for/libmc2for/readme
+END
+randi.f95
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/www/!svn/ver/797/mclab/mc2for/libmc2for/randi.f95
+END
+array_set22s.f95
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/www/!svn/ver/748/mclab/mc2for/libmc2for/array_set22s.f95
+END
+array_set3c2.f95
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/www/!svn/ver/808/mclab/mc2for/libmc2for/array_set3c2.f95
+END
+libmc2for.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/www/!svn/ver/808/mclab/mc2for/libmc2for/libmc2for.tar.gz
+END
+eye.f95
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/www/!svn/ver/797/mclab/mc2for/libmc2for/eye.f95
+END
+zeros.f95
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/www/!svn/ver/797/mclab/mc2for/libmc2for/zeros.f95
+END
+array_get22c.f95
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/www/!svn/ver/748/mclab/mc2for/libmc2for/array_get22c.f95
+END
+array_get2c2.f95
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/www/!svn/ver/748/mclab/mc2for/libmc2for/array_get2c2.f95
+END
+ones.f95
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/www/!svn/ver/748/mclab/mc2for/libmc2for/ones.f95
+END

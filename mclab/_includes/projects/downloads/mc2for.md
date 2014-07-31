@@ -4,7 +4,7 @@ Hi, all, I am glad to release the beta version of Mc2For, a new
 MATLAB-to-Fortran compiler. Since the project is implemented in Java, we render
 the compiler in a jar package. Here is the link:
 
-[Mc2For.jar](http://www.sable.mcgill.ca/mclab/mc2for/Mc2For.jar) (One thing to remember: currently, we only support function files, not scripts.)
+[Mc2For.jar](http://www.sable.mcgill.ca/mclab/projects/mc2for/Mc2For.jar) (One thing to remember: currently, we only support function files, not scripts.)
 
 To run the compiler or view the help menu, you can type the command as "java
 -jar Mc2For.jar -help". Since the first phase of the compiler is an
@@ -26,7 +26,7 @@ several user-defined Fortran functions/subroutines. We put them in a
 stand-alone Fortran library. Here is link to the source of the library and the
 instruction to build the library.
 
-[The stand-alone Fortran Library](http://www.sable.mcgill.ca/mclab/mc2for/libmc2for/libmc2for.tar.gz)
+[The stand-alone Fortran Library](http://www.sable.mcgill.ca/mclab/projects/mc2for/libmc2for/libmc2for.tar.gz)
 
 Finally, we highly recommend that you start the compiler with some simple
 MATLAB programs or our benchmarks, and after you are familiar with the
@@ -38,7 +38,7 @@ with your own code. Have fun!
 We are currently working on this new MATLAB-to-Fortran 95 translator, Mc2For.
 We will distribute the first version of it when it is ready. You may request to
 be put on a list for notification when Mc2FOR is ready by sending an e-mail to
-[mclab-list@sable.mcgill.ca](http://www.sable.mcgill.ca/mclab/mc2for/libmc2for/libmc2for.tar.gz).
+[mclab-list@sable.mcgill.ca](http://www.sable.mcgill.ca/mclab/projects/mc2for/libmc2for/libmc2for.tar.gz).
 
 It would be very helpful if you could also send the .m files for a typical
 application that you would like to compile, along with some typical input data
