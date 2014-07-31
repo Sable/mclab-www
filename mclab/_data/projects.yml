@@ -12,18 +12,24 @@
 #  categories are in the research-cateogies.yml file
 
 ###################### Analysis Tools #############################
-- name: "McFlat" 
+- name: "McSAF"
   category: "Analysis Tools"
-  link: "/projects/mcflat/"
-  status: "unmaintained"
-  description: "We apply profile-based training runs to determine likely
-      loop-bounds ranges for which specialized versions of the loops may be
-      generated. The main idea is to collect information about observed loop bounds
-      and hot loops using training data which is then used to heuristically decide
-      upon which loops and which ranges are worth specializing using a variety of
-      loop transformation. This project is no longer maintained."
+  link: "/projects/mcsaf/"
+  status: "ongoing"
+  description: "In order for a compiler to perform optimizations or to provide
+      feedback to programmers, it must analyze the program source code. Making such
+      analyses easier to write requires a simple, well-defined Intermediate
+      Representation (IR) and analysis framework. This framework should also allow
+      new language extensions to use and adapt existing analyses. In spite of
+      MATLAB’s popularity, and the apparent need for static analysis, there has been
+      no publicly available framework for creating static analyses for the M ATLAB
+      programming language. The McLAB Static Analysis Framework, or McSAF is such a
+      framework. McSAF was created as part of the Mc L AB project to satisfy these
+      requirements. The goal of the framework is to make new analyses easy to write
+      and easy to extend to new language features."
   publications:
-    - "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
+    - "MCSAF: AN EXTENSIBLE STATIC ANALYSIS FRAMEWORK FOR THE MATLAB LANGUAGE"
+    - "McSAF: A Static Analysis Framework for MATLAB"
 
 - name: "Tamer"
   category: "Analysis Tools"
@@ -46,6 +52,18 @@
   publications:
     - ""
 
+- name: "McFlat" 
+  category: "Analysis Tools"
+  link: "/projects/mcflat/"
+  status: "unmaintained"
+  description: "We apply profile-based training runs to determine likely
+      loop-bounds ranges for which specialized versions of the loops may be
+      generated. The main idea is to collect information about observed loop bounds
+      and hot loops using training data which is then used to heuristically decide
+      upon which loops and which ranges are worth specializing using a variety of
+      loop transformation. This project is no longer maintained."
+  publications:
+    - "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
 ###################### Static Compilers  #############################
 - name: "VeloCity"
   category: "Static Compilers"
