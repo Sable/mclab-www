@@ -1,0 +1,958 @@
+plus, minus, mtimes, times, kron:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c      b      h    {}
+i8      i8    -     -      -      -      -      -      -      -      i8     -       i8      i8     -      -    - 
+u8      -     u8    -      -      -      -      -      -      -      u8     -       u8      u8     -      -    - 
+i16     -     -     i16    -      -      -      -      -      -      i16    -       i16     i16    -      -    - 
+u16     -     -     -      u16    -      -      -      -      -      u16    -       u16     u16    -      -    - 
+i32     -     -     -      -      i32    -      -      -      -      i32    -       i32     i32    -      -    - 
+u32     -     -     -      -      -      u32    -      -      -      u32    -       u32     u32    -      -    - 
+i64     -     -     -      -      -      -      i64    -      -      i64    -       i64     i64    -      -    - 
+u64     -     -     -      -      -      -      -      u64    -      u64    -       u64     u64    -      -    - 
+f32     -     -     -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+f64     i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+rf32    -     -     -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+rf64    i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+c       i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+b       -     -     -      -      -      -      -      -      f32    f64    f32     f64     f64    f64    -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+
+
+uplus, uminus, real, imag, abs, fix:
+i8      i8 
+u8      u8 
+i16     i16
+u16     u16
+i32     i32
+u32     u32
+i64     i64
+u64     u64
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       f64
+b       f64
+h       -  
+{}      -  
+
+
+mpower, power:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c      b      h    {}
+i8      i8    -     -      -      -      -      -      -      -      -      -       i8      i8     -      -    - 
+u8      -     u8    -      -      -      -      -      -      -      -      -       u8      u8     -      -    - 
+i16     -     -     i16    -      -      -      -      -      -      -      -       i16     i16    -      -    - 
+u16     -     -     -      u16    -      -      -      -      -      -      -       u16     u16    -      -    - 
+i32     -     -     -      -      i32    -      -      -      -      -      -       i32     i32    -      -    - 
+u32     -     -     -      -      -      u32    -      -      -      -      -       u32     u32    -      -    - 
+i64     -     -     -      -      -      -      i64    -      -      -      -       i64     i64    -      -    - 
+u64     -     -     -      -      -      -      -      u64    -      -      -       u64     u64    -      -    - 
+f32     -     -     -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+f64     i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+rf32    -     -     -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+rf64    i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+c       i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+b       -     -     -      -      -      -      -      -      f32    f64    f32     f64     f64    -      -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+
+
+mldivide, mrdivide, ldivide, rdivide, mod, rem, mod:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c      b      h    {}
+i8      i8    -     -      -      -      -      -      -      -      i8     -       i8      i8     -      -    - 
+u8      -     u8    -      -      -      -      -      -      -      u8     -       u8      u8     -      -    - 
+i16     -     -     i16    -      -      -      -      -      -      i16    -       i16     i16    -      -    - 
+u16     -     -     -      u16    -      -      -      -      -      u16    -       u16     u16    -      -    - 
+i32     -     -     -      -      i32    -      -      -      -      i32    -       i32     i32    -      -    - 
+u32     -     -     -      -      -      u32    -      -      -      u32    -       u32     u32    -      -    - 
+i64     -     -     -      -      -      -      i64    -      -      i64    -       i64     i64    -      -    - 
+u64     -     -     -      -      -      -      -      u64    -      u64    -       u64     u64    -      -    - 
+f32     -     -     -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+f64     i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+rf32    -     -     -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+rf64    i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+c       i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+b       -     -     -      -      -      -      -      -      f32    f64    f32     f64     f64    -      -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+
+
+eq, ne, lt, gt, le, ge, and, or, xor:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h    {}
+i8      b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+u8      b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+i16     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+u16     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+i32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+u32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+i64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+u64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+f32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+f64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+rf32    b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+rf64    b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+c       b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+b       b     b     b      b      b      b      b      b      b      b      b       b       b    b    -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+
+
+@(x,y)x&&y:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h      {} 
+i8      b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+u8      b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+i16     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+u16     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+i32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+u32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+i64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+u64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+f32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+f64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+rf32    b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      bad
+rf64    b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+c       b     b     b      b      b      b      b      b      b      b      b       b       b    b    -      -  
+b       b     b     b      b      b      b      b      b      b      b      b       b       b    b    N/A    N/A
+h       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -      -  
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -      -  
+
+
+@(x,y)x||y:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h      {} 
+i8      b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+u8      b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+i16     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+u16     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+i32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+u32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+i64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+u64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+f32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+f64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+rf32    b     b     b      b      b      b      b      b      b      b      b       b       b    b    N/A    b  
+rf64    b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      N/A
+c       b     b     b      b      b      b      b      b      b      b      b       b       b    b    b      b  
+b       b     b     b      b      b      b      b      b      b      b      b       b       b    b    N/A    N/A
+h       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -      -  
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -      -  
+
+
+not, any, all, isinf:
+i8      b
+u8      b
+i16     b
+u16     b
+i32     b
+u32     b
+i64     b
+u64     b
+f32     b
+f64     b
+rf32    b
+rf64    b
+c       b
+b       b
+h       -
+{}      -
+
+
+colon:
+        i8     u8     i16     u16     i32     u32     i64     u64     f32     f64     rf32    rf64    c     b       h    {}
+i8      Mi8    -      -       -       -       -       -       -       -       -       -       Mi8     -     -       -    - 
+u8      -      Mu8    -       -       -       -       -       -       -       -       -       Mu8     -     -       -    - 
+i16     -      -      Mi16    -       -       -       -       -       -       -       -       Mi16    -     -       -    - 
+u16     -      -      -       Mu16    -       -       -       -       -       -       -       Mu16    -     -       -    - 
+i32     -      -      -       -       Mi32    -       -       -       -       -       -       Mi32    -     -       -    - 
+u32     -      -      -       -       -       Mu32    -       -       -       -       -       Mu32    -     -       -    - 
+i64     -      -      -       -       -       -       Mi64    -       -       -       -       Mi64    -     -       -    - 
+u64     -      -      -       -       -       -       -       Mu64    -       -       -       Mu64    -     -       -    - 
+f32     -      -      -       -       -       -       -       -       Mf32    Mf32    Mf32    Mf32    -     -       -    - 
+f64     -      -      -       -       -       -       -       -       Mf32    Mf64    Mf32    Mf64    -     f64     -    - 
+rf32    -      -      -       -       -       -       -       -       Mf32    Mf32    Mf32    Mf32    -     -       -    - 
+rf64    Mi8    Mu8    Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf64    Mf32    Mf64    -     Mf64    -    - 
+c       -      -      -       -       -       -       -       -       -       -       -       -       Mc    -       -    - 
+b       -      -      -       -       -       -       -       -       -       Mf64    -       Mf64    -     -       -    - 
+h       -      -      -       -       -       -       -       -       -       -       -       -       -     -       -    - 
+{}      -      -      -       -       -       -       -       -       -       -       -       -       -     -       -    - 
+
+
+@(x,y)colon(x,y,x):
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b      h    {}
+i8      i8    -     -      -      -      -      -      -      -      -      -       i8      -    -      -    - 
+u8      -     u8    -      -      -      -      -      -      -      -      -       u8      -    -      -    - 
+i16     -     -     i16    -      -      -      -      -      -      -      -       i16     -    -      -    - 
+u16     -     -     -      u16    -      -      -      -      -      -      -       u16     -    -      -    - 
+i32     -     -     -      -      i32    -      -      -      -      -      -       i32     -    -      -    - 
+u32     -     -     -      -      -      u32    -      -      -      -      -       u32     -    -      -    - 
+i64     -     -     -      -      -      -      i64    -      -      -      -       i64     -    -      -    - 
+u64     -     -     -      -      -      -      -      u64    -      -      -       u64     -    -      -    - 
+f32     -     -     -      -      -      -      -      -      f32    f32    f32     f32     -    -      -    - 
+f64     -     -     -      -      -      -      -      -      f32    f64    f32     f64     -    f64    -    - 
+rf32    -     -     -      -      -      -      -      -      f32    f32    f32     f32     -    -      -    - 
+rf64    i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     -    f64    -    - 
+c       -     -     -      -      -      -      -      -      -      -      -       c       c    -      -    - 
+b       -     -     -      -      -      -      -      -      -      f64    -       f64     -    -      -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+
+
+@(x,y)colon(y,x,x):
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b       h    {}
+i8      i8    -     -      -      -      -      -      -      -      -      -       Mi8     -    -       -    - 
+u8      -     u8    -      -      -      -      -      -      -      -      -       Mu8     -    -       -    - 
+i16     -     -     i16    -      -      -      -      -      -      -      -       i16     -    -       -    - 
+u16     -     -     -      u16    -      -      -      -      -      -      -       u16     -    -       -    - 
+i32     -     -     -      -      i32    -      -      -      -      -      -       Mi32    -    -       -    - 
+u32     -     -     -      -      -      u32    -      -      -      -      -       u32     -    -       -    - 
+i64     -     -     -      -      -      -      i64    -      -      -      -       i64     -    -       -    - 
+u64     -     -     -      -      -      -      -      u64    -      -      -       Mu64    -    -       -    - 
+f32     -     -     -      -      -      -      -      -      f32    f32    f32     Mf32    -    -       -    - 
+f64     -     -     -      -      -      -      -      -      f32    f64    Mf32    f64     -    Mf64    -    - 
+rf32    -     -     -      -      -      -      -      -      f32    f32    Mf32    Mf32    -    -       -    - 
+rf64    i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     Mf64    -    Mf64    -    - 
+c       -     -     -      -      -      -      -      -      -      -      -       -       c    -       -    - 
+b       -     -     -      -      -      -      -      -      -      f64    -       f64     -    -       -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -    -       -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -    -       -    - 
+
+
+@(x,y)colon(x,x,y):
+        i8     u8     i16     u16     i32     u32     i64     u64     f32     f64     rf32    rf64    c     b      h    {}
+i8      Mi8    -      -       -       -       -       -       -       -       -       -       Mi8     -     -      -    - 
+u8      -      Mu8    -       -       -       -       -       -       -       -       -       Mu8     -     -      -    - 
+i16     -      -      Mi16    -       -       -       -       -       -       -       -       Mi16    -     -      -    - 
+u16     -      -      -       Mu16    -       -       -       -       -       -       -       Mu16    -     -      -    - 
+i32     -      -      -       -       Mi32    -       -       -       -       -       -       Mi32    -     -      -    - 
+u32     -      -      -       -       -       Mu32    -       -       -       -       -       Mu32    -     -      -    - 
+i64     -      -      -       -       -       -       Mi64    -       -       -       -       Mi64    -     -      -    - 
+u64     -      -      -       -       -       -       -       Mu64    -       -       -       Mu64    -     -      -    - 
+f32     -      -      -       -       -       -       -       -       Mf32    Mf32    Mf32    Mf32    -     -      -    - 
+f64     -      -      -       -       -       -       -       -       Mf32    Mf64    Mf32    Mf64    -     f64    -    - 
+rf32    -      -      -       -       -       -       -       -       Mf32    Mf32    Mf32    Mf32    -     -      -    - 
+rf64    Mi8    Mu8    Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf64    Mf32    Mf64    -     f64    -    - 
+c       -      -      -       -       -       -       -       -       -       -       -       -       Mc    -      -    - 
+b       -      -      -       -       -       -       -       -       -       Mf64    -       Mf64    -     -      -    - 
+h       -      -      -       -       -       -       -       -       -       -       -       -       -     -      -    - 
+{}      -      -      -       -       -       -       -       -       -       -       -       -       -     -      -    - 
+
+
+transpose, ctranspose, sort, sort:
+i8      i8 
+u8      u8 
+i16     i16
+u16     u16
+i32     i32
+u32     u32
+i64     i64
+u64     u64
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       c  
+b       b  
+h       -  
+{}      C- 
+
+
+horzcat, vertcat:
+        i8      u8      i16     u16     i32     u32     i64     u64     f32     f64     rf32    rf64    c     b       h    {}  
+i8      Mi8     Mi8     Mi8     Mi8     Mi8     Mi8     Mi8     Mi8     Mi8     Mi8     Mi8     Mi8     Mc    Mi8     -    Ci8 
+u8      Mu8     Mu8     Mu8     Mu8     Mu8     Mu8     Mu8     Mu8     Mu8     Mu8     Mu8     Mu8     Mc    Mu8     -    Cu8 
+i16     Mi16    Mi16    Mi16    Mi16    Mi16    Mi16    Mi16    Mi16    Mi16    Mi16    Mi16    Mi16    Mc    Mi16    -    Ci16
+u16     Mu16    Mu16    Mu16    Mu16    Mu16    Mu16    Mu16    Mu16    Mu16    Mu16    Mu16    Mu16    Mc    Mu16    -    Cu16
+i32     Mi32    Mi32    Mi32    Mi32    Mi32    Mi32    Mi32    Mi32    Mi32    Mi32    Mi32    Mi32    Mc    Mi32    -    Ci32
+u32     Mu32    Mu32    Mu32    Mu32    Mu32    Mu32    Mu32    Mu32    Mu32    Mu32    Mu32    Mu32    Mc    Mu32    -    Cu32
+i64     Mi64    Mi64    Mi64    Mi64    Mi64    Mi64    Mi64    Mi64    Mi64    Mi64    Mi64    Mi64    Mc    Mi64    -    Ci64
+u64     Mu64    Mu64    Mu64    Mu64    Mu64    Mu64    Mu64    Mu64    Mu64    Mu64    Mu64    Mu64    Mc    Mu64    -    Cu64
+f32     Mi8     Mu8     Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf32    Mf32    Mf32    Mc    Mf32    -    Cf32
+f64     Mi8     Mu8     Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf64    Mf32    Mf64    Mc    Mf64    -    Cf64
+rf32    Mi8     Mu8     Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf32    Mf32    Mf32    Mc    Mf32    -    Cf32
+rf64    Mi8     Mu8     Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf64    Mf32    Mf64    Mc    Mf64    -    Cf64
+c       Mc      Mc      Mc      Mc      Mc      Mc      Mc      Mc      Mc      Mc      Mc      Mc      Mc    -       -    Cc  
+b       Mi8     Mu8     Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf64    Mf32    Mf64    -     Mb      -    Cb  
+h       -       -       -       -       -       -       -       -       -       -       -       -       -     -       -    h   
+{}      Ci8     Cu8     Ci16    Cu16    Ci32    Cu32    Ci64    Cu64    Cf32    Cf64    Cf32    Cf64    Cc    Cb      h    C-  
+
+
+bitand, bitor, bitxor:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b      h    {}
+i8      -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+u8      -     u8    -      -      -      -      -      -      -      u8     -       u8      -    -      -    - 
+i16     -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+u16     -     -     -      u16    -      -      -      -      -      u16    -       u16     -    -      -    - 
+i32     -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+u32     -     -     -      -      -      u32    -      -      -      u32    -       u32     -    -      -    - 
+i64     -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+u64     -     -     -      -      -      -      -      u64    -      u64    -       u64     -    -      -    - 
+f32     -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+f64     -     u8    -      u16    -      u32    -      u64    -      -      -       -       -    -      -    - 
+rf32    -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+rf64    -     u8    -      u16    -      u32    -      u64    -      -      -       f64     -    f64    -    - 
+c       -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+b       -     -     -      -      -      -      -      -      -      -      -       f64     -    b      -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -    -      -    - 
+
+
+bitcmp:
+        i8     u8     i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c      b      h    {}
+i8      -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+u8      N/A    bad    bad    bad    bad    bad    bad    bad    -      -      N/A     N/A     -      u8     -    - 
+i16     -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+u16     bad    bad    bad    bad    bad    bad    bad    bad    -      -      bad     bad     -      u16    -    - 
+i32     -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+u32     N/A    bad    N/A    N/A    N/A    bad    N/A    bad    -      -      bad     bad     -      u32    -    - 
+i64     -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+u64     N/A    N/A    N/A    bad    N/A    N/A    N/A    N/A    -      -      bad     N/A     bad    u64    -    - 
+f32     -      f32    -      f32    -      f32    -      f32    -      -      -       -       -      -      -    - 
+f64     -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+rf32    -      f32    -      f32    -      f32    -      f32    -      -      -       -       -      -      -    - 
+rf64    -      bad    -      N/A    -      N/A    -      bad    -      bad    -       bad     -      -      -    - 
+c       -      c      -      c      -      c      -      c      -      -      -       -       -      -      -    - 
+b       -      b      -      b      -      b      -      b      -      -      -       -       -      -      -    - 
+h       -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+{}      -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+
+
+bitset:
+        i8     u8     i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h    {}
+i8      -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u8      N/A    bad    bad    bad    bad    bad    bad    bad    -      -      bad     bad     -    -    -    - 
+i16     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u16     bad    bad    bad    bad    N/A    bad    N/A    bad    -      -      bad     bad     -    -    -    - 
+i32     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u32     bad    bad    bad    N/A    bad    N/A    bad    N/A    -      -      N/A     bad     -    -    -    - 
+i64     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u64     bad    N/A    N/A    N/A    bad    N/A    N/A    bad    -      -      bad     N/A     -    -    -    - 
+f32     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+f64     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+rf32    -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+rf64    -      N/A    -      N/A    -      N/A    -      bad    -      -      -       N/A     -    -    -    - 
+c       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+b       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+h       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+{}      -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+
+
+bitget:
+        i8     u8     i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h    {}
+i8      -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u8      N/A    bad    bad    bad    bad    bad    bad    bad    -      -      bad     bad     -    -    -    - 
+i16     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u16     bad    bad    N/A    bad    bad    bad    bad    bad    -      -      bad     bad     -    -    -    - 
+i32     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u32     bad    bad    bad    bad    bad    bad    N/A    N/A    -      -      bad     N/A     -    -    -    - 
+i64     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u64     N/A    N/A    bad    N/A    N/A    bad    bad    N/A    -      -      bad     N/A     -    -    -    - 
+f32     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+f64     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+rf32    -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+rf64    -      N/A    -      N/A    -      bad    -      N/A    -      -      -       bad     -    -    -    - 
+c       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+b       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+h       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+{}      -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+
+
+bitshift:
+        i8     u8     i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h    {}
+i8      -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u8      u8     u8     u8     u8     u8     u8     u8     u8     -      -      u8      u8      -    -    -    - 
+i16     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u16     u16    u16    u16    u16    u16    u16    u16    u16    -      -      u16     u16     -    -    -    - 
+i32     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u32     u32    u32    u32    u32    u32    u32    u32    u32    -      -      u32     u32     -    -    -    - 
+i64     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u64     u64    u64    u64    u64    u64    u64    u64    u64    -      -      u64     u64     -    -    -    - 
+f32     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+f64     -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+rf32    -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+rf64    -      f64    -      f64    -      f64    -      f64    -      -      -       f64     -    -    -    - 
+c       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+b       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+h       -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+{}      -      -      -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+
+
+isequalwithequalnans, isequal:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h    {}
+i8      b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+u8      b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+i16     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+u16     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+i32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+u32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+i64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+u64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+f32     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+f64     b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+rf32    b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+rf64    b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+c       b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+b       b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+h       b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+{}      b     b     b      b      b      b      b      b      b      b      b       b       b    b    b    b 
+
+
+hypot, atan2, linsolve, linsolve:
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h    {}
+i8      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u8      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+i16     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u16     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+i32     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u32     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+i64     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u64     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+f32     -     -     -      -      -      -      -      -      f32    f32    f32     f32     -    -    -    - 
+f64     -     -     -      -      -      -      -      -      f32    f64    f32     f64     -    -    -    - 
+rf32    -     -     -      -      -      -      -      -      f32    f32    f32     f32     -    -    -    - 
+rf64    -     -     -      -      -      -      -      -      f32    f64    f32     f64     -    -    -    - 
+c       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+b       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+
+
+conj, round, floor, ceil, sign:
+i8      i8 
+u8      u8 
+i16     i16
+u16     u16
+i32     i32
+u32     u32
+i64     i64
+u64     u64
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       f64
+b       -  
+h       -  
+{}      -  
+
+
+expm, sqrtm, logm, sqrt, realsqrt, erf, erfinv, erfcinv, gamma, gammaln, 
+ exp, log, log2, log10, sin, cos, tan, cot, sec, csc, 
+ sind, cosd, tand, cotd, secd, cscd, sinh, cosh, tanh, coth, 
+ sech, csch, atan, acot, atand, acotd, asinh, acsch, inv, eig, 
+ norm, det, rcond, eps, prod, inv, eig, norm, det, rcond, 
+ eps, schur, lu, qr, svd, cumprod, mode:
+i8      -  
+u8      -  
+i16     -  
+u16     -  
+i32     -  
+u32     -  
+i64     -  
+u64     -  
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       -  
+b       -  
+h       -  
+{}      -  
+
+
+asin, acos, asind, acosd, atanh, asech:
+i8      -   
+u8      -   
+i16     -   
+u16     -   
+i32     -   
+u32     -   
+i64     -   
+u64     -   
+f32     xf32
+f64     xf64
+rf32    xf32
+rf64    xf64
+c       -   
+b       -   
+h       -   
+{}      -   
+
+
+asec, asecd:
+i8      -   
+u8      -   
+i16     -   
+u16     -   
+i32     -   
+u32     -   
+i64     -   
+u64     -   
+f32     xf32
+f64     f64 
+rf32    xf32
+rf64    f64 
+c       -   
+b       -   
+h       -   
+{}      -   
+
+
+acsc:
+i8      -   
+u8      -   
+i16     -   
+u16     -   
+i32     -   
+u32     -   
+i64     -   
+u64     -   
+f32     xf32
+f64     f64 
+rf32    f32 
+rf64    xf64
+c       -   
+b       -   
+h       -   
+{}      -   
+
+
+acscd:
+i8      -   
+u8      -   
+i16     -   
+u16     -   
+i32     -   
+u32     -   
+i64     -   
+u64     -   
+f32     f32 
+f64     f64 
+rf32    xf32
+rf64    xf64
+c       -   
+b       -   
+h       -   
+{}      -   
+
+
+acosh:
+i8      -   
+u8      -   
+i16     -   
+u16     -   
+i32     -   
+u32     -   
+i64     -   
+u64     -   
+f32     f32 
+f64     xf64
+rf32    xf32
+rf64    f64 
+c       -   
+b       -   
+h       -   
+{}      -   
+
+
+acoth:
+i8      -   
+u8      -   
+i16     -   
+u16     -   
+i32     -   
+u32     -   
+i64     -   
+u64     -   
+f32     f32 
+f64     xf64
+rf32    f32 
+rf64    f64 
+c       -   
+b       -   
+h       -   
+{}      -   
+
+
+dot, dot:
+        i8     u8     i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c      b      h    {}
+i8      f64    -      -      -      -      -      -      -      -      f64    -       f64     f64    -      -    - 
+u8      -      f64    -      -      -      -      -      -      -      f64    -       f64     f64    -      -    - 
+i16     -      -      f64    -      -      -      -      -      -      f64    -       f64     f64    -      -    - 
+u16     -      -      -      f64    -      -      -      -      -      f64    -       f64     f64    -      -    - 
+i32     -      -      -      -      f64    -      -      -      -      f64    -       f64     f64    -      -    - 
+u32     -      -      -      -      -      f64    -      -      -      f64    -       f64     f64    -      -    - 
+i64     -      -      -      -      -      -      f64    -      -      f64    -       f64     f64    -      -    - 
+u64     -      -      -      -      -      -      -      f64    -      f64    -       f64     f64    -      -    - 
+f32     -      -      -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+f64     f64    f64    f64    f64    f64    f64    f64    f64    f32    f64    f32     f64     f64    f64    -    - 
+rf32    -      -      -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+rf64    f64    f64    f64    f64    f64    f64    f64    f64    f32    f64    f32     f64     f64    f64    -    - 
+c       f64    f64    f64    f64    f64    f64    f64    f64    f32    f64    f32     f64     f64    f64    -    - 
+b       -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+h       -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+{}      -      -      -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+
+
+@(x,y)cross([x,x,x],[y,y,y]):
+        i8     u8     i16     u16     i32     u32     i64     u64     f32     f64     rf32    rf64    c       b       h    {}
+i8      Mi8    -      -       -       -       -       -       -       -       Mi8     -       Mi8     Mi8     -       -    - 
+u8      -      Mu8    -       -       -       -       -       -       -       Mu8     -       Mu8     Mu8     -       -    - 
+i16     -      -      Mi16    -       -       -       -       -       -       Mi16    -       Mi16    Mi16    -       -    - 
+u16     -      -      -       Mu16    -       -       -       -       -       Mu16    -       Mu16    Mu16    -       -    - 
+i32     -      -      -       -       Mi32    -       -       -       -       Mi32    -       Mi32    Mi32    -       -    - 
+u32     -      -      -       -       -       Mu32    -       -       -       Mu32    -       Mu32    Mu32    -       -    - 
+i64     -      -      -       -       -       -       Mi64    -       -       Mi64    -       Mi64    Mi64    -       -    - 
+u64     -      -      -       -       -       -       -       Mu64    -       Mu64    -       Mu64    Mu64    -       -    - 
+f32     -      -      -       -       -       -       -       -       Mf32    Mf32    Mf32    Mf32    Mf32    Mf32    -    - 
+f64     Mi8    Mu8    Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf64    Mf32    Mf64    Mf64    Mf64    -    - 
+rf32    -      -      -       -       -       -       -       -       Mf32    Mf32    Mf32    Mf32    Mf32    Mf32    -    - 
+rf64    Mi8    Mu8    Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf64    Mf32    Mf64    Mf64    Mf64    -    - 
+c       Mi8    Mu8    Mi16    Mu16    Mi32    Mu32    Mi64    Mu64    Mf32    Mf64    Mf32    Mf64    Mf64    Mf64    -    - 
+b       -      -      -       -       -       -       -       -       Mf32    Mf64    Mf32    Mf64    Mf64    Mf64    -    - 
+h       -      -      -       -       -       -       -       -       -       -       -       -       -       -       -    - 
+{}      -      -      -       -       -       -       -       -       -       -       -       -       -       -       -    - 
+
+
+tril, triu, diag, diag, median:
+i8      i8 
+u8      u8 
+i16     i16
+u16     u16
+i32     i32
+u32     u32
+i64     i64
+u64     u64
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       c  
+b       b  
+h       -  
+{}      -  
+
+
+unique, squeeze, unique, squeeze:
+i8      i8 
+u8      u8 
+i16     i16
+u16     u16
+i32     i32
+u32     u32
+i64     i64
+u64     u64
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       c  
+b       b  
+h       h  
+{}      C- 
+
+
+find, find, nnz:
+i8      f64
+u8      f64
+i16     f64
+u16     f64
+i32     f64
+u32     f64
+i64     f64
+u64     f64
+f32     f64
+f64     f64
+rf32    f64
+rf64    f64
+c       f64
+b       f64
+h       -  
+{}      -  
+
+
+complex:
+        i8     u8     i16     u16     i32     u32     i64     u64     f32     f64     rf32    rf64    c    b    h    {}
+i8      xi8    -      -       -       -       -       -       -       -       xi8     -       xi8     -    -    -    - 
+u8      -      xu8    -       -       -       -       -       -       -       xu8     -       xu8     -    -    -    - 
+i16     -      -      xi16    -       -       -       -       -       -       xi16    -       xi16    -    -    -    - 
+u16     -      -      -       xu16    -       -       -       -       -       xu16    -       xu16    -    -    -    - 
+i32     -      -      -       -       xi32    -       -       -       -       xi32    -       xi32    -    -    -    - 
+u32     -      -      -       -       -       xu32    -       -       -       xu32    -       xu32    -    -    -    - 
+i64     -      -      -       -       -       -       xi64    -       -       xi64    -       xi64    -    -    -    - 
+u64     -      -      -       -       -       -       -       xu64    -       xu64    -       xu64    -    -    -    - 
+f32     -      -      -       -       -       -       -       -       xf32    xf32    xf32    xf32    -    -    -    - 
+f64     xi8    xu8    xi16    xu16    xi32    xu32    xi64    xu64    xf32    xf64    xf32    xf64    -    -    -    - 
+rf32    -      -      -       -       -       -       -       -       xf32    xf32    xf32    xf32    -    -    -    - 
+rf64    xi8    xu8    xi16    xu16    xi32    xu32    xi64    xu64    xf32    xf64    xf32    xf64    -    -    -    - 
+c       -      -      -       -       -       -       -       -       -       -       -       -       -    -    -    - 
+b       -      -      -       -       -       -       -       -       -       -       -       -       -    -    -    - 
+h       -      -      -       -       -       -       -       -       -       -       -       -       -    -    -    - 
+{}      -      -      -       -       -       -       -       -       -       -       -       -       -    -    -    - 
+
+
+isempty, isobject, isfloat, isinteger, islogical, isstruct, iscell:
+i8      b
+u8      b
+i16     b
+u16     b
+i32     b
+u32     b
+i64     b
+u64     b
+f32     b
+f64     b
+rf32    b
+rf64    b
+c       b
+b       b
+h       b
+{}      b
+
+
+schar, ordschur:
+i8      -
+u8      -
+i16     -
+u16     -
+i32     -
+u32     -
+i64     -
+u64     -
+f32     -
+f64     -
+rf32    -
+rf64    -
+c       -
+b       -
+h       -
+{}      -
+
+
+sum, mean:
+i8      f64
+u8      f64
+i16     f64
+u16     f64
+i32     f64
+u32     f64
+i64     f64
+u64     f64
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       f64
+b       f64
+h       -  
+{}      -  
+
+
+min, max:
+i8      i8 
+u8      u8 
+i16     i16
+u16     u16
+i32     i32
+u32     u32
+i64     i64
+u64     u64
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       f64
+b       b  
+h       -  
+{}      -  
+
+
+@(x,y)min(x,y), @(x,y)max(x,y):
+        i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c      b      h    {}
+i8      i8    -     -      -      -      -      -      -      -      i8     -       i8      i8     -      -    - 
+u8      -     u8    -      -      -      -      -      -      -      u8     -       u8      u8     -      -    - 
+i16     -     -     i16    -      -      -      -      -      -      i16    -       i16     i16    -      -    - 
+u16     -     -     -      u16    -      -      -      -      -      u16    -       u16     u16    -      -    - 
+i32     -     -     -      -      i32    -      -      -      -      i32    -       i32     i32    -      -    - 
+u32     -     -     -      -      -      u32    -      -      -      u32    -       u32     u32    -      -    - 
+i64     -     -     -      -      -      -      i64    -      -      i64    -       i64     i64    -      -    - 
+u64     -     -     -      -      -      -      -      u64    -      u64    -       u64     u64    -      -    - 
+f32     -     -     -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+f64     i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+rf32    -     -     -      -      -      -      -      -      f32    f32    f32     f32     f32    f32    -    - 
+rf64    i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+c       i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    f32     f64     f64    f64    -    - 
+b       -     -     -      -      -      -      -      -      f32    f64    f32     f64     f64    b      -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -      -      -    - 
+
+
+length, ndims, numel:
+i8      f64
+u8      f64
+i16     f64
+u16     f64
+i32     f64
+u32     f64
+i64     f64
+u64     f64
+f32     f64
+f64     f64
+rf32    f64
+rf64    f64
+c       f64
+b       f64
+h       f64
+{}      f64
+
+
+rank:
+i8      -  
+u8      -  
+i16     -  
+u16     -  
+i32     -  
+u32     -  
+i64     -  
+u64     -  
+f32     f64
+f64     f64
+rf32    f64
+rf64    f64
+c       -  
+b       -  
+h       -  
+{}      -  
+
+
+cross:
+      i8    u8    i16    u16    i32    u32    i64    u64    f32    f64    rf32    rf64    c    b    h    {}
+i8      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u8      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+i16     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u16     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+i32     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u32     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+i64     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+u64     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+f32     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+f64     -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+rf32    -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+rf64    -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+c       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+b       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+h       -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+{}      -     -     -      -      -      -      -      -      -      -      -       -       -    -    -    - 
+
+
+ifftn, fftn, fft:
+i8      -  
+u8      f64
+i16     -  
+u16     f64
+i32     -  
+u32     -  
+i64     -  
+u64     -  
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       -  
+b       f64
+h       -  
+{}      -  
+
+
+chol:
+i8      -  
+u8      -  
+i16     -  
+u16     -  
+i32     -  
+u32     -  
+i64     -  
+u64     -  
+f32     f32
+f64     f64
+rf32    f32
+rf64    N/A
+c       -  
+b       -  
+h       -  
+{}      -  
+
+
+ones, zeros, eye, inf, nan:
+i8      Mf64
+u8      Mf64
+i16     Mf64
+u16     Mf64
+i32     Mf64
+u32     Mf64
+i64     Mf64
+u64     Mf64
+f32     Mf64
+f64     Mf64
+rf32    Mf64
+rf64    Mf64
+c       -   
+b       f64 
+h       -   
+{}      -   
+
+
+true, false:
+i8      Mb
+u8      Mb
+i16     Mb
+u16     Mb
+i32     Mb
+u32     Mb
+i64     Mb
+u64     Mb
+f32     Mb
+f64     Mb
+rf32    Mb
+rf64    Mb
+c       - 
+b       b 
+h       - 
+{}      - 
+
+
+cumsum:
+i8      -  
+u8      -  
+i16     -  
+u16     -  
+i32     -  
+u32     -  
+i64     -  
+u64     -  
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       -  
+b       f64
+h       -  
+{}      -  
+
+
+var, std:
+i8      -  
+u8      -  
+i16     -  
+u16     -  
+i32     -  
+u32     -  
+i64     -  
+u64     -  
+f32     f32
+f64     f64
+rf32    f32
+rf64    f64
+c       f64
+b       f64
+h       -  
+{}      -  
+
