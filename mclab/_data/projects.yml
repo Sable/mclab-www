@@ -142,7 +142,7 @@
       long-running loops, as it allows dynamic optimization of those loops as soon as
       they become hot. "
   publications:
-    - ""
+    - "Optimizing MATLAB feval with Dynamic Techniques"
 ###################### Web(JavaScript) and Distributed SCientific Computing #############################
 - name: "McLib.js"
   link: "/projects/mclibjs/"
