@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Compound Patterns</TITLE>
+<META NAME="description" CONTENT="Compound Patterns">
+<META NAME="keywords" CONTENT="usermanual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usermanual.css">
+
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html221"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html217"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html213"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html219"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html222"
+  HREF="node14.html">Actions</A>
+<B> Up:</B> <A NAME="tex2html218"
+  HREF="node7.html">Patterns</A>
+<B> Previous:</B> <A NAME="tex2html214"
+  HREF="node12.html">Scope Patterns</A>
+ &nbsp; <B>  <A NAME="tex2html220"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00052600000000000000"></A> <A NAME="sec:compound"></A>
+<BR>
+Compound Patterns
+</H3>
+
+<P>
+As in other aspect-oriented languages, AspectMatlab also provides a
+programmer the facility of creating compound patterns. Such user-defined
+patterns are in fact logical combination of user-defined patterns and 
+primitive patterns given in Table&nbsp;<A HREF="node7.html#table:patterns">I</A>.
+
+<P>
+Examples of compound patterns given in Listing <A HREF="#ex:compoundpat">9</A> 
+display the level of flexibility
+a programmer can achieve in order to create different logical compounds of
+primitive patterns. Pattern <TT>pCallFoo</TT> matched all calls made to
+function <TT>foo</TT>, but only the ones from within the loops, either 
+<TT>for</TT> or <TT>while</TT> loops. On the other hand, the pattern
+<TT>pGetOrSet</TT> will match all array read or write operations, but the 
+ones only within the function <TT>bar</TT>. <TT>pCallExec</TT> shows a
+combination of an already defined pattern <TT>pCallFoo</TT> with a
+primitive pattern <SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$execution$"></SPAN>.
+
+<P>
+<TABLE  WIDTH="100%">
+<TR><TD>
+
+<BR>
+<IMG
+ WIDTH="570" HEIGHT="124" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Compound Patterns}, lab...
+...function, bar);
+pCallExec : pCallFoo \vert execution(foo);
+end
+\end{lstlisting}">
+<BR></TD></TR>
+</TABLE>
+
+<P>
+Care should be taken while ANDing patterns
+of different kinds, because a shadow in the source code has only one
+specific type. For example, replacing OR with an AND in the pattern
+<TT>pGetOrSet</TT> above will result in no match, simply because an array
+can either be read or written to, not both at the same time.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html221"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html217"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html213"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html219"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html222"
+  HREF="node14.html">Actions</A>
+<B> Up:</B> <A NAME="tex2html218"
+  HREF="node7.html">Patterns</A>
+<B> Previous:</B> <A NAME="tex2html214"
+  HREF="node12.html">Scope Patterns</A>
+ &nbsp; <B>  <A NAME="tex2html220"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Toheed ASLAM
+2010-04-24
+</ADDRESS>
+</BODY>
+</HTML>

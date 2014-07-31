@@ -1,8 +1,8 @@
 A beta-release of the amc compiler is freely available to download
-[here](http://www.sable.mcgill.ca/mclab/aspectmatlab/amc/amc.jar). A
+[here](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/amc/amc.jar). A
 detailed user manual is also available.
-[(.html)](http://www.sable.mcgill.ca/mclab/aspectmatlab/amc/usermanual/usermanual.html)
-[(.pdf)](http://www.sable.mcgill.ca/mclab/aspectmatlab/publications/usermanual.pdf). 
+[(.html)](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/amc/usermanual/usermanual.html)
+[(.pdf)](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/usermanual.pdf). 
 
 ####Release Notes
 The new AspectMatlab release addresses the following issues:
@@ -48,4 +48,4 @@ working directory, which can be executed using any Matlab system.
 
 ####Sample Code
 A list of aspect and base programs along with amc generated woven code is given
-[here](http://www.sable.mcgill.ca/mclab/aspectmatlab/examples).
+[here](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/examples).

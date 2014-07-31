@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Function Patterns</TITLE>
+<META NAME="description" CONTENT="Function Patterns">
+<META NAME="keywords" CONTENT="usermanual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usermanual.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html163"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html159"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html153"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html161"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html164"
+  HREF="node9.html">Array Patterns</A>
+<B> Up:</B> <A NAME="tex2html160"
+  HREF="node7.html">Patterns</A>
+<B> Previous:</B> <A NAME="tex2html154"
+  HREF="node7.html">Patterns</A>
+ &nbsp; <B>  <A NAME="tex2html162"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00052100000000000000"></A> <A NAME="sec:funcpat"></A>
+<BR>
+Function Patterns
+</H3>
+
+<P>
+AspectJ and other aspect-oriented languages provide basic function-related 
+cross-cutting features, which enable a
+programmer to track, for example, the calls made to all or
+some specific functions matching the specified pattern.
+Other places of interest in a function source code are the entry and exit points
+of the body.
+
+<P>
+Figure&nbsp;<A HREF="#fig:funcpat">3</A> shows an example of the function-related join points
+in the source code. The whole body of the function <TT>main</TT> matches
+an <SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$execution$"></SPAN> pattern, whereas every call to a function is
+captured by the <SPAN CLASS="MATH"><IMG
+ WIDTH="32" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$call$"></SPAN> pattern.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:funcpat"></A><A NAME="319"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+Function Join Points</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+ WIDTH="345" HEIGHT="215" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="\includegraphics[width=3in]{images/func.eps}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+AspectMatlab also supports both <SPAN CLASS="MATH"><IMG
+ WIDTH="32" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$call$"></SPAN> and
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$execution$"></SPAN> patterns, not only for functions but
+to cross-cut scripts as well. Because there is no specific main entry point
+to M<SMALL>ATLAB</SMALL> programs, so we introduce a <SPAN CLASS="MATH"><IMG
+ WIDTH="120" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$mainexecution$"></SPAN> pattern.
+This pattern will match the execution of the main function or script,
+(i.e., the first function or script executed).
+The function patterns given in Listing <A HREF="#ex:funcpat">3</A> show example uses, 
+where <TT>pCallFoo</TT> pattern matches all calls made to
+the function or script named <TT>foo</TT> and <TT>pExecutionMain</TT>
+pattern captures the entry and exit points of the main function.
+
+<P>
+<TABLE  WIDTH="100%">
+<TR><TD>
+
+<BR>
+<IMG
+ WIDTH="570" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Function Patterns}, lab...
+...s
+pCallFoo : call(foo);
+pExecutionMain : mainexecution();
+end
+\end{lstlisting}">
+<BR></TD></TR>
+</TABLE>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html163"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html159"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html153"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html161"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html164"
+  HREF="node9.html">Array Patterns</A>
+<B> Up:</B> <A NAME="tex2html160"
+  HREF="node7.html">Patterns</A>
+<B> Previous:</B> <A NAME="tex2html154"
+  HREF="node7.html">Patterns</A>
+ &nbsp; <B>  <A NAME="tex2html162"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Toheed ASLAM
+2010-04-24
+</ADDRESS>
+</BODY>
+</HTML>

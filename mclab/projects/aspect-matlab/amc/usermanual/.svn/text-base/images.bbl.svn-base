@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{kiczales01}
+G.~Kiczales, E.~Hilsdale, J.~Hugunin, M.~Kersten, J.~Palm, and W.~G. Griswold.
+\newblock An overview of {AspectJ}.
+\newblock In {\em ECOOP}, volume 2072, pages 327--353, 2001.
+
+\bibitem{aosd05aspectcobol}
+R.~L\"{a}mmel and K.~De~Schutter.
+\newblock What does aspect-oriented programming mean to {Cobol?}
+\newblock In {\em AOSD '05: Proceedings of the 4th international conference on
+  Aspect-oriented software development}, pages 99--110, New York, NY, USA,
+  2005. ACM.
+
+\end{thebibliography}

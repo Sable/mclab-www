@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Array Patterns</TITLE>
+<META NAME="description" CONTENT="Array Patterns">
+<META NAME="keywords" CONTENT="usermanual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usermanual.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html175"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html171"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html165"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html173"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html176"
+  HREF="node10.html">Selective Matching</A>
+<B> Up:</B> <A NAME="tex2html172"
+  HREF="node7.html">Patterns</A>
+<B> Previous:</B> <A NAME="tex2html166"
+  HREF="node8.html">Function Patterns</A>
+ &nbsp; <B>  <A NAME="tex2html174"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00052200000000000000"></A> <A NAME="sec:arraypat"></A>
+<BR>
+Array Patterns
+</H3>
+
+<P>
+AspectJ provides array pointcuts functionality. However, the pointcuts of AspectJ do not support array objects in full. When an
+element of an array object is set or referenced, the corresponding index
+values and the assigned value are not exposed to the advice.
+AspectJ was extended to add array pointcuts but these extensions
+either just work for one-dimensional arrays or they force
+programmers to use other pointcuts in order to be able to
+perform selective matching and to fetch context information.
+
+<P>
+AspectMatlab provides simple, yet powerful, patterns to capture array accesses, <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$get$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$set$"></SPAN>. As shown is Figure&nbsp;<A HREF="#fig:arraypat">4</A>, 
+the first assignment statement is a <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$set$"></SPAN> join point where 
+<TT>arr1</TT> is being assigned a new value. The second statement is also a
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$set$"></SPAN> join point for <TT>arr2</TT>, but the right hand side 
+actually reads <TT>arr1</TT>. So the right hand side of the second assignment
+statement is a <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$get$"></SPAN> join point.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:arraypat"></A><A NAME="342"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+Array Join Points</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+ WIDTH="283" HEIGHT="217" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="\includegraphics[width=2.5in]{images/array.eps}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Figure&nbsp;<A HREF="#fig:arraypat2">5</A> shows an example of a more complicated <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$get$"></SPAN>
+match. Here we have array accesses within another array access and we
+have to sort out the order in which all these join points are matched.
+We decided to follow the evaluation order of an expression, where all the
+sub-expressions are evaluated before the containing expression. So, the
+first <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$get$"></SPAN> join point in the second assigment statement is the
+access of <TT>x</TT>, followed by the second <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$get$"></SPAN> join point for <TT>y</TT> and finally, the third <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$get$"></SPAN> join point is the whole
+right hand side.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:arraypat2"></A><A NAME="350"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+Array Join Points - Order</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+ WIDTH="345" HEIGHT="200" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="\includegraphics[width=3in]{images/array2.eps}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Examples of array patterns are given in Listing <A HREF="#ex:arraypat">4</A>. Pattern <TT>pGetX</TT> matches all the join points in the source code where any array or M<SMALL>ATLAB</SMALL> matrix access operation is performed. Similarly, all the write operations on the arrays can be captured using pattern <TT>pSetX</TT>. 
+
+<P>
+<TABLE  WIDTH="100%">
+<TR><TD>
+
+<BR>
+<IMG
+ WIDTH="570" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Array Patterns}, label=ex:arraypat]
+patterns
+pGetX : get(*);
+pSetX : set(*);
+end
+\end{lstlisting}">
+<BR></TD></TR>
+</TABLE>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html175"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html171"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html165"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html173"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html176"
+  HREF="node10.html">Selective Matching</A>
+<B> Up:</B> <A NAME="tex2html172"
+  HREF="node7.html">Patterns</A>
+<B> Previous:</B> <A NAME="tex2html166"
+  HREF="node8.html">Function Patterns</A>
+ &nbsp; <B>  <A NAME="tex2html174"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Toheed ASLAM
+2010-04-24
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="usermanual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usermanual.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="usermanual.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html96"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html92"
+  HREF="usermanual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html86"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html94"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html97"
+  HREF="node5.html">Language Definition</A>
+<B> Up:</B> <A NAME="tex2html93"
+  HREF="usermanual.html">AspectMatlab Compiler User Manual</A>
+<B> Previous:</B> <A NAME="tex2html87"
+  HREF="node3.html">List of Tables</A>
+ &nbsp; <B>  <A NAME="tex2html95"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000"></A> <A NAME="Sec:Introduction"></A>
+<BR>
+Introduction
+</H1>
+M<SMALL>ATLAB</SMALL> is a programming language that provides scientists with an
+interactive development loop, high-level array operations and a rich
+collection of built-in and library functions.  M<SMALL>ATLAB</SMALL> is also a very
+dynamic language in which variable types are not declared,  and in which
+new functions and scripts are loaded dynamically.  Although M<SMALL>ATLAB</SMALL> 
+recently incorporated object-oriented programming features,  there are
+currently no aspect-oriented features.
+
+<P>
+We have defined an extension of M<SMALL>ATLAB</SMALL>, AspectMatlab, which supports
+the notions of <SPAN  CLASS="textit">patterns</SPAN> (pointcuts in AspectJ terminology), and
+<EM>named actions</EM> (advice in AspectJ terminology).   An aspect in
+AspectMatlab looks very much like a class in the object-oriented part of
+M<SMALL>ATLAB</SMALL>.  Just like classes, an aspect can have properties (fields) and
+methods.  However, in addition, the programmer can specify patterns
+(pointcuts) and before, after and around actions (advice).   Each action
+is declared with a name (unlike advice in AspectJ, which do not have
+names).
+
+<P>
+AspectMatlab supports traditional patterns (pointcuts) such as
+<TT>call</TT> and <TT>execution</TT>,  but we have also concentrated on
+an effective design for <TT>get</TT> and <TT>set</TT> patterns which
+naturally deal with arrays. Loops are key control structures in
+scientific programs and we have developed a collection of patterns which 
+allow one to match on loops in a variety of ways.  We have also been
+inspired by AspectCobol [<A
+ HREF="node21.html#aosd05aspectcobol">2</A>] in that we expose
+join point context information via selectors that are associated with
+actions.
+
+<P>
+We have implemented the <SPAN  CLASS="textsl">amc</SPAN> compiler which translates AspectMatlab
+source files to pure M<SMALL>ATLAB</SMALL> source files.  The generated code can be
+run using any M<SMALL>ATLAB</SMALL> system.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html96"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html92"
+  HREF="usermanual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html86"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html94"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html97"
+  HREF="node5.html">Language Definition</A>
+<B> Up:</B> <A NAME="tex2html93"
+  HREF="usermanual.html">AspectMatlab Compiler User Manual</A>
+<B> Previous:</B> <A NAME="tex2html87"
+  HREF="node3.html">List of Tables</A>
+ &nbsp; <B>  <A NAME="tex2html95"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Toheed ASLAM
+2010-04-24
+</ADDRESS>
+</BODY>
+</HTML>

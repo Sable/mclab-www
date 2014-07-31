@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Aspects</TITLE>
+<META NAME="description" CONTENT="Aspects">
+<META NAME="keywords" CONTENT="usermanual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usermanual.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html133"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html129"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html123"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html131"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html134"
+  HREF="node7.html">Patterns</A>
+<B> Up:</B> <A NAME="tex2html130"
+  HREF="node5.html">Language Definition</A>
+<B> Previous:</B> <A NAME="tex2html124"
+  HREF="node5.html">Language Definition</A>
+ &nbsp; <B>  <A NAME="tex2html132"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00051000000000000000"></A> <A NAME="sec:aspects"></A>
+<BR>
+Aspects
+</H2>
+
+<P>
+In AspectMatlab, aspects are defined using a syntax similar to M<SMALL>ATLAB</SMALL> 
+classes.  A M<SMALL>ATLAB</SMALL> class typically contains properties, methods and
+events. As in other object-oriented languages, properties in M<SMALL>ATLAB</SMALL> class 
+encapsulate the data that belongs to instances of classes, which can be assigned 
+default values, initialized in class constructors, and used throughout the class. 
+Data contained in properties can be declared public, protected, or private. This 
+data can be a fixed set of constant values, or it can be dependent on other values 
+and calculated only when queried. Different attributes can be applied over a block
+of properties and property-specific access methods can be specified.
+
+<P>
+Encapsulation using methods is also a familiar concept in an object-oriented 
+systems. M<SMALL>ATLAB</SMALL> class methods are a little different as they act as an
+enclosing block, which can host a variety of functions. Common types of
+methods are ordinary functions, class constructors, class destructors and
+property access functions. Method blocks can be configured with different
+attributes, including access specifiers.
+
+<P>
+Listing <A HREF="#ex:class">1</A> shows a typical M<SMALL>ATLAB</SMALL> class, <TT>myClass</TT>,
+which can be used as a simple counter. This class declares a property, 
+<TT>count</TT>, which has default scalar value 0. The counting
+functionality is provided through two functions. <TT>incCount</TT>
+increments the counter and <TT>getCount</TT> can be used to query the
+current value of count, which is returned through variable <TT>out</TT>.
+One important point to notice here is that M<SMALL>ATLAB</SMALL> class methods always
+have the calling object automatically passed as the first argument.
+
+<P>
+<BR>
+<IMG
+ WIDTH="575" HEIGHT="391" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{lstlisting}[language=MATLAB, frame=htbp, caption={A typical {\sc Matlab}\...
+...s)
+out = this.count;
+end
+\par
+end %methods
+\par
+end %classdef
+\end{lstlisting}">
+<BR>
+
+<P>
+In this section, we outline the grammar of AspectMatlab in pieces as we
+go through related concepts and constructs. If you have a coloured version
+of this document, you will see that all references to productions in the
+McLab implementaion of the base M<SMALL>ATLAB</SMALL> grammar, are given in red.
+
+<P>
+As shown in Figure&nbsp;<A HREF="#fig:aspectgrammar">1</A>, the base McLab <TT>program</TT> rule
+is extended to include aspects, along with functions, scripts and classes,
+as a program entity. Just like a M<SMALL>ATLAB</SMALL> class structure, an <TT>aspect</TT>
+is named and contains a body. An aspect retains the 
+properties and methods constructs, while adding two aspect-related
+constructs: patterns and actions. Patterns are formally known as
+pointcuts in AspectJ and are used as picking out certain join points in
+the program flow. AspectMatlab actions correspond to AspectJ advice, which
+essentially is a block of code intended to be executed at certain points
+in the program. This choice of terminology was intended to convey that
+patterns specify where to match and actions specify what to do.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:aspectgrammar"></A><A NAME="226"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+Syntax of an Aspect</CAPTION>
+<TR><TD><IMG
+ WIDTH="465" HEIGHT="190" BORDER="0"
+ SRC="img2.png"
+ ALT="\begin{figure}\begin{grammar}[(colon){ ::$\Rightarrow$}]
+[(semicolon){\\ \hspac...
+... &lt;actions\_block&gt;,&lt;\textcolor{red}{stmt\_separator}&gt;.
+\end{grammar}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Moreover, it is important to explain the <TT>stmt_separator</TT> non-terminal,
+imported from McLab. Unlike other high level languages, a M<SMALL>ATLAB</SMALL> statement
+can be terminated in multiple ways. These statement separators include the 
+new-line, a comma or a semi-colon.
+
+<P>
+With the addition of patterns and actions, Listing <A HREF="#ex:aspect">2</A> shows an 
+extension to the class presented in Listing <A HREF="#ex:class">1</A>. <TT>myAspect</TT>
+counts how many times a function named <TT>foo</TT> is invoked. To achieve
+this functionality, we first define a pattern. Pattern <TT>callFoo</TT>
+provides us the way to specify the target join points. Once we match such 
+join points in the source code, then we can call the corresponding action,
+<TT>actCall</TT>. This action triggers before the call to function <TT>foo</TT>
+and increments the counter.
+
+<P>
+<TABLE  WIDTH="100%">
+<TR><TD>
+
+<BR>
+<IMG
+ WIDTH="575" HEIGHT="467" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{lstlisting}[language=MATLAB, frame=htbp, caption={A typical aspect exampl...
+...s
+actCall : before callFoo
+this.incCount();
+end
+end
+\par
+end
+\end{lstlisting}">
+<BR></TD></TR>
+</TABLE>
+
+<P>
+In the compiled code, an aspect is transformed into a class and the actions are
+translated into corresponding methods of the resulting class. As described 
+earlier, M<SMALL>ATLAB</SMALL> class methods have the invoking class object as an argument.
+So the methods created out of actions are also provided that object, which we 
+named <TT>this</TT> for the purposes of clarity and consistency. Inside an 
+action body, <TT>this</TT> should be used to interact with the properties
+and methods for the specific object.
+
+<P>
+We present a detailed discussion on patterns and actions in the following sections.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html133"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html129"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html123"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html131"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html134"
+  HREF="node7.html">Patterns</A>
+<B> Up:</B> <A NAME="tex2html130"
+  HREF="node5.html">Language Definition</A>
+<B> Previous:</B> <A NAME="tex2html124"
+  HREF="node5.html">Language Definition</A>
+ &nbsp; <B>  <A NAME="tex2html132"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Toheed ASLAM
+2010-04-24
+</ADDRESS>
+</BODY>
+</HTML>

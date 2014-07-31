@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>McLab - AspectMatlab</title>
+<script type="text/javascript" src="js/prototype.js"></script> <!--These three scripts are for lightbox. To use lightbox to display a picture, put <a href="source" rel="lightbox" title="your title"></a> around the link.--> 
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.title {font-family: "Lucida Sans"; font-weight: bold; } <!--use this style for titles-->
+
+a:link {
+	color: #840000;
+	text-decoration: none;
+}
+a:visited {
+	color: #830000;
+	text-decoration: none;
+}
+a:hover {
+	color: #590202;
+	text-decoration: underline;
+}
+a:active {
+	color: #830000;
+	text-decoration: none;
+}
+.paragraph {
+	font-family: "Lucida Sans";
+	font-size: 12px;
+} <!--use this style for body text-->
+-->
+</style>
+</head>
+
+<body onload="MM_preloadImages('../../image/inner/buttons/projects.png','../../image/inner/buttons/publications.png','../../image/inner/buttons/software.png','../../image/inner/buttons/people.png','../../image/inner/buttons/faqs.png','../../image/inner/buttons/contact.png','../../image/inner/buttons/internal.png','../../image/inner/buttons/home.png')">
+<table cellpadding="0" cellspacing="0" align="center">
+   <tr>
+    	<td><img src="../../image/inner/header.png" name="Image2" border="0" usemap="#Map" id="Image2" /></td>
+   </tr>
+   <tr>
+    	<td><img src="../../image/inner/nav.png" name="Image1" border="0" usemap="#Image1Map" id="Image1" /></td>
+   </tr>
+   <tr>
+      <td background="../../image/inner/tile.png">
+        <table cellpadding="10">
+           <tr>
+   	      <td>
+              <span class="paragraph">
+               <a href="../index.html">AspectMatlab</a>
+                  | <a href="../../mcir.html">McIR and analysis and transformation engine </a>| 
+                    <a href="../../mcvm_mcjit.html">mcVM and McJIT </a>| 
+                    <a href="../../matlab_fortran.html">Matlab to Fortran</a> | 
+                    <a href="../../domain_specific.html">Domain-Specific Scientific Languages</a>
+              </span>
+              </td>
+            </tr>
+
+<!--- begin row and column for content --->
+<tr>
+<td width="780">
+
+<!--- CONTENT GOES HERE --->
+<h1> Example Aspects and Base Programs </h1> 
+
+In general, we consider two possible use cases: (1) profiling programs,
+and (2) annotating data to variables in a running program to extend
+functionality.
+
+Profiling programs is particulary interesting for scientific programs,
+which are usually computationaly intensive. Having knowledge about
+what exactly is going on during execution can help increase efficiency. Some
+information is hard to get by "traditional" means, i.e. by extending
+the program to include profiling code. Adding an aspect represents a
+much cleaner solution, with the additional advantage that they allow to
+profile different programs without much modification.
+
+With regards to annotating functionality, aspects are a quick way to prototype further
+possible language extensions without much work.
+
+<h2> Tracking Array Size-Growing Operations </h2>
+MATLAB semantics force the array to be handled in a different way as compared to other
+objects. Each time the array size increases, MATLAB has to allocate new space to the array.
+We present a simple example aspect, that is used to track the growing size of the arrays.
+The purpose of this application is to monitor all the operations which may potentially alter
+the shape or the size of an array, and in the end we should be able to point to the operations
+in the source program at which the arrays attain the biggest size. (<a href="grow">Example</a>)
+
+<h2> Tracking Array Sparsity </h2>
+The sparsity benchmark is an aspect which helps to profile how sparse
+matrices are. The sparsity of a matrix is the number of zero
+elements compared to the number of non-zero elements. If a matrix is
+sufficiently sparse, it can be stored as a sparse matrix, which is a
+special data type supported by Matlab. It stores only the non-zero
+elements and their location. All arithmetic is supported both on sparse data
+types and between a mixture of sparse and dense matrices. (<a href="sparsity">Example</a>)
+
+<h2> Measuring Floating Point Operations </h2>
+In numerical computing it is common to count computational complexity
+in terms of floating point operations, because they tend to make up
+most of the operations and were traditionally more expensive than other
+operations. Knowing exactly how many floating point operations each part of
+a program performs can be more useful than knowing how time the
+computations take, because the number of flops may be more consistent,
+and is not subject to compiler optimizations. (<a href="flops">Example</a>)
+
+<h2> Adding Units to Computations </h2>
+The units aspect adds the functionality by allowing matrices to have SI units
+associated with them, while not requiring any special treatment of
+these variables. The aspect turns all variables that are encountered at calls into structures
+containing both a unit and the original value. All basic operations
+are overriden as well. In order to create a matrix with an associated
+unit, one merely has to multiply the matrix with the name of the unit. (<a href="unit">Example</a>)
+
+<h2> Interpreting Loop Iteration Space </h2>
+This aspect extracts the for loop iteration space and then interprets this space within the
+loop body. It can be useful in many applications, for example, for iterative solvers that get
+called a lot to see how many iterations are performed, or for loop dependency analyses
+where we need to know the lower bound, upper bound and the increment factor for the
+for loops. This benchmark can also be used to track how long loops run throughout the
+program. (<a href="loops">Example</a>)
+
+<!--- end row and column for content --->
+</td> 
+</tr>
+
+
+       </table>
+      
+     </td> 
+  </tr>
+  <tr>
+     <td><img src="../../image/inner/bottom.png" /></td>
+  </tr>
+</table>
+
+<link rel="stylesheet" href="../../css/lightbox.css" type="text/css" media="screen" /><!--for lightbox-->
+
+<!--image map for the navigation bar-->
+
+<map name="Image1Map" id="Image1Map"><area shape="rect" coords="171,-18,244,38" href="../../projects.html" alt="Projects" onmouseover="MM_swapImage('Image1','','../../image/inner/buttons/projects.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="242,-1,348,37" href="../../Publications.html" alt="Publications" onmouseover="MM_swapImage('Image1','','../../image/inner/buttons/publications.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="347,-2,429,35" href="../../Software.html" alt="Software" onmouseover="MM_swapImage('Image1','','../../image/inner/buttons/software.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="427,0,500,36" href="../../people.html" alt="People" onmouseover="MM_swapImage('Image1','','../../image/inner/buttons/people.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="496,-7,562,37" href="../../faq.html" alt="FAQs" onmouseover="MM_swapImage('Image1','','../../image/inner/buttons/faqs.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="560,-4,661,40" href="../../contact.html" onmouseover="MM_swapImage('Image1','','../../image/inner/buttons/contact.png',1)" onmouseout="MM_swapImgRestore()" />
+</map>
+<map name="Map" id="Map"><area shape="rect" coords="737,28,806,46" href="../../internal.html" onmouseover="MM_swapImage('Image2','','../../image/inner/buttons/internal.png',1)" onmouseout="MM_swapImgRestore()" />
+<area shape="rect" coords="733,7,808,30" href="../../index.html" onmouseover="MM_swapImage('Image2','','../../image/inner/buttons/home.png',1)" onmouseout="MM_swapImgRestore()" />
+</map></body>
+</html>

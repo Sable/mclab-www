@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Loop Patterns</TITLE>
+<META NAME="description" CONTENT="Loop Patterns">
+<META NAME="keywords" CONTENT="usermanual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usermanual.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html199"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html195"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html189"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html197"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html200"
+  HREF="node12.html">Scope Patterns</A>
+<B> Up:</B> <A NAME="tex2html196"
+  HREF="node7.html">Patterns</A>
+<B> Previous:</B> <A NAME="tex2html190"
+  HREF="node10.html">Selective Matching</A>
+ &nbsp; <B>  <A NAME="tex2html198"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00052400000000000000"></A> <A NAME="sec:looppat"></A>
+<BR>
+Loop Patterns
+</H3>
+
+<P>
+The original AspectJ language definition did not contain any loop-related pointcuts. 
+In M<SMALL>ATLAB</SMALL>, loops are extensively used and having the
+ability to cross-cut the loops is equally important in such a
+language. AspectMatlab
+provides a range of poincuts for loops: <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$loop$"></SPAN>, 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$loopbody$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$loophead$"></SPAN>.
+
+<P>
+As shown in Figure&nbsp;<A HREF="#fig:looppat">6</A>, the <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$loop$"></SPAN> join point 
+presents only an outside view of the loop;
+because the points before and after the loop are not within 
+the loop itself. For some applications it might be desirable 
+to advise the loop body. Also, the loop iterators are good 
+candidates to be advised. Because in M<SMALL>ATLAB</SMALL>, loop headers are
+evaluated completely before the loop itself. So the <SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$loophead$"></SPAN> 
+join point is not contained inside the <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$loop$"></SPAN> join point.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:looppat"></A><A NAME="394"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+Loop Join Points</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+ WIDTH="345" HEIGHT="276" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="\includegraphics[width=3in]{images/loop.eps}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In aspect-oriented systems, the means of selection for 
+a join point is, in most cases, ultimately based on the naming of some
+source element characterising the join point, possibly using a regular
+expression. For example, to advise a method call or a group
+of methods, the pointcut has to contain an explicit reference to some 
+names characterising the method signatures, for instance, a pattern matching 
+the name of the methods. Since loops can not be named in M<SMALL>ATLAB</SMALL>, a 
+name-based pattern to write a pointcut that would select a particular loop will not work.
+
+<P>
+If it is known for certain that all the loops within a function
+are to be advised, it would be possible in AspectMatlab to use certain scope-related pattern to restrict
+the loop pattern to all the loops contained in the functions
+picked up in the restricted scope. However, selecting
+only one of several loops within the same function turns out
+to be impossible without any further mechanism. So for the sake of 
+loops identification, we decided to use the loop iterator
+variables to match a loop pattern.
+
+<P>
+Examples of simple loop patterns are given in Listing <A HREF="#ex:looppat">6</A>. All three patterns will match on all the loops, either <TT>for</TT> or <TT>while</TT>, which iterate on variable <TT>i</TT>.
+
+<P>
+<TABLE  WIDTH="100%">
+<TR><TD>
+
+<BR>
+<IMG
+ WIDTH="570" HEIGHT="124" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Loop Patterns}, label=e...
+...p(i);
+pLoopHeadI : loophead(i);
+pLoopBodyI : loopbody(i);
+end
+\end{lstlisting}">
+<BR></TD></TR>
+</TABLE>
+
+<P>
+For example, consider the two loops shown in Listing <A HREF="#ex:looppatex">7</A>, where both display the numbers from 1 to 10. Both loops match the patterns given in Listing <A HREF="#ex:looppat">6</A>.
+
+<P>
+<TABLE  WIDTH="100%">
+<TR><TD>
+
+<BR>
+<IMG
+ WIDTH="570" HEIGHT="200" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Example of loop pattern...
+...0
+disp(i);
+end
+\par
+i=1;
+while (i&lt;=10)
+disp(i);
+i = i+1;
+end
+\end{lstlisting}">
+<BR></TD></TR>
+</TABLE>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html199"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html195"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html189"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html197"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html200"
+  HREF="node12.html">Scope Patterns</A>
+<B> Up:</B> <A NAME="tex2html196"
+  HREF="node7.html">Patterns</A>
+<B> Previous:</B> <A NAME="tex2html190"
+  HREF="node10.html">Selective Matching</A>
+ &nbsp; <B>  <A NAME="tex2html198"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Toheed ASLAM
+2010-04-24
+</ADDRESS>
+</BODY>
+</HTML>

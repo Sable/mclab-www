@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Flags</TITLE>
+<META NAME="description" CONTENT="Flags">
+<META NAME="keywords" CONTENT="usermanual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usermanual.css">
+
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html303"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html299"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html295"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html301"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html304"
+  HREF="node21.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html300"
+  HREF="node19.html">Execution</A>
+<B> Previous:</B> <A NAME="tex2html296"
+  HREF="node19.html">Execution</A>
+ &nbsp; <B>  <A NAME="tex2html302"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00061000000000000000">
+Flags</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textsl">amc</SPAN> supports the following list of flags:
+
+<P>
+
+<UL>
+<LI>A non-aspect M<SMALL>ATLAB</SMALL> file can be specified as a starting point of execution with the help of a <TT>-main</TT> flag. For example, <TT>myFunc1.m</TT> is nominated as the entry point.
+
+<BR><TT>java -jar amc.jar -main myFunc1.m myFunc2.m  myAspect.m</TT>
+
+<P>
+</LI>
+<LI>If standard M<SMALL>ATLAB</SMALL> code needs to be translated into Natlab compatible code, use <TT>-m</TT> flag. In the example below, all files following <TT>-m</TT> flag will be translated first.
+
+<BR><TT>java -jar amc.jar -m myFunc.m  myAspect.m</TT>
+
+<P>
+</LI>
+<LI>An output directory other than the default one can be specified using a <TT>-out</TT> flag. For example:
+
+<BR><TT>java -jar amc.jar -out output myFunc.m  myAspect.m</TT>
+
+<P>
+</LI>
+<LI>The version number of the <SPAN  CLASS="textsl">amc</SPAN> can be checked using a <TT>-version</TT> flag. For example:
+
+<BR><TT>java -jar amc.jar -version myFunc.m  myAspect.m</TT>
+
+<P>
+</LI>
+<LI>The usage of the <SPAN  CLASS="textsl">amc</SPAN> can be checked using a <TT>-h</TT> or a a <TT>-help</TT> flag. For example:
+
+<BR><TT>java -jar amc.jar -h</TT>
+
+<BR><TT>java -jar amc.jar -help</TT>
+</LI>
+</UL>
+
+<P>
+
+<BR><HR>
+<ADDRESS>
+Toheed ASLAM
+2010-04-24
+</ADDRESS>
+</BODY>
+</HTML>

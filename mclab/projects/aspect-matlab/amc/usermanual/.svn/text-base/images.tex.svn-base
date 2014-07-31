@@ -1,0 +1,767 @@
+\batchmode
+
+\documentclass{SableNote}
+\RequirePackage{ifthen}
+
+
+
+
+\usepackage{epsfig}
+\usepackage{cite}
+\usepackage{comment}
+\usepackage{url}
+\usepackage{pstricks}
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{alltt}
+\usepackage[bw]{mcode}
+\usepackage[all]{xy}
+
+
+\usepackage{bnf}
+
+
+\usepackage[format=hang,font={small,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage{subfig}
+\usepackage{longtable} 
+\usepackage{multirow}  
+\usepackage{dcolumn}   
+\usepackage{color}     
+\usepackage{colortbl}  
+\usepackage{graphicx}  
+
+
+\lstset{
+    basicstyle=\small ,
+    numberstyle=\tiny ,
+    numbers=left,
+    numberstyle=\tiny ,
+    stepnumber=1,
+    numbersep=5pt,
+    tabsize=2,
+    showstringspaces=false,
+    %aboveskip=\smallskipamount,
+    aboveskip=\medskipamount,
+    belowskip=\medskipamount
+}
+
+
+\lstset{columns=flexible}
+
+%
+\providecommand{\sectionref}[1]{Section~\ref{#1}}%
+\providecommand{\lstref}[1]{Listing~\ref{#1}}%
+\providecommand{\figref}[1]{Figure~\ref{#1}}%
+\providecommand{\tableref}[1]{Table~\ref{#1}} 
+
+
+\widowpenalty=3000\clubpenalty=3000
+
+\setcounter{totalnumber}{5}
+
+\addtolength{\textfloatsep}{-2mm} 
+
+%
+\providecommand{\abc}{\textsl{abc}\xspace}%
+\providecommand{\amc}{\textsl{amc}\xspace}%
+\providecommand{\matlab}{{\sc Matlab}\xspace}%
+\providecommand{\smatlab}{{\sc Matlab}} 
+
+
+\lstdefinelanguage{MATLAB}{
+    sensitive=true, % Case sensitive identifiers
+    morecomment=[l]{\%}, % Line-based comment character
+    morestring=[b]', % String character
+    morekeywords= {
+		function,
+		for,
+		while,
+		if,
+		else,
+		elseif,
+		end,
+		program,
+		aspect,
+		patterns,
+		actions,
+		methods,
+		properties,
+		class,
+		classdef,
+		script,
+		loops,
+		set,
+		get,
+		call,
+		execution,
+		mainexecution,
+		loop,
+		loopbody,
+		loophead,
+		within,
+		before,
+		after,
+		around
+	},
+	commentstyle=\color[rgb]{.600,.600,.600}, % grey comments
+}
+
+
+%
+\renewcommand{\thetable}{\Roman{table}}
+
+
+\title{
+AspectMatlab Compiler
+\\[1ex]User Manual
+}
+\author{
+	Toheed Aslam
+}
+\date{April 24, 2010}
+
+
+
+
+
+\pagecolor[gray]{.7}
+
+\usepackage[latin1]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+\setcounter{totalnumber}{5}
+\stepcounter{section}
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting179}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={A typical {\sc Matlab}\xspace class example}, label=ex:class]
+classdef myClass
+\par
+properties
+  count = 0;
+end
+\par
+methods
+\par
+function incCount(this)
+    this.count = this.count + 1;
+  end
+\par
+function out = getCount(this)
+    out = this.count;
+  end
+\par
+end %methods
+\par
+end %classdef
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure185}%
+\begin{figure}\begin{grammar}
+      [(colon){ ::$\Rightarrow$}]
+      [(semicolon){\\\hspace*{1 cm} {$|$} \hspace{0.1 cm}}]
+      [(comma){ }]
+      [(period){\\}]
+      [(quote){'}{'}]
+      [(nonterminal){$\langle$}{$\rangle$}]
+<\textcolor{red}{program}>:<\textcolor{red}{script}>,$|$,<\textcolor{red}{function\_list}>,$|$,<\textcolor{red}{class}>,$|$,<aspect>.
+<aspect>:"{\tt aspect}",IDENTIFIER,<\textcolor{red}{stmt\_separator}>,<\textcolor{red}{help\_comment}>,
+	\\\hspace*{1 cm} <aspect\_body>*,"{\tt end}".
+<aspect\_body>:\\\hspace*{1 cm}
+	<\textcolor{red}{properties\_block}>,<\textcolor{red}{stmt\_separator}>;
+	<patterns\_block>,<\textcolor{red}{stmt\_separator}>;
+	<\textcolor{red}{methods\_block}>,<\textcolor{red}{stmt\_separator}>;
+	<actions\_block>,<\textcolor{red}{stmt\_separator}>.
+\end{grammar}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting241}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={A typical aspect example}, label=ex:aspect]
+aspect myAspect
+\par
+properties
+  count = 0;
+end
+\par
+patterns
+  callFoo : call(foo);
+end
+\par
+methods
+  function incCount(this)
+    this.count = this.count + 1;
+  end
+end
+\par
+actions
+  actCall : before callFoo
+    this.incCount();
+  end
+end
+\par
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{figure251}%
+\begin{figure}\begin{grammar}
+      [(colon){ ::$\Rightarrow$}]
+      [(semicolon){\\\hspace*{1 cm} {$|$} \hspace{0.1 cm}}]
+      [(comma){ }]
+      [(period){\\}]
+      [(quote){'}{'}]
+      [(nonterminal){$\langle$}{$\rangle$}]
+<patterns\_block>:"{\tt patterns}",<\textcolor{red}{stmt\_separator}>,<patterns\_body>*,"{\tt end}".
+<patterns\_body>:IDENTIFIER,":",<pattern\_designators>,<\textcolor{red}{stmt\_separator}>.
+<pattern\_designators>:\\\hspace*{1 cm}
+	<pattern\_designators\_and>;
+	<pattern\_designators>,"$|$",<pattern\_designators\_and>.
+<pattern\_designators\_and>:\\\hspace*{1 cm}
+	<pattern\_designators\_unary>;
+	<pattern\_designators\_and>,"\&",<pattern\_designators\_unary>.
+<pattern\_designators\_unary>:\\\hspace*{1 cm}
+	<pattern\_designator>;
+	"$\sim$",<pattern\_designator>.
+<pattern\_designator>:\\\hspace*{1 cm}
+	"$($",<pattern\_designators>,"$)$";
+	"{\tt set}","$($",<pattern\_select>,"$)$";
+	"{\tt get}","$($",<pattern\_select>,"$)$";
+	"{\tt call}","$($",<pattern\_select>,"$)$";
+	"{\tt execution}","$($",<pattern\_select>,"$)$";
+	"{\tt mainexecution}","$($","$)$";
+	"{\tt loop}","$($",<pattern\_select>,"$)$";
+	"{\tt loopbody}","$($",<pattern\_select>,"$)$";
+	"{\tt loophead}","$($",<pattern\_select>,"$)$";
+	"{\tt within}","$($",<construct\_type>,","<pattern\_select>,"$)$";
+	IDENTIFIER.
+<pattern\_select>:\\\hspace*{1 cm}
+	<pattern\_target>;
+	<pattern\_target>,"$($",<list\_dotdot>,"$)$".
+<pattern\_target>:\\\hspace*{1 cm}
+	<pattern\_target\_unit>;
+	<pattern\_target>,<pattern\_target\_unit>.
+<pattern\_target\_unit>:"*",$|$,IDENTIFIER.
+<list\_dotdot>:$\epsilon$;
+	"..";
+	<list\_star>;
+	<list\_star>,",","..".
+<list\_star>:"*";
+	<list\_star>,",","*".
+<construct\_type>:"*",$|$,"{\tt function}",$|$,"{\tt script}",$|$,"{\tt loops}",\\\hspace*{1 cm} $|$,"{\tt class}",$|$,"{\tt aspect}".
+\end{grammar}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline838}%
+$call$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline840}%
+$execution$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline842}%
+$get$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline844}%
+$set$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline846}%
+$within$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlpictureA{tex2html_wrap2018}%
+\includegraphics[width=3in]{images/func.eps}%
+\lthtmlpictureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline856}%
+$mainexecution$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting330}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Function Patterns}, label=ex:funcpat]
+patterns
+  pCallFoo       : call(foo);
+  pExecutionMain : mainexecution();
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlpictureA{tex2html_wrap2032}%
+\includegraphics[width=2.5in]{images/array.eps}%
+\lthtmlpictureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlpictureA{tex2html_wrap2040}%
+\includegraphics[width=3in]{images/array2.eps}%
+\lthtmlpictureZ
+\lthtmlcheckvsize\clearpage}
+
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting360}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Array Patterns}, label=ex:arraypat]
+patterns
+  pGetX : get(*);
+  pSetX : set(*);
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting375}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Selective Matching}, label=ex:selmatch]
+patterns
+  call2args : call(*(*,..));
+  fullSet : set(*());
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline876}%
+$loop$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline878}%
+$loopbody$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline880}%
+$loophead$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlpictureA{tex2html_wrap2083}%
+\includegraphics[width=3in]{images/loop.eps}%
+\lthtmlpictureZ
+\lthtmlcheckvsize\clearpage}
+
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting405}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Loop Patterns}, label=ex:looppat]
+patterns
+  pLoopI     : loop(i);
+  pLoopHeadI : loophead(i);
+  pLoopBodyI : loopbody(i);
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting415}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Example of loop patterns}, label=ex:looppatex]
+for i = 1:10
+	disp(i);
+end
+\par
+i=1;
+while (i<=10)
+	disp(i);
+	i = i+1;
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting441}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Scope Patterns}, label=ex:scopepat]
+patterns
+  pWithinFoo     : within(function, foo);
+  pWithinBar     : within(script, bar);
+  pWithinMyClass : within(class, myClass);
+  pWithinLoops   : within(loops, *);
+  pWithinAllAbc  : within(*, abc);
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting461}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Compound Patterns}, label=ex:compoundpat]
+patterns
+  pCallFoo  : call(foo) & within(loops, *);
+  pGetOrSet : (get(*) | set(*)) & within(function, bar);
+  pCallExec : pCallFoo | execution(foo);
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{figure473}%
+\begin{figure}\begin{grammar}
+      [(colon){ ::$\Rightarrow$}]
+      [(semicolon){\\\hspace*{1 cm} {$|$} \hspace{0.1 cm}}]
+      [(comma){ }]
+      [(period){\\}]
+      [(quote){'}{'}]
+      [(nonterminal){$\langle$}{$\rangle$}]
+<actions\_block>:"{\tt actions}",<\textcolor{red}{stmt\_separator}>,<actions\_body>*,"{\tt end}".
+<actions\_body>:\\\hspace*{1 cm}
+	IDENTIFIER,":",<action\_type>,IDENTIFIER,<\textcolor{red}{stmt\_separator}>,
+	\\\hspace*{1 cm} <\textcolor{red}{help\_comment}>, <\textcolor{red}{stmt\_or\_function}>,"{\tt end}";
+	IDENTIFIER,":",<action\_type>,IDENTIFIER,":",<\textcolor{red}{input\_params}>,\\\hspace*{1 cm}
+<\textcolor{red}{stmt\_separator}>,<\textcolor{red}{help\_comment}>,<\textcolor{red}{stmt\_or\_function}>,"{\tt end}".
+<action\_type>:"{\tt before}",$|$,"{\tt after}",$|$,"{\tt around}".
+\end{grammar}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting531}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Before and After Actions}, label=ex:simpleact]
+actions
+  aCountCall : before pCallFoo
+    this.count = this.count + 1;
+  end
+\par
+aExecution : after executionMain
+    total = this.getCount();
+    disp(['total calls: ', num2str(total)]);
+  end
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting548}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={Context Exposure}, label=ex:contextexpo]
+actcall : before call2args : (name, args)
+  %
+  disp(['calling ', name, ' with arguments(', args , ')']);
+  %
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting623}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={An around action without \texttt{proceed}}, label=ex:aroundactwop]
+actions
+  actcall : around callFoo : (args)
+  	% proceed not called, so varargout is set
+    varargout{1} = bar(args{1}, args{2});
+  end
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+
+\renewcommand{\baselinestretch}{1}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting639}%
+\begin{lstlisting}[language=MATLAB, frame=htbp, caption={An around action with \texttt{proceed}}, label=ex:aroundact]
+actions
+  actcall : around call2args : (name, args)
+    disp(['before call of ', name, 'with parameters(', args , ')']);
+    proceed();
+    disp(['after call of ', name, 'with parameters(', args , ')']);
+  end
+end
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline904}%
+$before$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline908}%
+$after$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline912}%
+$around$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline930}%
+$proceed$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlpictureA{tex2html_wrap2183}%
+\includegraphics[width=0.3\textwidth]{images/actions.eps}%
+\lthtmlpictureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlpictureA{tex2html_wrap2184}%
+\includegraphics[width=0.5\textwidth]{images/weaved.eps}%
+\lthtmlpictureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{figure664}%
+\begin{figure}\begin{lstlisting}[language=MATLAB, frame=htbp]
+aspect myAspect
+\par
+properties
+  count=0;
+end
+\par
+methods
+  function out = getCount(this)
+    out = this.count;
+  end
+  function incCount(this)
+    this.count = this.count + 1;
+  end
+end %methods
+\par
+patterns
+  call2args : call(*(*,..));
+  executionMain : mainexecution();
+end
+\par
+actions
+  actcall : around call2args : (name, args)
+    this.incCount();
+    disp(['calling ', name, 'with parameters(', args , ')']);
+    proceed();
+  end
+  actexecution : after executionMain
+    total = this.getCount();
+    disp(['total calls: ', num2str(total)]);
+  end
+end %actions
+\par
+end %myAspect
+\end{lstlisting}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure672}%
+\begin{figure}\begin{lstlisting}[language=MATLAB, frame=htbp]
+function [m, s, d] = histo(n)
+  % Generate vectors of random inputs
+  x1 = ( randn(n,1) * 5 ) + 100;
+  x2 = 5 + rand(n,1) * ( 15 - 5 );
+  y = x2.^2 ./ x1;
+  % Create a histogram of the results (50 bins)
+  hist(y,50);
+  % Calculate summary statistics
+  m = mean(y);
+  s = std(y);
+  d = median(y);
+end
+\end{lstlisting}
+
+\end{figure}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+
+\end{document}
