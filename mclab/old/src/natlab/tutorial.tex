@@ -1,0 +1,299 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
+% see http://writer2latex.sourceforge.net for more info
+\documentclass[letterpaper]{article}
+\usepackage[ascii]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=, pdfauthor=Vineet Kumar, pdfsubject=, pdfkeywords=}
+% List styles
+\newcommand\liststyleLi{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleLii{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleLiii{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+% Page layout (geometry)
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{2cm}
+\setlength\oddsidemargin{2cm}
+\setlength\textheight{23.94cm}
+\setlength\textwidth{17.59cm}
+\setlength\footskip{0.0cm}
+\setlength\headheight{0cm}
+\setlength\headsep{0cm}
+% Footnote rule
+\setlength{\skip\footins}{0.119cm}
+\renewcommand\footnoterule{\vspace*{-0.018cm}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.018cm}}\vspace*{0.101cm}}
+% Pages styles
+\makeatletter
+\newcommand\ps@Standard{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{}
+  \renewcommand\thepage{\arabic{page}}
+}
+\makeatother
+\pagestyle{Standard}
+\title{}
+\author{Vineet Kumar}
+\date{2012-06-06}
+\begin{document}
+
+\bigskip
+
+Tutorial about how to build the environment and run samples
+
+
+\bigskip
+
+Get your own copy of the software:
+
+
+\bigskip
+
+\liststyleLi
+\begin{enumerate}
+\item Jar package : Click here{\textless}!-{}-link to the
+jar-{}-{\textgreater} to download the compiled Jar package
+
+OR
+\item Source Code : McLab source code is freely provided under the
+Apache Version 2.0 license. Go to
+\url{http://www.sable.mcgill.ca/mclab/download_mclab.html} download the
+source code as a .tar.gz source archive for UNIX-like systems or a .zip
+source archive for Windows.
+\end{enumerate}
+
+\bigskip
+
+{\textless}!-{}-
+
+P.S. You can also generate the jar package after you download the source
+code with ant: go to the directory of \~{}{\textbackslash}Matlab
+Source{\textbackslash}languages{\textbackslash}Natlab, you will find
+there is a build.xml file. You can compile the source code to jar
+package in Eclipse by adding the build file into ant window and double
+click the option of jar, or you can type the command as
+{\textquotedblleft}ant jar{\textquotedblright} in your command line
+when you are under the directory of \~{}{\textbackslash}Matlab
+Source{\textbackslash}languages{\textbackslash}Natlab.
+
+{}-{}-{\textgreater}
+
+
+\bigskip
+
+Build from the source code 
+
+
+\bigskip
+
+Building on UNIX-like systems
+
+
+\bigskip
+
+\liststyleLii
+\begin{enumerate}
+\item Make sure you have JDK6(or higher) and ANT installed on your
+system
+\item Unpack the .tar.gz source archive
+\item run cd ./Matlab{\textbackslash} Source/languages/Natlab
+\item run ant jar
+\item If everything goes well, you should get a Natlab.jar package
+
+
+\bigskip
+
+Building on Windows
+\end{enumerate}
+
+\bigskip
+
+\liststyleLiii
+\begin{enumerate}
+\item Make sure you have JDK6(or higher) and ANT installed on your
+system
+\item Unpack the .zip source archive
+\item Open a Command window (Select Start-{\textgreater} Run, type
+{\textquotedblleft}cmd{\textquotedblright} and press Enter)
+\item Go to the directory where you have downloaded the .zip archive
+\item run cd {\textquotedblleft}Matlab
+Source{\textbackslash}languages{\textbackslash}Natlab{\textquotedblright}
+\item run ant build
+\end{enumerate}
+
+\bigskip
+
+Import the mclab source code into the workspace, the eclipse will
+compile a new folder named bin-eclipse automatically. But this is not
+enough, we have to compile the source code by ourselves. Open ant
+window in eclipse and add new build.xml by click {\textquotedblleft}Add
+Buildfiles{\textquotedblright}. And then, double click
+{\textquotedblleft}build [default]{\textquotedblright}, this operation
+will build the environment for you. If the building process is
+successful, you will find a folder named
+{\textquotedblleft}bin-ant{\textquotedblright} under
+\~{}{\textbackslash}Matlab
+Source{\textbackslash}languages{\textbackslash}Natlab directory. And
+wait a few seconds, you will find there will be no error in the Natlab
+source code in the eclipse workspace and now, you can run it with some
+certain command. And the main file (entry point) of Natlab project is
+under \~{}{\textbackslash}Matlab
+Source{\textbackslash}languages{\textbackslash}Natlab{\textbackslash}src{\textbackslash}natlab
+directory.
+
+
+\bigskip
+
+2.Command line in Windows:
+
+The prerequisite of building the environment is you should have both
+Java JDK and ANT in your computer. And here, we just give the direction
+of how to install ant and set environment variables:
+
+1.First, you must have Java JDK installed in your computer;
+
+2.Get the ANT for windows from the Internet,
+http://ant.apache.org/bindownload.cgi and pick the .zip archive, for
+example, the latest one is apache-ant-1.8.3-bin.zip;
+
+3.After download ANT, extract zip package in (for example)
+C:{\textbackslash}Ant;
+
+4.Set ANT\_HOME
+
+[F0A7?]Right click My Computer icon
+
+[F0A7?]Choose properties
+
+[F0A7?]Choose Advanced Tab
+
+[F0A7?]Choose Environment Variables Button
+
+[F0A7?]In the System Variables, click New Button
+
+[F0A7?]Give the Variable Name: ANT\_HOME, and give the Value:
+C:{\textbackslash}Ant
+
+[F0A7?]Click OK
+
+Then, we{\textquoteright}ll add new ANT\_HOME path,
+
+Find PATH (or Path) in the Variable Column in System variables frame
+
+[F0A7?]After found, click Edit button
+
+[F0A7?]Then, add
+{\textquotedblleft}\%ANT\_HOME\%{\textbackslash}bin;{\textquotedblright}
+in the bottom of Variable value
+
+[F0A7?]Click OK to finish
+
+5.Check whether ANT works correctly or not
+
+In the command prompt, type {\textquotedblleft}ant
+--version{\textquotedblright}, then click Enter. If the result text is
+something like this, {\textquotedblleft}Apache Ant(TM) version 1.8.3
+compiled on February 26 2012{\textquotedblright}, then your ANT works
+correctly on your Windows.
+
+The reference of this section is from
+http://omrudi.wordpress.com/2008/11/08/how-to-install-ant-in-windows-xp/.
+
+After installing the ANT, we go to the directory of
+\~{}{\textbackslash}Matlab
+Source{\textbackslash}languages{\textbackslash}Natlab, type
+{\textquotedblleft}ant build{\textquotedblright} in your Windows
+command prompt. Then the environment of the project is built.
+
+
+\bigskip
+
+Run the software
+
+There are two options to run the software:
+
+1.Compiling the source code into jar package, and run it in command
+line. For example, after compiling the source code, there will be a jar
+package named Natlab.jar under the directory of
+\~{}{\textbackslash}Matlab
+Source{\textbackslash}languages{\textbackslash}Natlab, open the command
+prompt, go to the same directory, type {\textquotedblleft}java --jar
+Natlab.jar -help{\textquotedblright}, you will get the options of
+Natlab. [give some examples here, like --x and --t, or make a new
+section below?]
+
+2.You can also run the software in Eclipse. Open {\textquotedblleft}Run
+Configurations{\textquotedblright}, click
+{\textquotedblleft}Search{\textquotedblright} in
+{\textquotedblleft}Main class{\textquotedblright} section, pick
+{\textquotedblleft}Main - natlab{\textquotedblright}. Then go back to
+{\textquotedblleft}Run Configurations{\textquotedblright} panel, click
+{\textquotedblleft}Arguments{\textquotedblright} and type command in
+{\textquotedblleft}Program arguments{\textquotedblright} section. For
+example, type {\textquotedblleft}-x
+\~{}/test/test.m{\textquotedblright} into the section. Then, click
+{\textquotedblleft}run{\textquotedblright} button at the right bottom
+corner.
+
+According to my own experience, we suggest you to choose the first
+option to run the software. And if you want to know exactly how the
+program works, then you can go to the source code.
+
+
+\bigskip
+
+FAQ:
+
+1.When you compile the code, if the Eclipse throws some error like this:
+
+
+{\textquotedblleft}com.sun.tools.javac.Main is not on the classpath.
+Perhaps JAVA\_HOME does not point to the JDK. It is currently set to
+{\textquotedbl}C:{\textbackslash}Program
+Files{\textbackslash}Java{\textbackslash}jre6{\textquotedbl}{\textquotedblright}
+
+First, check whether you install the JDK on your machine, because
+Windows people always use Eclipse with JRE to write programs. If you
+have already installed the JDK, copy the tools.lib in the directory of
+jdk{\textbackslash}lib to the directory of jre{\textbackslash}lib.
+
+2.In Windows, remember the file path should not have white space, if
+there is white space, use double quotation to quote the path and file,
+like this: java --jar Natlab.jar -- x
+{\textquotedblleft}D:{\textbackslash}java{\textbackslash}workspace{\textbackslash}Matlab
+Source{\textbackslash}test.m{\textquotedblright}
+\end{document}
