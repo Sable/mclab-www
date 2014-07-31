@@ -131,7 +131,7 @@
 
 
 - name: "McOSR"
-  category: "Analysis Tools"
+  category: "JIT Compilers"
   link: "/projects/mcosr/"
   status: "ongoing"
   description: "On-stack replacement (OSR) is a technique that allows a virtual
