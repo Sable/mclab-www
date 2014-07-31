@@ -1,8 +1,0 @@
-@inproceedings{AOSD2010 ,
- author =       {Toheed Aslam, Jesse Doherty, Anton Dubrau and Laurie Hendren},
- title =        {AOSD2010 Paper - AspectMatlab: An Aspect-Oriented Scientific Programming Language},
- booktitle =    {AOSD '10:Proceedings of 9th International Conference on Aspect-Oriented Software Development},
- year =         {2010},
- month = 		mar,
- note =         {To appear.}
-}

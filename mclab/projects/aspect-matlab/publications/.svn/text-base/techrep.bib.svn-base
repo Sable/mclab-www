@@ -1,9 +1,0 @@
-@TechReport{aslam-09-aspectmatlab-TR,
-  author = 	 {Toheed Aslam and Jesse Doherty and Anton Dubrau and Laurie Hendren},
-  title = 	 {AspectMatlab: An Aspect-Oriented Scientific Programming Language},
-  institution =  {Sable Research Group, School of Computer Science, McGill University},
-  number = 	 {SABLE-TR-2009-3},
-  year = 	 {2009},
-  month = 	 oct,
-  address = 	 {Montr\'eal, Qu\'ebec, Canada},
-}
