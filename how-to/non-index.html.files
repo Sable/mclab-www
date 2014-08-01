@@ -1,0 +1,4 @@
+The html files that are not named index.html and exist outside of the projects
+folder are only redirects. They exists for backwards compatability for the
+links in the old papers. Do not add to them or add new content html files that
+breaks the design of the site without good reason. 
