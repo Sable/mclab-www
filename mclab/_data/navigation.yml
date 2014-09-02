@@ -10,6 +10,9 @@
 - name: People
   link: /people/
 
+- name: Events 
+  link: /events/
+
 - name: FAQs 
   link: /faq/
 

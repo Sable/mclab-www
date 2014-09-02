@@ -1,0 +1,19 @@
+# Template (Even if you don't need the key/value, make sure you leave it there with an empty string. For descriptions, do 2 hard breaks for a single one on the webpage.
+# - name: ""
+#  date: ""
+#  time: ""
+#  location: ""
+#  abstract: ""
+##########################################Professors###############################################
+
+
+- name: "McNumJS" 
+  date: "TBD" 
+  time: "TBD" 
+  location: "TBD"
+  abstract: "McNumJS is a numerical library for JavaScript which provides NumPy
+    like API and it uses recent JavaScript features like Typed Arrays to make it
+    fast. The presentation will discuss the development and architecture of the
+    library as well as some initial performance results. Anyone interested in
+    developing numerical application in JavaScript, will find this talk
+    resourceful." 

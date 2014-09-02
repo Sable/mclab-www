@@ -1,0 +1,50 @@
+---
+---
+<!DOCTYPE HTML>
+<html> 
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+		<!-- Main -->
+			<div id="main-wrapper">
+				<div id="main" class="container">
+					<div class="row">
+						<div class="12u skel-cell-important">
+							<div class="content">
+								<!-- Content -->
+									<article class="is-page-content">
+                  <section>
+										<header>
+											<h2>Events</h2>
+										</header>
+                      <p>
+                        The Sable group does several presentations and workshops
+                        throughout the year. These events are open to all
+                        interested McGill students, staff and faculty. Anyone 
+                        outside of McGill should contact Dr. Hendren in order 
+                        to arrange attendance to any interseted event.                       
+                      </p>
+                      <ul>
+                      <hr>
+                      {% for e in site.data.events %} 
+                        <li>
+                        <h4 style="color: #4682b4; margin: 0; text-transform: none">{{ e.name }}</h4> 
+                        <div><b>Date:</b> {{ e.date | date: "%B %-d, %Y" }} </div>
+                        <div><b>Time:</b>{{ e.time }}</div>
+                        <div><b>Location:</b> {{ e.location }}</div>
+                        <div><b>Abstract:</b> <p>{{ e.abstract}}</p></div>
+                        </li>
+                        <hr>
+                      {% endfor %}
+									</article>
+								<!-- /Content -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Main -->
+    {% include footer.html %}
+	</body>
+</html>
