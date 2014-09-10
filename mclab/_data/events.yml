@@ -8,9 +8,9 @@
 
 
 - name: "McNumJS" 
-  date: "TBD" 
-  time: "TBD" 
-  location: "TBD"
+  date: "16th September 2014" 
+  time: "12 Noon" 
+  location: "MC320 McConnell "
   abstract: "McNumJS is a numerical library for JavaScript which provides NumPy
     like API and it uses recent JavaScript features like Typed Arrays to make it
     fast. The presentation will discuss the development and architecture of the
