@@ -21,7 +21,7 @@
   date : "23rd September 2014"
   time : "12 noon"
   location : "MC320 McConnell"
-  Abstract : "Git is a version control system that has been gaining in popularity, but it has
+  abstract : "Git is a version control system that has been gaining in popularity, but it has
 a reputation for a steep learning curve and an intimidating command line
 interface. In order to avoid having to memorize arcane incantations to make git
 do what we want, it can be beneficial to learn to reason about how git actually
