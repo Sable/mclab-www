@@ -33,3 +33,9 @@ git does what it does, but there will be illustrative live demos throughout, so
 if you've never used git, you should walk away with a working knowledge of how
 the most common commands are used, in addition to a high-level picture of how
 the whole thing works."
+
+- name: "VeloCty"
+  date : "30th September 2014"
+  time : "12 noon"
+  location : "MC320 McConnell"
+  abstract : "VeloCty is an optimizing static compiler for Matlab and Python and performs partial compilation of code written in these two languages to parallel C++. Matlab and Python with its NumPy library are also gaining popularity among scientists and mathematicians. These languages provide many features which allow easy prototyping. However these same features inhibit performance of the code. We developed VeloCty as a solution to the problem of enhancing performance of programs written in these languages.VeloCty takes as input, functions written in Matlab and Python which are defined by the user as computationally intensive and generates an equivalent C++ version.&nbsp; The talk will focus on the&nbsp; challenges of supporting the semantics of two languages, implementation and design on VeloCty and the performance improvement seen as a result of the compilation."
