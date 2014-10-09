@@ -92,6 +92,30 @@
   publisher: "WCRE 2014" 
   location: "Antwerp, Belgium"
   bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2014-1/wcre14-xuli.bib"  
+  
+- title: "Optimizing MATLAB Feval with Dynamic Techniques"
+  link: "http://www.sable.mcgill.ca/publications/papers/2013-6/dls13-lameed.pdf" 
+  type: "Paper" 
+  abstract: "MATLAB is a popular dynamic array-based language used by engineers, scientists
+      and students worldwide. The built-in function feval is an important MATLAB
+      feature for certain classes of numerical programs and solvers which benefit
+      from having functions as parameters. Programmers may pass a function name or
+      function handle to the solver and then the solver uses feval to indirectly call
+      the function. In this paper, we show that there are significant performance
+      overheads for function calls via feval, in both MATLAB interpreters and JITs.
+      The paper then proposes, implements and compares two on-the-fly mechanisms for
+      specialization of feval calls. The first approach uses on-stack replacement
+      technology, as supported by McVM/McOSR. The second approach specializes calls
+      of functions with feval using a combination of runtime input argument types and
+      values. Experimental results on seven numerical solvers show that the
+      techniques provide good performance improvements."
+  authors: 
+    - "Nurudeen Lameed" 
+    - "Laurie Hendren" 
+  date: "October 2013"
+  publisher: "DLS 2013" 
+  location: "Indianapolis, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2013-6/dls13-lameed.bib" 
 
 - title: "Refactoring MATLAB"
   link: "http://www.sable.mcgill.ca/publications/papers/2013-2/cc13-radpour.pdf" 
