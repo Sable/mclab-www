@@ -641,6 +641,25 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/Metalexer.bib" 
 
 #================================Technical Reports================================
+- title: "McTutorial: A Structured Approach to Teaching MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2014-3/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "Learning how to program has increasingly become a more important
+  skill for non-programmers in the tech industry or researchers outside of
+  computer science. Newer programming languages such as MATLAB have
+  grown into industrial strength languages, and many industries
+  and academic fields outside of math and computer science have found
+  uses for it. Thus, it is essential for many more people to learn MATLAB.
+  However, many people often learn it without fundamental knowledge in
+  programming concepts that are rooted in computer science. McTutorial 
+  aims to fill this gap."
+  authors: 
+    - "Lei Lopez" 
+  date: "August 2014"
+  publisher: "McGill University" 
+  location: "Montreal, Canada"
+  bibTexEntry: "" 
+
 - title: "Using JavaScript and WebCL for Numerical Computations: A Comparative Study of Native and Web Technologies"
   link: "http://www.sable.mcgill.ca/publications/techreports/2014-6/techrep.pdf" 
   type: "Technical Report" 
