@@ -658,7 +658,7 @@
   date: "August 2014"
   publisher: "McGill University" 
   location: "Montreal, Canada"
-  bibTexEntry: "" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2014-3/techrep.bib" 
 
 - title: "Using JavaScript and WebCL for Numerical Computations: A Comparative Study of Native and Web Technologies"
   link: "http://www.sable.mcgill.ca/publications/techreports/2014-6/techrep.pdf" 
@@ -683,7 +683,7 @@
   date: "June 2014"
   publisher: "McGill University" 
   location: "Montreal, Canada"
-  bibTexEntry: "" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2014-2/techrep.bib" 
 
 - title: "MiX10: Compiling MATLAB for High Performance Computing via X10"
   link: "http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.pdf" 
