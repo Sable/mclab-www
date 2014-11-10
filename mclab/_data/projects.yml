@@ -166,7 +166,7 @@
 
 - name: "McNumJS"
   link: "/projects/mcnumjs/"
-  category: "JavaScript, Scientific Computing, Numeric computing"
+  category: "JavaScript, Web and Distributed Scientific Computing"
   status: "ongoing"
   description: "McNumJS is a high-performance JavaScript library for numerical computations which provides an easy-to-use API like NumPy.
     McNumJS makes use of TypedArrays which provide a mechanism for accessing data much more efficiently.
