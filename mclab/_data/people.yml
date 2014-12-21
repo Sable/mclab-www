@@ -175,7 +175,7 @@
 - name: "Sameer Jagdale"
   type: "Masters"
   email: "sameer.jagdale@mail.mcgill.ca"
-  website: ""
+  website: "http://sameerjagdale.github.io/"
   projects:
     - name: "VeloCty"
       link: ""
