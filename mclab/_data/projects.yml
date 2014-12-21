@@ -67,7 +67,7 @@
 ###################### Static Compilers  #############################
 - name: "VeloCty"
   category: "Static Compilers"
-  link: "/projects/velocity/"
+  link: "/projects/velocty/"
   status: "ongoing"
   description: "VeloCty is a tool for enhancing the performance of scientific languages by selectively compiling hot sections of the code to parallel C++."
   publications:
