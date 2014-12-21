@@ -1,1 +1,1 @@
-The project is a work in progress, hence no stable version is available for release yet.
+The project is a work in progress, hence no stable version is available for release yet. The source code for the project is divided into two parts. The MATLAB frontend is part of the McLab repository and can be found [here](https://github.com/Sable/mclab). The C++ backend can be found [here](https://github.com/Sable/VeloCty). 
