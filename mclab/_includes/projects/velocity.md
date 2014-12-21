@@ -22,3 +22,17 @@ MATLAB benchmark versions compiled using VeloCty with all optimisations enabled 
 between 1.3 to 458 times faster than the MathWorks’ MATLAB 2014b interpreter and JIT
 compiler. Similarly, Python benchmark versions were between 44.11 and 1681 times faster
 than the CPython interpreter.
+
+##### Code Examples
+Following are a examples in Python and MATLAB which are compiled to C++ VeloCty.
+
+###### MATLAB examples. 
+
+Babai Estimation Algorithm. 
+	[MATLAB](https://gist.githubusercontent.com/sameerjagdale/216a9e47121ac5ca3dda/raw/79fdf8bd341888733646c52c8290988eb565bc8a/Matlab%20implementation%20of%20the%20Babai%20Benchmark). [VeloCty](https://gist.githubusercontent.com/sameerjagdale/b3b016c3786f565e5893/raw/ba0b7ac3ff583400993a146b5f7552a4e9d3da05/C++%20implementation%20of%20Babai)
+
+###### Python Examples
+
+Arc Distance. The function calculates the pairwise arc distance between all points in vectors A and B. 
+	[Python](https://gist.githubusercontent.com/sameerjagdale/3d245ab01feaac09eb9b/raw/ddb51e4e7aaa2d0d174b8fb6fc797056e62cae3f/arc_distance.py)
+	[VeloCty](https://gist.githubusercontent.com/sameerjagdale/8fe84eace8a7454e85b0/raw/99bee0e2ae220d9a54d2b1c39dfb02c582f84237/arc_distance.cpp)
