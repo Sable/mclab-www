@@ -65,13 +65,13 @@
   publications:
     - "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
 ###################### Static Compilers  #############################
-- name: "VeloCity"
+- name: "VeloCty"
   category: "Static Compilers"
-  link: "/projects/velocity/"
+  link: "/projects/velocty/"
   status: "ongoing"
   description: "VeloCty is a tool for enhancing the performance of scientific languages by selectively compiling hot sections of the code to parallel C++."
   publications:
-    - ""
+    - "VeloCty Lecture At CASCON"
 
 - name: "AspectMatlab"
   category: "Static Compilers"

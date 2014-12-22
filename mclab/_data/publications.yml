@@ -14,6 +14,20 @@
 #   bibTexEntry: "" 
 
 #================================Lectures and Tutorials================================
+- title: "VeloCty Lecture At CASCON"
+  link: "http://www.cs.rochester.edu/drupal/sites/default/files/CasconTalk_VeloCty.pdf" 
+  type: "Lecture" 
+  abstract: "We presented an overview of VeloCty at the 13th Compiler Driven
+      Performance workshop. The CDP workshop was held during the 
+      IBM Center for Advanced Studies Conference (CASCON). The workshop featured talks on topics such as innovative
+      analysis, languages, compilers and optimisation techniques for parallel environments etc. More information can be
+      found [here](http://www.cs.rochester.edu/drupal/cdp-2014-program). " 
+  authors: 
+    - "Sameer Jagdale" 
+  date: "November 2014"
+  publisher: "CASCON 2014" 
+  location: "Markham, Canada"
+
 - title: "MiX10 Lecture At CASCON"
   link: "http://webdocs.cs.ualberta.ca/~amaral/cascon/CDP13/#VinetKumar" 
   type: "Lecture" 
