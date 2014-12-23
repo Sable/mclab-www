@@ -30,10 +30,11 @@ Are you a compiler writer or a hardware vendor? We will be very interested in he
 Velociraptor is a compiler toolkit consisting of a code generation library as well as a runtime system. It takes as input a high-level IR called Velociraptor IR (VRIR for short) that is designed to accomodate array semantics of many different languages. VRIR is a typed AST based representation that is easy to generate, and has built-in operators for many high-level array operations (like matrix multiplication), flexible array indexing schemes, and array layouts. Velociraptor generates LLVM for CPUs and OpenCL for GPUs, making it portable across many different systems.
 Velociraptor is accompanied by its intelligent runtime system, that is designed for maximizing throughput in hybrid systems by doing operations in parallel and by minimizing redundant data transfers.
 
+<p>
 Velociraptor has it's own high-level IR called VRIR that is easy to generate from array-based languages and includes 
 high-level constructs for parallelism and GPU acceleration. VRIR has a textual representation inspired from Lisp S-expressions.
 The grammar for VRIR textual representation can be found <a href=http://www.raijincl.org/Vrir.g>here </a>.
-
+</p>
 
 <h2>RaijinCL</h2>
 
