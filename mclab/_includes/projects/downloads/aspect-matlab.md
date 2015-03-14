@@ -1,12 +1,20 @@
 We are proud to release AspectMatlab++. 
 
 New features in this release:
+
 -Several new patterns: annotate, type, and dimension
+
 -New functionality for around advice on loops with body keyword
+
 -Improved code weaving strategies for better performance
+
 -New GUI that can be called from within MATLAB
 
+
 We also include several new general purpose aspects which aid with several tasks ranging from ensuring type safety to managing units.
+
+
+
 
 How to use the compiler:
 1.Download the [AspectMatlab compiler.](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/AspectMatlab.zip)
