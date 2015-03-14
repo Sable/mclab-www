@@ -14,6 +14,20 @@
 #   bibTexEntry: "" 
 
 #================================Lectures and Tutorials================================
+- title: "VeloCty Lecture At CASCON"
+  link: "http://www.cs.rochester.edu/drupal/sites/default/files/CasconTalk_VeloCty.pdf" 
+  type: "Lecture" 
+  abstract: "We presented an overview of VeloCty at the 13th Compiler Driven
+      Performance workshop. The CDP workshop was held during the 
+      IBM Center for Advanced Studies Conference (CASCON). The workshop featured talks on topics such as innovative
+      analysis, languages, compilers and optimisation techniques for parallel environments etc. More information can be
+      found [here](http://www.cs.rochester.edu/drupal/cdp-2014-program). " 
+  authors: 
+    - "Sameer Jagdale" 
+  date: "November 2014"
+  publisher: "CASCON 2014" 
+  location: "Markham, Canada"
+
 - title: "MiX10 Lecture At CASCON"
   link: "http://webdocs.cs.ualberta.ca/~amaral/cascon/CDP13/#VinetKumar" 
   type: "Lecture" 
@@ -489,7 +503,7 @@
       this thesis has been done within the McLab virtual machine, McVM, and is
       available to the public as open source software."
   authors: 
-    - "Nurudeen Abiodum Lameed" 
+    - "Nurudeen Lameed" 
   date: "April 2013"
   publisher: "Ph.D Thesis" 
   location: "McGill University, Montreal, Canada"
@@ -641,6 +655,25 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/Metalexer.bib" 
 
 #================================Technical Reports================================
+- title: "McTutorial: A Structured Approach to Teaching MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2014-3/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "Learning how to program has increasingly become a more important
+  skill for non-programmers in the tech industry or researchers outside of
+  computer science. Newer programming languages such as MATLAB have
+  grown into industrial strength languages, and many industries
+  and academic fields outside of math and computer science have found
+  uses for it. Thus, it is essential for many more people to learn MATLAB.
+  However, many people often learn it without fundamental knowledge in
+  programming concepts that are rooted in computer science. McTutorial 
+  aims to fill this gap."
+  authors: 
+    - "Lei Lopez" 
+  date: "August 2014"
+  publisher: "McGill University" 
+  location: "Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2014-3/techrep.bib" 
+
 - title: "Using JavaScript and WebCL for Numerical Computations: A Comparative Study of Native and Web Technologies"
   link: "http://www.sable.mcgill.ca/publications/techreports/2014-6/techrep.pdf" 
   type: "Technical Report" 
@@ -664,7 +697,7 @@
   date: "June 2014"
   publisher: "McGill University" 
   location: "Montreal, Canada"
-  bibTexEntry: "" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2014-2/techrep.bib" 
 
 - title: "MiX10: Compiling MATLAB for High Performance Computing via X10"
   link: "http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.pdf" 

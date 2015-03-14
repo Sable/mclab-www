@@ -65,13 +65,13 @@
   publications:
     - "McFLAT: A Profile-based Framework for MATLAB Loop Analysis and Transformations"
 ###################### Static Compilers  #############################
-- name: "VeloCity"
+- name: "VeloCty"
   category: "Static Compilers"
-  link: "/projects/velocity/"
+  link: "/projects/velocty/"
   status: "ongoing"
   description: "VeloCty is a tool for enhancing the performance of scientific languages by selectively compiling hot sections of the code to parallel C++."
   publications:
-    - ""
+    - "VeloCty Lecture At CASCON"
 
 - name: "AspectMatlab"
   category: "Static Compilers"
@@ -161,16 +161,18 @@
       they become hot. "
   publications:
     - "Optimizing MATLAB feval with Dynamic Techniques"
+
 ###################### Web(JavaScript) and Distributed SCientific Computing #############################
-- name: "McLib.js"
-  link: "/projects/mclibjs/"
+
+- name: "McNumJS"
+  link: "/projects/mcnumjs/"
   category: "JavaScript, Web and Distributed Scientific Computing"
   status: "ongoing"
-  description: "McLib.js is a dynamic and high-performance JavaScript library for numerical computations.
-    McLib.js makes use of TypedArrays which provide a mechanism for accessing data much more efficiently.
-    McLib.js uses implicitly typed objects specified by asm.js so that modern javascript engines can 
+  description: "McNumJS is a high-performance JavaScript library for numerical computations which provides an easy-to-use API like NumPy.
+    McNumJS makes use of TypedArrays which provide a mechanism for accessing data much more efficiently.
+    McNumJS uses implicitly typed objects specified by asm.js so that modern javascript engines can 
     optimize the code more efficiently and provide higher performance. Compiler writers who target 
-    javascript as the target language and other web developers can make use of this library for 
+    javascript language and other web developers or scientists can make use of this library for 
     numeric computations on the web."
   publications:
     - "name"
@@ -261,4 +263,4 @@
   status: "ongoing"
   description: ""
   publications:
-    - "name"
+    - "McTutorial: A Structured Approach to Teaching MATLAB"
