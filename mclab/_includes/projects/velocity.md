@@ -24,7 +24,7 @@ compiler. Similarly, Python benchmark versions were between 44.11 and 1681 times
 than the CPython interpreter.
 
 ##### Code Examples
-Following are a examples in Python and MATLAB which are compiled to C++ VeloCty.
+Following are a examples in Python and MATLAB which are compiled to using C++ VeloCty.
 
 ###### MATLAB examples. 
 
