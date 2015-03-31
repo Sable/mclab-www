@@ -400,7 +400,7 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   date: "April 2015"
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
-  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2015-masters-sjagda.bib" 
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-sjagda/sable-thesis-2015-masters-sjagda.bib" 
 
 - title: "Mc2For: A MATLAB to Fortran 95 Compiler"
   link: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2014-master-xuli.pdf" 
