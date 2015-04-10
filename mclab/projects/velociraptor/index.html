@@ -40,6 +40,17 @@ libVRIR provides many standard passes such as simplification, inlining and liven
 VRdino is the dynamic backend for Velociraptor. It generates LLVM for CPUs and OpenCL for GPUs, making it portable across many different systems. It performs some interesting optimizations, such as runtime code specialization of regions identified using region detection analysis. VRdino is accompanied by its intelligent runtime system, that is designed for maximizing throughput in hybrid systems by doing operations in parallel and by minimizing redundant data transfers.
 VRdino depends upon libVRIR, LLVM, OpenCL, BLAS and RaijinCL.
 
+<h3> Case-studies </h3>
+We are demonstrating the use of our tools above by using the tools in two different projects. 
+First, we are using it to enable the use of GPUs in 
+<a href="http://www.sable.mcgill.ca/mclab/mcvm_mcjit.html">McVM</a>, 
+a virtual machine for MATLAB language built at our lab. This will be open-sourced soon. 
+
+<p> Second, we have a proof-of-concept system for compiling annotataed Python code 
+(specifically the numerical subset using NumPy) where both CPU and GPU code generation is 
+handled by Velociraptor. 
+You can find the Python to VRIR compiler <a href="https://bitbucket.org/codedivine/pyvrir"> here</a>. </p>
+
 <h2>RaijinCL</h2>
 
 RaijinCL is a high-performance, portable libary for implementing many matrix operations on the GPU such as matrix multiplication and reductions. It is difficult to write a single OpenCL code that works well everywhere. Therefore, RaijinCL does autotuning, a process where it tests hundreds of different versions of important functions and records the best one found on a user's machine. 
@@ -48,13 +59,6 @@ RaijinCL is a high-performance, portable libary for implementing many matrix ope
 We have also developed a prototype extension of our autotuning approach for single-chip CPU+GPU systems that utilizes both CPU and GPU. We found that on some systems, the GPU kernels that are optimized for GPU-only workloads are not optimal for hybrid CPU+GPU workloads. Depending on the machine, our autotuner outperforms CPU-only, GPU-only as well as naive CPU+GPU auto-tuning strategies. 
 
 <p> RaijinCL download and support can be found <a href="http://www.raijincl.org">here</a> </p>
-
-<h2>MATLAB and Python compilers</h2>
-
-We are demonstrating the use of our tools above by using the tools in two different projects. First, we are using it to enable the use of GPUs in <a href="http://www.sable.mcgill.ca/mclab/mcvm_mcjit.html">McVM</a>, a virtual machine for MATLAB language built at our lab. This will be open-sourced soon. 
-
-<p> Second, we have a proof-of-concept system for compiling annotataed Python code (specifically the numerical subset using NumPy) where both CPU and GPU code generation is handled by Velociraptor. You can find the Python to VRIR compiler <a href="https://bitbucket.org/codedivine/pyvrir"> here</a>. </p>
-
 
 <h2>Publications and Presentations</h2>
 <ul>
