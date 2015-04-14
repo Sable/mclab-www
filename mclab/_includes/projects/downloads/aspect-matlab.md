@@ -16,7 +16,7 @@ We also include several new general purpose aspects which aid with several tasks
 How to use the compiler:
 
 
-1.   Download the [AspectMatlab compiler.](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/aspectmatlabppthesis.zip)
+1.   Download the [AspectMatlab compiler.](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/amc/AspectMatlab.zip)
 2.   Extract amc.jar, along with the other files to a convenient location
 3.   Run the "RunAMC.m" function in Matlab.
 4.   Select the desired aspects to weave and the desired functions to weave, add them, and then press "Weave"
