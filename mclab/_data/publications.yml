@@ -28,6 +28,17 @@
   publisher: "CASCON 2014" 
   location: "Markham, Canada"
 
+- title: "McNumJS Lecture At CASCON"
+  link: "http://www.cs.rochester.edu/drupal/sites/default/files/McNumJS.pdf" 
+  type: "Lecture" 
+  abstract: "We presented the modules and features of the McNumJS library and 
+        demonstrated the performance of the library compared to Ostrich benchmark suite at CASCON Compiler Driven Performance workshop." 
+  authors: 
+    - "Sujay Kathrotia" 
+  date: "November 2014"
+  publisher: "CASCON 2014" 
+  location: "Markham, Canada"
+
 - title: "MiX10 Lecture At CASCON"
   link: "http://webdocs.cs.ualberta.ca/~amaral/cascon/CDP13/#VinetKumar" 
   type: "Lecture" 
@@ -401,6 +412,40 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-sjagda/sable-thesis-2015-masters-sjagda.bib" 
+
+- title: "McNumJS: A JavaScript Library for Numerical Computations"
+  link: "https://copy.com/vQGTQRlbJ7uB8PkL/thesis.pdf?download=1" 
+  type: "Thesis"
+  abstract: "There has been a huge development in the web community recently, with an increasing
+   focus on the performance of JavaScript. The development of state-of-the-art JavaScript engines 
+   and JavaScript technologies has improved the performance of JavaScript considerably and made it
+   competitive with other dynamic languages. The major advantage of JavaScript applications is 
+   that they can run on any device that supports web browsers and distribution of these applications
+   is very easy. This thesis reports on McNumJS, an easy-to-use and high-performance JavaScript
+   library for numerical computations. This library is helpful to JavaScript developers for 
+   developing numerical applications and compiler writers who want to compile scientific languages 
+   like MATLAB or R to JavaScript.
+
+
+   There has been a surge of technologies like typed arrays, web workers and asm.js, developed to
+   improve the performance of JavaScript. We analyze these technologies and report their suitability 
+   for numerical applications. We have also compiled a detailed study on asm.js and performed different 
+   experiments to find the parts of asm.js that we can use in regular development of JavaScript applications.
+
+          
+   There are two main design goals behind the development of McNumJS: i) making it easy-to-use, and 
+   ii) provide high-performance. We achieved the easy-to-use goal by making an API similar to the NumPy, 
+   a popular python library for scientific computing. To make McNumJS high-performance, we used JavaScript 
+   typed arrays and type coercing rules defined by asm.js. We report the speedups we get by using McNumJS 
+   compared to other JavaScript libraries and JavaScript with regular arrays. We report the performance 
+   difference between McNumJS and native C. These experiments show that the performance of McNumJS 
+   library is competitive with native C and outperforms other JavaScript libraries for numerical computations." 
+  authors: 
+    - "Sujay Kathrotia" 
+  date: "April 2015"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "https://copy.com/ttBS49FSxsZwFaYF?download=1" 
 
 - title: "Mc2For: A MATLAB to Fortran 95 Compiler"
   link: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2014-master-xuli.pdf" 
