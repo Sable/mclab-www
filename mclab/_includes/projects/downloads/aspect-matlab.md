@@ -23,4 +23,4 @@ How to use the compiler:
 5.   The woven code can be found in a newly created "weaved" directory
 
 
-A reference guide to AspectMatlab can be found [here.](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/usermanual.pdf)
+A reference guide to AspectMatlab can be found [here.](http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/usermanual.pdf)
