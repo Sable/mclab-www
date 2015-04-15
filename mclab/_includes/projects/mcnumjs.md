@@ -14,6 +14,40 @@ numeric computations on the web.
 |Unary Operations   |Creates Unary operation functions                                  | sum, average, sin, cos, fill
 |Binary Operations  |Creates Binary operation functions                                 | add, subtract, multiply, divide
 
+#### Examples
+ 
+* Core Module
+
+<script src="https://gist.github.com/sujaykathrotia/8e2ac7665cfdd35b8509.js"></script>
+
+* Generation Module
+
+<script src="https://gist.github.com/sujaykathrotia/bd23a55404c569f511aa.js"></script>
+
+* Unary / Binary Operations
+
+<script src="https://gist.github.com/sujaykathrotia/b4e4da451e6e2e693a57.js"></script>
+
+
+#### Performance
+
+* McnumJS vs. Regular JavaScript: (Higher is better)
+
+<img src="img/mn-vs-nota.png" width="500" />
+
+* McNumJS vs. JavaScript with typed arrays: (Lower is better)
+
+<img src="img/mn-vs-js.png" width="500" />
+
+* McNumJS vs. Compiled asm.js: (Lower is better)
+
+<img src="img/mn-vs-asm.png" width="500" />
+
+* McNumJS vs. C: (Lower is better)
+
+<img src="img/mn-vs-c.png" width="500" />
+
+
 #### Development
 
 For the development, you will need to install following dependencies.
