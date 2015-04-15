@@ -175,7 +175,8 @@
     javascript language and other web developers or scientists can make use of this library for 
     numeric computations on the web."
   publications:
-    - "name"
+    - "McNumJS Lecture At CASCON"
+    - "McNumJS: A JavaScript Library for Numerical Computations"
 
 - name: "Pando"
   category: "JavaScript, Web and Distributed Scientific Computing"
