@@ -735,6 +735,25 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/Metalexer.bib" 
 
 #================================Technical Reports================================
+- title: "Halophile: Comparing PNacl to Other Web Technologies"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2015-1/techrep.pdf" 
+  type: "Technical Report"
+  abstract: "Most modern web applications are written in JavaScript. However, the 
+demand for web applications that require more numerically-intensive 
+calculations, such as 3D gaming or photo-editing, has increased. This has 
+also increased the demand for code that runs near native speeds.
+PNaCl is a toolchain that allows native C/C++ code to be run in the browser.
+This paper provides a comparison of the performance of PNaCl to native code 
+and JavaScript. Using a benchmark suite that covers a representative set of 
+numerical computations, it is shown on average, that the performance PNaCl 
+is within 9% of native C code."
+  authors: 
+    - "Lei Lopez" 
+  date: "April 2015"
+  publisher: "McGill University" 
+  location: "Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2015-1/techrep.bib"
+  
 - title: "McTutorial: A Structured Approach to Teaching MATLAB"
   link: "http://www.sable.mcgill.ca/publications/techreports/2014-3/techrep.pdf" 
   type: "Technical Report" 
