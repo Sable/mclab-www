@@ -35,7 +35,10 @@ VRIR also includes high-level constructs for parallelism and GPU acceleration. V
 
 <h3> libVRIR </h3>
 libVRIR is an analysis and transformation infrastructure for VRIR that can be used in both static and dynamic tools. As a compiler writer interested in VRIR, this is your first stop.
-libVRIR provides many standard passes such as simplification, inlining and liveness analysis. In addition, it also provides an interesting new analysis called region detection analysis that identifies interesting regions of code (such as loops and vector operations) that may be specialized at runtime using information such as shape of variables. This information can be used by dynamic compilers or static tools such as code instrumentation tools. 
+libVRIR provides many standard passes such as simplification, inlining and liveness analysis. 
+In addition, it also provides an interesting new analysis called region detection analysis that identifies interesting regions of code (such as loops and vector operations) that may be specialized at runtime using information such as shape of variables. 
+This information can be used by dynamic compilers or static tools such as code instrumentation tools. 
+libVRIR can be downloaded <a href="http://www.raijincl.org/velociraptor/libvrir.zip">here</a>
 
 <h3> VRdino </h3>
 VRdino is the dynamic backend for Velociraptor. It generates LLVM for CPUs and OpenCL for GPUs, making it portable across many different systems. It performs some interesting optimizations, such as runtime code specialization of regions identified using region detection analysis. VRdino is accompanied by its intelligent runtime system, that is designed for maximizing throughput in hybrid systems by doing operations in parallel and by minimizing redundant data transfers.
