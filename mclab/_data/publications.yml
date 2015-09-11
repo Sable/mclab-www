@@ -84,6 +84,28 @@
   location: "San Jose, California"
 
 #================================Papers================================
+- title: "AspectMatlab++: Annotations, Types, and Aspects for Scientists"
+  link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.pdf"
+  type:"Paper"
+  abstract: "In this paper we present extensions to an aspect oriented compiler
+      developed for MATLAB . These extensions are intended to support
+      important functionality for scientists, and include pattern match-
+      ing on annotations, and types of variables, as well as new manners
+      of exposing context. We provide use-cases of these features in the
+      form of several general-use aspects which focus on solving issues
+      that arise from use of dynamically-typed languages. We also de-
+      tail performance enhancements to the AspectMatlab compiler
+      which result in an order of magnitude in performance gains."
+  authors: 
+    - "Andrew Bodzay"
+    - "Laurie Hendren" 
+  date: "March 2015"
+  publisher: "Modularity 2015" 
+  location: "Fort Collins, CO, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.bib"
+
+
+
 - title: "Mc2For: A tool for automatically translating MATLAB to FORTRAN 95"
   link: "http://www.sable.mcgill.ca/publications/papers/2014-1/wcre14-xuli.pdf" 
   type: "Paper" 
@@ -446,6 +468,39 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
   bibTexEntry: "https://copy.com/ttBS49FSxsZwFaYF?download=1" 
+  
+  
+- title: "AspectMatlab++: Developing an Aspect-Oriented Language for Scientists"
+  link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/aspectmatlabppthesis.pdf"
+  type:"Thesis"
+  abstract: "MATLAB is a popular dynamic array-based language commonly used within the scientific
+   community. MATLAB ’s widespread use can be attributed to its large library of built-in
+   functions, and its high-level syntax, which requires no type declarations, making it ideal for
+   fast prototyping. This thesis presents extensions to AspectMatlab, an aspect oriented compiler
+   developed for MATLAB.
+   
+   AspectMatlab was created with the intent of bringing aspect oriented programming
+   to MATLAB, and targeted features such as array accesses and loops, which are the core
+   computations in scientific programs. This thesis presents AspectMatlab++. AspectMatlab++ 
+   extends AspectMatlab by focusing on a different set of challenges, seeking
+   to make aspect-oriented programming easier to use and providing mechanisms to handle
+   a variety of the problems that occur in a dynamically typed language. To this end, we introduce
+   pattern matching on annotations and types of variables, as well as new manners of
+   exposing context.
+   We also provide several use-cases of these features in the form of general-use aspects
+   which focus on solving issues that arise from use of dynamically-typed languages. These
+   include aspects which perform type and unit checking, profiling aspects, as well as as-
+   pects which perform basic loop optimizations. This thesis also details several performance
+   enhancements to the AspectMatlab compiler, which result in a speed improvement of
+   about 10 times."
+  authors: 
+    - "Andrew Bodzay" 
+  date: "December 2015"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/aspectmatlabppthesis.bib"
+  
+  
 
 - title: "Mc2For: A MATLAB to Fortran 95 Compiler"
   link: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2014-master-xuli.pdf" 
@@ -489,6 +544,8 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2014-master-xuli.bib" 
+
+
 
 - title: "MiX10: Compiling MATLAB to X10 for high performance"
   link: "http://www.sable.mcgill.ca/publications/thesis/masters-vkumar/thesis.pdf" 

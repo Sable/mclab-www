@@ -84,6 +84,8 @@
   publications:
     - "AspectMatlab: An Aspect-Oriented Scientific Programming Language"
     - "Typing Aspects for MATLAB"
+    - "AspectMatlab++: Annotations, Types, and Aspects for Scientists"
+    - "AspectMatlab++: Developing an Aspect-Oriented Language for Scientists"
 
 - name: "MiX10"
   category: "Static Compilers"
