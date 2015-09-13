@@ -86,7 +86,7 @@
 #================================Papers================================
 - title: "AspectMatlab++: Annotations, Types, and Aspects for Scientists"
   link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.pdf"
-  type:"Paper"
+  type: "Paper"
   abstract: "In this paper we present extensions to an aspect oriented compiler
       developed for MATLAB . These extensions are intended to support
       important functionality for scientists, and include pattern match-
@@ -472,7 +472,7 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   
 - title: "AspectMatlab++: Developing an Aspect-Oriented Language for Scientists"
   link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/aspectmatlabppthesis.pdf"
-  type:"Thesis"
+  type: "Thesis"
   abstract: "MATLAB is a popular dynamic array-based language commonly used within the scientific
    community. MATLAB ’s widespread use can be attributed to its large library of built-in
    functions, and its high-level syntax, which requires no type declarations, making it ideal for
