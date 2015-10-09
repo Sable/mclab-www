@@ -21,39 +21,58 @@ The project is being supervised <a href="http://www.sable.mcgill.ca/~hendren">Pr
 is part of the <a href="http://www.sable.mcgill.ca/mclab">McLab</a> project. 
 </p>
 
-<p>
-Are you a compiler writer or a hardware vendor? We will be very interested in hearing from you! You can contact Rahul by emailing him at his firstname.lastname@mail.mcgill.ca
-</p>
-
 <h2>Velociraptor</h2>
 
-Velociraptor is a compiler toolkit consisting of a code generation library as well as a runtime system. It takes as input a high-level IR called Velociraptor IR (VRIR for short) that is designed to accomodate array semantics of many different languages. VRIR is a typed AST based representation that is easy to generate, and has built-in operators for many high-level array operations (like matrix multiplication), flexible array indexing schemes, and array layouts. Velociraptor generates LLVM for CPUs and OpenCL for GPUs, making it portable across many different systems.
-Velociraptor is accompanied by its intelligent runtime system, that is designed for maximizing throughput in hybrid systems by doing operations in parallel and by minimizing redundant data transfers.
+Velociraptor is a compiler toolkit designed for array-based languages that is not tied to a single source language. You can use it to build compilers and other tools for array-based languages. Velociraptor takes as input a high-level IR called Velociraptor IR (VRIR for short) which is described below. 
+Velociraptor provides multiple components that can be used to build compilers. The first component libVRIR is an analysis and transformation infrastructure that can be used by both static and dynamic tools. The second component, VRdino, is a dynamic compiler that generates LLVM for CPUs, and OpenCL for GPUs from VRIR. 
+
+<h3> VRIR </h3>
+VRIR is a typed, AST based IR used by Velociraptor. VRIR is designed to be easy to generate from array-based languages. It has built-in operators for many high-level array operations (like matrix multiplication), flexible array indexing schemes, and support for various array layouts. 
+VRIR also includes high-level constructs for parallelism and GPU acceleration. VRIR has a textual representation inspired from Lisp S-expressions.
+<br> <b> Overview: </b>A high-level overview for VRIR can be found <a href="http://www.raijincl.org/velociraptor/vrir.pdf">here</a>. 
+<br> <b> Grammar: </b>The grammar for VRIR textual representation can be found <a href="http://www.raijincl.org/velociraptor/Vrir.g">here </a>. 
+<br> <b> Samples</b> of VRIR generated from example programs can be found <a href="http://www.raijincl.org/velociraptor/samples.zip"> here </a>
+
+<h3> libVRIR </h3>
+libVRIR is an analysis and transformation infrastructure for VRIR that can be used in both static and dynamic tools. As a compiler writer interested in VRIR, this is your first stop.
+libVRIR provides many standard passes such as simplification, inlining and liveness analysis. 
+In addition, it also provides an interesting new analysis called region detection analysis that identifies interesting regions of code (such as loops and vector operations) that may be specialized at runtime using information such as shape of variables. 
+This information can be used by dynamic compilers or static tools such as code instrumentation tools. 
+libVRIR can be downloaded <a href="http://www.raijincl.org/velociraptor/libvrir.zip">here</a>
+
+<h3> VRdino </h3>
+VRdino is the dynamic backend for Velociraptor. It generates LLVM for CPUs and OpenCL for GPUs, making it portable across many different systems. It performs some interesting optimizations, such as runtime code specialization of regions identified using region detection analysis. VRdino is accompanied by its intelligent runtime system, that is designed for maximizing throughput in hybrid systems by doing operations in parallel and by minimizing redundant data transfers.
+VRdino depends upon libVRIR, LLVM, OpenCL, BLAS and RaijinCL.
+
+<h3> Case-studies </h3>
+We are demonstrating the use of our tools above by using the tools in two different projects. 
+First, we are using it to enable the use of GPUs in 
+<a href="http://www.sable.mcgill.ca/mclab/mcvm_mcjit.html">McVM</a>, 
+a virtual machine for MATLAB language built at our lab. This will be open-sourced soon. 
+
+<p> Second, we have a proof-of-concept system for compiling annotataed Python code 
+(specifically the numerical subset using NumPy) where both CPU and GPU code generation is 
+handled by Velociraptor. 
+You can find the Python to VRIR compiler <a href="https://bitbucket.org/codedivine/pyvrir"> here</a>. </p>
 
 <h2>RaijinCL</h2>
 
-RaijinCL is a high-performance, portable libary for implementing many matrix operations on the GPU such as matrix multiplication and reductions. It is difficult to write a single OpenCL code that works well everywhere. Therefore, RaijinCL does autotuning, a process where it tests hundreds of different versions of important functions and records the best one found on a user's machine. Initial results are encouraging, and we are able to match the performance of vendor libraries on some systems, and deliver good performance everywhere. 
+RaijinCL is a high-performance, portable libary for implementing many matrix operations on the GPU such as matrix multiplication and reductions. It is difficult to write a single OpenCL code that works well everywhere. Therefore, RaijinCL does autotuning, a process where it tests hundreds of different versions of important functions and records the best one found on a user's machine. 
 
-RaijinCL currently consists of GEMM-inspired (GEMM = general matrix multiply) routines, reduction routines for calulating sum and product of elements of multidimensional arrays along a particular axis as well as several element-wise operations on strided multidimensional arrays. We are also looking into more routines such as matrix decomposition.
+<p> On GEMM (GEMM = general matrix multiply) routines, we are able to match the performance of vendor libraries on most systems, and deliver good performance everywhere. 
+We have also developed a prototype extension of our autotuning approach for single-chip CPU+GPU systems that utilizes both CPU and GPU. We found that on some systems, the GPU kernels that are optimized for GPU-only workloads are not optimal for hybrid CPU+GPU workloads. Depending on the machine, our autotuner outperforms CPU-only, GPU-only as well as naive CPU+GPU auto-tuning strategies. 
 
-<h2>MATLAB and Python compilers</h2>
-
-We are demonstrating the use of our tools above by using the tools in two different projects. First, we are using it to enable the use of GPUs in <a href="http://www.sable.mcgill.ca/mclab/mcvm_mcjit.html">McVM</a>, 
-a virtual machine for MATLAB language built at our lab. 
-Second, we have a proof-of-concept system for compiling annotataed Python code (specifically the numerical subset using NumPy) where both CPU and GPU code generation is handled by Velociraptor.
-These will also be open-sourced and will be useful for any user of these languages, not only compiler writers.
+<p> RaijinCL download and support can be found <a href="http://www.raijincl.org">here</a> </p>
 
 <h2>Publications and Presentations</h2>
 <ul>
+  <li> Rahul's Ph.D. <a href="http://www.raijincl.org/thesis/rahul_thesis.pdf">thesis</a></li>
+<li> "Velociraptor: an embedded compiler toolkit for numerical programs targeting CPUs and GPUs" by Rahul Garg, Laurie Hendren at <a href="http://dl.acm.org/citation.cfm?id=2628071.2628097">PACT 2014</a> </li>
+<li> "Just-in-time shape inference for array languages" by Rahul Garg, Laurie Hendren at <a href="http://dl.acm.org/citation.cfm?id=2627373.2627382"> ARRAY 14 </a></li>
+<li> "A Portable and High-Performance General Matrix-Multiply (GEMM) Library for GPUs and Single-Chip CPU/GPU Systems." by Rahul Garg, Laurie Hendren at PDP 2014 </li>
 <li>Presentation: CASCON Compiler Driven Performance workshop 2012: <a href="cdp12.pdf">PDF</a> (presentation only, workshop does not have proceedings)</li>
-<li> Technical report: <i>Velociraptor: A compiler toolkit for numerical programs targeting CPUs and GPUs.</i> Rahul Garg and Laurie Hendren. <a href="http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.pdf">PDF</a></li>
-<li> Technical report: <i>A portable and high-performance matrix operations library for CPUs, GPUs and beyond</i> Rahul Garg and Laurie Hendren. <a href="http://www.sable.mcgill.ca/publications/techreports/2013-1/sable-tr-2013-1.pdf">PDF</a></li>
-<li> VRIR specifications (last updated 22 Jan) <a href="vrirspecs.pdf">PDF</a>. </li>
-<li> Some simple samples of VRIR textual representation (generated by our proof-of-concept Python compiler) can be found <a href="vrirsample.zip">here (ZIP) </a> </li>
 </ul>
-<h2>Software</h2>
-RaijinCL download and support can be found <a href="http://www.raijincl.org">here</a><br>
-Velociraptor downloads coming soon. Private builds are available, please contact me by email. <br>
+
 </div>
 </body>
 </html>

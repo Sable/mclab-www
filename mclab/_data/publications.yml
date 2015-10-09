@@ -28,6 +28,17 @@
   publisher: "CASCON 2014" 
   location: "Markham, Canada"
 
+- title: "McNumJS Lecture At CASCON"
+  link: "http://www.cs.rochester.edu/drupal/sites/default/files/McNumJS.pdf" 
+  type: "Lecture" 
+  abstract: "We presented the modules and features of the McNumJS library and 
+        demonstrated the performance of the library compared to Ostrich benchmark suite at CASCON Compiler Driven Performance workshop." 
+  authors: 
+    - "Sujay Kathrotia" 
+  date: "November 2014"
+  publisher: "CASCON 2014" 
+  location: "Markham, Canada"
+
 - title: "MiX10 Lecture At CASCON"
   link: "http://webdocs.cs.ualberta.ca/~amaral/cascon/CDP13/#VinetKumar" 
   type: "Lecture" 
@@ -73,6 +84,28 @@
   location: "San Jose, California"
 
 #================================Papers================================
+- title: "AspectMatlab++: Annotations, Types, and Aspects for Scientists"
+  link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.pdf"
+  type: "Paper"
+  abstract: "In this paper we present extensions to an aspect oriented compiler
+      developed for MATLAB . These extensions are intended to support
+      important functionality for scientists, and include pattern match-
+      ing on annotations, and types of variables, as well as new manners
+      of exposing context. We provide use-cases of these features in the
+      form of several general-use aspects which focus on solving issues
+      that arise from use of dynamically-typed languages. We also de-
+      tail performance enhancements to the AspectMatlab compiler
+      which result in an order of magnitude in performance gains."
+  authors: 
+    - "Andrew Bodzay"
+    - "Laurie Hendren" 
+  date: "March 2015"
+  publisher: "Modularity 2015" 
+  location: "Fort Collins, CO, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.bib"
+
+
+
 - title: "Mc2For: A tool for automatically translating MATLAB to FORTRAN 95"
   link: "http://www.sable.mcgill.ca/publications/papers/2014-1/wcre14-xuli.pdf" 
   type: "Paper" 
@@ -367,6 +400,108 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2010-2/AspectMatlab.bib" 
 
 #================================Theses================================
+
+- title: "VeloCty: A Static Optimising Compiler for MATLAB and NumPy"
+  link: "http://www.sable.mcgill.ca/publications/thesis/masters-sjagda/sable-thesis-2015-masters-sjagda.pdf" 
+  type: "Thesis"
+  abstract: "High-level scientific languages such as MATLAB and Python's NumPy 
+library are gaining popularity among scientists and 
+mathematicians. These languages provide many features such as dynamic typing, 
+high-level scientific functions etc. which allow easy 
+prototyping. However these features also inhibit performance of the code. 
+
+We present VeloCty, an optimizing static compiler for MATLAB and Python as a 
+solution to the problem of enhancing performance of programs written in these 
+languages. In most programs, a large portion of the time is spent executing a 
+small part of the code. Moreover, these sections can often be compiled ahead of 
+time and improved performance can be achieved by optimizing only these `hot' 
+sections of the code. VeloCty takes as input functions written in MATLAB and 
+Python specified by the user and generates an equivalent C++ version. VeloCty also generates glue code to interface with MATLAB and Python. The generated code can then be compiled and packaged as 
+a shared library that can be linked to any program written in MATLAB and 
+Python. We also implemented optimisations to eliminate array bounds checks, 
+reuse previously allocated memory during array operations and support parallel execution using OpenMP. 
+
+VeloCty uses the Velociraptor toolkit. We implemented a C++ backend for the 
+Velociraptor intermediate representation, VRIR, and language-specific runtimes 
+for MATLAB and Python. We have also implemented a MATLAB VRIR generator using the mclab toolkit. 
+
+VeloCty was evaluated using 17 MATLAB benchmarks and 9 Python benchmarks. The MATLAB benchmark versions 
+compiled using VeloCty with all optimisations enabled were between 1.3 to 458 times faster than the MathWorks' 
+MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions were between 44.11 and 1681 times faster than the CPython interpreter." 
+  authors: 
+    - "Sameer Jagdale" 
+  date: "April 2015"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-sjagda/sable-thesis-2015-masters-sjagda.bib" 
+
+- title: "McNumJS: A JavaScript Library for Numerical Computations"
+  link: "https://copy.com/BY2YbP2kL7fnERuN/thesis.pdf?download=1" 
+  type: "Thesis"
+  abstract: "There has been a huge development in the web community recently, with an increasing
+   focus on the performance of JavaScript. The development of state-of-the-art JavaScript engines 
+   and JavaScript technologies has improved the performance of JavaScript considerably and made it
+   competitive with other dynamic languages. The major advantage of JavaScript applications is 
+   that they can run on any device that supports web browsers and distribution of these applications
+   is very easy. This thesis reports on McNumJS, an easy-to-use and high-performance JavaScript
+   library for numerical computations. This library is helpful to JavaScript developers for 
+   developing numerical applications and compiler writers who want to compile scientific languages 
+   like MATLAB or R to JavaScript.
+
+
+   There has been a surge of technologies like typed arrays, web workers and asm.js, developed to
+   improve the performance of JavaScript. We analyze these technologies and report their suitability 
+   for numerical applications. We have also compiled a detailed study on asm.js and performed different 
+   experiments to find the parts of asm.js that we can use in regular development of JavaScript applications.
+
+          
+   There are two main design goals behind the development of McNumJS: i) making it easy-to-use, and 
+   ii) provide high-performance. We achieved the easy-to-use goal by making an API similar to the NumPy, 
+   a popular python library for scientific computing. To make McNumJS high-performance, we used JavaScript 
+   typed arrays and type coercing rules defined by asm.js. We report the speedups we get by using McNumJS 
+   compared to other JavaScript libraries and JavaScript with regular arrays. We report the performance 
+   difference between McNumJS and native C. These experiments show that the performance of McNumJS 
+   library is competitive with native C and outperforms other JavaScript libraries for numerical computations." 
+  authors: 
+    - "Sujay Kathrotia" 
+  date: "April 2015"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "https://copy.com/ttBS49FSxsZwFaYF?download=1" 
+  
+  
+- title: "AspectMatlab++: Developing an Aspect-Oriented Language for Scientists"
+  link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/aspectmatlabppthesis.pdf"
+  type: "Thesis"
+  abstract: "MATLAB is a popular dynamic array-based language commonly used within the scientific
+   community. MATLAB ’s widespread use can be attributed to its large library of built-in
+   functions, and its high-level syntax, which requires no type declarations, making it ideal for
+   fast prototyping. This thesis presents extensions to AspectMatlab, an aspect oriented compiler
+   developed for MATLAB.
+   
+   AspectMatlab was created with the intent of bringing aspect oriented programming
+   to MATLAB, and targeted features such as array accesses and loops, which are the core
+   computations in scientific programs. This thesis presents AspectMatlab++. AspectMatlab++ 
+   extends AspectMatlab by focusing on a different set of challenges, seeking
+   to make aspect-oriented programming easier to use and providing mechanisms to handle
+   a variety of the problems that occur in a dynamically typed language. To this end, we introduce
+   pattern matching on annotations and types of variables, as well as new manners of
+   exposing context.
+   We also provide several use-cases of these features in the form of general-use aspects
+   which focus on solving issues that arise from use of dynamically-typed languages. These
+   include aspects which perform type and unit checking, profiling aspects, as well as as-
+   pects which perform basic loop optimizations. This thesis also details several performance
+   enhancements to the AspectMatlab compiler, which result in a speed improvement of
+   about 10 times."
+  authors: 
+    - "Andrew Bodzay" 
+  date: "December 2015"
+  publisher: "Master's Thesis" 
+  location: "McGill University, Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/aspectmatlabppthesis.bib"
+  
+  
+
 - title: "Mc2For: A MATLAB to Fortran 95 Compiler"
   link: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2014-master-xuli.pdf" 
   type: "Thesis" 
@@ -409,6 +544,8 @@
   publisher: "Master's Thesis" 
   location: "McGill University, Montreal, Canada"
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/master-xli141/sable-thesis-2014-master-xuli.bib" 
+
+
 
 - title: "MiX10: Compiling MATLAB to X10 for high performance"
   link: "http://www.sable.mcgill.ca/publications/thesis/masters-vkumar/thesis.pdf" 
@@ -655,6 +792,25 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/Metalexer.bib" 
 
 #================================Technical Reports================================
+- title: "Halophile: Comparing PNacl to Other Web Technologies"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2015-1/techrep.pdf" 
+  type: "Technical Report"
+  abstract: "Most modern web applications are written in JavaScript. However, the 
+demand for web applications that require more numerically-intensive 
+calculations, such as 3D gaming or photo-editing, has increased. This has 
+also increased the demand for code that runs near native speeds.
+PNaCl is a toolchain that allows native C/C++ code to be run in the browser.
+This paper provides a comparison of the performance of PNaCl to native code 
+and JavaScript. Using a benchmark suite that covers a representative set of 
+numerical computations, it is shown on average, that the performance PNaCl 
+is within 9% of native C code."
+  authors: 
+    - "Lei Lopez" 
+  date: "April 2015"
+  publisher: "McGill University" 
+  location: "Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2015-1/techrep.bib"
+  
 - title: "McTutorial: A Structured Approach to Teaching MATLAB"
   link: "http://www.sable.mcgill.ca/publications/techreports/2014-3/techrep.pdf" 
   type: "Technical Report" 
