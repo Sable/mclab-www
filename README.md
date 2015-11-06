@@ -5,4 +5,8 @@ how-to folder. The theme used is in the theme folder and it is provided by n33co
 on HTML5 UP, the details can be found within its specific README file. The 
 templates for certain pages are found in the templates folder. 
 
+###Tools
+
+- checklinks: contains scripts for checking broken links within the McLab website.
+
 
