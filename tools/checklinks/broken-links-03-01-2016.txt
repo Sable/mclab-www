@@ -1,0 +1,195 @@
+searching in:   http://www.sable.mcgill.ca/mclab/
+searching in:   http://www.sable.mcgill.ca/mclab/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/
+searching in:   http://www.sable.mcgill.ca/mclab/publications/
+     http://www.sable.mcgill.ca/publications/papers/2011-5/dsall11-hendren.pptx  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-2/techrep.bib  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/people/
+searching in:   http://www.sable.mcgill.ca/mclab/events/
+searching in:   http://www.sable.mcgill.ca/mclab/faq/
+     http://jan-pan.com/  ** Not Found **
+     http://www.sable.mcgill.ca/mclab/faq/&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#101;&#110;&#100;&#114;&#101;&#110;&#064;&#099;&#115;&#046;&#109;&#099;&#103;&#105;&#108;&#108;&#046;&#099;&#097;  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/contact/
+     https://github.com/Sable/mclab/issues  ** Not Found **
+     http://www.sable.mcgill.ca/mclab/contact/&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#101;&#110;&#100;&#114;&#101;&#110;&#064;&#099;&#115;&#046;&#109;&#099;&#103;&#105;&#108;&#108;&#046;&#099;&#097;  ** Not Found **
+     http://www.sable.mcgill.ca/mclab/contact/&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#109;&#099;&#108;&#097;&#098;&#045;&#108;&#105;&#115;&#116;&#064;&#115;&#097;&#098;&#108;&#101;&#046;&#109;&#099;&#103;&#105;&#108;&#108;&#046;&#099;&#097;  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/#
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcsaf/
+     https://github.com/Sable/mclab  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer/
+     https://github.com/Sable/mclab  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer-plus/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcflat/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/velocty/
+     https://github.com/Sable/mclab  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mix10/
+     https://github.com/Sable/mclab/tree/develop/languages/Natlab/src/natlab/backends/x10  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mc2for/
+     https://github.com/Sable/mclab/tree/develop  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mccli/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcfor/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcvm/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcosr/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcnumjs/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/pando/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/matjuice/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/ostrich/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/velociraptor/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcide/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mctutorial/
+searching in:   http://www.sable.mcgill.ca/mclab/publications/#tutorials
+     http://www.sable.mcgill.ca/publications/papers/2011-5/dsall11-hendren.pptx  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-2/techrep.bib  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/publications/#papers
+     http://www.sable.mcgill.ca/publications/papers/2011-5/dsall11-hendren.pptx  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-2/techrep.bib  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/publications/#theses
+     http://www.sable.mcgill.ca/publications/papers/2011-5/dsall11-hendren.pptx  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-2/techrep.bib  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/publications/#techreports
+     http://www.sable.mcgill.ca/publications/papers/2011-5/dsall11-hendren.pptx  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2014-1/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-5/techrep.bib  ** Not Found **
+     http://www.sable.mcgill.ca/publications/techreports/2013-2/techrep.bib  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/
+searching in:   http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.bib
+searching in:   http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/aspectmatlabppthesis.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/aspectmatlabppthesis.bib
+searching in:   http://www.sable.mcgill.ca/mclab/people/#professors
+searching in:   http://www.sable.mcgill.ca/mclab/people/#postdocs
+searching in:   http://www.sable.mcgill.ca/mclab/people/#phds
+searching in:   http://www.sable.mcgill.ca/mclab/people/#masters
+searching in:   http://www.sable.mcgill.ca/mclab/people/#undergrads
+searching in:   http://www.sable.mcgill.ca/mclab/people/#postdocalumni
+searching in:   http://www.sable.mcgill.ca/mclab/people/#phdalumni
+searching in:   http://www.sable.mcgill.ca/mclab/people/#mastersalumni
+searching in:   http://www.sable.mcgill.ca/mclab/people/#formerundergrad
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer/generateMatlabBuiltinClassRelationships.zip
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer/calls.txt
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer/builtins.txt
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer/tables.txt
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer/tree.png
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer/builtins.csv
+searching in:   http://www.sable.mcgill.ca/mclab/projects/tamer/ClassPropagationLanguage.txt
+searching in:   http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/amc/AspectMatlab.zip
+searching in:   http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/usermanual.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mix10/docs/thesis/thesis.html#Q1-1-64
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mix10/docs/thesis/thesis.html#x1-420004
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mix10/docs/thesis/thesis.html#Q1-1-78
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mix10/docs/MiX10.tar.gz
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mix10/docs/MiX10_alpha_release_doc.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mc2for/mat_indexing.txt
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mc2for/Mc2For.jar
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mc2for/libmc2for/libmc2for.tar.gz
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcvm/copy_analysis.html
+     http://www.sable.mcgill.ca/mclab/projects/mcvm/source  ** Not Found **
+     http://www.sable.mcgill.ca/mclab/projects/mcvm/mcvm/cpAnalysis/refcounter.m  ** Not Found **
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mcnumjs/source/McNumJS.zip
+searching in:   http://www.sable.mcgill.ca/mclab
+searching in:   http://www.sable.mcgill.ca/mclab/mcvm_mcjit.html
+searching in:   http://www.sable.mcgill.ca/mclab/projects/velociraptor/cdp12.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/projects/mctutorial/tutorial.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme1.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme1.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme1-handouts.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme2.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme2.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme2-handouts.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme3.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme3.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/leverhulme/LeverhulmeSlides/leverhulme3-handouts.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/
+searching in:   http://www.sable.mcgill.ca/mclab/aspectmatlab
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/?C=N;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/?C=M;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/?C=S;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/?C=D;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/README
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/?C=N;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/?C=M;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/?C=S;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/?C=D;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/?C=N;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/?C=M;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/?C=S;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/?C=D;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/1_intro_handout.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/2_matlab_handout.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/3_frontend_handout.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/4_IR_handout.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/5_framework_handout.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/6_backends_handout.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/7_mcvmex_handout.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/8_wrapup_handout.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/mclab-tutorial-all-handouts.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/?C=N;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/?C=M;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/?C=S;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/?C=D;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/1_intro_slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/2_matlab_slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/3_frontend_slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/4_IR_slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/5_framework_slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/6_backends_slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/7_mcvmex_slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/8_wrapup_slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/mclab-tutorial-all-slides.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/?C=N;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/?C=M;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/?C=S;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/?C=D;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/1_intro.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/2_matlab.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/3_frontend.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/4_IR.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/5_framework.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/6_backends.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/7_mcvmex.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/8_wrapup.pptx
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/?C=N;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/?C=M;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/?C=S;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/?C=D;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/1_intro_withnotes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/2_matlab_withnotes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/3_frontend_withnotes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/4_IR_withnotes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/5_framework_withnotes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/6_backends_withnotes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/7_mcvmex_withnotes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/8_wrapup_withnotes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/mclab-tutorial-slides-with-notes.pdf
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/?C=N;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/?C=M;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/?C=S;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/HandoutsPDF/?C=D;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/?C=N;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/?C=M;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/?C=S;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPDF/?C=D;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/?C=N;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/?C=M;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/?C=S;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesPowerPoint/?C=D;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/?C=N;O=A
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/?C=M;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/?C=S;O=D
+searching in:   http://www.sable.mcgill.ca/mclab/publications/lectures-and-tutorials/pldi-tutorial/TutorialSlides/SlidesWithNotesPDF/?C=D;O=D
+None
+execution time is 1487.528061 s

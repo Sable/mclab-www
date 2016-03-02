@@ -67,6 +67,8 @@ def testURL(url):
 		return 0
 	except socket.error:
 		return 0
+	except httplib.BadStatusLine:
+		return 0
 	response.close()
 	return 1
 	
