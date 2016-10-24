@@ -71,6 +71,26 @@
   image: "/images/people/guang.jpg"
 
 ##########################################PHDs###################################################
+- name: "Hanfeng Chen"
+  type: "PHD"
+  email: "hanfeng.chen@mail.mcgill.ca "
+  website: "http://www.sable.mcgill.ca/~hanfeng.c/" 
+  projects:
+    - name: "Mc2Mc"
+      link: "https://github.com/sable/mc2mc"
+  description: ""
+  image: "/images/people/hanfeng.png"
+
+- name: "Prabhjot Sandhu"
+  type: "PHD"
+  email: "prabhjot.sandhu@mail.mcgill.ca"
+  website: ""
+  projects:
+    - name: ""
+      link: ""
+  description: ""
+  image: ""
+
 - name: "Erick Lavoie"
   type: "PHD"
   email: "erick.lavoie@mail.mcgill.ca"
@@ -92,7 +112,7 @@
   image: "/images/people/erick.jpg"
 
 - name: "Rahul Garg"
-  type: "PHD"
+  type: "PHD Alumni"
   email: "rahul.garg@mail.mcgill.ca"
   website: ""
   projects:
@@ -128,6 +148,36 @@
   image: "/images/people/nurudeen.jpg"
 
 ##########################################Masters################################################
+- name: "Alexander Krolik"
+  type: "Masters"
+  email: "alexander.krolik@mail.mcgill.ca"
+  website: ""
+  projects:
+    - name: ""
+      link: ""
+  description: " "
+  image: ""
+
+- name: "Steven Thephsourinthone"
+  type: "Masters"
+  email: "steven.thephsourinthone@mail.mcgill.ca"
+  website: ""
+  projects:
+    - name: ""
+      link: ""
+  description: " "
+  image: ""
+
+- name: "Fabrice Anon"
+  type: "Masters"
+  email: "fabriceanon@hotmail.com"
+  website: ""
+  projects:
+    - name: ""
+      link: ""
+  description: " "
+  image: ""
+
 - name: "Faiz Khan"
   type: "Masters"
   email: "faiz.khan@mail.mcgill.ca"
@@ -139,7 +189,7 @@
   image: ""
 
 - name: "Sujay Kathrotia"
-  type: "Masters"
+  type: "Masters Alumni"
   email: "sujay.kathrotia@mail.mcgill.ca"
   website: ""
   projects:
@@ -154,7 +204,7 @@
   image: "/images/people/sujay.jpg"
 
 - name: "Vincent Foley-Bourgon"
-  type: "Masters"
+  type: "Masters Alumni"
   email: "vincent.foley-bourgon@mail.mcgill.ca"
   website: "http://www.cs.mcgill.ca/~vfoley1/"
   projects:
@@ -173,7 +223,7 @@
 
 
 - name: "Sameer Jagdale"
-  type: "Masters"
+  type: "Masters Alumni"
   email: "sameer.jagdale@mail.mcgill.ca"
   website: "http://sameerjagdale.github.io/"
   projects:
@@ -183,7 +233,7 @@
   image: "/images/people/sameer.jpg"
 
 - name: "Ismail Badawi"
-  type: "Masters"
+  type: "Masters Alumni"
   email: "ismail@badawi.io"
   website: "http://ismail.badawi.io"
   projects:
@@ -193,7 +243,7 @@
   image: "/images/people/ismail.jpg"
 
 - name: "Andrew Bodzay "
-  type: "Masters"
+  type: "Masters Alumni"
   email: "andrew.bodzay@mail.mcgill.ca"
   website: ""
   projects:

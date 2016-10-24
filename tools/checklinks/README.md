@@ -5,7 +5,7 @@ The scripts are used to automatically detect broken links within http://www.sabl
 
 Note: if the content of a website has been removed but it is still accessible, the link of the webite is considered a valid one (i.e. http://vineetkumar.net/).
 
-## Prerequistes
+## Prerequisites
 
 Additional Python libraries should be installed before you run the main script `checkall.py`.
 
