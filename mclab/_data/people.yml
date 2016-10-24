@@ -365,8 +365,18 @@
   image: "/images/people/soroush.jpg"
 
 ##########################################Undergrads################################################
-- name: "Lei Lopez"
+- name: "Hongji Chen"
   type: "Undergrad"
+  email: "hongji.chen@mail.mcgill.ca"
+  website: ""
+  projects:
+    - name: ""
+      link: ""
+  description: ""
+  image: ""
+
+- name: "Lei Lopez"
+  type: "Undergrad Alumni"
   email: "lei.lopez@mail.mcgill.ca"
   website: ""
   projects:
