@@ -190,7 +190,7 @@
   computing through a web browser using a high-level dynamic array-oriented 
   language, such as MATLAB."
   publications:
-    - "name"
+    - "A Formalization for Specifying and Implementing Correct Pull-Stream Modules"
 
 - name: "MatJuice"
   category: "JavaScript, Web and Distributed Scientific Computing"
