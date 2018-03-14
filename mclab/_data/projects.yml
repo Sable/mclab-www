@@ -209,8 +209,9 @@
       and WebCL for numerical code. Version of the benchmarks are available in C/C++,
       JavaScript, OpenCL and WebCL."
   publications:
+    - "WebAssembly and JavaScript Challenge: Numerical program performance using modern browser technologies and devices"
     - "Using JavaScript and WebCL for Numerical Computations: A Comparative Study of Native and Web Technologies"
-
+ 
 ###################### Parallel Scientific Computing #############################
 - name: "Velociraptor"
   category: "Parallel Scientific Computing"

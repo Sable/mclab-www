@@ -824,6 +824,21 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/Metalexer.bib" 
 
 #================================Technical Reports================================
+ - title: "WebAssembly and JavaScript Challenge: Numerical program performance using modern browser technologies and devices"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2018-2/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "Recent advances in execution environments for JavaScript and WebAssembly that run on a broad range of devices, from workstations to IoT devices, provides new opportunities for portable and web-based numerical computing. The aim of this paper is to evaluate the current state of the art through a comprehensive experiment using the Ostrich benchmark suite, a collection of numerical programs representing the numerical dwarf categories. Five research questions evaluate the improvement of JavaScript-based browser engines, the relative performance of JavaScript and WebAssembly, the relative performance of portable versus vendor-specific browsers, the relative performance of server-side versus client-side JavaScript/WebAssembly, and an overall comparison to find the best performing browser/language and the best performing device." 
+  authors: 
+    - "David Herrera"
+    - "Hanfeng Chen"
+    - "Erick Lavoie" 
+    - "Laurie Hendren" 
+  date: "January 2018"
+  publisher: "McGill University" 
+  location: "Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2018-2/techrep.bib" 
+
+
  - title: "A Formalization for Specifying and Implementing Correct Pull-Stream Modules"
   link: "https://arxiv.org/abs/1801.06144" 
   type: "Technical Report" 
