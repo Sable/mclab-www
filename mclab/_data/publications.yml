@@ -93,6 +93,7 @@
       into making JavaScript JIT engines fast. But before that can happen, the
       original MATLAB code must be properly translated, making sure to bridge the
       semantic gaps of the two languages.
+
       
       An important area where MATLAB and JavaScript differ is in their handling of
       arrays: for example, in MATLAB, arrays are one-indexed and writing at an
@@ -102,6 +103,7 @@
       difference between the two languages is the assignment of arrays to
       variables: in MATLAB, this operation has value semantics, while in JavaScript
       is has reference semantics.
+
       
       In this paper, we present MatJuice --- a source-to-source, ahead-of-time
       compiler back-end for MATLAB --- and how it deals efficiently with this last
@@ -197,12 +199,14 @@
       can be used to easily build compilers for numerical programs targeting
       multicores and GPUs.
 
+
       Velociraptor provides a new high-level IR called VRIR which has been
       specifically designed for numeric computations, with rich support for arrays,
       plus support for high-level parallel and GPU constructs. A compiler developer
       uses Velociraptor by generating VRIR for key parts of an input program.
       Velociraptor provides an optimizing compiler toolkit for generating CPU and
       GPU code and also provides a smart runtime system to manage the GPU.
+
 
       To demonstrate Velociraptor in action, we present two proof-of-concept case
       studies: a GPU extension for a JIT implementation of MATLAB language, and a
