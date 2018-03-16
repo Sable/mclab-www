@@ -84,6 +84,86 @@
   location: "San Jose, California"
 
 #================================Papers================================
+- title: "Efficiently implementing the copy semantics of MATLAB's arrays in JavaScript"
+  link: "http://www.sable.mcgill.ca/publications/papers/2016-4/foleybourgon-16-matjuice.pdf"
+  type: "Paper" 
+  abstract: "Compiling MATLAB --- a dynamic, array-based language --- to
+      JavaScript is an attractive proposal: the output code can be deployed on a
+      platform used by billions and can leverage the countless hours that have gone
+      into making JavaScript JIT engines fast. But before that can happen, the
+      original MATLAB code must be properly translated, making sure to bridge the
+      semantic gaps of the two languages.
+      
+      An important area where MATLAB and JavaScript differ is in their handling of
+      arrays: for example, in MATLAB, arrays are one-indexed and writing at an
+      index beyond the end of an array extends it; in JavaScript, typed arrays are
+      zero-indexed and writing out of bounds is a no-op. A MATLAB-to-JavaScript
+      compiler must address these mismatches. Another salient and pervasive
+      difference between the two languages is the assignment of arrays to
+      variables: in MATLAB, this operation has value semantics, while in JavaScript
+      is has reference semantics.
+      
+      In this paper, we present MatJuice --- a source-to-source, ahead-of-time
+      compiler back-end for MATLAB --- and how it deals efficiently with this last
+      issue. We present an intra-procedural data-flow analysis to track where each
+      array variable may point to and which variables are possibly aliased. We also
+      present the associated copy insertion transformation that uses the points-to
+      information to insert explicit copies when necessary. The resulting
+      JavaScript program respects the MATLAB value semantics and we show that it
+      performs fewer run-time copies than some alternative approaches."
+  authors: 
+    - "Vincent Foley-Bourgon"
+    - "Laurie Hendren" 
+  date: "1 November 2016"
+  publisher: "DLS 2016" 
+  location: "Amsterdam, Netherlands"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2016-4/foleybourgon-16-matjuice.bib"
+
+
+- title: "Automatic Vectorization for MATLAB"
+  link: "http://www.sable.mcgill.ca/publications/papers/2016-3/chen-16-vectorization.pdf"
+  type: "Paper" 
+  abstract: "Dynamic array-based languages such as MATLAB provide a wide range
+      of built-in operations which can be efficiently applied to all elements of an
+      array. Historically, MATLAB and Octave programmers have been advised to
+      manually transform loops to equivalent \"vectorized\" computations in
+      order to maximize performance. In this paper we present the techniques and
+      tools to perform automatic vectorization, including handling for loops with
+      calls to user-defined functions. We evaluate the technique on 9 benchmarks
+      using two interpreters and two JIT-based platforms and show that automatic
+      vectorization is extremely effective for the interpreters on most benchmarks,
+      and moderately effective on some benchmarks in the JIT context."
+  authors: 
+    - "Hanfeng Chen" 
+    - "Alexander Krolik"
+    - "Erick Lavoie"
+    - "Laurie Hendren" 
+  date: "28-30 September 2016"
+  publisher: "LCPC 2016" 
+  location: "Rochester, NY, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2016-3/chen-16-vectorization.bib"
+
+
+- title: "Velociraptor: a compiler toolkit for array-based languages targeting CPUs and GPUs"
+  link: "http://www.sable.mcgill.ca/publications/papers/2015-1/garg-15-velociraptor.pdf"
+  type: "Paper" 
+  abstract: "We present a toolkit called Velociraptor that can be used by
+       compiler writers to quickly build compilers and other tools for array-based
+       languages. Velociraptor operates on its own unique intermediate
+       representation (IR) designed to support a variety of array-based languages.
+       The toolkit also provides some novel analysis and transformations such as
+       region detection and specialization, as well as a dynamic backend with CPU
+       and GPU code generation. We discuss the components of the toolkit and also
+       present case-studies illustrating the use of the toolkit."
+  authors: 
+    - "Rahul Grag" 
+    - "Laurie Hendren" 
+  date: "June 15 - 17, 2015"
+  publisher: "ARRAY@PLDI 2015" 
+  location: "Portland, OR, USA"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2015-1/garg-15-velociraptor.bib"
+
+
 - title: "AspectMatlab++: Annotations, Types, and Aspects for Scientists"
   link: "http://www.sable.mcgill.ca/publications/papers/2015-2/bodzay-15-aspectmatlab.pdf"  
   #link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.pdf"
@@ -106,6 +186,34 @@
   bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2015-2/bodzay-15-aspectmatlab.bib"  
   # bibTexEntry: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.bib"
 
+
+- title: "Velociraptor: an embedded compiler toolkit for numerical programs targeting CPUs and GPUs"
+  link: "http://www.sable.mcgill.ca/publications/papers/2014-2/garg-14-velociraptor.pdf"
+  type: "Paper" 
+  abstract: "Developing just-in-time (JIT) compilers that that allow scientific
+      programmers to efficiently target both CPUs and GPUs is of increasing
+      interest. However building such compilers requires considerable effort. We
+      present a reusable and embeddable compiler toolkit called Velociraptor that
+      can be used to easily build compilers for numerical programs targeting
+      multicores and GPUs.
+
+      Velociraptor provides a new high-level IR called VRIR which has been
+      specifically designed for numeric computations, with rich support for arrays,
+      plus support for high-level parallel and GPU constructs. A compiler developer
+      uses Velociraptor by generating VRIR for key parts of an input program.
+      Velociraptor provides an optimizing compiler toolkit for generating CPU and
+      GPU code and also provides a smart runtime system to manage the GPU.
+
+      To demonstrate Velociraptor in action, we present two proof-of-concept case
+      studies: a GPU extension for a JIT implementation of MATLAB language, and a
+      JIT compiler for Python targeting CPUs and GPUs."
+  authors: 
+    - "Rahul Grag" 
+    - "Laurie Hendren" 
+  date: "August 24-27, 2014"
+  publisher: "PACT 2014" 
+  location: "Edmonton, AB, Canada"
+  bibTexEntry:: "http://www.sable.mcgill.ca/publications/papers/2014-2/garg-14-velociraptor.bib"
 
 
 - title: "Mc2For: A tool for automatically translating MATLAB to FORTRAN 95"
