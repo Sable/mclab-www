@@ -85,7 +85,8 @@
 
 #================================Papers================================
 - title: "AspectMatlab++: Annotations, Types, and Aspects for Scientists"
-  link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.pdf"
+  link: "http://www.sable.mcgill.ca/publications/papers/2015-2/bodzay-15-aspectmatlab.pdf"  
+  #link: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.pdf"
   type: "Paper"
   abstract: "In this paper we present extensions to an aspect oriented compiler
       developed for MATLAB . These extensions are intended to support
@@ -102,7 +103,8 @@
   date: "March 2015"
   publisher: "Modularity 2015" 
   location: "Fort Collins, CO, USA"
-  bibTexEntry: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.bib"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/papers/2015-2/bodzay-15-aspectmatlab.bib"  
+  # bibTexEntry: "http://www.sable.mcgill.ca/mclab/projects/aspect-matlab/publications/paperpp.bib"
 
 
 
