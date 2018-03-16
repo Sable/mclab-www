@@ -824,6 +824,39 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/Metalexer.bib" 
 
 #================================Technical Reports================================
+- title: "HorseIR: Fusing Array Programming and Database Query Processing"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2018-3/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "While traditional relational database management systems (RDBMS)
+      seem to be a natural choice for data storage and analysis in the area of Data
+      Science, current systems still fall short in two aspects. First, with
+      increasingly cheap main memory, many workloads now fit into main memory while
+      RDBMS have been optimized for I/O. Second, while current systems support
+      advanced analytics beyond SQL queries through user-defined functions (UDF)
+      written in procedural languages, integration into the SQL engine mostly
+      follows a black-box approach limiting the opportunities for a holistic
+      optimization. In this paper, we propose HorseIR, an array-based intermediate
+      representation that allows for a unified representation of UDFs and SQL
+      execution plans optimized with traditional RDBMS optimization techniques.
+      HorseIR has a high-level design, supports rich types and data structures,
+      including homogeneous vectors and heterogeneous lists. We identify suitable
+      optimizations for generating efficient code from HorseIR, taking memory and
+      CPU aspects into account. We compare HorseIR with the MonetDB RDBMS, by
+      testing both standard SQL queries and queries with UDFs, and show how our
+      holistic approach and compiler optimizations benefit the runtime of complex
+      queries."
+  authors: 
+    - "Hanfeng Chen"
+    - "Joseph Vinish D'silva" 
+    - "Hongji Chen"
+    - "Bettina Kemme"
+    - "Laurie Hendren" 
+  date: "January 2018"
+  publisher: "McGill University" 
+  location: "Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2018-3/techrep.bib" 
+
+
 - title: "WebAssembly and JavaScript Challenge: Numerical program performance using modern browser technologies and devices"
   link: "http://www.sable.mcgill.ca/publications/techreports/2018-2/techrep.pdf" 
   type: "Technical Report" 
