@@ -158,7 +158,7 @@
        and GPU code generation. We discuss the components of the toolkit and also
        present case-studies illustrating the use of the toolkit."
   authors: 
-    - "Rahul Grag" 
+    - "Rahul Garg" 
     - "Laurie Hendren" 
   date: "June 15 - 17, 2015"
   publisher: "ARRAY@PLDI 2015" 
@@ -212,7 +212,7 @@
       studies: a GPU extension for a JIT implementation of MATLAB language, and a
       JIT compiler for Python targeting CPUs and GPUs."
   authors: 
-    - "Rahul Grag" 
+    - "Rahul Garg" 
     - "Laurie Hendren" 
   date: "August 24-27, 2014"
   publisher: "PACT 2014" 
