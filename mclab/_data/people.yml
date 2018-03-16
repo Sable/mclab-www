@@ -156,6 +156,16 @@
   image: "/images/people/nurudeen.jpg"
 
 ##########################################Masters################################################
+- name: "David Herrera"
+  type: "Masters"
+  email: "david.herrera@mail.mcgill.ca"
+  website: ""
+  projects:
+    - name: ""
+      link: ""
+  description: " "
+  image: ""
+
 - name: "Alexander Krolik"
   type: "Masters"
   email: "alexander.krolik@mail.mcgill.ca"
