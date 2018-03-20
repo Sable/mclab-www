@@ -938,6 +938,41 @@ MATLAB2014b interpreter and JIT compiler. Similarly, Python benchmark versions w
   bibTexEntry: "http://www.sable.mcgill.ca/publications/thesis/masters-acasey/Metalexer.bib" 
 
 #================================Technical Reports================================
+- title: "Sparse matrices on the web -- Characterizing the performance and 
+      optimal format selection of sparse matrix-vector multiplication in JavaScript"
+  link: "http://www.sable.mcgill.ca/publications/techreports/2018-4/techrep.pdf" 
+  type: "Technical Report" 
+  abstract: "JavaScript is the most widely used language for web programming, 
+     and now increasingly becoming popular for high performance computing, 
+     data-intensive applications, and deep learning. 
+     Sparse matrix-vector multiplication (SpMV) is an important kernel 
+     that is considered critical for the perfor- mance of those applications. 
+     In SpMV, the optimal selection of storage format is one of the key aspects 
+     of developing effective applications. This paper describes the distinctive 
+     nature of the performance and choice of optimal sparse matrix storage format 
+     for sequential SpMV in JavaScript as compared to native languages like C. 
+     Based on exhaustive experiments with 2000 real-life sparse matrices,  
+     we explored three main research questions. First, we examined the difference 
+     in performance between native C and JavaScript for the two major browsers, 
+     Firefox and Chrome. We observed that the best performing browser demonstrated 
+     a slowdown of only 1.2x to 3.9x, depending on the choice of sparse 
+     storage format. Second, we explored the performance of single-precision 
+     versus double-precision SpMV. In contrast to C, in JavaScript, we found that 
+     double-precision is more efficient than single-precision. Finally, we examined 
+     the choice of optimal storage format. To do this in a rigorous manner we 
+     introduced the notion of x%-affinity which allows us to identify those formats 
+     that are at least x% better than all other formats. Somewhat surprisingly, the 
+     best format choices are very different for C as compared to JavaScript, 
+     and even quite different between the two browsers."
+  authors: 
+    - "Prabhjot Sandhu" 
+    - "David Herrera" 
+    - "Laurie Hendren" 
+  date: "January 2018"
+  publisher: "McGill University" 
+  location: "Montreal, Canada"
+  bibTexEntry: "http://www.sable.mcgill.ca/publications/techreports/2018-4/techrep.bib" 
+
 - title: "HorseIR: Fusing Array Programming and Database Query Processing"
   link: "http://www.sable.mcgill.ca/publications/techreports/2018-3/techrep.pdf" 
   type: "Technical Report" 
