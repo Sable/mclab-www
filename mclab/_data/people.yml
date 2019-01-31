@@ -71,6 +71,16 @@
   image: "/images/people/guang.jpg"
 
 ##########################################PHDs###################################################
+- name: "Alexander Krolik"
+  type: "PHD"
+  email: "alexander.krolik@mail.mcgill.ca"
+  website: ""
+  projects:
+    - name: ""
+      link: ""
+  description: " "
+  image: ""
+
 - name: "Hanfeng Chen"
   type: "PHD"
   email: "hanfeng.chen@mail.mcgill.ca "
@@ -156,19 +166,19 @@
   image: "/images/people/nurudeen.jpg"
 
 ##########################################Masters################################################
+- name: "Hongji Chen"
+  type: "Masters"
+  email: "hongji.chen@mail.mcgill.ca"
+  website: ""
+  projects:
+    - name: "woot"
+      link: "https://wasm-woot.tools"
+  description: ""
+  image: ""
+
 - name: "David Herrera"
   type: "Masters"
   email: "david.herrera@mail.mcgill.ca"
-  website: ""
-  projects:
-    - name: ""
-      link: ""
-  description: " "
-  image: ""
-
-- name: "Alexander Krolik"
-  type: "Masters"
-  email: "alexander.krolik@mail.mcgill.ca"
   website: ""
   projects:
     - name: ""
@@ -383,16 +393,6 @@
   image: "/images/people/soroush.jpg"
 
 ##########################################Undergrads################################################
-- name: "Hongji Chen"
-  type: "Undergrad"
-  email: "hongji.chen@mail.mcgill.ca"
-  website: ""
-  projects:
-    - name: ""
-      link: ""
-  description: ""
-  image: ""
-
 - name: "Lei Lopez"
   type: "Undergrad Alumni"
   email: "lei.lopez@mail.mcgill.ca"
