@@ -16,6 +16,6 @@ How to add publication entries (including technical reports)
 
 ### Tools
 
-- checklinks: contains scripts for checking broken links within the McLab website.
+- [checklinks](tools/checklinks): contains scripts for checking broken links within the McLab website.
 
 
