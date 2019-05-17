@@ -84,10 +84,12 @@
 - name: "Hanfeng Chen"
   type: "PHD"
   email: "hanfeng.chen@mail.mcgill.ca "
-  website: "http://www.sable.mcgill.ca/~hanfeng.c/" 
+  website: "http://www.sable.mcgill.ca/~hanfeng.c"
   projects:
     - name: "Mc2Mc"
       link: "https://github.com/sable/mc2mc"
+    - name: "HorsePower"
+      link: "https://github.com/sable/horsepower"
   description: 'I am a PhD student supervised by Professor Laurie Hendren.  My
                 research interests are in the field of compilers, program
                 analysis and databases.  I particularly like to explore array
