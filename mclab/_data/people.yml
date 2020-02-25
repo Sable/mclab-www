@@ -104,12 +104,12 @@
 - name: "Prabhjot Sandhu"
   type: "PHD"
   email: "prabhjot.sandhu@mail.mcgill.ca"
-  website: ""
+  website: "http://www.sable.mcgill.ca/~psandh3/"
   projects:
     - name: ""
       link: ""
   description: ""
-  image: ""
+  image: "/images/people/prabhjot.jpg"
 
 - name: "Erick Lavoie"
   type: "PHD"
