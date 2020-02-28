@@ -90,16 +90,15 @@
       link: "https://github.com/sable/mc2mc"
     - name: "HorsePower"
       link: "https://github.com/sable/horsepower"
-  description: 'I am a PhD candidate supervised by Professor Laurie Hendren.  My
-                research interests are in the field of compilers, program
+  description: 'I am a PhD candidate supervised by Professor Bettina Kemme and Professor Laurie Hendren.
+                My research interests are in the field of compilers, program
                 analysis, and in-memory column-based databases.  I like
                 exploring array programming languages and how to combine array
-                languages and databases.  I learned my first array
-                programming language APL when I was a third-year
-                undergraduate.  Later I wrote <a
-                href="http://www.sable.mcgill.ca/~hanfeng.c/eli/"
+                languages and databases.  I learned my first array programming
+                language APL when I was a third-year undergraduate.  Later I
+                wrote <a href="http://www.sable.mcgill.ca/~hanfeng.c/eli/"
                 target="_blank">ELI</a>, an APL dialect, with Dr. Wai-Mee Ching.'
-  image: "/images/people/hanfeng.jpg"
+  image: "/images/people/hanfeng1.jpg"
 
 - name: "Prabhjot Sandhu"
   type: "PHD"
@@ -112,7 +111,7 @@
   image: "/images/people/prabhjot.jpg"
 
 - name: "Erick Lavoie"
-  type: "PHD"
+  type: "PHD Alumni"
   email: "erick.lavoie@mail.mcgill.ca"
   website: "http://ericklavoie.com/"
   projects:
